@@ -1,0 +1,698 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Foundation\Kernel |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Application.html">Application</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Bootstrapers.html">Bootstrapers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.ComponentProviders.html">ComponentProviders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Middleware.html">Middleware</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Foundation.CommandLoader.html">
+							CommandLoader
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.ComponentManager.html">
+							ComponentManager
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.ComponentProvider.html">
+							ComponentProvider
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.ConfigRegistry.html">
+							ConfigRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.DotEnv.html">
+							DotEnv
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Env.html">
+							Env
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.ExceptionHandler.html">
+							ExceptionHandler
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Foundation.Kernel.html">
+							Kernel
+						</a>
+					</li>
+			</ul>
+		</div>
+
+		<div class="menu-section">
+			<h3>Interfaces</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Foundation.DeferredComponentProvider.html">
+							DeferredComponentProvider
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Foundation.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Foundation.Kernel.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Foundation.html">Foundation</a>\<a href="Twipsi.Foundation.Kernel.html">Kernel</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Foundation.Kernel.html#32" title="Go to source code">Twipsi\Foundation\Kernel.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Kernel.html#87-100" title="Go to source code">__construct</a>(<span><a href="Twipsi.Foundation.Application.Application.html"><span title="Twipsi\Foundation\Application\Application">Application</span></a> <var>$app</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct the kernel.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct the kernel.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="run" id="_run">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Kernel.html#102-131" title="Go to source code">run</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>): <a href="Twipsi.Components.Http.Response.Interfaces.ResponseInterface.html"><span title="Twipsi\Components\Http\Response\Interfaces\ResponseInterface">ResponseInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Run the request through the system and return a valid response.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Run the request through the system and return a valid response.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_run">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dispatch" id="_dispatch">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Kernel.html#133-166" title="Go to source code">dispatch</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>): <a href="Twipsi.Components.Http.Response.Interfaces.ResponseInterface.html"><span title="Twipsi\Components\Http\Response\Interfaces\ResponseInterface">ResponseInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Dispatch the router and return the response.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Dispatch the router and return the response.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Components.Router.Exceptions.RouteNotFoundException.html"><span>Twipsi\Components\Router\Exceptions\RouteNotFoundException</span></a>|<a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dispatch">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="handleMiddlewares" id="_handleMiddlewares">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Kernel.html#168-186" title="Go to source code">handleMiddlewares</a>(<span><a href="Twipsi.Foundation.Middleware.MiddlewareHandler.html"><span title="Twipsi\Foundation\Middleware\MiddlewareHandler">MiddlewareHandler</span></a> <var>$handler</var></span>, <span><a href="Twipsi.Components.Router.Route.Route.html"><span title="Twipsi\Components\Router\Route\Route">Route</span></a> <var>$route</var></span>): <a href="Twipsi.Foundation.Middleware.MiddlewareCollector.html"><span title="Twipsi\Foundation\Middleware\MiddlewareCollector">MiddlewareCollector</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Handle the middlewares.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Handle the middlewares.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_handleMiddlewares">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="send" id="_send">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Kernel.html#188-211" title="Go to source code">send</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>, <span><a href="Twipsi.Components.Http.Response.Interfaces.ResponseInterface.html"><span title="Twipsi\Components\Http\Response\Interfaces\ResponseInterface">ResponseInterface</span></a> <var>$response</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Handle response hooks and send it to the client.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Handle response hooks and send it to the client.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_send">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="terminate" id="_terminate">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Kernel.html#213-238" title="Go to source code">terminate</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>, <span><a href="Twipsi.Components.Http.Response.Interfaces.ResponseInterface.html"><span title="Twipsi\Components\Http\Response\Interfaces\ResponseInterface">ResponseInterface</span></a> <var>$response</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Terminate any terminatable.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Terminate any terminatable.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_terminate">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="handleException" id="_handleException">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Kernel.html#240-248" title="Go to source code">handleException</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>, <span><a href="Throwable.html"><span title="Throwable">Throwable</span></a> <var>$e</var></span>): <a href="Twipsi.Components.Http.Response.Interfaces.ResponseInterface.html"><span title="Twipsi\Components\Http\Response\Interfaces\ResponseInterface">ResponseInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Handle custom exception handling.
+@ ToImplement
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Handle custom exception handling.
+@ ToImplement</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_handleException">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="bootstrapSystem" id="_bootstrapSystem">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Kernel.html#250-261" title="Go to source code">bootstrapSystem</a>(): <b><span class="active" title="Twipsi\Foundation\Kernel">Kernel</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Bootstrap the application with the provided bootstraps.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Bootstrap the application with the provided bootstraps.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_bootstrapSystem">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="bootstrapComponents" id="_bootstrapComponents">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Kernel.html#263-274" title="Go to source code">bootstrapComponents</a>(): <b><span class="active" title="Twipsi\Foundation\Kernel">Kernel</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Bootstrap the application with the provided component bootstraps.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Bootstrap the application with the provided component bootstraps.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_bootstrapComponents">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="hooks" id="$hooks">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span title="Twipsi\Support\Bags\RecursiveArrayBag">RecursiveArrayBag</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Kernel.html#34-39" title="Go to source code">$hooks</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$hooks">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="middlewares" id="$middlewares">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span title="Twipsi\Support\Bags\RecursiveArrayBag">RecursiveArrayBag</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Kernel.html#41-46" title="Go to source code">$middlewares</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$middlewares">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="router" id="$router">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Router.Router.html"><span title="Twipsi\Components\Router\Router">Router</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Kernel.html#48-53" title="Go to source code">$router</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$router">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="middleware" id="$middleware">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Foundation.Middleware.MiddlewareHandler.html"><span title="Twipsi\Foundation\Middleware\MiddlewareHandler">MiddlewareHandler</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Kernel.html#55-60" title="Go to source code">$middleware</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$middleware">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="bootstrappers" id="$bootstrappers">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array&lt;int|string&gt;</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Kernel.html#62-74" title="Go to source code">$bootstrappers</a></var> = [
+	<a href="Twipsi.Foundation.Bootstrapers.BootstrapEnvironment.html"><span title="Twipsi\Foundation\Bootstrapers\BootstrapEnvironment">BootstrapEnvironment</span></a>::class,
+	<a href="Twipsi.Foundation.Bootstrapers.BootstrapContext.html"><span title="Twipsi\Foundation\Bootstrapers\BootstrapContext">BootstrapContext</span></a>::class,
+	<a href="Twipsi.Foundation.Bootstrapers.BootstrapConfiguration.html"><span title="Twipsi\Foundation\Bootstrapers\BootstrapConfiguration">BootstrapConfiguration</span></a>::class,
+	<a href="Twipsi.Foundation.Bootstrapers.BootstrapExceptionHandler.html"><span title="Twipsi\Foundation\Bootstrapers\BootstrapExceptionHandler">BootstrapExceptionHandler</span></a>::class,
+	<a href="Twipsi.Foundation.Bootstrapers.SubscribeEventListeners.html"><span title="Twipsi\Foundation\Bootstrapers\SubscribeEventListeners">SubscribeEventListeners</span></a>::class,
+	<a href="Twipsi.Foundation.Bootstrapers.SubscribeRoutes.html"><span title="Twipsi\Foundation\Bootstrapers\SubscribeRoutes">SubscribeRoutes</span></a>::class,
+]</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$bootstrappers">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="bootcomponents" id="$bootcomponents">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array&lt;int|string&gt;</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Kernel.html#76-85" title="Go to source code">$bootcomponents</a></var> = [<a href="Twipsi.Foundation.Bootstrapers.BootstrapAliases.html"><span title="Twipsi\Foundation\Bootstrapers\BootstrapAliases">BootstrapAliases</span></a>::class, <a href="Twipsi.Foundation.Bootstrapers.AttachComponentProviders.html"><span title="Twipsi\Foundation\Bootstrapers\AttachComponentProviders">AttachComponentProviders</span></a>::class, <a href="Twipsi.Foundation.Bootstrapers.BootComponentProviders.html"><span title="Twipsi\Foundation\Bootstrapers\BootComponentProviders">BootComponentProviders</span></a>::class]</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$bootcomponents">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="app" id="$app">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Foundation.Application.Application.html"><span title="Twipsi\Foundation\Application\Application">Application</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Kernel.html#92" title="Go to source code">$app</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$app">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

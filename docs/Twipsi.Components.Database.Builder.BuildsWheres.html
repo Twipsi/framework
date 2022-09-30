@@ -1,0 +1,1776 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Trait Twipsi\Components\Database\Builder\BuildsWheres |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.Builder.html">Builder</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Connections.html">Connections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Drivers.html">Drivers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Language.html">Language</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Database.Builder.QueryBuilder.html">
+							QueryBuilder
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Database.Builder.BuildsHavings.html">
+							BuildsHavings
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.Builder.BuildsJoins.html">
+							BuildsJoins
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.Builder.BuildsPagination.html">
+							BuildsPagination
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Database.Builder.BuildsWheres.html">
+							BuildsWheres
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Database.Builder.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Database.Builder.BuildsWheres.html">Trait</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Trait <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Database.html">Database</a>\<a href="namespace-Twipsi.Components.Database.Builder.html">Builder</a>\<a href="Twipsi.Components.Database.Builder.BuildsWheres.html">BuildsWheres</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Database\Builder\BuildsWheres</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span>Twipsi\Components\Database\Builder\QueryBuilder</span></a>
+
+
+		uses
+			<b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>, 
+			<a href="Twipsi.Components.Database.Builder.BuildsJoins.html"><span title="Twipsi\Components\Database\Builder\BuildsJoins">BuildsJoins</span></a>, 
+			<a href="Twipsi.Components.Database.Builder.BuildsHavings.html"><span title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></a>, 
+			<a href="Twipsi.Components.Database.Builder.BuildsPagination.html"><span title="Twipsi\Components\Database\Builder\BuildsPagination">BuildsPagination</span></a>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#12" title="Go to source code">Twipsi\Components\Database\Builder\BuildsWheres.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="where" id="_where">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#14-52" title="Go to source code">where</a>(
+	<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a>|<a href="Twipsi.Components.Database.Language.Expression.html"><span title="Twipsi\Components\Database\Language\Expression">Expression</span></a> <var>$column</var></span>,
+	<span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>,
+	<span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>,
+	<span>string <var>$condition</var> = <span class="php-str">'and'</span></span>,
+): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Add a where clause.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a where clause.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_where">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="makeWhere" id="_makeWhere">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#54-74" title="Go to source code">makeWhere</a>(
+	<span>string|self <var>$query</var></span>,
+	<span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>,
+	<span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>,
+	<span>string <var>$condition</var> = <span class="php-str">'and'</span></span>,
+): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a where clause from a sub select.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a where clause from a sub select.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_makeWhere">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="nestWhere" id="_nestWhere">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#76-96" title="Go to source code">nestWhere</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a>|self <var>$column</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Make a nested where clause.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Make a nested where clause.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_nestWhere">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="subWhere" id="_subWhere">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#98-118" title="Go to source code">subWhere</a>(<span>string <var>$column</var></span>, <span>string <var>$operator</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$value</var></span>, <span>string <var>$condition</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Make a where clause where value is sub select.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Make a where clause where value is sub select.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_subWhere">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhere" id="_orWhere">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#120-132" title="Go to source code">orWhere</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$column</var></span>, <span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>, <span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Add a where clause with condition (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a where clause with condition (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhere">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereNot" id="_whereNot">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#134-147" title="Go to source code">whereNot</a>(
+	<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$column</var></span>,
+	<span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>,
+	<span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>,
+	<span>string <var>$condition</var> = <span class="php-str">'and'</span></span>,
+): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where clause with NOT condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where clause with NOT condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereNot">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereNot" id="_orWhereNot">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#149-161" title="Go to source code">orWhereNot</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$column</var></span>, <span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>, <span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where clause with NOT condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where clause with NOT condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereNot">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereCompare" id="_whereCompare">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#163-180" title="Go to source code">whereCompare</a>(
+	<span>string <var>$column</var></span>,
+	<span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>,
+	<span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>,
+	<span>string <var>$condition</var> = <span class="php-str">'and'</span></span>,
+): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Compare two columns in a where clause.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Compare two columns in a where clause.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereCompare">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereCompare" id="_orWhereCompare">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#182-193" title="Go to source code">orWhereCompare</a>(<span>string <var>$column</var></span>, <span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>, <span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Compare two columns in a where clause with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Compare two columns in a where clause with (OR) condition.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereCompare">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="rawWhere" id="_rawWhere">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#195-212" title="Go to source code">rawWhere</a>(<span>string <var>$sql</var></span>, <span>array <var>$bindings</var> = []</span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a where clause from raw sql.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a where clause from raw sql.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_rawWhere">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orRawWhere" id="_orRawWhere">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#214-225" title="Go to source code">orRawWhere</a>(<span>string <var>$sql</var></span>, <span>array <var>$bindings</var> = []</span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a where clause from raw sql with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a where clause from raw sql with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orRawWhere">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereIn" id="_whereIn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#227-250" title="Go to source code">whereIn</a>(<span>string <var>$column</var></span>, <span>mixed <var>$values</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>, <span>string <var>$type</var> = <span class="php-str">'In'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a where clause with (In).
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a where clause with (In).</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereIn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="makeWhereIn" id="_makeWhereIn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#252-267" title="Go to source code">makeWhereIn</a>(<span>string|self <var>$query</var></span>): <a href="Twipsi.Components.Database.Language.Expression.html"><span title="Twipsi\Components\Database\Language\Expression">Expression</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Make a where in value from a sub select.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Make a where in value from a sub select.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_makeWhereIn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereIn" id="_orWhereIn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#269-280" title="Go to source code">orWhereIn</a>(<span>string <var>$column</var></span>, <span>mixed <var>$values</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a where in clause with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a where in clause with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereIn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereNotIn" id="_whereNotIn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#282-294" title="Go to source code">whereNotIn</a>(<span>string <var>$column</var></span>, <span>mixed <var>$values</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a where clause with (Not In).
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a where clause with (Not In).</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereNotIn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereNotIn" id="_orWhereNotIn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#296-307" title="Go to source code">orWhereNotIn</a>(<span>string <var>$column</var></span>, <span>mixed <var>$values</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a where not in clause with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a where not in clause with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereNotIn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereNull" id="_whereNull">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#309-322" title="Go to source code">whereNull</a>(<span>string <var>$column</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>, <span>string <var>$type</var> = <span class="php-str">'Null'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where clause where column is null.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where clause where column is null.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereNull">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereNull" id="_orWhereNull">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#324-333" title="Go to source code">orWhereNull</a>(<span>string <var>$column</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where is null with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where is null with (OR) condition.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereNull">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereNotNull" id="_whereNotNull">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#335-345" title="Go to source code">whereNotNull</a>(<span>string <var>$column</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where clause where column is not null.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where clause where column is not null.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereNotNull">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereNotNull" id="_orWhereNotNull">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#347-356" title="Go to source code">orWhereNotNull</a>(<span>string <var>$column</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where is not null with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where is not null with (OR) condition.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereNotNull">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereBetween" id="_whereBetween">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#358-375" title="Go to source code">whereBetween</a>(
+	<span>string <var>$column</var></span>,
+	<span>array <var>$values</var></span>,
+	<span>string <var>$condition</var> = <span class="php-str">'and'</span></span>,
+	<span>string <var>$type</var> = <span class="php-str">'Between'</span></span>,
+): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where clause where column is between values.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where clause where column is between values.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereBetween">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereBetween" id="_orWhereBetween">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#377-388" title="Go to source code">orWhereBetween</a>(<span>string <var>$column</var></span>, <span>array <var>$values</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create between where clause with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create between where clause with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereBetween">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereNotBetween" id="_whereNotBetween">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#390-402" title="Go to source code">whereNotBetween</a>(<span>string <var>$column</var></span>, <span>array <var>$values</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where clause where column is not between values.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where clause where column is not between values.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereNotBetween">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereNotBetween" id="_orWhereNotBetween">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#404-415" title="Go to source code">orWhereNotBetween</a>(<span>string <var>$column</var></span>, <span>array <var>$values</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create not between where clause with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create not between where clause with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereNotBetween">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereDate" id="_whereDate">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#417-441" title="Go to source code">whereDate</a>(<span>string <var>$column</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$value</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where claus where date(column) = value.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where claus where date(column) = value.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereDate">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereDate" id="_orWhereDate">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#443-455" title="Go to source code">orWhereDate</a>(<span>string <var>$column</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$value</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create Date() where with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create Date() where with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereDate">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereTime" id="_whereTime">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#457-481" title="Go to source code">whereTime</a>(<span>string <var>$column</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$value</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where claus where time(column) = value.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where claus where time(column) = value.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereTime">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereTime" id="_orWhereTime">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#483-495" title="Go to source code">orWhereTime</a>(<span>string <var>$column</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$value</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create Time() where with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create Time() where with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereTime">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereDay" id="_whereDay">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#497-521" title="Go to source code">whereDay</a>(<span>string <var>$column</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$value</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where claus where day(column) = value.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where claus where day(column) = value.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereDay">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereDay" id="_orWhereDay">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#523-535" title="Go to source code">orWhereDay</a>(<span>string <var>$column</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$value</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create Day() where with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create Day() where with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereDay">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereMonth" id="_whereMonth">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#537-561" title="Go to source code">whereMonth</a>(<span>string <var>$column</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$value</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where claus where month(column) = value.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where claus where month(column) = value.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereMonth">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereMonth" id="_orWhereMonth">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#563-575" title="Go to source code">orWhereMonth</a>(<span>string <var>$column</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$value</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create Month() where with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create Month() where with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereMonth">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereYear" id="_whereYear">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#577-601" title="Go to source code">whereYear</a>(<span>string <var>$column</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$value</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where claus where year(column) = value.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where claus where year(column) = value.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereYear">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereYear" id="_orWhereYear">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#603-615" title="Go to source code">orWhereYear</a>(<span>string <var>$column</var></span>, <span>string <var>$operator</var></span>, <span>mixed <var>$value</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create Year() where with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create Year() where with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereYear">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereExists" id="_whereExists">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#617-635" title="Go to source code">whereExists</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$column</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>, <span>string <var>$type</var> = <span class="php-str">'Exists'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Add an exists where clause.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add an exists where clause.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereExists">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereExists" id="_orWhereExists">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#637-648" title="Go to source code">orWhereExists</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$column</var></span>, <span>string <var>$type</var> = <span class="php-str">'Exists'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Add an exists where clause with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add an exists where clause with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereExists">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereNotExists" id="_whereNotExists">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#650-661" title="Go to source code">whereNotExists</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$column</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Add a not exists where clause.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a not exists where clause.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereNotExists">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereNotExists" id="_orWhereNotExists">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#663-673" title="Go to source code">orWhereNotExists</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$column</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Add a not exists where clause with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a not exists where clause with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereNotExists">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereRowedValues" id="_whereRowedValues">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#675-693" title="Go to source code">whereRowedValues</a>(<span>array <var>$columns</var></span>, <span>string <var>$operator</var></span>, <span>array <var>$values</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Make where clause with rowed value comparison.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Make where clause with rowed value comparison.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereRowedValues">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereRowedValues" id="_orWhereRowedValues">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsWheres.html#695-707" title="Go to source code">orWhereRowedValues</a>(<span>array <var>$columns</var></span>, <span>string <var>$operator</var></span>, <span>array <var>$values</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Make rowed value comparison where with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Make rowed value comparison where with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereRowedValues">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

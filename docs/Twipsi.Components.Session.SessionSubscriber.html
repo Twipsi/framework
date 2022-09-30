@@ -1,0 +1,726 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Session\SessionSubscriber |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.Drivers.html">Drivers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.Middlewares.html">Middlewares</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Session.EncryptedSessionItemItem.html">
+							EncryptedSessionItemItem
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Session.SessionHandler.html">
+							SessionHandler
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Session.SessionItem.html">
+							SessionItem
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Session.SessionSubscriber.html">
+							SessionSubscriber
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Session.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Session.SessionSubscriber.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Session.html">Session</a>\<a href="Twipsi.Components.Session.SessionSubscriber.html">SessionSubscriber</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+		<tr>
+			<th><code>uses</code></th>
+			<td>
+<code><a href="Twipsi.Support.Applicables.Database.html"><span title="Twipsi\Support\Applicables\Database">Database</span></a>, <a href="Twipsi.Support.Applicables.Cookies.html"><span title="Twipsi\Support\Applicables\Cookies">Cookies</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Session.SessionSubscriber.html#29" title="Go to source code">Twipsi\Components\Session\SessionSubscriber.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Session.SessionSubscriber.html#38-44" title="Go to source code">__construct</a>(<span><a href="Twipsi.Foundation.ConfigRegistry.html"><span title="Twipsi\Foundation\ConfigRegistry">ConfigRegistry</span></a> <var>$config</var></span>, <span><a href="Twipsi.Components.Security.Encrypter.html"><span title="Twipsi\Components\Security\Encrypter">Encrypter</span></a> <var>$encrypter</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct session subscriber.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct session subscriber.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="create" id="_create">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Session.SessionSubscriber.html#46-73" title="Go to source code">create</a>(<span>string <var>$driver</var></span>): <a href="Twipsi.Components.Session.SessionItem.html"><span title="Twipsi\Components\Session\SessionItem">SessionItem</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create new driver and session.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create new driver and session.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_create">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createArrayDrivenSession" id="_createArrayDrivenSession">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Session.SessionSubscriber.html#85-91" title="Go to source code">createArrayDrivenSession</a>(): <a href="Twipsi.Components.Session.SessionItem.html"><span title="Twipsi\Components\Session\SessionItem">SessionItem</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create new session with array driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create new session with array driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createArrayDrivenSession">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createDatabaseDrivenSession" id="_createDatabaseDrivenSession">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Session.SessionSubscriber.html#93-99" title="Go to source code">createDatabaseDrivenSession</a>(<span><var>$connection</var></span>): <a href="Twipsi.Components.Session.SessionItem.html"><span title="Twipsi\Components\Session\SessionItem">SessionItem</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create new session with database driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create new session with database driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createDatabaseDrivenSession">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createFileDrivenSession" id="_createFileDrivenSession">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Session.SessionSubscriber.html#101-107" title="Go to source code">createFileDrivenSession</a>(): <a href="Twipsi.Components.Session.SessionItem.html"><span title="Twipsi\Components\Session\SessionItem">SessionItem</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create new session with file driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create new session with file driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createFileDrivenSession">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createCookieDrivenSession" id="_createCookieDrivenSession">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Session.SessionSubscriber.html#109-115" title="Go to source code">createCookieDrivenSession</a>(<span><a href="Twipsi.Components.Cookie.CookieBag.html"><span title="Twipsi\Components\Cookie\CookieBag">CookieBag</span></a> <var>$cookies</var></span>): <a href="Twipsi.Components.Session.SessionItem.html"><span title="Twipsi\Components\Session\SessionItem">SessionItem</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create new session with cookie driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create new session with cookie driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createCookieDrivenSession">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createGlobalDrivenSession" id="_createGlobalDrivenSession">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Session.SessionSubscriber.html#117-123" title="Go to source code">createGlobalDrivenSession</a>(): <a href="Twipsi.Components.Session.SessionItem.html"><span title="Twipsi\Components\Session\SessionItem">SessionItem</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create new session with global driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create new session with global driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createGlobalDrivenSession">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createArraySessionDriver" id="_createArraySessionDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Session.SessionSubscriber.html#125-133" title="Go to source code">createArraySessionDriver</a>(): <a href="Twipsi.Components.Session.Interfaces.SessionDriverInterface.html"><span title="Twipsi\Components\Session\Interfaces\SessionDriverInterface">SessionDriverInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create new array session driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create new array session driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createArraySessionDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createFileSessionDriver" id="_createFileSessionDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Session.SessionSubscriber.html#135-144" title="Go to source code">createFileSessionDriver</a>(): <a href="Twipsi.Components.Session.Interfaces.SessionDriverInterface.html"><span title="Twipsi\Components\Session\Interfaces\SessionDriverInterface">SessionDriverInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create new file session driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create new file session driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createFileSessionDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createDatabaseSessionDriver" id="_createDatabaseSessionDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Session.SessionSubscriber.html#146-156" title="Go to source code">createDatabaseSessionDriver</a>(<span><var>$connection</var></span>): <a href="Twipsi.Components.Session.Interfaces.SessionDriverInterface.html"><span title="Twipsi\Components\Session\Interfaces\SessionDriverInterface">SessionDriverInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create new database session driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create new database session driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createDatabaseSessionDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createCookieSessionDriver" id="_createCookieSessionDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Session.SessionSubscriber.html#158-167" title="Go to source code">createCookieSessionDriver</a>(<span><a href="Twipsi.Components.Cookie.CookieBag.html"><span title="Twipsi\Components\Cookie\CookieBag">CookieBag</span></a> <var>$cookies</var></span>): <a href="Twipsi.Components.Session.Interfaces.SessionDriverInterface.html"><span title="Twipsi\Components\Session\Interfaces\SessionDriverInterface">SessionDriverInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create new cookie session driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create new cookie session driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createCookieSessionDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createGlobalSessionDriver" id="_createGlobalSessionDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Session.SessionSubscriber.html#169-177" title="Go to source code">createGlobalSessionDriver</a>(): <a href="Twipsi.Components.Session.Interfaces.SessionDriverInterface.html"><span title="Twipsi\Components\Session\Interfaces\SessionDriverInterface">SessionDriverInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create new global session driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create new global session driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createGlobalSessionDriver">#</a>
+		</td>
+	</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Support.Applicables.Database.html"><span>Twipsi\Support\Applicables\Database</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Support.Applicables.Database.html#_appendDatabase">appendDatabase()</a>, <a href="Twipsi.Support.Applicables.Database.html#_getDatabase">getDatabase()</a></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Support.Applicables.Cookies.html"><span>Twipsi\Support\Applicables\Cookies</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Support.Applicables.Cookies.html#_appendCookies">appendCookies()</a>, <a href="Twipsi.Support.Applicables.Cookies.html#_getCookies">getCookies()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="drivers" id="$drivers">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Support.Bags.ArrayAccessibleBag.html"><span title="Twipsi\Support\Bags\ArrayAccessibleBag">ArrayAccessibleBag</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Session.SessionSubscriber.html#33-36" title="Go to source code">$drivers</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		Session drivers.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Session drivers.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$drivers">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="config" id="$config">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Foundation.ConfigRegistry.html"><span title="Twipsi\Foundation\ConfigRegistry">ConfigRegistry</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Session.SessionSubscriber.html#41" title="Go to source code">$config</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$config">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="encrypter" id="$encrypter">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Security.Encrypter.html"><span title="Twipsi\Components\Security\Encrypter">Encrypter</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Session.SessionSubscriber.html#41" title="Go to source code">$encrypter</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$encrypter">#</a>
+		</td>
+	</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties used from <a href="Twipsi.Support.Applicables.Database.html"><span>Twipsi\Support\Applicables\Database</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Support.Applicables.Database.html#$db">$db</a></var></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties used from <a href="Twipsi.Support.Applicables.Cookies.html"><span>Twipsi\Support\Applicables\Cookies</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Support.Applicables.Cookies.html#$cookies">$cookies</a></var></code>				</td>
+			</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

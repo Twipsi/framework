@@ -1,0 +1,526 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\User\DatabaseUserProvider |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.Interfaces.html">Interfaces</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li class="active">
+						<a href="Twipsi.Components.User.DatabaseUserProvider.html">
+							DatabaseUserProvider
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.User.ModelUserProvider.html">
+							ModelUserProvider
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.User.UserProvider.html">
+							UserProvider
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.User.Authenticatable.html">
+							Authenticatable
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.User.Authorizable.html">
+							Authorizable
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.User.Localizable.html">
+							Localizable
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.User.Notifiable.html">
+							Notifiable
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.User.Refreshable.html">
+							Refreshable
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.User.Resetable.html">
+							Resetable
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.User.Verifiable.html">
+							Verifiable
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.User.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.User.DatabaseUserProvider.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.User.html">User</a>\<a href="Twipsi.Components.User.DatabaseUserProvider.html">DatabaseUserProvider</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+			<tr><th><code>final</code></th></tr>
+		<tr>
+			<th><code>implements</code></th>
+			<td>
+<code><a href="Twipsi.Components.User.Interfaces.IUserProvider.html"><span title="Twipsi\Components\User\Interfaces\IUserProvider">IUserProvider</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.User.DatabaseUserProvider.html#22" title="Go to source code">Twipsi\Components\User\DatabaseUserProvider.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.User.DatabaseUserProvider.html#38-48" title="Go to source code">__construct</a>(<span><a href="Twipsi.Components.Database.Interfaces.IDatabaseConnection.html"><span title="Twipsi\Components\Database\Interfaces\IDatabaseConnection">IDatabaseConnection</span></a> <var>$connection</var></span>, <span>string <var>$table</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		UserProvider Constructor.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>UserProvider Constructor.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getByID" id="_getByID">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.User.DatabaseUserProvider.html#50-63" title="Go to source code">getByID</a>(<span>int <var>$id</var></span>): <a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a>|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve a user by userID.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve a user by userID.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.User.Interfaces.IUserProvider.html#_getByID">						<code>Twipsi\Components\User\Interfaces\IUserProvider::getByID()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getByID">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getByToken" id="_getByToken">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.User.DatabaseUserProvider.html#65-81" title="Go to source code">getByToken</a>(<span>int <var>$id</var></span>, <span>string <var>$token</var></span>): <a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a>|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve a user by user token.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve a user by user token.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.User.Interfaces.IUserProvider.html#_getByToken">						<code>Twipsi\Components\User\Interfaces\IUserProvider::getByToken()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getByToken">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getByCredentials" id="_getByCredentials">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.User.DatabaseUserProvider.html#83-108" title="Go to source code">getByCredentials</a>(<span>array <var>$data</var></span>): <a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a>|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve a user by user credentials.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve a user by user credentials.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.User.Interfaces.IUserProvider.html#_getByCredentials">						<code>Twipsi\Components\User\Interfaces\IUserProvider::getByCredentials()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getByCredentials">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="updateUserToken" id="_updateUserToken">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.User.DatabaseUserProvider.html#110-125" title="Go to source code">updateUserToken</a>(<span><a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a> <var>$user</var></span>, <span>string <var>$token</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Update the (remember me) user token.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Update the (remember me) user token.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.User.Interfaces.IUserProvider.html#_updateUserToken">						<code>Twipsi\Components\User\Interfaces\IUserProvider::updateUserToken()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_updateUserToken">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validateUser" id="_validateUser">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.User.DatabaseUserProvider.html#127-137" title="Go to source code">validateUser</a>(<span><a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a> <var>$user</var></span>, <span>array <var>$data</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Validate a user based on provided credentials.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Validate a user based on provided credentials.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.User.Interfaces.IUserProvider.html#_validateUser">						<code>Twipsi\Components\User\Interfaces\IUserProvider::validateUser()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateUser">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="connection" id="$connection">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Database.Interfaces.IDatabaseConnection.html"><span title="Twipsi\Components\Database\Interfaces\IDatabaseConnection">IDatabaseConnection</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.User.DatabaseUserProvider.html#24-29" title="Go to source code">$connection</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$connection">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="table" id="$table">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.User.DatabaseUserProvider.html#31-36" title="Go to source code">$table</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$table">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

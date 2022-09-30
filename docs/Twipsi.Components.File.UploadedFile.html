@@ -1,0 +1,782 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\File\UploadedFile |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.Exceptions.html">Exceptions</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.File.DirectoryManager.html">
+							DirectoryManager
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.File.FileBag.html">
+							FileBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.File.FileItem.html">
+							FileItem
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.File.MimeType.html">
+							MimeType
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.File.UploadedFile.html">
+							UploadedFile
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.File.UploadedFileBag.html">
+							UploadedFileBag
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.File.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.File.UploadedFile.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.File.html">File</a>\<a href="Twipsi.Components.File.UploadedFile.html">UploadedFile</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+		<tr>
+			<th><code>extends</code></th>
+			<td>
+<code><a href="Twipsi.Components.File.FileItem.html"><span title="Twipsi\Components\File\FileItem">FileItem</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.File.FileItem.html"><span>Twipsi\Components\File\FileItem</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\File\UploadedFile</span></b>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.File.UploadedFile.html#19" title="Go to source code">Twipsi\Components\File\UploadedFile.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.File.UploadedFile.html#61-73" title="Go to source code">__construct</a>(<span>array <var>$data</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct our file item.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct our file item.</p>
+</div>
+
+
+
+
+		<h4>Overrides</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.File.FileItem.html#___construct">						<code>Twipsi\Components\File\FileItem::__construct()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getOriginalName" id="_getOriginalName">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.File.UploadedFile.html#75-81" title="Go to source code">getOriginalName</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the original name given.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the original name given.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getOriginalName">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getOriginalExtension" id="_getOriginalExtension">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.File.UploadedFile.html#83-90" title="Go to source code">getOriginalExtension</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the original type given from the name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the original type given from the name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getOriginalExtension">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getOriginalMimeType" id="_getOriginalMimeType">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.File.UploadedFile.html#92-98" title="Go to source code">getOriginalMimeType</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the files mime type.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the files mime type.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getOriginalMimeType">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getError" id="_getError">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.File.UploadedFile.html#100-106" title="Go to source code">getError</a>(): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get error.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get error.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getError">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getSize" id="_getSize">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.File.UploadedFile.html#108-114" title="Go to source code">getSize</a>(): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the file size.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the file size.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getSize">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isValid" id="_isValid">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.File.UploadedFile.html#116-122" title="Go to source code">isValid</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the uplaoded file is valid.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the uplaoded file is valid.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isValid">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="move" id="_move">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.File.UploadedFile.html#124-134" title="Go to source code">move</a>(<span>string <var>$location</var></span>, <span>string <var>$name</var> = <span class="php-kw">null</span></span>): <a href="Twipsi.Components.File.FileItem.html"><span title="Twipsi\Components\File\FileItem">FileItem</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Move the file to provided location.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Move the file to provided location.</p>
+</div>
+
+
+
+
+		<h4>Overrides</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.File.FileItem.html#_move">						<code>Twipsi\Components\File\FileItem::move()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_move">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getErrorMessage" id="_getErrorMessage">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.File.UploadedFile.html#136-147" title="Go to source code">getErrorMessage</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the error message provided.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the error message provided.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getErrorMessage">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getMaxFileSize" id="_getMaxFileSize">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.File.UploadedFile.html#149-158" title="Go to source code">getMaxFileSize</a>(): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the max upload file size
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the max upload file size</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getMaxFileSize">#</a>
+		</td>
+	</tr>
+		</table>
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods inherited from <a href="Twipsi.Components.File.FileItem.html"><span>Twipsi\Components\File\FileItem</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.File.FileItem.html#_replace">replace()</a>, <a href="Twipsi.Components.File.FileItem.html#_put">put()</a>, <a href="Twipsi.Components.File.FileItem.html#_push">push()</a>, <a href="Twipsi.Components.File.FileItem.html#_prepend">prepend()</a>, <a href="Twipsi.Components.File.FileItem.html#_getContent">getContent()</a>, <a href="Twipsi.Components.File.FileItem.html#_getLines">getLines()</a>, <a href="Twipsi.Components.File.FileItem.html#_extractContent">extractContent()</a>, <a href="Twipsi.Components.File.FileItem.html#_require">require()</a>, <a href="Twipsi.Components.File.FileItem.html#_include">include()</a>, <a href="Twipsi.Components.File.FileItem.html#_contains">contains()</a>, <a href="Twipsi.Components.File.FileItem.html#_delete">delete()</a>, <a href="Twipsi.Components.File.FileItem.html#_chmod">chmod()</a>, <a href="Twipsi.Components.File.FileItem.html#_copy">copy()</a>, <a href="Twipsi.Components.File.FileItem.html#_modified">modified()</a>, <a href="Twipsi.Components.File.FileItem.html#_prepareTargetFile">prepareTargetFile()</a>, <a href="Twipsi.Components.File.FileItem.html#_getBaseName">getBaseName()</a>, <a href="Twipsi.Components.File.FileItem.html#_getPath">getPath()</a>, <a href="Twipsi.Components.File.FileItem.html#_getMimeType">getMimeType()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+		<table class="table" id="constants">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Constants</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="ERROR_MSG" id="ERROR_MSG">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.File.UploadedFile.html#46-59" title="Go to source code">ERROR_MSG</a> = [
+	UPLOAD_ERR_OK =&gt; <span class="php-str">'There where no errors uploading file [%s]'</span>,
+	UPLOAD_ERR_INI_SIZE =&gt; <span class="php-str">'The file [%s] exceeds your upload_max_filesize ini directive (limit is %d KiB).'</span>,
+	UPLOAD_ERR_FORM_SIZE =&gt; <span class="php-str">'The file [%s] exceeds the upload limit defined in your form.'</span>,
+	UPLOAD_ERR_PARTIAL =&gt; <span class="php-str">'The file [%s] was only partially uploaded.'</span>,
+	UPLOAD_ERR_NO_FILE =&gt; <span class="php-str">'No file was uploaded.'</span>,
+	UPLOAD_ERR_CANT_WRITE =&gt; <span class="php-str">'The file [%s] could not be written on disk.'</span>,
+	UPLOAD_ERR_NO_TMP_DIR =&gt; <span class="php-str">'File could not be uploaded: missing temporary directory.'</span>,
+	UPLOAD_ERR_EXTENSION =&gt; <span class="php-str">'File upload was stopped by a PHP extension.'</span>,
+	<span class="php-str">'UNKNOWN'</span> =&gt; <span class="php-str">'The file [%s] was not uploaded due to an unknown error.'</span>,
+]</code>
+
+	<div class="expandable-collapsedView">
+		Possible error messages.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Possible error messages.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#ERROR_MSG">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="name" id="$name">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.File.UploadedFile.html#21-24" title="Go to source code">$name</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		The name of the file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The name of the file.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$name">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="type" id="$type">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.File.UploadedFile.html#26-29" title="Go to source code">$type</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		The type of the file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The type of the file.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$type">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="path" id="$path">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.File.UploadedFile.html#31-34" title="Go to source code">$path</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		The path to the file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The path to the file.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$path">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="error" id="$error">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.File.UploadedFile.html#36-39" title="Go to source code">$error</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		Errors on uploading.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Errors on uploading.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$error">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="size" id="$size">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.File.UploadedFile.html#41-44" title="Go to source code">$size</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		Size fo the file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Size fo the file.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$size">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

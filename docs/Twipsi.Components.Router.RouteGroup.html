@@ -1,0 +1,822 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Router\RouteGroup |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.Matcher.html">Matcher</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.Route.html">Route</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Router.ControllerFactory.html">
+							ControllerFactory
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Router.RouteBag.html">
+							RouteBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Router.RouteFactory.html">
+							RouteFactory
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Router.RouteGroup.html">
+							RouteGroup
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Router.Router.html">
+							Router
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Router.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Router.RouteGroup.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Router.html">Router</a>\<a href="Twipsi.Components.Router.RouteGroup.html">RouteGroup</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+			<tr><th><code>final</code></th></tr>
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Router.RouteGroup.html#17" title="Go to source code">Twipsi\Components\Router\RouteGroup.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="append" id="_append">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#26-41" title="Go to source code">append</a>(<span>array <var>$child</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Manage the stack in hierarchy.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Manage the stack in hierarchy.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_append">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="empty" id="_empty">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#43-51" title="Go to source code">empty</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the stack is empty.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the stack is empty.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_empty">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="last" id="_last">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#53-61" title="Go to source code">last</a>(): array|bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Return the lowest child in the stack.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return the lowest child in the stack.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_last">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="pop" id="_pop">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#63-71" title="Go to source code">pop</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Remove the lowest layer in the group stack.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Remove the lowest layer in the group stack.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_pop">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="addToTheStack" id="_addToTheStack">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#73-82" title="Go to source code">addToTheStack</a>(<span>array <var>$group</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Add a new group to the stack.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a new group to the stack.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_addToTheStack">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="convertShortKeys" id="_convertShortKeys">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#84-108" title="Go to source code">convertShortKeys</a>(<span>array <var>$options</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Rename the short group keys to original one.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Rename the short group keys to original one.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_convertShortKeys">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="mergeGroupAttributes" id="_mergeGroupAttributes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#110-132" title="Go to source code">mergeGroupAttributes</a>(<span>array <var>$child</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Merge lower options with higher ones in the stack.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Merge lower options with higher ones in the stack.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_mergeGroupAttributes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildName" id="_buildName">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#134-150" title="Go to source code">buildName</a>(<span>array <var>$child</var></span>, <span>array <var>$parent</var></span>): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Merge parent namespace with child's namespace.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Merge parent namespace with child's namespace.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildName">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildNamespace" id="_buildNamespace">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#152-174" title="Go to source code">buildNamespace</a>(<span>array <var>$child</var></span>, <span>array <var>$parent</var></span>): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Merge parent namespace with child's namespace.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Merge parent namespace with child's namespace.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildNamespace">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildPrefix" id="_buildPrefix">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#176-192" title="Go to source code">buildPrefix</a>(<span>array <var>$child</var></span>, <span>array <var>$parent</var></span>): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Merge parent prefix with child's prefix.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Merge parent prefix with child's prefix.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildPrefix">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildContext" id="_buildContext">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#194-210" title="Go to source code">buildContext</a>(<span>array <var>$child</var></span>, <span>array <var>$parent</var></span>): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Merge parent prefix with child's context.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Merge parent prefix with child's context.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildContext">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildScheme" id="_buildScheme">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#212-222" title="Go to source code">buildScheme</a>(<span>array <var>$child</var></span>, <span>array <var>$parent</var></span>): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the route scheme.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the route scheme.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildScheme">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildRegex" id="_buildRegex">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#224-234" title="Go to source code">buildRegex</a>(<span>array <var>$child</var></span>, <span>array <var>$parent</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Merge parent regexes with child's conditions.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Merge parent regexes with child's conditions.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildRegex">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildCondition" id="_buildCondition">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#236-246" title="Go to source code">buildCondition</a>(<span>array <var>$child</var></span>, <span>array <var>$parent</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Merge parent conditions with child's conditions.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Merge parent conditions with child's conditions.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildCondition">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildException" id="_buildException">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#248-258" title="Go to source code">buildException</a>(<span>array <var>$child</var></span>, <span>array <var>$parent</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Merge parent exceptions with child's exceptions.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Merge parent exceptions with child's exceptions.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildException">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildOptional" id="_buildOptional">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#260-270" title="Go to source code">buildOptional</a>(<span>array <var>$child</var></span>, <span>array <var>$parent</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Merge parent optionals with child's exceptions.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Merge parent optionals with child's exceptions.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildOptional">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildMiddlewares" id="_buildMiddlewares">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#272-282" title="Go to source code">buildMiddlewares</a>(<span>array <var>$child</var></span>, <span>array <var>$parent</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Merge parent middlewares with child's middlewares.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Merge parent middlewares with child's middlewares.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildMiddlewares">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="filterAttributes" id="_filterAttributes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.RouteGroup.html#284-297" title="Go to source code">filterAttributes</a>(<span>array <var>$parent</var></span>, <span>array <var>$child</var></span>, <span>string <var>$name</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Filter out null type attributes.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Filter out null type attributes.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_filterAttributes">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="stack" id="$stack">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.RouteGroup.html#19-24" title="Go to source code">$stack</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$stack">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

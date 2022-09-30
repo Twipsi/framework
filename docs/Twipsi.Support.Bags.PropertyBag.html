@@ -1,0 +1,570 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Support\Bags\PropertyBag |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.Applicables.html">Applicables</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Support.Bags.html">Bags</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.Traits.html">Traits</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Support.Bags.ArrayAccessibleBag.html">
+							ArrayAccessibleBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Support.Bags.ArrayBag.html">
+							ArrayBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Support.Bags.ObjectBag.html">
+							ObjectBag
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Support.Bags.PropertyBag.html">
+							PropertyBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Support.Bags.RecursiveArrayBag.html">
+							RecursiveArrayBag
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Support.Bags.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Support.Bags.PropertyBag.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Support.html">Support</a>\<a href="namespace-Twipsi.Support.Bags.html">Bags</a>\<a href="Twipsi.Support.Bags.PropertyBag.html">PropertyBag</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Support\Bags\PropertyBag</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Model.ModelContainer.html"><span>Twipsi\Components\Model\ModelContainer</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Model.BaseModel.html"><span>Twipsi\Components\Model\BaseModel</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Model.Model.html"><span>Twipsi\Components\Model\Model</span></a>
+
+		implements
+			<a href="Twipsi.Components.Model.Interfaces.ModelInterface.html"><span title="Twipsi\Components\Model\Interfaces\ModelInterface">ModelInterface</span></a>
+
+		uses
+			<a href="Twipsi.Components.Model.HandlesQueryBuilder.html"><span title="Twipsi\Components\Model\HandlesQueryBuilder">HandlesQueryBuilder</span></a>, 
+			<a href="Twipsi.Components.Model.HandlesRelations.html"><span title="Twipsi\Components\Model\HandlesRelations">HandlesRelations</span></a>
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Bridge.User.ModelUser.html"><span>Twipsi\Bridge\User\ModelUser</span></a>
+
+		implements
+			<a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a>, 
+			<a href="Twipsi.Components.User.Interfaces.IAuthorizable.html"><span title="Twipsi\Components\User\Interfaces\IAuthorizable">IAuthorizable</span></a>, 
+			<a href="Twipsi.Components.User.Interfaces.IResetable.html"><span title="Twipsi\Components\User\Interfaces\IResetable">IResetable</span></a>, 
+			<a href="Twipsi.Components.User.Interfaces.IVerifiable.html"><span title="Twipsi\Components\User\Interfaces\IVerifiable">IVerifiable</span></a>, 
+			<a href="Twipsi.Components.User.Interfaces.IRefreshable.html"><span title="Twipsi\Components\User\Interfaces\IRefreshable">IRefreshable</span></a>, 
+			<a href="Twipsi.Components.User.Interfaces.INotifiable.html"><span title="Twipsi\Components\User\Interfaces\INotifiable">INotifiable</span></a>
+
+		uses
+			<a href="Twipsi.Components.User.Authenticatable.html"><span title="Twipsi\Components\User\Authenticatable">Authenticatable</span></a>, 
+			<a href="Twipsi.Components.User.Authorizable.html"><span title="Twipsi\Components\User\Authorizable">Authorizable</span></a>, 
+			<a href="Twipsi.Components.User.Resetable.html"><span title="Twipsi\Components\User\Resetable">Resetable</span></a>, 
+			<a href="Twipsi.Components.User.Verifiable.html"><span title="Twipsi\Components\User\Verifiable">Verifiable</span></a>, 
+			<a href="Twipsi.Components.User.Refreshable.html"><span title="Twipsi\Components\User\Refreshable">Refreshable</span></a>, 
+			<a href="Twipsi.Components.User.Notifiable.html"><span title="Twipsi\Components\User\Notifiable">Notifiable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Notification.DatabaseNotification.html"><span>Twipsi\Components\Notification\DatabaseNotification</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Support.Bags.PropertyBag.html#19" title="Go to source code">Twipsi\Support\Bags\PropertyBag.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.PropertyBag.html#21-34" title="Go to source code">__construct</a>(<span>array <var>$properties</var> = []</span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct our property storage.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct our property storage.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Model.Model.html#___construct">						<code>Twipsi\Components\Model\Model::__construct()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="all" id="_all">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.PropertyBag.html#36-56" title="Go to source code">all</a>(<span>string ...<var>$exceptions</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return all the properties excluding exceptions.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return all the properties excluding exceptions.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_all">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="selected" id="_selected">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.PropertyBag.html#58-77" title="Go to source code">selected</a>(<span>string ...<var>$keys</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return all the properties with the selection key in one array
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return all the properties with the selection key in one array</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_selected">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="replace" id="_replace">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.PropertyBag.html#79-94" title="Go to source code">replace</a>(<span>array <var>$properties</var></span>): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Replace current properties with another.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Replace current properties with another.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_replace">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="keys" id="_keys">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.PropertyBag.html#96-112" title="Go to source code">keys</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return all property names in the class.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return all property names in the class.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_keys">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="set" id="_set">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.PropertyBag.html#114-126" title="Go to source code">set</a>(<span>string <var>$key</var></span>, <span>mixed <var>$value</var></span>): static</code>
+
+
+	<div class="expandable-collapsedView">
+		Set a parameter into class property.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set a parameter into class property.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_set">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="merge" id="_merge">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.PropertyBag.html#128-142" title="Go to source code">merge</a>(<span>array <var>$data</var></span>): static</code>
+
+
+	<div class="expandable-collapsedView">
+		Set multiple properties and values.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set multiple properties and values.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_merge">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="get" id="_get">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.PropertyBag.html#144-154" title="Go to source code">get</a>(<span>string <var>$property</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Get a property.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get a property.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_get">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="has" id="_has">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.PropertyBag.html#156-166" title="Go to source code">has</a>(<span>string <var>$property</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the class has a property.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the class has a property.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_has">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="empty" id="_empty">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.PropertyBag.html#168-176" title="Go to source code">empty</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the bag is empty.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the bag is empty.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_empty">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="delete" id="_delete">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.PropertyBag.html#178-190" title="Go to source code">delete</a>(<span>string <var>$property</var></span>): static</code>
+
+
+	<div class="expandable-collapsedView">
+		Remove a property from the class.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Remove a property from the class.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_delete">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

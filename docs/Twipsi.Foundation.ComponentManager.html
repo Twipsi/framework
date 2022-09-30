@@ -1,0 +1,644 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Foundation\ComponentManager |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Application.html">Application</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Bootstrapers.html">Bootstrapers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.ComponentProviders.html">ComponentProviders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Middleware.html">Middleware</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Foundation.CommandLoader.html">
+							CommandLoader
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Foundation.ComponentManager.html">
+							ComponentManager
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.ComponentProvider.html">
+							ComponentProvider
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.ConfigRegistry.html">
+							ConfigRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.DotEnv.html">
+							DotEnv
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Env.html">
+							Env
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.ExceptionHandler.html">
+							ExceptionHandler
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Kernel.html">
+							Kernel
+						</a>
+					</li>
+			</ul>
+		</div>
+
+		<div class="menu-section">
+			<h3>Interfaces</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Foundation.DeferredComponentProvider.html">
+							DeferredComponentProvider
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Foundation.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Foundation.ComponentManager.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Foundation.html">Foundation</a>\<a href="Twipsi.Foundation.ComponentManager.html">ComponentManager</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+			<tr><th><code>abstract</code></th></tr>
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Foundation\ComponentManager</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Database.DatabaseManager.html"><span>Twipsi\Components\Database\DatabaseManager</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Mailer.MailManager.html"><span>Twipsi\Components\Mailer\MailManager</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Foundation.ComponentManager.html#18" title="Go to source code">Twipsi\Foundation\ComponentManager.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.ComponentManager.html#41-46" title="Go to source code">__construct</a>(<span><a href="Twipsi.Foundation.Application.Application.html"><span title="Twipsi\Foundation\Application\Application">Application</span></a> <var>$app</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct component manager.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct component manager.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="driver" id="_driver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.ComponentManager.html#48-65" title="Go to source code">driver</a>(<span>string|null <var>$driver</var> = <span class="php-kw">null</span></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Returns the current driver from the container.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Returns the current driver from the container.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_driver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resolveCustomDriver" id="_resolveCustomDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.ComponentManager.html#67-82" title="Go to source code">resolveCustomDriver</a>(<span>string <var>$driver</var></span>, <span>mixed ...<var>$args</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Resolve custom set driver resolvers.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Resolve custom set driver resolvers.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resolveCustomDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="forget" id="_forget">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.ComponentManager.html#84-94" title="Go to source code">forget</a>(<span>string <var>$driver</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Forget an already resolved driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Forget an already resolved driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_forget">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="has" id="_has">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.ComponentManager.html#96-106" title="Go to source code">has</a>(<span>string <var>$driver</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if we have a resolved driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if we have a resolved driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_has">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="extend" id="_extend">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.ComponentManager.html#108-119" title="Go to source code">extend</a>(<span>string <var>$driver</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Add a custom resolver to a driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a custom resolver to a driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_extend">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setDefaultDriver" id="_setDefaultDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.ComponentManager.html#121-131" title="Go to source code">setDefaultDriver</a>(<span>string <var>$driver</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set a custom default driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set a custom default driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setDefaultDriver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__call" id="___call">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.ComponentManager.html#133-144" title="Go to source code">__call</a>(<span>string <var>$method</var></span>, <span>array&lt;int, mixed&gt; <var>$parameters</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Forward calls to the actual driver if needed.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Forward calls to the actual driver if needed.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___call">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resolve" id="_resolve">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					abstract
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.ComponentManager.html#146-153" title="Go to source code">resolve</a>(<span>string <var>$driver</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Resolves the requested driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Resolves the requested driver.</p>
+</div>
+
+
+
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Database.DatabaseManager.html#_resolve">						<code>Twipsi\Components\Database\DatabaseManager::resolve()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Mailer.MailManager.html#_resolve">						<code>Twipsi\Components\Mailer\MailManager::resolve()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resolve">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getDefaultDriver" id="_getDefaultDriver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					abstract
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.ComponentManager.html#155-160" title="Go to source code">getDefaultDriver</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Gets the default driver set that should be used.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Gets the default driver set that should be used.</p>
+</div>
+
+
+
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Database.DatabaseManager.html#_getDefaultDriver">						<code>Twipsi\Components\Database\DatabaseManager::getDefaultDriver()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Mailer.MailManager.html#_getDefaultDriver">						<code>Twipsi\Components\Mailer\MailManager::getDefaultDriver()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getDefaultDriver">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="drivers" id="$drivers">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array&lt;string, object&gt;</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.ComponentManager.html#20-25" title="Go to source code">$drivers</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$drivers">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="default" id="$default">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.ComponentManager.html#27-32" title="Go to source code">$default</a></var> = <span class="php-kw">null</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$default">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="customResolvers" id="$customResolvers">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array&lt;string, <a href="Closure.html"><span title="Closure">Closure</span></a>&gt;</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.ComponentManager.html#34-39" title="Go to source code">$customResolvers</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$customResolvers">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="app" id="$app">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Foundation.Application.Application.html"><span title="Twipsi\Foundation\Application\Application">Application</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.ComponentManager.html#46" title="Go to source code">$app</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$app">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

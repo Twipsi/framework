@@ -1,0 +1,1390 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Model\ModelQueryFactory |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.Interfaces.html">Interfaces</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Model.BaseModel.html">
+							BaseModel
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Model.Model.html">
+							Model
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Model.ModelCollection.html">
+							ModelCollection
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Model.ModelContainer.html">
+							ModelContainer
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Model.ModelQueryFactory.html">
+							ModelQueryFactory
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Model.HandlesQueryBuilder.html">
+							HandlesQueryBuilder
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Model.HandlesRelations.html">
+							HandlesRelations
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Model.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Model.ModelQueryFactory.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Model.html">Model</a>\<a href="Twipsi.Components.Model.ModelQueryFactory.html">ModelQueryFactory</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Model.ModelQueryFactory.html#16" title="Go to source code">Twipsi\Components\Model\ModelQueryFactory.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#46-54" title="Go to source code">__construct</a>(<span><a href="Twipsi.Components.Database.Interfaces.IDatabaseConnection.html"><span title="Twipsi\Components\Database\Interfaces\IDatabaseConnection">IDatabaseConnection</span></a> <var>$connection</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct Model query factory.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct Model query factory.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="queryBuilder" id="_queryBuilder">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#56-64" title="Go to source code">queryBuilder</a>(): <a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a>|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Return the database query builder.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return the database query builder.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_queryBuilder">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="model" id="_model">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#66-80" title="Go to source code">model</a>(<span><a href="Twipsi.Components.Model.Model.html"><span title="Twipsi\Components\Model\Model">Model</span></a> <var>$model</var></span>): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the model in hand.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the model in hand.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_model">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="filters" id="_filters">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#82-93" title="Go to source code">filters</a>(<span>array <var>$filters</var></span>): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Set global query filters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set global query filters.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_filters">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="withFilters" id="_withFilters">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#95-106" title="Go to source code">withFilters</a>(<span>array <var>$filter</var></span>): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Set a global query filter.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set a global query filter.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_withFilters">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="openTable" id="_openTable">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#108-119" title="Go to source code">openTable</a>(<span>string <var>$table</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Open connection to the table.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Open connection to the table.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_openTable">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="modelize" id="_modelize">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#121-137" title="Go to source code">modelize</a>(<span>array <var>$models</var></span>): <a href="Twipsi.Components.Model.ModelCollection.html"><span title="Twipsi\Components\Model\ModelCollection">ModelCollection</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a model collection from an array of results.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a model collection from an array of results.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Model.Exceptions.ModelPropertyException.html"><span>Twipsi\Components\Model\Exceptions\ModelPropertyException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_modelize">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="wherePrimary" id="_wherePrimary">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#139-159" title="Go to source code">wherePrimary</a>(<span><a href="Twipsi.Components.Model.Model.html"><span title="Twipsi\Components\Model\Model">Model</span></a>|array|int|string <var>$id</var></span>): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Resolve the primary key column and value,
+then set the where clause on the query builder.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Resolve the primary key column and value,
+then set the where clause on the query builder.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_wherePrimary">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="wherePrimaryNot" id="_wherePrimaryNot">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#161-181" title="Go to source code">wherePrimaryNot</a>(<span><a href="Twipsi.Components.Model.Model.html"><span title="Twipsi\Components\Model\Model">Model</span></a>|array|int|string <var>$id</var></span>): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Resolve the primary key column and value,
+then set the !where clause on the query builder.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Resolve the primary key column and value,
+then set the !where clause on the query builder.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_wherePrimaryNot">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="where" id="_where">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#183-204" title="Go to source code">where</a>(
+	<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a>|<a href="Twipsi.Components.Database.Language.Expression.html"><span title="Twipsi\Components\Database\Language\Expression">Expression</span></a> <var>$column</var></span>,
+	<span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>,
+	<span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>,
+	<span>string <var>$condition</var> = <span class="php-str">'and'</span></span>,
+): <b><span class="active" title="Twipsi\Components\Model\ModelQueryFactory">ModelQueryFactory</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Add a where clause.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a where clause.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_where">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhere" id="_orWhere">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#206-218" title="Go to source code">orWhere</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$column</var></span>, <span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>, <span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Model\ModelQueryFactory">ModelQueryFactory</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Add a where clause with condition (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a where clause with condition (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhere">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="whereNot" id="_whereNot">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#220-233" title="Go to source code">whereNot</a>(
+	<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$column</var></span>,
+	<span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>,
+	<span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>,
+	<span>string <var>$condition</var> = <span class="php-str">'and'</span></span>,
+): <b><span class="active" title="Twipsi\Components\Model\ModelQueryFactory">ModelQueryFactory</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where clause with NOT condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where clause with NOT condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_whereNot">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orWhereNot" id="_orWhereNot">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#235-247" title="Go to source code">orWhereNot</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$column</var></span>, <span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>, <span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Model\ModelQueryFactory">ModelQueryFactory</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Create where clause with NOT condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create where clause with NOT condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orWhereNot">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="newest" id="_newest">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#249-263" title="Go to source code">newest</a>(<span>string|<a href="Twipsi.Components.Database.Language.Expression.html"><span title="Twipsi\Components\Database\Language\Expression">Expression</span></a>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a>|null <var>$column</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Model\ModelQueryFactory">ModelQueryFactory</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Automatically order for the newest model.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Automatically order for the newest model.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_newest">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="oldest" id="_oldest">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#265-279" title="Go to source code">oldest</a>(<span>string|<a href="Twipsi.Components.Database.Language.Expression.html"><span title="Twipsi\Components\Database\Language\Expression">Expression</span></a>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a>|null <var>$column</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Model\ModelQueryFactory">ModelQueryFactory</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Automatically order for the oldest model.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Automatically order for the oldest model.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_oldest">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="find" id="_find">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#281-294" title="Go to source code">find</a>(<span>int|string <var>$id</var></span>, <span>string ...<var>$columns</var></span>): <a href="Twipsi.Components.Model.Model.html"><span title="Twipsi\Components\Model\Model">Model</span></a>|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Find a model based on the primary key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Find a model based on the primary key.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_find">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="findMany" id="_findMany">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#296-309" title="Go to source code">findMany</a>(<span>array <var>$ids</var></span>, <span>string ...<var>$columns</var></span>): <a href="Twipsi.Components.Model.ModelCollection.html"><span title="Twipsi\Components\Model\ModelCollection">ModelCollection</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Find many models based on the primary key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Find many models based on the primary key.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_findMany">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="findOrFail" id="_findOrFail">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#311-336" title="Go to source code">findOrFail</a>(<span>int|string|array <var>$ids</var></span>, <span>string ...<var>$columns</var></span>): <a href="Twipsi.Components.Model.ModelCollection.html"><span title="Twipsi\Components\Model\ModelCollection">ModelCollection</span></a>|<a href="Twipsi.Components.Model.Model.html"><span title="Twipsi\Components\Model\Model">Model</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Find models based on the primary key or throw an exception.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Find models based on the primary key or throw an exception.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_findOrFail">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="findOrNew" id="_findOrNew">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#338-354" title="Go to source code">findOrNew</a>(<span>int|string <var>$id</var></span>, <span>string ...<var>$columns</var></span>): <a href="Twipsi.Components.Model.Model.html"><span title="Twipsi\Components\Model\Model">Model</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Find models based on the primary key or return a new model.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Find models based on the primary key or return a new model.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a>|<a href="Twipsi.Components.Model.Exceptions.ModelPropertyException.html"><span>Twipsi\Components\Model\Exceptions\ModelPropertyException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_findOrNew">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="first" id="_first">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#356-371" title="Go to source code">first</a>(<span>string ...<var>$columns</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the first model in the result set.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the first model in the result set.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a>|<a href="Twipsi.Components.Model.Exceptions.ModelPropertyException.html"><span>Twipsi\Components\Model\Exceptions\ModelPropertyException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_first">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="get" id="_get">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#373-387" title="Go to source code">get</a>(<span>string ...<var>$columns</var></span>): <a href="Twipsi.Components.Model.ModelCollection.html"><span title="Twipsi\Components\Model\ModelCollection">ModelCollection</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get the results in a model collection.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the results in a model collection.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_get">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getModels" id="_getModels">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#389-403" title="Go to source code">getModels</a>(<span>string ...<var>$columns</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the result as an array of built models.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the result as an array of built models.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Components.Model.Exceptions.ModelPropertyException.html"><span>Twipsi\Components\Model\Exceptions\ModelPropertyException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getModels">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getCollection" id="_getCollection">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#405-419" title="Go to source code">getCollection</a>(<span>string ...<var>$columns</var></span>): <a href="Twipsi.Components.Model.ModelCollection.html"><span title="Twipsi\Components\Model\ModelCollection">ModelCollection</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get the result as a collection of built models.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the result as a collection of built models.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Components.Model.Exceptions.ModelPropertyException.html"><span>Twipsi\Components\Model\Exceptions\ModelPropertyException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getCollection">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="applyFilters" id="_applyFilters">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#421-434" title="Go to source code">applyFilters</a>(): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Apply all the custom filters before query.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Apply all the custom filters before query.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_applyFilters">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="with" id="_with">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#438-443" title="Go to source code">with</a>(<span>string ...<var>$relations</var></span>): <b><span class="active" title="Twipsi\Components\Model\ModelQueryFactory">ModelQueryFactory</span></b></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_with">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="newModel" id="_newModel">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#445-455" title="Go to source code">newModel</a>(): <a href="Twipsi.Components.Model.Model.html"><span title="Twipsi\Components\Model\Model">Model</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a new model instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a new model instance.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Model.Exceptions.ModelPropertyException.html"><span>Twipsi\Components\Model\Exceptions\ModelPropertyException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_newModel">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__call" id="___call">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#457-472" title="Go to source code">__call</a>(<span>string <var>$method</var></span>, <span>array|null <var>$parameters</var> = <span class="php-kw">null</span></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Forward calls to the query builder.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Forward calls to the query builder.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___call">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="connection" id="$connection">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Database.Interfaces.IDatabaseConnection.html"><span title="Twipsi\Components\Database\Interfaces\IDatabaseConnection">IDatabaseConnection</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#18-23" title="Go to source code">$connection</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$connection">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="query" id="$query">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#25-30" title="Go to source code">$query</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$query">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="model" id="$model">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Model.Model.html"><span title="Twipsi\Components\Model\Model">Model</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#32-37" title="Go to source code">$model</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$model">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="filters" id="$filters">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.ModelQueryFactory.html#39-44" title="Go to source code">$filters</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$filters">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

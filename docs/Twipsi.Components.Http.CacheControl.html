@@ -1,0 +1,816 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Http\CacheControl |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.Middlewares.html">Middlewares</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.Response.html">Response</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li class="active">
+						<a href="Twipsi.Components.Http.CacheControl.html">
+							CacheControl
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HeaderBag.html">
+							HeaderBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HttpDevice.html">
+							HttpDevice
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HttpRequest.html">
+							HttpRequest
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.InputBag.html">
+							InputBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.RequestFactory.html">
+							RequestFactory
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Http.HandlesCookies.html">
+							HandlesCookies
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HandlesInput.html">
+							HandlesInput
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HandlesSession.html">
+							HandlesSession
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HandlesUser.html">
+							HandlesUser
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HandlesValidation.html">
+							HandlesValidation
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Http.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Http.CacheControl.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Http.html">Http</a>\<a href="Twipsi.Components.Http.CacheControl.html">CacheControl</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+		<tr>
+			<th><code>extends</code></th>
+			<td>
+<code><a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span title="Twipsi\Support\Bags\RecursiveArrayBag">RecursiveArrayBag</span></a></code>			</td>
+		</tr>
+		<tr>
+			<th><code>implements</code></th>
+			<td>
+<code><a href="Stringable.html"><span title="Stringable">Stringable</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Support.Bags.ArrayBag.html"><span>Twipsi\Support\Bags\ArrayBag</span></a>
+
+		implements
+			<a href="IteratorAggregate.html"><span title="IteratorAggregate">IteratorAggregate</span></a>, 
+			<a href="Countable.html"><span title="Countable">Countable</span></a>
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span>Twipsi\Support\Bags\RecursiveArrayBag</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Http\CacheControl</span></b>
+
+		implements
+			<a href="Stringable.html"><span title="Stringable">Stringable</span></a>
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Http.CacheControl.html#18" title="Go to source code">Twipsi\Components\Http\CacheControl.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#20-30" title="Go to source code">__construct</a>(<span>string <var>$header</var> = <span class="php-kw">null</span></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Cache directive constructor.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Cache directive constructor.</p>
+</div>
+
+
+
+
+		<h4>Overrides</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#___construct">						<code>Twipsi\Support\Bags\RecursiveArrayBag::__construct()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="extractCacheDirectives" id="_extractCacheDirectives">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#32-39" title="Go to source code">extractCacheDirectives</a>(<span>string <var>$header</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Extract cache controll directives.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Extract cache controll directives.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_extractCacheDirectives">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="private" id="_private">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#41-52" title="Go to source code">private</a>(): <b><span class="active" title="Twipsi\Components\Http\CacheControl">CacheControl</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set chache control to private.
+The private response directive indicates that the response can be stored
+only in a…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set chache control to private.
+The private response directive indicates that the response can be stored
+only in a private cache (e.g. local caches in browsers).</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_private">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="public" id="_public">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#54-66" title="Go to source code">public</a>(): <b><span class="active" title="Twipsi\Components\Http\CacheControl">CacheControl</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set chache control to public.
+Responses for requests with Authorization header fields must not be
+stored in a shared…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set chache control to public.
+Responses for requests with Authorization header fields must not be
+stored in a shared cache. But the public directive will cause such
+responses to be stored in a shared cache.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_public">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="store" id="_store">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#68-82" title="Go to source code">store</a>(<span>bool <var>$state</var> = <span class="php-kw">true</span></span>): <b><span class="active" title="Twipsi\Components\Http\CacheControl">CacheControl</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set cache control no-store.
+The no-store response directive indicates that any caches of any kind
+(private or shared)…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set cache control no-store.
+The no-store response directive indicates that any caches of any kind
+(private or shared) should not store this response.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_store">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="cache" id="_cache">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#84-99" title="Go to source code">cache</a>(<span>bool <var>$state</var> = <span class="php-kw">true</span></span>): <b><span class="active" title="Twipsi\Components\Http\CacheControl">CacheControl</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set cache control must-revalidate.
+The no-cache response directive indicates that the response can be stored in
+caches,…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set cache control must-revalidate.
+The no-cache response directive indicates that the response can be stored in
+caches, but must be validated with the origin server before each
+reuse — even when the cache is disconnected from the origin server.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_cache">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="revalidate" id="_revalidate">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#101-123" title="Go to source code">revalidate</a>(<span>bool <var>$state</var> = <span class="php-kw">true</span></span>): <b><span class="active" title="Twipsi\Components\Http\CacheControl">CacheControl</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set cache control must-revalidate.
+The must-revalidate response directive indicates that the response can be
+stored in…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set cache control must-revalidate.
+The must-revalidate response directive indicates that the response can be
+stored in caches and can be reused while fresh. Once it becomes stale,
+it must be validated with the origin server before reuse.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_revalidate">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="understand" id="_understand">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#125-142" title="Go to source code">understand</a>(<span>bool <var>$state</var> = <span class="php-kw">true</span></span>): <b><span class="active" title="Twipsi\Components\Http\CacheControl">CacheControl</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set cache control must-understand.
+The must-understand response directive indicates that a cache should store
+the…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set cache control must-understand.
+The must-understand response directive indicates that a cache should store
+the response only if it understands the requirements for caching based on status code.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_understand">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="transform" id="_transform">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#144-158" title="Go to source code">transform</a>(<span>bool <var>$state</var> = <span class="php-kw">true</span></span>): <b><span class="active" title="Twipsi\Components\Http\CacheControl">CacheControl</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set cache control no-transform.
+no-transform indicates that any intermediary (regardless of whether it implements a…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set cache control no-transform.
+no-transform indicates that any intermediary (regardless of whether it implements a cache)
+shouldn't transform the response contents.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_transform">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="immutable" id="_immutable">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#160-174" title="Go to source code">immutable</a>(<span>bool <var>$state</var> = <span class="php-kw">true</span></span>): <b><span class="active" title="Twipsi\Components\Http\CacheControl">CacheControl</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set cache control to immutable.
+The immutable response directive indicates that the response
+will not be updated while…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set cache control to immutable.
+The immutable response directive indicates that the response
+will not be updated while it's fresh.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_immutable">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="maxAge" id="_maxAge">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#176-186" title="Go to source code">maxAge</a>(<span>int <var>$seconds</var></span>): <b><span class="active" title="Twipsi\Components\Http\CacheControl">CacheControl</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set cache control max-age.
+The max-age=N response directive indicates that the response remains fresh
+until N seconds…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set cache control max-age.
+The max-age=N response directive indicates that the response remains fresh
+until N seconds after the response is generated.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_maxAge">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="sharedMaxAge" id="_sharedMaxAge">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#188-200" title="Go to source code">sharedMaxAge</a>(<span>int <var>$seconds</var></span>): <b><span class="active" title="Twipsi\Components\Http\CacheControl">CacheControl</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set cache control s-maxage.
+The s-maxage response directive also indicates how long the response is
+fresh for (similar…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set cache control s-maxage.
+The s-maxage response directive also indicates how long the response is
+fresh for (similar to max-age) — but it is specific to shared caches,
+and they will ignore max-age when it is present.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_sharedMaxAge">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__toString" id="___toString">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.CacheControl.html#202-218" title="Go to source code">__toString</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Return cache controll compiled as a string.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return cache controll compiled as a string.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Stringable.html#___toString">						<code>Stringable::__toString()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___toString">#</a>
+		</td>
+	</tr>
+		</table>
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods inherited from <a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span>Twipsi\Support\Bags\RecursiveArrayBag</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_all">all()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_selected">selected()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_recursiveMerge">recursiveMerge()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_keys">keys()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_set">set()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_push">push()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_gather">gather()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_implode">implode()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_get">get()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_pull">pull()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_has">has()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_find">find()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_search">search()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_contains">contains()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_delete">delete()</a></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods inherited from <a href="Twipsi.Support.Bags.ArrayBag.html"><span>Twipsi\Support\Bags\ArrayBag</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Support.Bags.ArrayBag.html#___invoke">__invoke()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_filter">filter()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_replace">replace()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_merge">merge()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_add">add()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_shift">shift()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_empty">empty()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_getIterator">getIterator()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_count">count()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_first">first()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_last">last()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties inherited from <a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span>Twipsi\Support\Bags\RecursiveArrayBag</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Support.Bags.RecursiveArrayBag.html#$parameters">$parameters</a></var></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

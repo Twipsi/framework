@@ -1,0 +1,2343 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Http\HttpRequest |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.Middlewares.html">Middlewares</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.Response.html">Response</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Http.CacheControl.html">
+							CacheControl
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HeaderBag.html">
+							HeaderBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HttpDevice.html">
+							HttpDevice
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Http.HttpRequest.html">
+							HttpRequest
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.InputBag.html">
+							InputBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.RequestFactory.html">
+							RequestFactory
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Http.HandlesCookies.html">
+							HandlesCookies
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HandlesInput.html">
+							HandlesInput
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HandlesSession.html">
+							HandlesSession
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HandlesUser.html">
+							HandlesUser
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.HandlesValidation.html">
+							HandlesValidation
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Http.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Http.HttpRequest.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Http.html">Http</a>\<a href="Twipsi.Components.Http.HttpRequest.html">HttpRequest</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+		<tr>
+			<th><code>uses</code></th>
+			<td>
+<code><a href="Twipsi.Components.Http.HandlesInput.html"><span title="Twipsi\Components\Http\HandlesInput">HandlesInput</span></a>, <a href="Twipsi.Components.Http.HandlesSession.html"><span title="Twipsi\Components\Http\HandlesSession">HandlesSession</span></a>, <a href="Twipsi.Components.Http.HandlesCookies.html"><span title="Twipsi\Components\Http\HandlesCookies">HandlesCookies</span></a>, <a href="Twipsi.Components.Http.HandlesUser.html"><span title="Twipsi\Components\Http\HandlesUser">HandlesUser</span></a>, <a href="Twipsi.Components.Http.HandlesValidation.html"><span title="Twipsi\Components\Http\HandlesValidation">HandlesValidation</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Http\HttpRequest</span></b>
+
+
+		uses
+			<a href="Twipsi.Components.Http.HandlesInput.html"><span title="Twipsi\Components\Http\HandlesInput">HandlesInput</span></a>, 
+			<a href="Twipsi.Components.Http.HandlesSession.html"><span title="Twipsi\Components\Http\HandlesSession">HandlesSession</span></a>, 
+			<a href="Twipsi.Components.Http.HandlesCookies.html"><span title="Twipsi\Components\Http\HandlesCookies">HandlesCookies</span></a>, 
+			<a href="Twipsi.Components.Http.HandlesUser.html"><span title="Twipsi\Components\Http\HandlesUser">HandlesUser</span></a>, 
+			<a href="Twipsi.Components.Http.HandlesValidation.html"><span title="Twipsi\Components\Http\HandlesValidation">HandlesValidation</span></a>
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Http.RequestFactory.html"><span>Twipsi\Components\Http\RequestFactory</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Http.HttpRequest.html#29" title="Go to source code">Twipsi\Components\Http\HttpRequest.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#172-198" title="Go to source code">__construct</a>(
+	<span>array|null <var>$headers</var> = []</span>,
+	<span>array|null <var>$get</var> = []</span>,
+	<span>array|null <var>$post</var> = []</span>,
+	<span>array|null <var>$files</var> = []</span>,
+	<span>array|null <var>$cookies</var> = []</span>,
+	<span>array <var>$properties</var> = []</span>,
+)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct a new HttpRequest.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct a new HttpRequest.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getHost" id="_getHost">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#200-226" title="Go to source code">getHost</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve the host name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve the host name.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Http.Exceptions.MaliciousRequestException.html"><span>Twipsi\Components\Http\Exceptions\MaliciousRequestException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getHost">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setMethod" id="_setMethod">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#228-241" title="Go to source code">setMethod</a>(<span>string <var>$method</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the request method
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the request method</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Http.Exceptions.NotSupportedException.html"><span>Twipsi\Components\Http\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setMethod">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getMethod" id="_getMethod">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#243-273" title="Go to source code">getMethod</a>(<span>bool <var>$strict</var> = <span class="php-kw">false</span></span>): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve the request method
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve the request method</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Http.Exceptions.NotSupportedException.html"><span>Twipsi\Components\Http\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getMethod">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setUrl" id="_setUrl">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#275-291" title="Go to source code">setUrl</a>(<span><a href="Twipsi.Components.Url.UrlItem.html"><span title="Twipsi\Components\Url\UrlItem">UrlItem</span></a> <var>$url</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set UrlItem object and update params.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set UrlItem object and update params.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setUrl">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="url" id="_url">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#293-299" title="Go to source code">url</a>(): <a href="Twipsi.Components.Url.UrlItem.html"><span title="Twipsi\Components\Url\UrlItem">UrlItem</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve the Url object.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve the Url object.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_url">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setLocale" id="_setLocale">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#301-323" title="Go to source code">setLocale</a>(<span>string <var>$locale</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set Locale.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set Locale.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="InvalidArgumentException.html"><span>InvalidArgumentException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setLocale">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getLocale" id="_getLocale">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#325-335" title="Go to source code">getLocale</a>(<span>string <var>$locale</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve the locale.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve the locale.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getLocale">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getContentType" id="_getContentType">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#337-355" title="Go to source code">getContentType</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve the content type.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve the content type.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Http.Exceptions.NotSupportedException.html"><span>Twipsi\Components\Http\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getContentType">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getSupportedMimeTypes" id="_getSupportedMimeTypes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#357-367" title="Go to source code">getSupportedMimeTypes</a>(<span>string <var>$format</var></span>, <span>bool <var>$first</var> = <span class="php-kw">false</span></span>): array|string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve the supported mime type list for a format.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve the supported mime type list for a format.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getSupportedMimeTypes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getSupportedMimeTypeFormat" id="_getSupportedMimeTypeFormat">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#369-387" title="Go to source code">getSupportedMimeTypeFormat</a>(<span>string <var>$mimeType</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve the format name that supports the mime type.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve the format name that supports the mime type.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Http.Exceptions.NotSupportedException.html"><span>Twipsi\Components\Http\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getSupportedMimeTypeFormat">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isMimeTypeSupported" id="_isMimeTypeSupported">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#389-405" title="Go to source code">isMimeTypeSupported</a>(<span>string <var>$mimeType</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a mime type is supported.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a mime type is supported.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isMimeTypeSupported">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAcceptedContentTypes" id="_getAcceptedContentTypes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#407-423" title="Go to source code">getAcceptedContentTypes</a>(<span>bool <var>$first</var> = <span class="php-kw">false</span></span>): array|string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve accepted content types.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve accepted content types.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAcceptedContentTypes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isContentTypeAccepted" id="_isContentTypeAccepted">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#425-435" title="Go to source code">isContentTypeAccepted</a>(<span>string <var>$mimetype</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a content type is accepted.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a content type is accepted.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isContentTypeAccepted">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAcceptedEncodings" id="_getAcceptedEncodings">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#437-453" title="Go to source code">getAcceptedEncodings</a>(<span>bool <var>$first</var> = <span class="php-kw">false</span></span>): array|string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve accepted encodings.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve accepted encodings.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAcceptedEncodings">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isEncodingAccepted" id="_isEncodingAccepted">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#455-465" title="Go to source code">isEncodingAccepted</a>(<span>string <var>$encoding</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a encoding is accepted.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a encoding is accepted.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isEncodingAccepted">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAcceptedCharsets" id="_getAcceptedCharsets">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#467-483" title="Go to source code">getAcceptedCharsets</a>(<span>bool <var>$first</var> = <span class="php-kw">false</span></span>): array|string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve accepted charset.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve accepted charset.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAcceptedCharsets">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isCharsetAccepted" id="_isCharsetAccepted">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#485-495" title="Go to source code">isCharsetAccepted</a>(<span>string <var>$charset</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a charset is accepted.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a charset is accepted.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isCharsetAccepted">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAcceptedLanguages" id="_getAcceptedLanguages">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#497-513" title="Go to source code">getAcceptedLanguages</a>(<span>bool <var>$first</var> = <span class="php-kw">false</span></span>): array|string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve accepted language.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve accepted language.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAcceptedLanguages">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isLanguageAccepted" id="_isLanguageAccepted">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#515-525" title="Go to source code">isLanguageAccepted</a>(<span>string <var>$language</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a language is accepted.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a language is accepted.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isLanguageAccepted">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isRequestSecure" id="_isRequestSecure">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#527-539" title="Go to source code">isRequestSecure</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the request is secure.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the request is secure.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isRequestSecure">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isRequestAjax" id="_isRequestAjax">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#541-547" title="Go to source code">isRequestAjax</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the request is ajax.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the request is ajax.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isRequestAjax">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isRequestMethod" id="_isRequestMethod">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#549-555" title="Go to source code">isRequestMethod</a>(<span>string <var>$method</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a method is the request method.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a method is the request method.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isRequestMethod">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isRequestMethodSafe" id="_isRequestMethodSafe">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#557-563" title="Go to source code">isRequestMethodSafe</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the request method is safe type method.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the request method is safe type method.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isRequestMethodSafe">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isRequestMethodData" id="_isRequestMethodData">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#565-571" title="Go to source code">isRequestMethodData</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the request method is type with data.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the request method is type with data.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isRequestMethodData">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isRequestMethodRead" id="_isRequestMethodRead">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#573-579" title="Go to source code">isRequestMethodRead</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the request method is read method
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the request method is read method</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isRequestMethodRead">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getReferer" id="_getReferer">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#581-591" title="Go to source code">getReferer</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve request referer or remote address.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve request referer or remote address.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getReferer">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getUserAgent" id="_getUserAgent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#593-599" title="Go to source code">getUserAgent</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve request user agent.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve request user agent.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getUserAgent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getProtocol" id="_getProtocol">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#601-607" title="Go to source code">getProtocol</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve request protocol version.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve request protocol version.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getProtocol">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getScriptName" id="_getScriptName">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#609-615" title="Go to source code">getScriptName</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve request script name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve request script name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getScriptName">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getUniqueID" id="_getUniqueID">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#617-623" title="Go to source code">getUniqueID</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve request unique id.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve request unique id.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getUniqueID">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getDocumentRoot" id="_getDocumentRoot">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#625-635" title="Go to source code">getDocumentRoot</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve request document root.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve request document root.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getDocumentRoot">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getContent" id="_getContent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#637-652" title="Go to source code">getContent</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve request content.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve request content.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getContent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getPort" id="_getPort">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#654-668" title="Go to source code">getPort</a>(): ?int</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve request port with url port priority.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve request port with url port priority.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getPort">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getUser" id="_getUser">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#670-680" title="Go to source code">getUser</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve request username with url username priority.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve request username with url username priority.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getUser">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getPassword" id="_getPassword">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#682-692" title="Go to source code">getPassword</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve request password with url password priority.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve request password with url password priority.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getPassword">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getClientIp" id="_getClientIp">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#694-706" title="Go to source code">getClientIp</a>(<span>bool <var>$strict</var> = <span class="php-kw">true</span></span>): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve request IP address.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve request IP address.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getClientIp">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="compile" id="_compile">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.HttpRequest.html#708-714" title="Go to source code">compile</a>(): <b><span class="active" title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Compile the request object.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Compile the request object.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_compile">#</a>
+		</td>
+	</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Components.Http.HandlesInput.html"><span>Twipsi\Components\Http\HandlesInput</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Http.HandlesInput.html#_setRequestData">setRequestData()</a>, <a href="Twipsi.Components.Http.HandlesInput.html#_setQueryData">setQueryData()</a>, <a href="Twipsi.Components.Http.HandlesInput.html#_setFileData">setFileData()</a>, <a href="Twipsi.Components.Http.HandlesInput.html#_getData">getData()</a>, <a href="Twipsi.Components.Http.HandlesInput.html#_getInputSource">getInputSource()</a>, <a href="Twipsi.Components.Http.HandlesInput.html#_input">input()</a>, <a href="Twipsi.Components.Http.HandlesInput.html#_bool">bool()</a>, <a href="Twipsi.Components.Http.HandlesInput.html#_isJson">isJson()</a></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Components.Http.HandlesSession.html"><span>Twipsi\Components\Http\HandlesSession</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Http.HandlesSession.html#_setSession">setSession()</a>, <a href="Twipsi.Components.Http.HandlesSession.html#_hasSession">hasSession()</a>, <a href="Twipsi.Components.Http.HandlesSession.html#_session">session()</a></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Components.Http.HandlesCookies.html"><span>Twipsi\Components\Http\HandlesCookies</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Http.HandlesCookies.html#_setCookies">setCookies()</a>, <a href="Twipsi.Components.Http.HandlesCookies.html#_cookies">cookies()</a></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Components.Http.HandlesUser.html"><span>Twipsi\Components\Http\HandlesUser</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Http.HandlesUser.html#_attachUser">attachUser()</a>, <a href="Twipsi.Components.Http.HandlesUser.html#_user">user()</a></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Components.Http.HandlesValidation.html"><span>Twipsi\Components\Http\HandlesValidation</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Http.HandlesValidation.html#_setValidator">setValidator()</a>, <a href="Twipsi.Components.Http.HandlesValidation.html#_validate">validate()</a>, <a href="Twipsi.Components.Http.HandlesValidation.html#_validator">validator()</a>, <a href="Twipsi.Components.Http.HandlesValidation.html#_loadFactory">loadFactory()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+		<table class="table" id="constants">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Constants</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="REQUEST_METHOD_HEAD" id="REQUEST_METHOD_HEAD">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#37" title="Go to source code">REQUEST_METHOD_HEAD</a> = <span class="php-str">'HEAD'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#REQUEST_METHOD_HEAD">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="REQUEST_METHOD_GET" id="REQUEST_METHOD_GET">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#38" title="Go to source code">REQUEST_METHOD_GET</a> = <span class="php-str">'GET'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#REQUEST_METHOD_GET">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="REQUEST_METHOD_POST" id="REQUEST_METHOD_POST">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#39" title="Go to source code">REQUEST_METHOD_POST</a> = <span class="php-str">'POST'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#REQUEST_METHOD_POST">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="REQUEST_METHOD_PUT" id="REQUEST_METHOD_PUT">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#40" title="Go to source code">REQUEST_METHOD_PUT</a> = <span class="php-str">'PUT'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#REQUEST_METHOD_PUT">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="REQUEST_METHOD_PATCH" id="REQUEST_METHOD_PATCH">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#41" title="Go to source code">REQUEST_METHOD_PATCH</a> = <span class="php-str">'PATCH'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#REQUEST_METHOD_PATCH">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="REQUEST_METHOD_DELETE" id="REQUEST_METHOD_DELETE">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#42" title="Go to source code">REQUEST_METHOD_DELETE</a> = <span class="php-str">'DELETE'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#REQUEST_METHOD_DELETE">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="REQUEST_METHOD_PURGE" id="REQUEST_METHOD_PURGE">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#43" title="Go to source code">REQUEST_METHOD_PURGE</a> = <span class="php-str">'PURGE'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#REQUEST_METHOD_PURGE">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="REQUEST_METHOD_OPTIONS" id="REQUEST_METHOD_OPTIONS">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#44" title="Go to source code">REQUEST_METHOD_OPTIONS</a> = <span class="php-str">'OPTIONS'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#REQUEST_METHOD_OPTIONS">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="REQUEST_METHOD_TRACE" id="REQUEST_METHOD_TRACE">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#45" title="Go to source code">REQUEST_METHOD_TRACE</a> = <span class="php-str">'TRACE'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#REQUEST_METHOD_TRACE">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="REQUEST_METHOD_CONNECT" id="REQUEST_METHOD_CONNECT">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#46" title="Go to source code">REQUEST_METHOD_CONNECT</a> = <span class="php-str">'CONNECT'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#REQUEST_METHOD_CONNECT">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="CONTENT_TYPE_HTML" id="CONTENT_TYPE_HTML">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#48" title="Go to source code">CONTENT_TYPE_HTML</a> = [<span class="php-str">'text/html'</span>, <span class="php-str">'application/xhtml+xml'</span>]</code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#CONTENT_TYPE_HTML">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="CONTENT_TYPE_TXT" id="CONTENT_TYPE_TXT">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#49" title="Go to source code">CONTENT_TYPE_TXT</a> = [<span class="php-str">'text/plain'</span>]</code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#CONTENT_TYPE_TXT">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="CONTENT_TYPE_CSS" id="CONTENT_TYPE_CSS">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#50" title="Go to source code">CONTENT_TYPE_CSS</a> = [<span class="php-str">'text/css'</span>]</code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#CONTENT_TYPE_CSS">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="CONTENT_TYPE_JS" id="CONTENT_TYPE_JS">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#51" title="Go to source code">CONTENT_TYPE_JS</a> = [<span class="php-str">'application/javascript'</span>, <span class="php-str">'application/x-javascript'</span>, <span class="php-str">'text/javascript'</span>]</code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#CONTENT_TYPE_JS">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="CONTENT_TYPE_JSON" id="CONTENT_TYPE_JSON">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#52" title="Go to source code">CONTENT_TYPE_JSON</a> = [<span class="php-str">'application/json'</span>, <span class="php-str">'application/x-json'</span>]</code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#CONTENT_TYPE_JSON">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="CONTENT_TYPE_XML" id="CONTENT_TYPE_XML">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#53" title="Go to source code">CONTENT_TYPE_XML</a> = [<span class="php-str">'text/xml'</span>, <span class="php-str">'application/xml'</span>, <span class="php-str">'application/x-xml'</span>]</code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#CONTENT_TYPE_XML">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="CONTENT_TYPE_FORM_DATA" id="CONTENT_TYPE_FORM_DATA">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#54" title="Go to source code">CONTENT_TYPE_FORM_DATA</a> = [<span class="php-str">'multipart/form-data'</span>]</code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#CONTENT_TYPE_FORM_DATA">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="CONTENT_TYPE_X_FORM_ENCODED" id="CONTENT_TYPE_X_FORM_ENCODED">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#55" title="Go to source code">CONTENT_TYPE_X_FORM_ENCODED</a> = [<span class="php-str">'application/x-www-form-urlencoded'</span>]</code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#CONTENT_TYPE_X_FORM_ENCODED">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="FORCE_METHOD_OVERRIDE_KEY" id="FORCE_METHOD_OVERRIDE_KEY">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#57" title="Go to source code">FORCE_METHOD_OVERRIDE_KEY</a> = <span class="php-str">'_method'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#FORCE_METHOD_OVERRIDE_KEY">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="DEFAULT_SYSTEM_LOCALE" id="DEFAULT_SYSTEM_LOCALE">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#58" title="Go to source code">DEFAULT_SYSTEM_LOCALE</a> = <span class="php-str">'en-US'</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#DEFAULT_SYSTEM_LOCALE">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="HTTPS_PORT" id="HTTPS_PORT">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#59" title="Go to source code">HTTPS_PORT</a> = <span class="php-num">443</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#HTTPS_PORT">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="HTTP_PORT" id="HTTP_PORT">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.HttpRequest.html#60" title="Go to source code">HTTP_PORT</a> = <span class="php-num">80</span></code>
+
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#HTTP_PORT">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="properties" id="$properties">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span title="Twipsi\Support\Bags\RecursiveArrayBag">RecursiveArrayBag</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.HttpRequest.html#122-125" title="Go to source code">$properties</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		Additional request data.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Additional request data.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$properties">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="headers" id="$headers">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Http.HeaderBag.html"><span title="Twipsi\Components\Http\HeaderBag">HeaderBag</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.HttpRequest.html#127-130" title="Go to source code">$headers</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		$_SERVER data.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>$_SERVER data.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$headers">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="url" id="$url">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Url.UrlItem.html"><span title="Twipsi\Components\Url\UrlItem">UrlItem</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.HttpRequest.html#132-135" title="Go to source code">$url</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		URL data.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>URL data.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$url">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="method" id="$method">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.HttpRequest.html#137-140" title="Go to source code">$method</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		Http Request method.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Http Request method.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$method">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="locale" id="$locale">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.HttpRequest.html#142-145" title="Go to source code">$locale</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		System locale
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>System locale</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$locale">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="acceptedContentTypes" id="$acceptedContentTypes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.HttpRequest.html#147-150" title="Go to source code">$acceptedContentTypes</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		Accepted content types.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Accepted content types.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$acceptedContentTypes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="acceptedEncodings" id="$acceptedEncodings">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.HttpRequest.html#152-155" title="Go to source code">$acceptedEncodings</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		Accepted encodings.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Accepted encodings.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$acceptedEncodings">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="acceptedCharsets" id="$acceptedCharsets">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.HttpRequest.html#157-160" title="Go to source code">$acceptedCharsets</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		Accepted charsets
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Accepted charsets</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$acceptedCharsets">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="acceptedLanguages" id="$acceptedLanguages">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.HttpRequest.html#162-165" title="Go to source code">$acceptedLanguages</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		Accepted languages.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Accepted languages.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$acceptedLanguages">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="requestContent" id="$requestContent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.HttpRequest.html#167-170" title="Go to source code">$requestContent</a></var> = <span class="php-kw">null</span></code>
+				
+	<div class="expandable-collapsedView">
+		Content of the request.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Content of the request.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$requestContent">#</a>
+		</td>
+	</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties used from <a href="Twipsi.Components.Http.HandlesInput.html"><span>Twipsi\Components\Http\HandlesInput</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Components.Http.HandlesInput.html#$request">$request</a></var>, <var><a href="Twipsi.Components.Http.HandlesInput.html#$query">$query</a></var>, <var><a href="Twipsi.Components.Http.HandlesInput.html#$json">$json</a></var>, <var><a href="Twipsi.Components.Http.HandlesInput.html#$files">$files</a></var></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties used from <a href="Twipsi.Components.Http.HandlesSession.html"><span>Twipsi\Components\Http\HandlesSession</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Components.Http.HandlesSession.html#$session">$session</a></var></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties used from <a href="Twipsi.Components.Http.HandlesCookies.html"><span>Twipsi\Components\Http\HandlesCookies</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Components.Http.HandlesCookies.html#$cookies">$cookies</a></var></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties used from <a href="Twipsi.Components.Http.HandlesUser.html"><span>Twipsi\Components\Http\HandlesUser</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Components.Http.HandlesUser.html#$user">$user</a></var></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties used from <a href="Twipsi.Components.Http.HandlesValidation.html"><span>Twipsi\Components\Http\HandlesValidation</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Components.Http.HandlesValidation.html#$validationFactory">$validationFactory</a></var>, <var><a href="Twipsi.Components.Http.HandlesValidation.html#$validator">$validator</a></var></code>				</td>
+			</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

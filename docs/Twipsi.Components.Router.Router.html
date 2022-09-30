@@ -1,0 +1,617 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Router\Router |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.Matcher.html">Matcher</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.Route.html">Route</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Router.ControllerFactory.html">
+							ControllerFactory
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Router.RouteBag.html">
+							RouteBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Router.RouteFactory.html">
+							RouteFactory
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Router.RouteGroup.html">
+							RouteGroup
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Router.Router.html">
+							Router
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Router.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Router.Router.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Router.html">Router</a>\<a href="Twipsi.Components.Router.Router.html">Router</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+			<tr><th><code>final</code></th></tr>
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Router.Router.html#29" title="Go to source code">Twipsi\Components\Router\Router.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Router.html#73-90" title="Go to source code">__construct</a>(
+	<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>,
+	<span><a href="Twipsi.Components.Router.RouteFactory.html"><span title="Twipsi\Components\Router\RouteFactory">RouteFactory</span></a> <var>$factory</var></span>,
+	<span><a href="Twipsi.Components.Events.EventHandler.html"><span title="Twipsi\Components\Events\EventHandler">EventHandler</span></a>|null <var>$dispatcher</var> = <span class="php-kw">null</span></span>,
+	<span><a href="Twipsi.Foundation.Application.Application.html"><span title="Twipsi\Foundation\Application\Application">Application</span></a>|null <var>$app</var> = <span class="php-kw">null</span></span>,
+)</code>
+
+
+	<div class="expandable-collapsedView">
+		Router constructor.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Router constructor.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="match" id="_match">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Router.html#92-132" title="Go to source code">match</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>): <a href="Twipsi.Components.Router.Route.Route.html"><span title="Twipsi\Components\Router\Route\Route">Route</span></a>|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Find any matching routes for the request.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Find any matching routes for the request.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Router.Exceptions.RouteNotFoundException.html"><span>Twipsi\Components\Router\Exceptions\RouteNotFoundException</span></a>|<a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Components.Http.Exceptions.NotSupportedException.html"><span>Twipsi\Components\Http\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_match">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="process" id="_process">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Router.html#134-157" title="Go to source code">process</a>(<span><a href="Twipsi.Components.Router.RouteBag.html"><span title="Twipsi\Components\Router\RouteBag">RouteBag</span></a> <var>$routes</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Process routes and uri before routing.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Process routes and uri before routing.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_process">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="render" id="_render">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Router.html#159-178" title="Go to source code">render</a>(<span><a href="Twipsi.Components.Router.Route.Route.html"><span title="Twipsi\Components\Router\Route\Route">Route</span></a> <var>$route</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Render the route.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Render the route.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_render">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="addLoadedRoute" id="_addLoadedRoute">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Router.html#180-189" title="Go to source code">addLoadedRoute</a>(<span><a href="Twipsi.Components.Router.Route.Route.html"><span title="Twipsi\Components\Router\Route\Route">Route</span></a> <var>$route</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Add a route to our loaded stack.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a route to our loaded stack.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_addLoadedRoute">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getRoutes" id="_getRoutes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Router.html#191-199" title="Go to source code">getRoutes</a>(): <a href="Twipsi.Components.Router.RouteBag.html"><span title="Twipsi\Components\Router\RouteBag">RouteBag</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Return all the registered routes.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return all the registered routes.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getRoutes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getLoadedRoutes" id="_getLoadedRoutes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Router.html#201-209" title="Go to source code">getLoadedRoutes</a>(): <a href="Twipsi.Components.Router.RouteBag.html"><span title="Twipsi\Components\Router\RouteBag">RouteBag</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Return all the loaded routes.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return all the loaded routes.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getLoadedRoutes">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="loadedRoutes" id="$loadedRoutes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Router.RouteBag.html"><span title="Twipsi\Components\Router\RouteBag">RouteBag</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Router.html#31-36" title="Go to source code">$loadedRoutes</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$loadedRoutes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="processedRoutes" id="$processedRoutes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Router.RouteBag.html"><span title="Twipsi\Components\Router\RouteBag">RouteBag</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Router.html#38-43" title="Go to source code">$processedRoutes</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$processedRoutes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="factory" id="$factory">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Router.RouteFactory.html"><span title="Twipsi\Components\Router\RouteFactory">RouteFactory</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Router.html#45-50" title="Go to source code">$factory</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$factory">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="request" id="$request">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Router.html#52-57" title="Go to source code">$request</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$request">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dispatcher" id="$dispatcher">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Events.EventHandler.html"><span title="Twipsi\Components\Events\EventHandler">EventHandler</span></a>|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Router.html#59-64" title="Go to source code">$dispatcher</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$dispatcher">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="app" id="$app">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Foundation.Application.Application.html"><span title="Twipsi\Foundation\Application\Application">Application</span></a>|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Router.html#66-71" title="Go to source code">$app</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$app">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

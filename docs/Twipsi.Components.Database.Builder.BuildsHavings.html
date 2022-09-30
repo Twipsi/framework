@@ -1,0 +1,737 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Trait Twipsi\Components\Database\Builder\BuildsHavings |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.Builder.html">Builder</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Connections.html">Connections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Drivers.html">Drivers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Language.html">Language</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Database.Builder.QueryBuilder.html">
+							QueryBuilder
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li class="active">
+						<a href="Twipsi.Components.Database.Builder.BuildsHavings.html">
+							BuildsHavings
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.Builder.BuildsJoins.html">
+							BuildsJoins
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.Builder.BuildsPagination.html">
+							BuildsPagination
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.Builder.BuildsWheres.html">
+							BuildsWheres
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Database.Builder.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Database.Builder.BuildsHavings.html">Trait</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Trait <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Database.html">Database</a>\<a href="namespace-Twipsi.Components.Database.Builder.html">Builder</a>\<a href="Twipsi.Components.Database.Builder.BuildsHavings.html">BuildsHavings</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Database\Builder\BuildsHavings</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span>Twipsi\Components\Database\Builder\QueryBuilder</span></a>
+
+
+		uses
+			<a href="Twipsi.Components.Database.Builder.BuildsWheres.html"><span title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></a>, 
+			<a href="Twipsi.Components.Database.Builder.BuildsJoins.html"><span title="Twipsi\Components\Database\Builder\BuildsJoins">BuildsJoins</span></a>, 
+			<b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>, 
+			<a href="Twipsi.Components.Database.Builder.BuildsPagination.html"><span title="Twipsi\Components\Database\Builder\BuildsPagination">BuildsPagination</span></a>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#10" title="Go to source code">Twipsi\Components\Database\Builder\BuildsHavings.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="having" id="_having">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#12-40" title="Go to source code">having</a>(
+	<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a>|<a href="Twipsi.Components.Database.Language.Expression.html"><span title="Twipsi\Components\Database\Language\Expression">Expression</span></a> <var>$column</var></span>,
+	<span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>,
+	<span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>,
+	<span>string <var>$condition</var> = <span class="php-str">'and'</span></span>,
+): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Add a having clause.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a having clause.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_having">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="nestHaving" id="_nestHaving">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#42-67" title="Go to source code">nestHaving</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a>|self <var>$column</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Make a nested having clause.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Make a nested having clause.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_nestHaving">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orHaving" id="_orHaving">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#69-81" title="Go to source code">orHaving</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$column</var></span>, <span>string|null <var>$operator</var> = <span class="php-kw">null</span></span>, <span>mixed|null <var>$value</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Add a having clause with condition (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a having clause with condition (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orHaving">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="rawHaving" id="_rawHaving">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#83-100" title="Go to source code">rawHaving</a>(<span>string <var>$sql</var></span>, <span>array <var>$bindings</var> = []</span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a having clause from raw sql.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a having clause from raw sql.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_rawHaving">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orRawHaving" id="_orRawHaving">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#102-113" title="Go to source code">orRawHaving</a>(<span>string <var>$sql</var></span>, <span>array <var>$bindings</var> = []</span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a having clause from raw sql with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a having clause from raw sql with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orRawHaving">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="havingNull" id="_havingNull">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#115-128" title="Go to source code">havingNull</a>(<span>string <var>$column</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>, <span>string <var>$type</var> = <span class="php-str">'Null'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create having clause having column is null.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create having clause having column is null.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_havingNull">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orHavingNull" id="_orHavingNull">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#130-139" title="Go to source code">orHavingNull</a>(<span>string <var>$column</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create having is null with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create having is null with (OR) condition.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orHavingNull">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="havingNotNull" id="_havingNotNull">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#141-151" title="Go to source code">havingNotNull</a>(<span>string <var>$column</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create having clause having column is not null.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create having clause having column is not null.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_havingNotNull">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orHavingNotNull" id="_orHavingNotNull">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#153-162" title="Go to source code">orHavingNotNull</a>(<span>string <var>$column</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create having is not null with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create having is not null with (OR) condition.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orHavingNotNull">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="havingBetween" id="_havingBetween">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#164-181" title="Go to source code">havingBetween</a>(
+	<span>string <var>$column</var></span>,
+	<span>array <var>$values</var></span>,
+	<span>string <var>$condition</var> = <span class="php-str">'and'</span></span>,
+	<span>string <var>$type</var> = <span class="php-str">'Between'</span></span>,
+): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create having clause having column is between values.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create having clause having column is between values.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_havingBetween">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orHavingBetween" id="_orHavingBetween">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#183-194" title="Go to source code">orHavingBetween</a>(<span>string <var>$column</var></span>, <span>array <var>$values</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create between having clause with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create between having clause with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orHavingBetween">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="havingNotBetween" id="_havingNotBetween">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#196-208" title="Go to source code">havingNotBetween</a>(<span>string <var>$column</var></span>, <span>array <var>$values</var></span>, <span>string <var>$condition</var> = <span class="php-str">'and'</span></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create having clause having column is not between values.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create having clause having column is not between values.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_havingNotBetween">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="orHavingNotBetween" id="_orHavingNotBetween">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsHavings.html#210-221" title="Go to source code">orHavingNotBetween</a>(<span>string <var>$column</var></span>, <span>array <var>$values</var></span>): <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></b>|<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create not between having clause with (OR) condition.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create not between having clause with (OR) condition.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_orHavingNotBetween">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

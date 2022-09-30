@@ -1,0 +1,431 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Trait Twipsi\Bridge\Auth\ThrottlesLogins |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Bridge.Auth.html">Auth</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.Middlewares.html">Middlewares</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.User.html">User</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Bridge.Auth.RedirectsLogins.html">
+							RedirectsLogins
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Bridge.Auth.ThrottlesLogins.html">
+							ThrottlesLogins
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Bridge.Auth.ValidatesAccounts.html">
+							ValidatesAccounts
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Bridge.Auth.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Bridge.Auth.ThrottlesLogins.html">Trait</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Trait <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Bridge.html">Bridge</a>\<a href="namespace-Twipsi.Bridge.Auth.html">Auth</a>\<a href="Twipsi.Bridge.Auth.ThrottlesLogins.html">ThrottlesLogins</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Bridge.Auth.ThrottlesLogins.html#25" title="Go to source code">Twipsi\Bridge\Auth\ThrottlesLogins.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="hasSteppedOverMaxAttempts" id="_hasSteppedOverMaxAttempts">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ThrottlesLogins.html#27-39" title="Go to source code">hasSteppedOverMaxAttempts</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if we have stepped over the limit.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if we have stepped over the limit.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasSteppedOverMaxAttempts">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="incrementLoginAttempt" id="_incrementLoginAttempt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ThrottlesLogins.html#41-53" title="Go to source code">incrementLoginAttempt</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Increment login attempt.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Increment login attempt.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_incrementLoginAttempt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="clearLoginAttempt" id="_clearLoginAttempt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ThrottlesLogins.html#55-64" title="Go to source code">clearLoginAttempt</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Clear the login attempts cache file.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Clear the login attempts cache file.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_clearLoginAttempt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="abortWithLockoutResponse" id="_abortWithLockoutResponse">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ThrottlesLogins.html#66-84" title="Go to source code">abortWithLockoutResponse</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>): <a href="Twipsi.Components.Http.Response.Interfaces.ResponseInterface.html"><span title="Twipsi\Components\Http\Response\Interfaces\ResponseInterface">ResponseInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Abort with validation error.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Abort with validation error.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Validator.Exceptions.ValidatorException.html"><span>Twipsi\Components\Validator\Exceptions\ValidatorException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_abortWithLockoutResponse">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dispatchLockoutEvent" id="_dispatchLockoutEvent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ThrottlesLogins.html#86-95" title="Go to source code">dispatchLockoutEvent</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Dispatch the lockout event.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Dispatch the lockout event.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_dispatchLockoutEvent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="throttleKey" id="_throttleKey">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ThrottlesLogins.html#97-108" title="Go to source code">throttleKey</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Build the cache key we should use.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Build the cache key we should use.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_throttleKey">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="maxAttempts" id="_maxAttempts">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ThrottlesLogins.html#111-119" title="Go to source code">maxAttempts</a>(): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the maximum attempts allowed.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the maximum attempts allowed.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_maxAttempts">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="decayInSeconds" id="_decayInSeconds">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ThrottlesLogins.html#121-129" title="Go to source code">decayInSeconds</a>(): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the decay value to use in seconds.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the decay value to use in seconds.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_decayInSeconds">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="limiter" id="_limiter">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ThrottlesLogins.html#131-139" title="Go to source code">limiter</a>(): <a href="Twipsi.Components.RateLimiter.RateLimiter.html"><span title="Twipsi\Components\RateLimiter\RateLimiter">RateLimiter</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Return the limiter service.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return the limiter service.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_limiter">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

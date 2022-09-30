@@ -1,0 +1,1072 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Foundation\Application\IOCManager |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Foundation.Application.html">Application</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Bootstrapers.html">Bootstrapers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.ComponentProviders.html">ComponentProviders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Middleware.html">Middleware</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Foundation.Application.AliasRegistry.html">
+							AliasRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.Application.html">
+							Application
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.BindingRegistry.html">
+							BindingRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.ComponentRegistry.html">
+							ComponentRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.DependencyResolver.html">
+							DependencyResolver
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.ImplantRegistry.html">
+							ImplantRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.InstanceRegistry.html">
+							InstanceRegistry
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Foundation.Application.IOCManager.html">
+							IOCManager
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.PathRegistry.html">
+							PathRegistry
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Foundation.Application.ApplicationAccessor.html">
+							ApplicationAccessor
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesBootstrap.html">
+							HandlesBootstrap
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesComponents.html">
+							HandlesComponents
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesEnvironment.html">
+							HandlesEnvironment
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesLocale.html">
+							HandlesLocale
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesPaths.html">
+							HandlesPaths
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Foundation.Application.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Foundation.Application.IOCManager.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Foundation.html">Foundation</a>\<a href="namespace-Twipsi.Foundation.Application.html">Application</a>\<a href="Twipsi.Foundation.Application.IOCManager.html">IOCManager</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+		<tr>
+			<th><code>implements</code></th>
+			<td>
+<code><a href="ArrayAccess.html"><span title="ArrayAccess">ArrayAccess</span></a></code>			</td>
+		</tr>
+		<tr>
+			<th><code>uses</code></th>
+			<td>
+<code><a href="Twipsi.Foundation.Application.ApplicationAccessor.html"><span title="Twipsi\Foundation\Application\ApplicationAccessor">ApplicationAccessor</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Foundation\Application\IOCManager</span></b>
+
+		implements
+			<a href="ArrayAccess.html"><span title="ArrayAccess">ArrayAccess</span></a>
+
+		uses
+			<a href="Twipsi.Foundation.Application.ApplicationAccessor.html"><span title="Twipsi\Foundation\Application\ApplicationAccessor">ApplicationAccessor</span></a>
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Foundation.Application.Application.html"><span>Twipsi\Foundation\Application\Application</span></a>
+
+
+		uses
+			<a href="Twipsi.Foundation.Application.HandlesLocale.html"><span title="Twipsi\Foundation\Application\HandlesLocale">HandlesLocale</span></a>, 
+			<a href="Twipsi.Foundation.Application.HandlesEnvironment.html"><span title="Twipsi\Foundation\Application\HandlesEnvironment">HandlesEnvironment</span></a>, 
+			<a href="Twipsi.Foundation.Application.HandlesPaths.html"><span title="Twipsi\Foundation\Application\HandlesPaths">HandlesPaths</span></a>, 
+			<a href="Twipsi.Foundation.Application.HandlesComponents.html"><span title="Twipsi\Foundation\Application\HandlesComponents">HandlesComponents</span></a>, 
+			<a href="Twipsi.Foundation.Application.HandlesBootstrap.html"><span title="Twipsi\Foundation\Application\HandlesBootstrap">HandlesBootstrap</span></a>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Foundation.Application.IOCManager.html#21" title="Go to source code">Twipsi\Foundation\Application\IOCManager.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#52-61" title="Go to source code">__construct</a>()</code>
+
+
+	<div class="expandable-collapsedView">
+		Application Manager constructor.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Application Manager constructor.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Foundation.Application.Application.html#___construct">						<code>Twipsi\Foundation\Application\Application::__construct()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="call" id="_call">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#63-69" title="Go to source code">call</a>(<span>string <var>$abstract</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Call for a registered instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Call for a registered instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_call">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="keep" id="_keep">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#71-77" title="Go to source code">keep</a>(<span>string <var>$abstract</var></span>, <span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$concrete</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register a persistable binding.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a persistable binding.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_keep">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="make" id="_make">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#79-130" title="Go to source code">make</a>(<span>string <var>$abstract</var></span>, <span>array <var>$parameters</var> = []</span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Attempt to load or build instance based on provided abstract.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Attempt to load or build instance based on provided abstract.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Foundation.Application.Application.html#_make">						<code>Twipsi\Foundation\Application\Application::make()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_make">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="build" id="_build">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#132-159" title="Go to source code">build</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$concrete</var></span>, <span>array <var>$parameters</var> = []</span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Attempt to build a class and resolve dependencies.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Attempt to build a class and resolve dependencies.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_build">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resolveClassApplicables" id="_resolveClassApplicables">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#161-178" title="Go to source code">resolveClassApplicables</a>(<span>object <var>$object</var></span>): object</code>
+
+
+	<div class="expandable-collapsedView">
+		Resolve class applicables.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Resolve class applicables.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resolveClassApplicables">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resolveClosureDependencies" id="_resolveClosureDependencies">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#180-195" title="Go to source code">resolveClosureDependencies</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$closure</var></span>, <span>array <var>$parameters</var> = []</span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Resolve closure dependecies.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Resolve closure dependecies.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resolveClosureDependencies">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="concrete" id="_concrete">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#197-215" title="Go to source code">concrete</a>(<span>string <var>$abstract</var></span>): string|<a href="Closure.html"><span title="Closure">Closure</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get the concrete for the requested abstract.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the concrete for the requested abstract.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_concrete">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isBuildable" id="_isBuildable">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#217-227" title="Go to source code">isBuildable</a>(<span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$concrete</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the concrete is buildable.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the concrete is buildable.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isBuildable">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="implant" id="_implant">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#229-238" title="Go to source code">implant</a>(<span>string <var>$abstract</var></span>, <span>array <var>$parameters</var> = []</span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Bind a parameter dependency to an abstract.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Bind a parameter dependency to an abstract.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_implant">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="bind" id="_bind">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#240-255" title="Go to source code">bind</a>(<span>string <var>$abstract</var></span>, <span>string|<a href="Closure.html"><span title="Closure">Closure</span></a> <var>$concrete</var> = <span class="php-kw">null</span></span>, <span>bool <var>$persistent</var> = <span class="php-kw">false</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Bind a concrete closure or class to an abstract.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Bind a concrete closure or class to an abstract.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_bind">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="rebind" id="_rebind">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#257-276" title="Go to source code">rebind</a>(<span>string <var>$abstract</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Rebind an abstract with a callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Rebind an abstract with a callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_rebind">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="extend" id="_extend">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#278-287" title="Go to source code">extend</a>(<span>string <var>$abstract</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_extend">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="instance" id="_instance">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#289-306" title="Go to source code">instance</a>(<span>string <var>$abstract</var></span>, <span>object <var>$instance</var></span>): object</code>
+
+
+	<div class="expandable-collapsedView">
+		Bind an instance to an abstract.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Bind an instance to an abstract.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_instance">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="bound" id="_bound">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#308-316" title="Go to source code">bound</a>(<span>string <var>$abstract</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if an abstract is bound in the application.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if an abstract is bound in the application.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Foundation.Application.Application.html#_bound">						<code>Twipsi\Foundation\Application\Application::bound()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_bound">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="rebuild" id="_rebuild">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#318-332" title="Go to source code">rebuild</a>(<span>string <var>$abstract</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Rebuild the abstract.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Rebuild the abstract.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_rebuild">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAlias" id="_getAlias">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#334-340" title="Go to source code">getAlias</a>(<span>string <var>$abstract</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Find alias pointer for an abstract.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Find alias pointer for an abstract.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAlias">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isAlias" id="_isAlias">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#342-348" title="Go to source code">isAlias</a>(<span>string <var>$abstract</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if abstract is an alias.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if abstract is an alias.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isAlias">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isResolved" id="_isResolved">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#350-353" title="Go to source code">isResolved</a>(<span>string <var>$abstract</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isResolved">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getRebindings" id="_getRebindings">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#355-358" title="Go to source code">getRebindings</a>(<span>string <var>$abstract</var></span>): array</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getRebindings">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isPersistent" id="_isPersistent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.IOCManager.html#360-367" title="Go to source code">isPersistent</a>(<span>string <var>$abstract</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if an abstract is set to be persistent singleton.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if an abstract is set to be persistent singleton.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isPersistent">#</a>
+		</td>
+	</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Foundation.Application.ApplicationAccessor.html"><span>Twipsi\Foundation\Application\ApplicationAccessor</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Foundation.Application.ApplicationAccessor.html#___get">__get()</a>, <a href="Twipsi.Foundation.Application.ApplicationAccessor.html#_get">get()</a>, <a href="Twipsi.Foundation.Application.ApplicationAccessor.html#_offsetExists">offsetExists()</a>, <a href="Twipsi.Foundation.Application.ApplicationAccessor.html#_offsetGet">offsetGet()</a>, <a href="Twipsi.Foundation.Application.ApplicationAccessor.html#_offsetSet">offsetSet()</a>, <a href="Twipsi.Foundation.Application.ApplicationAccessor.html#_offsetUnset">offsetUnset()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="aliases" id="$aliases">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Foundation.Application.AliasRegistry.html"><span title="Twipsi\Foundation\Application\AliasRegistry">AliasRegistry</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Application.IOCManager.html#25-28" title="Go to source code">$aliases</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		System alias container.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>System alias container.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$aliases">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="instances" id="$instances">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Foundation.Application.InstanceRegistry.html"><span title="Twipsi\Foundation\Application\InstanceRegistry">InstanceRegistry</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Application.IOCManager.html#30-33" title="Go to source code">$instances</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		System instance container.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>System instance container.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$instances">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="bindings" id="$bindings">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Foundation.Application.BindingRegistry.html"><span title="Twipsi\Foundation\Application\BindingRegistry">BindingRegistry</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Application.IOCManager.html#35-38" title="Go to source code">$bindings</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		System bindings container.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>System bindings container.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$bindings">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="implants" id="$implants">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Foundation.Application.ImplantRegistry.html"><span title="Twipsi\Foundation\Application\ImplantRegistry">ImplantRegistry</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Application.IOCManager.html#40-43" title="Go to source code">$implants</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		System parameter bindings container.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>System parameter bindings container.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$implants">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resolved" id="$resolved">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Application.IOCManager.html#45-50" title="Go to source code">$resolved</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$resolved">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

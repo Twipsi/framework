@@ -1,0 +1,760 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Trait Twipsi\Components\Database\HandlesTransactions |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Builder.html">Builder</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Connections.html">Connections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Drivers.html">Drivers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Language.html">Language</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Database.DatabaseDriver.html">
+							DatabaseDriver
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.DatabaseManager.html">
+							DatabaseManager
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.QueryDispatcher.html">
+							QueryDispatcher
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li class="active">
+						<a href="Twipsi.Components.Database.HandlesTransactions.html">
+							HandlesTransactions
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.LogsQueries.html">
+							LogsQueries
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.MocksQueries.html">
+							MocksQueries
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Database.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Database.HandlesTransactions.html">Trait</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Trait <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Database.html">Database</a>\<a href="Twipsi.Components.Database.HandlesTransactions.html">HandlesTransactions</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Database\HandlesTransactions</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Database.QueryDispatcher.html"><span>Twipsi\Components\Database\QueryDispatcher</span></a>
+
+
+		uses
+			<a href="Twipsi.Components.Database.LogsQueries.html"><span title="Twipsi\Components\Database\LogsQueries">LogsQueries</span></a>, 
+			<a href="Twipsi.Components.Database.MocksQueries.html"><span title="Twipsi\Components\Database\MocksQueries">MocksQueries</span></a>, 
+			<b><span class="active" title="Twipsi\Components\Database\HandlesTransactions">HandlesTransactions</span></b>, 
+			<a href="Twipsi.Support.Traits.Timer.html"><span title="Twipsi\Support\Traits\Timer">Timer</span></a>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Database.HandlesTransactions.html#12" title="Go to source code">Twipsi\Components\Database\HandlesTransactions.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="transaction" id="_transaction">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#21-49" title="Go to source code">transaction</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Create a transaction process.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a transaction process.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Throwable.html"><span>Throwable</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_transaction">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="beginTransaction" id="_beginTransaction">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#51-80" title="Go to source code">beginTransaction</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Begin PDO transaction.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Begin PDO transaction.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Throwable.html"><span>Throwable</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_beginTransaction">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="commit" id="_commit">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#82-103" title="Go to source code">commit</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Commit PDO transactions.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Commit PDO transactions.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_commit">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="rollback" id="_rollback">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#105-133" title="Go to source code">rollback</a>(<span>int|null <var>$level</var> = <span class="php-kw">null</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Rollback to a transaction level.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Rollback to a transaction level.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_rollback">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="registerSavePoint" id="_registerSavePoint">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#135-149" title="Go to source code">registerSavePoint</a>(<span>int <var>$depth</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register the level savepoint.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register the level savepoint.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_registerSavePoint">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="releaseSavePoint" id="_releaseSavePoint">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#151-165" title="Go to source code">releaseSavePoint</a>(<span>int <var>$depth</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Release savepoint at a level.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Release savepoint at a level.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_releaseSavePoint">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="rollbackSavePoint" id="_rollbackSavePoint">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#167-181" title="Go to source code">rollbackSavePoint</a>(<span>int <var>$depth</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Rollback to savepoint at a level.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Rollback to savepoint at a level.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_rollbackSavePoint">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="tryTransactionAgain" id="_tryTransactionAgain">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#183-200" title="Go to source code">tryTransactionAgain</a>(<span><a href="Throwable.html"><span title="Throwable">Throwable</span></a> <var>$e</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Try transaction again or thor error.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Try transaction again or thor error.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Throwable.html"><span>Throwable</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_tryTransactionAgain">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="handleTransactionException" id="_handleTransactionException">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#202-215" title="Go to source code">handleTransactionException</a>(<span><a href="Throwable.html"><span title="Throwable">Throwable</span></a> <var>$e</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Rollback and throw the exception.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Rollback and throw the exception.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Throwable.html"><span>Throwable</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_handleTransactionException">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="handleCommitException" id="_handleCommitException">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#217-234" title="Go to source code">handleCommitException</a>(<span><a href="Throwable.html"><span title="Throwable">Throwable</span></a> <var>$e</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Handle exception on commit.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Handle exception on commit.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Throwable.html"><span>Throwable</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_handleCommitException">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="supportsSavePoints" id="_supportsSavePoints">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#236-244" title="Go to source code">supportsSavePoints</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the driver supports save points.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the driver supports save points.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_supportsSavePoints">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="flushTransactions" id="_flushTransactions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#246-254" title="Go to source code">flushTransactions</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Flush the transaction count.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Flush the transaction count.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_flushTransactions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isNestedTransaction" id="_isNestedTransaction">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.HandlesTransactions.html#256-264" title="Go to source code">isNestedTransaction</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if we are doing nested transactions.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if we are doing nested transactions.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isNestedTransaction">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="transactionDepth" id="$transactionDepth">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Database.HandlesTransactions.html#14-19" title="Go to source code">$transactionDepth</a></var> = <span class="php-num">0</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$transactionDepth">#</a>
+		</td>
+	</tr>
+		</table>
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

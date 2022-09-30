@@ -1,0 +1,590 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Trait Twipsi\Components\Validator\Managers\ManagesImplicitRules |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Validator.Managers.html">Managers</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Validator.Managers.ManagesDependentRules.html">
+							ManagesDependentRules
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Validator.Managers.ManagesImplicitRules.html">
+							ManagesImplicitRules
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Validator.Managers.ManagesMessages.html">
+							ManagesMessages
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Validator.Managers.ManagesSizeRules.html">
+							ManagesSizeRules
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Validator.Managers.ManagesStringRules.html">
+							ManagesStringRules
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Validator.Managers.ManagesTypeRules.html">
+							ManagesTypeRules
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Validator.Managers.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Validator.Managers.ManagesImplicitRules.html">Trait</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Trait <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Validator.html">Validator</a>\<a href="namespace-Twipsi.Components.Validator.Managers.html">Managers</a>\<a href="Twipsi.Components.Validator.Managers.ManagesImplicitRules.html">ManagesImplicitRules</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Validator\Managers\ManagesImplicitRules</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Validator.Validator.html"><span>Twipsi\Components\Validator\Validator</span></a>
+
+
+		uses
+			<a href="Twipsi.Components.Validator.Managers.ManagesMessages.html"><span title="Twipsi\Components\Validator\Managers\ManagesMessages">ManagesMessages</span></a>, 
+			<b><span class="active" title="Twipsi\Components\Validator\Managers\ManagesImplicitRules">ManagesImplicitRules</span></b>, 
+			<a href="Twipsi.Components.Validator.Managers.ManagesDependentRules.html"><span title="Twipsi\Components\Validator\Managers\ManagesDependentRules">ManagesDependentRules</span></a>, 
+			<a href="Twipsi.Components.Validator.Managers.ManagesTypeRules.html"><span title="Twipsi\Components\Validator\Managers\ManagesTypeRules">ManagesTypeRules</span></a>, 
+			<a href="Twipsi.Components.Validator.Managers.ManagesStringRules.html"><span title="Twipsi\Components\Validator\Managers\ManagesStringRules">ManagesStringRules</span></a>, 
+			<a href="Twipsi.Components.Validator.Managers.ManagesSizeRules.html"><span title="Twipsi\Components\Validator\Managers\ManagesSizeRules">ManagesSizeRules</span></a>, 
+			<a href="Twipsi.Components.Validator.ParsesRules.html"><span title="Twipsi\Components\Validator\ParsesRules">ParsesRules</span></a>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Validator.Managers.ManagesImplicitRules.html#17" title="Go to source code">Twipsi\Components\Validator\Managers\ManagesImplicitRules.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="validatePresent" id="_validatePresent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Validator.Managers.ManagesImplicitRules.html#19-29" title="Go to source code">validatePresent</a>(<span>string <var>$identifier</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the identifier exists in the validatable data.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the identifier exists in the validatable data.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validatePresent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validateFilled" id="_validateFilled">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Validator.Managers.ManagesImplicitRules.html#31-42" title="Go to source code">validateFilled</a>(<span>string <var>$identifier</var></span>, <span>mixed <var>$value</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check When the identifier exists is not empty.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check When the identifier exists is not empty.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateFilled">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validateRequired" id="_validateRequired">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Validator.Managers.ManagesImplicitRules.html#44-67" title="Go to source code">validateRequired</a>(<span>string <var>$identifier</var></span>, <span>string|null <var>$value</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the identifier exists and is not null or empty.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the identifier exists and is not null or empty.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateRequired">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validateRequiredWith" id="_validateRequiredWith">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Validator.Managers.ManagesImplicitRules.html#69-88" title="Go to source code">validateRequiredWith</a>(<span>string <var>$identifier</var></span>, <span>string|null <var>$value</var></span>, <span>array <var>$option</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if any of the identifiers exist before requiring
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if any of the identifiers exist before requiring</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateRequiredWith">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validateRequiredWithAll" id="_validateRequiredWithAll">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Validator.Managers.ManagesImplicitRules.html#90-108" title="Go to source code">validateRequiredWithAll</a>(<span>string <var>$identifier</var></span>, <span>string|null <var>$value</var></span>, <span>array <var>$option</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if all of the identifiers exist before requiring
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if all of the identifiers exist before requiring</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateRequiredWithAll">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validateRequiredWithout" id="_validateRequiredWithout">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Validator.Managers.ManagesImplicitRules.html#110-128" title="Go to source code">validateRequiredWithout</a>(<span>string <var>$identifier</var></span>, <span>string|null <var>$value</var></span>, <span>array <var>$option</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if any of the identifiers dont exist before requiring.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if any of the identifiers dont exist before requiring.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateRequiredWithout">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validateRequiredWithoutAll" id="_validateRequiredWithoutAll">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Validator.Managers.ManagesImplicitRules.html#130-148" title="Go to source code">validateRequiredWithoutAll</a>(<span>string <var>$identifier</var></span>, <span>string|null <var>$value</var></span>, <span>array <var>$option</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if none of the identifiers exist before requiring.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if none of the identifiers exist before requiring.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateRequiredWithoutAll">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validateRequiredIf" id="_validateRequiredIf">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Validator.Managers.ManagesImplicitRules.html#150-172" title="Go to source code">validateRequiredIf</a>(<span>string <var>$identifier</var></span>, <span>string|null <var>$value</var></span>, <span>array <var>$option</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the identifier exists and is equal to the option.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the identifier exists and is equal to the option.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateRequiredIf">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validateRequiredUnless" id="_validateRequiredUnless">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Validator.Managers.ManagesImplicitRules.html#174-196" title="Go to source code">validateRequiredUnless</a>(<span>string <var>$identifier</var></span>, <span>string|null <var>$value</var></span>, <span>array <var>$option</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the identifier exists and is not equal to the option.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the identifier exists and is not equal to the option.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateRequiredUnless">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validateAccepted" id="_validateAccepted">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Validator.Managers.ManagesImplicitRules.html#198-211" title="Go to source code">validateAccepted</a>(<span>string <var>$identifier</var></span>, <span>mixed <var>$value</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if any type of checkbox has been checked.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if any type of checkbox has been checked.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateAccepted">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validateDeclined" id="_validateDeclined">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Validator.Managers.ManagesImplicitRules.html#213-226" title="Go to source code">validateDeclined</a>(<span>string <var>$identifier</var></span>, <span>mixed <var>$value</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if any type of checkbox has been unchecked.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if any type of checkbox has been unchecked.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateDeclined">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

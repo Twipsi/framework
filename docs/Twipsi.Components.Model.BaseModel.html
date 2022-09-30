@@ -1,0 +1,1531 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Model\BaseModel |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.Interfaces.html">Interfaces</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li class="active">
+						<a href="Twipsi.Components.Model.BaseModel.html">
+							BaseModel
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Model.Model.html">
+							Model
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Model.ModelCollection.html">
+							ModelCollection
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Model.ModelContainer.html">
+							ModelContainer
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Model.ModelQueryFactory.html">
+							ModelQueryFactory
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Model.HandlesQueryBuilder.html">
+							HandlesQueryBuilder
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Model.HandlesRelations.html">
+							HandlesRelations
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Model.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Model.BaseModel.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Model.html">Model</a>\<a href="Twipsi.Components.Model.BaseModel.html">BaseModel</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+			<tr><th><code>abstract</code></th></tr>
+
+		<tr>
+			<th><code>extends</code></th>
+			<td>
+<code><a href="Twipsi.Components.Model.ModelContainer.html"><span title="Twipsi\Components\Model\ModelContainer">ModelContainer</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Support.Bags.PropertyBag.html"><span>Twipsi\Support\Bags\PropertyBag</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Model.ModelContainer.html"><span>Twipsi\Components\Model\ModelContainer</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Model\BaseModel</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Model.Model.html"><span>Twipsi\Components\Model\Model</span></a>
+
+		implements
+			<a href="Twipsi.Components.Model.Interfaces.ModelInterface.html"><span title="Twipsi\Components\Model\Interfaces\ModelInterface">ModelInterface</span></a>
+
+		uses
+			<a href="Twipsi.Components.Model.HandlesQueryBuilder.html"><span title="Twipsi\Components\Model\HandlesQueryBuilder">HandlesQueryBuilder</span></a>, 
+			<a href="Twipsi.Components.Model.HandlesRelations.html"><span title="Twipsi\Components\Model\HandlesRelations">HandlesRelations</span></a>
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Bridge.User.ModelUser.html"><span>Twipsi\Bridge\User\ModelUser</span></a>
+
+		implements
+			<a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a>, 
+			<a href="Twipsi.Components.User.Interfaces.IAuthorizable.html"><span title="Twipsi\Components\User\Interfaces\IAuthorizable">IAuthorizable</span></a>, 
+			<a href="Twipsi.Components.User.Interfaces.IResetable.html"><span title="Twipsi\Components\User\Interfaces\IResetable">IResetable</span></a>, 
+			<a href="Twipsi.Components.User.Interfaces.IVerifiable.html"><span title="Twipsi\Components\User\Interfaces\IVerifiable">IVerifiable</span></a>, 
+			<a href="Twipsi.Components.User.Interfaces.IRefreshable.html"><span title="Twipsi\Components\User\Interfaces\IRefreshable">IRefreshable</span></a>, 
+			<a href="Twipsi.Components.User.Interfaces.INotifiable.html"><span title="Twipsi\Components\User\Interfaces\INotifiable">INotifiable</span></a>
+
+		uses
+			<a href="Twipsi.Components.User.Authenticatable.html"><span title="Twipsi\Components\User\Authenticatable">Authenticatable</span></a>, 
+			<a href="Twipsi.Components.User.Authorizable.html"><span title="Twipsi\Components\User\Authorizable">Authorizable</span></a>, 
+			<a href="Twipsi.Components.User.Resetable.html"><span title="Twipsi\Components\User\Resetable">Resetable</span></a>, 
+			<a href="Twipsi.Components.User.Verifiable.html"><span title="Twipsi\Components\User\Verifiable">Verifiable</span></a>, 
+			<a href="Twipsi.Components.User.Refreshable.html"><span title="Twipsi\Components\User\Refreshable">Refreshable</span></a>, 
+			<a href="Twipsi.Components.User.Notifiable.html"><span title="Twipsi\Components\User\Notifiable">Notifiable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Notification.DatabaseNotification.html"><span>Twipsi\Components\Notification\DatabaseNotification</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Model.BaseModel.html#8" title="Go to source code">Twipsi\Components\Model\BaseModel.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="lives" id="_lives">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#87-98" title="Go to source code">lives</a>(<span>bool <var>$state</var> = <span class="php-kw">true</span></span>): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the existence of the model in the database.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the existence of the model in the database.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_lives">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="table" id="_table">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#100-111" title="Go to source code">table</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the table name of the model.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the table name of the model.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_table">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="primary" id="_primary">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#113-123" title="Go to source code">primary</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the primary key of the model.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the primary key of the model.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_primary">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="tablePrimary" id="_tablePrimary">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#125-133" title="Go to source code">tablePrimary</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the primary key of the model with the table prefix.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the primary key of the model with the table prefix.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_tablePrimary">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="key" id="_key">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#135-150" title="Go to source code">key</a>(): string|int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the primary key value.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the primary key value.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_key">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isIncrementing" id="_isIncrementing">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#152-160" title="Go to source code">isIncrementing</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if we are incrementing primary key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if we are incrementing primary key.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isIncrementing">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="savingKey" id="_savingKey">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#162-170" title="Go to source code">savingKey</a>(): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Return the primary key for saving.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return the primary key for saving.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_savingKey">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="foreign" id="_foreign">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#172-180" title="Go to source code">foreign</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the default foreign key to use.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the default foreign key to use.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_foreign">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setTableOnColumn" id="_setTableOnColumn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#182-193" title="Go to source code">setTableOnColumn</a>(<span>string|array <var>$columns</var></span>): string|array</code>
+
+
+	<div class="expandable-collapsedView">
+		Prepend the table name on the column.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Prepend the table name on the column.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setTableOnColumn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createdAt" id="_createdAt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#195-203" title="Go to source code">createdAt</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Return the created at column name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return the created at column name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createdAt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="updatedAt" id="_updatedAt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#205-213" title="Go to source code">updatedAt</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Return the updated at column name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return the updated at column name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_updatedAt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="syncOriginal" id="_syncOriginal">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#215-225" title="Go to source code">syncOriginal</a>(): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Sync current values to original.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Sync current values to original.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_syncOriginal">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="syncChanges" id="_syncChanges">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#227-237" title="Go to source code">syncChanges</a>(): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Sync the changes made since fetch.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Sync the changes made since fetch.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_syncChanges">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resetChanges" id="_resetChanges">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#239-250" title="Go to source code">resetChanges</a>(): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Reset all the changes made, since the last sync.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Reset all the changes made, since the last sync.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resetChanges">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isNotInitial" id="_isNotInitial">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#252-264" title="Go to source code">isNotInitial</a>(<span>string ...<var>$properties</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if any properties have been modified since the
+last save sync done.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if any properties have been modified since the
+last save sync done.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isNotInitial">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isInitial" id="_isInitial">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#266-276" title="Go to source code">isInitial</a>(<span>string ...<var>$properties</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if any properties or the model is the same since
+the last sync.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if any properties or the model is the same since
+the last sync.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isInitial">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="wasChanged" id="_wasChanged">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#278-289" title="Go to source code">wasChanged</a>(<span>string ...<var>$properties</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if any properties have been changed since first fetch.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if any properties have been changed since first fetch.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_wasChanged">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getModified" id="_getModified">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#291-305" title="Go to source code">getModified</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get property changes since the last sync.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get property changes since the last sync.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getModified">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getChangedProperties" id="_getChangedProperties">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#307-315" title="Go to source code">getChangedProperties</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the changed property values.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the changed property values.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getChangedProperties">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getOriginalProperties" id="_getOriginalProperties">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#317-325" title="Go to source code">getOriginalProperties</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the original property values.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the original property values.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getOriginalProperties">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isOriginalProperty" id="_isOriginalProperty">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#327-341" title="Go to source code">isOriginalProperty</a>(<span>string <var>$key</var></span>, <span>mixed <var>$value</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the value is the original one.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the value is the original one.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isOriginalProperty">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="parseChanges" id="_parseChanges">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#343-363" title="Go to source code">parseChanges</a>(<span>array <var>$changes</var></span>, <span>array <var>$properties</var> = []</span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if any changes have been made to property list.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if any changes have been made to property list.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_parseChanges">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setProperties" id="_setProperties">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#365-381" title="Go to source code">setProperties</a>(<span>array <var>$properties</var></span>, <span>bool <var>$sync</var> = <span class="php-kw">false</span></span>): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Set model properties without guard parsing.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set model properties without guard parsing.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setProperties">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="generateTime" id="_generateTime">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#383-393" title="Go to source code">generateTime</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Generate the current time.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Generate the current time.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_generateTime">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="usesTimeStamps" id="_usesTimeStamps">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#395-403" title="Go to source code">usesTimeStamps</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if we are using timestamps.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if we are using timestamps.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_usesTimeStamps">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="updateTimeStamps" id="_updateTimeStamps">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#405-421" title="Go to source code">updateTimeStamps</a>(): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Update the timestamps before syncing.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Update the timestamps before syncing.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_updateTimeStamps">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__toString" id="___toString">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#423-431" title="Go to source code">__toString</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Return the model name when called as string.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return the model name when called as string.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___toString">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__get" id="___get">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#433-442" title="Go to source code">__get</a>(<span><var>$key</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Dynamically get model property.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Dynamically get model property.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___get">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__set" id="___set">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Model.BaseModel.html#444-454" title="Go to source code">__set</a>(<span><var>$key</var></span>, <span><var>$value</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Dynamically set model property.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Dynamically set model property.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___set">#</a>
+		</td>
+	</tr>
+		</table>
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods inherited from <a href="Twipsi.Components.Model.ModelContainer.html"><span>Twipsi\Components\Model\ModelContainer</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Model.ModelContainer.html#_fill">fill()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_forceFill">forceFill()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_fillable">fillable()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_fillables">fillables()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_isFillable">isFillable()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_guard">guard()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_guarded">guarded()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_bypass">bypass()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_bypassable">bypassable()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_isGuarded">isGuarded()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_isLocked">isLocked()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_breached">breached()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_parseFillables">parseFillables()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_isModelStrict">isModelStrict()</a>, <a href="Twipsi.Components.Model.ModelContainer.html#_throwExceptionOnBreach">throwExceptionOnBreach()</a></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods inherited from <a href="Twipsi.Support.Bags.PropertyBag.html"><span>Twipsi\Support\Bags\PropertyBag</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Support.Bags.PropertyBag.html#___construct">__construct()</a>, <a href="Twipsi.Support.Bags.PropertyBag.html#_all">all()</a>, <a href="Twipsi.Support.Bags.PropertyBag.html#_selected">selected()</a>, <a href="Twipsi.Support.Bags.PropertyBag.html#_replace">replace()</a>, <a href="Twipsi.Support.Bags.PropertyBag.html#_keys">keys()</a>, <a href="Twipsi.Support.Bags.PropertyBag.html#_set">set()</a>, <a href="Twipsi.Support.Bags.PropertyBag.html#_merge">merge()</a>, <a href="Twipsi.Support.Bags.PropertyBag.html#_get">get()</a>, <a href="Twipsi.Support.Bags.PropertyBag.html#_has">has()</a>, <a href="Twipsi.Support.Bags.PropertyBag.html#_empty">empty()</a>, <a href="Twipsi.Support.Bags.PropertyBag.html#_delete">delete()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="live" id="$live">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">bool</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.BaseModel.html#10-15" title="Go to source code">$live</a></var> = <span class="php-kw">false</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$live">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="table" id="$table">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.BaseModel.html#17-22" title="Go to source code">$table</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$table">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="primary" id="$primary">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.BaseModel.html#24-29" title="Go to source code">$primary</a></var> = <span class="php-str">'id'</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$primary">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="primaryType" id="$primaryType">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.BaseModel.html#31-36" title="Go to source code">$primaryType</a></var> = <span class="php-str">'int'</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$primaryType">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="primaryIncrement" id="$primaryIncrement">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">bool</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.BaseModel.html#38-43" title="Go to source code">$primaryIncrement</a></var> = <span class="php-kw">true</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$primaryIncrement">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="timestamps" id="$timestamps">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">bool</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.BaseModel.html#45-50" title="Go to source code">$timestamps</a></var> = <span class="php-kw">true</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$timestamps">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="dateFormat" id="$dateFormat">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.BaseModel.html#52-57" title="Go to source code">$dateFormat</a></var> = <span class="php-str">'Y-m-d H:i:s'</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$dateFormat">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createdColumn" id="$createdColumn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.BaseModel.html#59-64" title="Go to source code">$createdColumn</a></var> = <span class="php-str">'created_at'</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$createdColumn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="updatedColumn" id="$updatedColumn">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.BaseModel.html#66-71" title="Go to source code">$updatedColumn</a></var> = <span class="php-str">'updated_at'</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$updatedColumn">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="original" id="$original">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.BaseModel.html#73-78" title="Go to source code">$original</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$original">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="changes" id="$changes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Model.BaseModel.html#80-85" title="Go to source code">$changes</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$changes">#</a>
+		</td>
+	</tr>
+		</table>
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties inherited from <a href="Twipsi.Components.Model.ModelContainer.html"><span>Twipsi\Components\Model\ModelContainer</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Components.Model.ModelContainer.html#$default">$default</a></var>, <var><a href="Twipsi.Components.Model.ModelContainer.html#$fillables">$fillables</a></var>, <var><a href="Twipsi.Components.Model.ModelContainer.html#$guarded">$guarded</a></var>, <var><a href="Twipsi.Components.Model.ModelContainer.html#$breached">$breached</a></var>, <var><a href="Twipsi.Components.Model.ModelContainer.html#$strict">$strict</a></var>, <var><a href="Twipsi.Components.Model.ModelContainer.html#$bypassable">$bypassable</a></var></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

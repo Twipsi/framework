@@ -1,0 +1,1215 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Support\Bags\ArrayBag |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.Applicables.html">Applicables</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Support.Bags.html">Bags</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.Traits.html">Traits</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Support.Bags.ArrayAccessibleBag.html">
+							ArrayAccessibleBag
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Support.Bags.ArrayBag.html">
+							ArrayBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Support.Bags.ObjectBag.html">
+							ObjectBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Support.Bags.PropertyBag.html">
+							PropertyBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Support.Bags.RecursiveArrayBag.html">
+							RecursiveArrayBag
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Support.Bags.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Support.Bags.ArrayBag.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Support.html">Support</a>\<a href="namespace-Twipsi.Support.Bags.html">Bags</a>\<a href="Twipsi.Support.Bags.ArrayBag.html">ArrayBag</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+		<tr>
+			<th><code>implements</code></th>
+			<td>
+<code><a href="IteratorAggregate.html"><span title="IteratorAggregate">IteratorAggregate</span></a>, <a href="Countable.html"><span title="Countable">Countable</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Support\Bags\ArrayBag</span></b>
+
+		implements
+			<a href="IteratorAggregate.html"><span title="IteratorAggregate">IteratorAggregate</span></a>, 
+			<a href="Countable.html"><span title="Countable">Countable</span></a>
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Bridge.User.User.html"><span>Twipsi\Bridge\User\User</span></a>
+
+		implements
+			<a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a>
+
+		uses
+			<a href="Twipsi.Components.User.Authenticatable.html"><span title="Twipsi\Components\User\Authenticatable">Authenticatable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Cookie.CookieBag.html"><span>Twipsi\Components\Cookie\CookieBag</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Http.HeaderBag.html"><span>Twipsi\Components\Http\HeaderBag</span></a>
+
+		implements
+			<a href="Stringable.html"><span title="Stringable">Stringable</span></a>
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Http.Response.ResponseHeaderBag.html"><span>Twipsi\Components\Http\Response\ResponseHeaderBag</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	<li>
+<a href="Twipsi.Components.Model.ModelCollection.html"><span>Twipsi\Components\Model\ModelCollection</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Router.RouteBag.html"><span>Twipsi\Components\Router\RouteBag</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Foundation.Application.AliasRegistry.html"><span>Twipsi\Foundation\Application\AliasRegistry</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Foundation.Application.BindingRegistry.html"><span>Twipsi\Foundation\Application\BindingRegistry</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Foundation.Application.ImplantRegistry.html"><span>Twipsi\Foundation\Application\ImplantRegistry</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Foundation.Application.InstanceRegistry.html"><span>Twipsi\Foundation\Application\InstanceRegistry</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Support.Bags.ArrayAccessibleBag.html"><span>Twipsi\Support\Bags\ArrayAccessibleBag</span></a>
+
+		implements
+			<a href="ArrayAccess.html"><span title="ArrayAccess">ArrayAccess</span></a>
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Foundation.Application.PathRegistry.html"><span>Twipsi\Foundation\Application\PathRegistry</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Foundation.ConfigRegistry.html"><span>Twipsi\Foundation\ConfigRegistry</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span>Twipsi\Support\Bags\RecursiveArrayBag</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.File.UploadedFileBag.html"><span>Twipsi\Components\File\UploadedFileBag</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Http.CacheControl.html"><span>Twipsi\Components\Http\CacheControl</span></a>
+
+		implements
+			<a href="Stringable.html"><span title="Stringable">Stringable</span></a>
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Http.InputBag.html"><span>Twipsi\Components\Http\InputBag</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Mailer.MessageBag.html"><span>Twipsi\Components\Mailer\MessageBag</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Session.SessionItem.html"><span>Twipsi\Components\Session\SessionItem</span></a>
+
+		implements
+			<a href="Twipsi.Components.Http.Interfaces.StateProviderInterface.html"><span title="Twipsi\Components\Http\Interfaces\StateProviderInterface">StateProviderInterface</span></a>
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Session.EncryptedSessionItemItem.html"><span>Twipsi\Components\Session\EncryptedSessionItemItem</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	<li>
+<a href="Twipsi.Components.View.ViewErrorBag.html"><span>Twipsi\Components\View\ViewErrorBag</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Foundation.Application.ComponentRegistry.html"><span>Twipsi\Foundation\Application\ComponentRegistry</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Foundation.Middleware.MiddlewareCollector.html"><span>Twipsi\Foundation\Middleware\MiddlewareCollector</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Support.Bags.ArrayBag.html#20" title="Go to source code">Twipsi\Support\Bags\ArrayBag.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#29-37" title="Go to source code">__construct</a>(<span>array <var>$parameters</var> = []</span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct our array based parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct our array based parameters.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Bridge.User.User.html#___construct">						<code>Twipsi\Bridge\User\User::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Cookie.CookieBag.html#___construct">						<code>Twipsi\Components\Cookie\CookieBag::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Http.HeaderBag.html#___construct">						<code>Twipsi\Components\Http\HeaderBag::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Model.ModelCollection.html#___construct">						<code>Twipsi\Components\Model\ModelCollection::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Router.RouteBag.html#___construct">						<code>Twipsi\Components\Router\RouteBag::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Foundation.Application.AliasRegistry.html#___construct">						<code>Twipsi\Foundation\Application\AliasRegistry::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Foundation.Application.PathRegistry.html#___construct">						<code>Twipsi\Foundation\Application\PathRegistry::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Foundation.ConfigRegistry.html#___construct">						<code>Twipsi\Foundation\ConfigRegistry::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#___construct">						<code>Twipsi\Support\Bags\RecursiveArrayBag::__construct()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__invoke" id="___invoke">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#39-47" title="Go to source code">__invoke</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return array of parameters if called.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return array of parameters if called.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___invoke">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="all" id="_all">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#49-69" title="Go to source code">all</a>(<span>string ...<var>$exceptions</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return all the parameters excluding exceptions.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return all the parameters excluding exceptions.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Http.HeaderBag.html#_all">						<code>Twipsi\Components\Http\HeaderBag::all()</code></a>				</li>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_all">						<code>Twipsi\Support\Bags\RecursiveArrayBag::all()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_all">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="selected" id="_selected">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#71-91" title="Go to source code">selected</a>(<span>string ...<var>$keys</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return all the parameters with the selection key in one array
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return all the parameters with the selection key in one array</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Http.HeaderBag.html#_selected">						<code>Twipsi\Components\Http\HeaderBag::selected()</code></a>				</li>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_selected">						<code>Twipsi\Support\Bags\RecursiveArrayBag::selected()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_selected">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="filter" id="_filter">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#93-104" title="Go to source code">filter</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Filter using a callback and replace the haystack.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Filter using a callback and replace the haystack.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_filter">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="replace" id="_replace">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#106-122" title="Go to source code">replace</a>(<span>array|<b><span class="active" title="Twipsi\Support\Bags\ArrayBag">ArrayBag</span></b> <var>$parameters</var></span>): static</code>
+
+
+	<div class="expandable-collapsedView">
+		Replace the current parameters entirely.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Replace the current parameters entirely.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Http.HeaderBag.html#_replace">						<code>Twipsi\Components\Http\HeaderBag::replace()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_replace">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="merge" id="_merge">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#124-140" title="Go to source code">merge</a>(<span>array|<b><span class="active" title="Twipsi\Support\Bags\ArrayBag">ArrayBag</span></b> <var>$parameters</var></span>): static</code>
+
+
+	<div class="expandable-collapsedView">
+		Merge An array of paramters with current parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Merge An array of paramters with current parameters.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Http.HeaderBag.html#_merge">						<code>Twipsi\Components\Http\HeaderBag::merge()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_merge">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="keys" id="_keys">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#142-150" title="Go to source code">keys</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return all keys in the parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return all keys in the parameters.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_keys">						<code>Twipsi\Support\Bags\RecursiveArrayBag::keys()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_keys">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="set" id="_set">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#152-165" title="Go to source code">set</a>(<span>string <var>$key</var></span>, <span>mixed <var>$value</var></span>): static</code>
+
+
+	<div class="expandable-collapsedView">
+		Set a parameter into parameters array.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set a parameter into parameters array.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Http.HeaderBag.html#_set">						<code>Twipsi\Components\Http\HeaderBag::set()</code></a>				</li>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_set">						<code>Twipsi\Support\Bags\RecursiveArrayBag::set()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_set">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="add" id="_add">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#167-179" title="Go to source code">add</a>(<span>mixed <var>$value</var></span>): static</code>
+
+
+	<div class="expandable-collapsedView">
+		Add a parameter into parameters array.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add a parameter into parameters array.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_add">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="push" id="_push">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#181-194" title="Go to source code">push</a>(<span>string <var>$key</var></span>, <span>mixed <var>$value</var></span>): static</code>
+
+
+	<div class="expandable-collapsedView">
+		Push a value into parameter with a key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Push a value into parameter with a key.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Foundation.ConfigRegistry.html#_push">						<code>Twipsi\Foundation\ConfigRegistry::push()</code></a>				</li>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_push">						<code>Twipsi\Support\Bags\RecursiveArrayBag::push()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_push">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="gather" id="_gather">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#196-213" title="Go to source code">gather</a>(<span>string <var>$pointer</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Collect values out of an array based on a key
+keeping the parent key as the key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Collect values out of an array based on a key
+keeping the parent key as the key.</p>
+<p>ex. ['container' =&gt; ['value' =&gt; 85552]].
+output. ['container' =&gt; 85552].</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_gather">						<code>Twipsi\Support\Bags\RecursiveArrayBag::gather()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_gather">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="get" id="_get">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#215-226" title="Go to source code">get</a>(<span>string <var>$key</var></span>, <span>mixed|null <var>$default</var> = <span class="php-kw">null</span></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Retrieve a parameter from parameters array.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Retrieve a parameter from parameters array.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Http.HeaderBag.html#_get">						<code>Twipsi\Components\Http\HeaderBag::get()</code></a>				</li>
+				<li>
+<a href="Twipsi.Foundation.ConfigRegistry.html#_get">						<code>Twipsi\Foundation\ConfigRegistry::get()</code></a>				</li>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_get">						<code>Twipsi\Support\Bags\RecursiveArrayBag::get()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_get">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="pull" id="_pull">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#228-242" title="Go to source code">pull</a>(<span>string <var>$key</var></span>, <span>mixed|null <var>$default</var> = <span class="php-kw">null</span></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Return and remove an element based on a key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return and remove an element based on a key.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_pull">						<code>Twipsi\Support\Bags\RecursiveArrayBag::pull()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_pull">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="has" id="_has">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#244-254" title="Go to source code">has</a>(<span>string <var>$key</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if parameter exists in parameters array.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if parameter exists in parameters array.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Http.HeaderBag.html#_has">						<code>Twipsi\Components\Http\HeaderBag::has()</code></a>				</li>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_has">						<code>Twipsi\Support\Bags\RecursiveArrayBag::has()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_has">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="search" id="_search">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#256-265" title="Go to source code">search</a>(<span>string <var>$value</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Search for a value and return the key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Search for a value and return the key.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_search">						<code>Twipsi\Support\Bags\RecursiveArrayBag::search()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_search">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="contains" id="_contains">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#267-277" title="Go to source code">contains</a>(<span>string <var>$value</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if value exists in parameters array.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if value exists in parameters array.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_contains">						<code>Twipsi\Support\Bags\RecursiveArrayBag::contains()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_contains">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="delete" id="_delete">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#279-291" title="Go to source code">delete</a>(<span>string <var>$key</var></span>): static</code>
+
+
+	<div class="expandable-collapsedView">
+		Remove a parameter from parameters array.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Remove a parameter from parameters array.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Http.HeaderBag.html#_delete">						<code>Twipsi\Components\Http\HeaderBag::delete()</code></a>				</li>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_delete">						<code>Twipsi\Support\Bags\RecursiveArrayBag::delete()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_delete">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="shift" id="_shift">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#293-301" title="Go to source code">shift</a>(): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Return and shift first element.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return and shift first element.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_shift">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="empty" id="_empty">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#303-311" title="Go to source code">empty</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the container is empty.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the container is empty.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_empty">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getIterator" id="_getIterator">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#313-321" title="Go to source code">getIterator</a>(): <a href="ArrayIterator.html"><span title="ArrayIterator">ArrayIterator</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Returns an iterator for parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Returns an iterator for parameters.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="IteratorAggregate.html#_getIterator">						<code>IteratorAggregate::getIterator()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getIterator">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="count" id="_count">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#323-331" title="Go to source code">count</a>(): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Returns the number of parameters in the array.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Returns the number of parameters in the array.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Countable.html#_count">						<code>Countable::count()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_count">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="first" id="_first">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#333-341" title="Go to source code">first</a>(): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Returns the first parameter.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Returns the first parameter.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_first">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="last" id="_last">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Support.Bags.ArrayBag.html#343-351" title="Go to source code">last</a>(): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Returns the last parameter.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Returns the last parameter.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_last">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="parameters" id="$parameters">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Support.Bags.ArrayBag.html#22-27" title="Go to source code">$parameters</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$parameters">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

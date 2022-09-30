@@ -1,0 +1,547 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Notification\Drivers\MailDriver |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Notification.Drivers.html">Drivers</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.Drivers.Interfaces.html">Interfaces</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.Messages.html">Messages</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Notification.Drivers.BroadcastDriver.html">
+							BroadcastDriver
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Notification.Drivers.DatabaseDriver.html">
+							DatabaseDriver
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Notification.Drivers.MailDriver.html">
+							MailDriver
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Notification.Drivers.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Notification.Drivers.MailDriver.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Notification.html">Notification</a>\<a href="namespace-Twipsi.Components.Notification.Drivers.html">Drivers</a>\<a href="Twipsi.Components.Notification.Drivers.MailDriver.html">MailDriver</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+		<tr>
+			<th><code>implements</code></th>
+			<td>
+<code><a href="Twipsi.Components.Notification.Drivers.Interfaces.NotificationDriverInterface.html"><span title="Twipsi\Components\Notification\Drivers\Interfaces\NotificationDriverInterface">NotificationDriverInterface</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Notification.Drivers.MailDriver.html#26" title="Go to source code">Twipsi\Components\Notification\Drivers\MailDriver.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Notification.Drivers.MailDriver.html#28-31" title="Go to source code">__construct</a>(<span><a href="Twipsi.Components.Mailer.MailManager.html"><span title="Twipsi\Components\Mailer\MailManager">MailManager</span></a> <var>$mailer</var></span>, <span><a href="Twipsi.Components.Mailer.Markdown.html"><span title="Twipsi\Components\Mailer\Markdown">Markdown</span></a> <var>$markdown</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Mail driver constructor
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Mail driver constructor</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="send" id="_send">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Notification.Drivers.MailDriver.html#33-63" title="Go to source code">send</a>(<span><a href="Twipsi.Components.User.Interfaces.INotifiable.html"><span title="Twipsi\Components\User\Interfaces\INotifiable">INotifiable</span></a> <var>$notifiable</var></span>, <span>mixed <var>$notification</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Initiate mail sending.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Initiate mail sending.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Notification.Drivers.Interfaces.NotificationDriverInterface.html#_send">						<code>Twipsi\Components\Notification\Drivers\Interfaces\NotificationDriverInterface::send()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_send">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getMessage" id="_getMessage">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Notification.Drivers.MailDriver.html#65-80" title="Go to source code">getMessage</a>(<span><a href="Twipsi.Components.User.Interfaces.INotifiable.html"><span title="Twipsi\Components\User\Interfaces\INotifiable">INotifiable</span></a> <var>$notifiable</var></span>, <span><a href="Twipsi.Components.Notification.Interfaces.MailNotificationInterface.html"><span title="Twipsi\Components\Notification\Interfaces\MailNotificationInterface">MailNotificationInterface</span></a> <var>$notification</var></span>): <a href="Twipsi.Components.Notification.Messages.MailMessage.html"><span title="Twipsi\Components\Notification\Messages\MailMessage">MailMessage</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get the message from the database notification.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the message from the database notification.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getMessage">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildView" id="_buildView">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Notification.Drivers.MailDriver.html#82-109" title="Go to source code">buildView</a>(<span><a href="Twipsi.Components.Notification.Messages.MailMessage.html"><span title="Twipsi\Components\Notification\Messages\MailMessage">MailMessage</span></a> <var>$message</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Build the message based on the view.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Build the message based on the view.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildView">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setSubject" id="_setSubject">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Notification.Drivers.MailDriver.html#111-125" title="Go to source code">setSubject</a>(<span><a href="Twipsi.Components.Notification.Messages.MailMessage.html"><span title="Twipsi\Components\Notification\Messages\MailMessage">MailMessage</span></a> <var>$message</var></span>, <span><a href="Twipsi.Components.Notification.Interfaces.MailNotificationInterface.html"><span title="Twipsi\Components\Notification\Interfaces\MailNotificationInterface">MailNotificationInterface</span></a> <var>$notification</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Add the subject to the message.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add the subject to the message.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setSubject">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="compileData" id="_compileData">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Notification.Drivers.MailDriver.html#127-138" title="Go to source code">compileData</a>(<span><a href="Twipsi.Components.Notification.Messages.MailMessage.html"><span title="Twipsi\Components\Notification\Messages\MailMessage">MailMessage</span></a> <var>$message</var></span>, <span><a href="Twipsi.Components.Notification.Interfaces.MailNotificationInterface.html"><span title="Twipsi\Components\Notification\Interfaces\MailNotificationInterface">MailNotificationInterface</span></a> <var>$notification</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Compile the required data to be used.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Compile the required data to be used.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_compileData">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildSystemData" id="_buildSystemData">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Notification.Drivers.MailDriver.html#140-153" title="Go to source code">buildSystemData</a>(<span><a href="Twipsi.Components.Notification.Interfaces.MailNotificationInterface.html"><span title="Twipsi\Components\Notification\Interfaces\MailNotificationInterface">MailNotificationInterface</span></a> <var>$notification</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Build extra system meta data.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Build extra system meta data.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildSystemData">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getRecipients" id="_getRecipients">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Notification.Drivers.MailDriver.html#155-171" title="Go to source code">getRecipients</a>(<span><a href="Twipsi.Components.User.Interfaces.INotifiable.html"><span title="Twipsi\Components\User\Interfaces\INotifiable">INotifiable</span></a> <var>$notifiable</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the recipients from the notifiable object
+and add them to the message object. [email, $name]
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the recipients from the notifiable object
+and add them to the message object. [email, $name]</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getRecipients">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="mailer" id="$mailer">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Mailer.MailManager.html"><span title="Twipsi\Components\Mailer\MailManager">MailManager</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Notification.Drivers.MailDriver.html#31" title="Go to source code">$mailer</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$mailer">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="markdown" id="$markdown">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Mailer.Markdown.html"><span title="Twipsi\Components\Mailer\Markdown">Markdown</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Notification.Drivers.MailDriver.html#31" title="Go to source code">$markdown</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$markdown">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

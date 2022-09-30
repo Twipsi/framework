@@ -1,0 +1,590 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Database\DatabaseDriver |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Builder.html">Builder</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Connections.html">Connections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Drivers.html">Drivers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Language.html">Language</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li class="active">
+						<a href="Twipsi.Components.Database.DatabaseDriver.html">
+							DatabaseDriver
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.DatabaseManager.html">
+							DatabaseManager
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.QueryDispatcher.html">
+							QueryDispatcher
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Database.HandlesTransactions.html">
+							HandlesTransactions
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.LogsQueries.html">
+							LogsQueries
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.MocksQueries.html">
+							MocksQueries
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Database.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Database.DatabaseDriver.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Database.html">Database</a>\<a href="Twipsi.Components.Database.DatabaseDriver.html">DatabaseDriver</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+			<tr><th><code>abstract</code></th></tr>
+
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Database\DatabaseDriver</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Database.Drivers.MySqlDriver.html"><span>Twipsi\Components\Database\Drivers\MySqlDriver</span></a>
+
+		implements
+			<a href="Twipsi.Components.Database.Interfaces.IDatabaseDriver.html"><span title="Twipsi\Components\Database\Interfaces\IDatabaseDriver">IDatabaseDriver</span></a>
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Database.Drivers.PostgresDriver.html"><span>Twipsi\Components\Database\Drivers\PostgresDriver</span></a>
+
+		implements
+			<a href="Twipsi.Components.Database.Interfaces.IDatabaseDriver.html"><span title="Twipsi\Components\Database\Interfaces\IDatabaseDriver">IDatabaseDriver</span></a>
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Database.Drivers.SQLiteDriver.html"><span>Twipsi\Components\Database\Drivers\SQLiteDriver</span></a>
+
+		implements
+			<a href="Twipsi.Components.Database.Interfaces.IDatabaseDriver.html"><span title="Twipsi\Components\Database\Interfaces\IDatabaseDriver">IDatabaseDriver</span></a>
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Database.DatabaseDriver.html#22" title="Go to source code">Twipsi\Components\Database\DatabaseDriver.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="createConnection" id="_createConnection">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.DatabaseDriver.html#51-71" title="Go to source code">createConnection</a>(<span>string <var>$dsn</var></span>, <span><a href="Twipsi.Foundation.ConfigRegistry.html"><span title="Twipsi\Foundation\ConfigRegistry">ConfigRegistry</span></a> <var>$config</var></span>, <span>array <var>$options</var> = []</span>): <a href="PDO.html"><span title="PDO">PDO</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Create the PDO connection.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create the PDO connection.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createConnection">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildOptions" id="_buildOptions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.DatabaseDriver.html#73-79" title="Go to source code">buildOptions</a>(<span>array <var>$options</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Build options based on default and custom.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Build options based on default and custom.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildOptions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="connectWithPdo" id="_connectWithPdo">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.DatabaseDriver.html#81-93" title="Go to source code">connectWithPdo</a>(<span>string <var>$dsn</var></span>, <span>string <var>$username</var></span>, <span>string <var>$password</var></span>, <span>array <var>$options</var></span>): <a href="PDO.html"><span title="PDO">PDO</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Connect with PDO.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Connect with PDO.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_connectWithPdo">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="tryAgain" id="_tryAgain">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.DatabaseDriver.html#95-113" title="Go to source code">tryAgain</a>(<span><a href="PDOException.html"><span title="PDOException">PDOException</span></a> <var>$e</var></span>, <span>string <var>$dsn</var></span>, <span>string <var>$username</var></span>, <span>string <var>$password</var></span>, <span>array <var>$options</var></span>): <a href="PDO.html"><span title="PDO">PDO</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Attempt to connect again after fail.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Attempt to connect again after fail.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="PDOException.html"><span>PDOException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_tryAgain">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isConnectionError" id="_isConnectionError">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.DatabaseDriver.html#115-124" title="Go to source code">isConnectionError</a>(<span><a href="Throwable.html"><span title="Throwable">Throwable</span></a> <var>$e</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if error is due to lost connection.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if error is due to lost connection.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isConnectionError">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getOptions" id="_getOptions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.DatabaseDriver.html#126-134" title="Go to source code">getOptions</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get default options.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get default options.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getOptions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setOptions" id="_setOptions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.DatabaseDriver.html#136-147" title="Go to source code">setOptions</a>(<span>array <var>$options</var></span>): $this</code>
+
+
+	<div class="expandable-collapsedView">
+		Set default options
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set default options</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setOptions">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="options" id="$options">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Database.DatabaseDriver.html#24-33" title="Go to source code">$options</a></var> = [
+	<a href="PDO.html"><span title="PDO">PDO</span></a>::ATTR_CASE =&gt; <a href="PDO.html"><span title="PDO">PDO</span></a>::CASE_NATURAL,
+	<a href="PDO.html"><span title="PDO">PDO</span></a>::ATTR_ERRMODE =&gt; <a href="PDO.html"><span title="PDO">PDO</span></a>::ERRMODE_EXCEPTION,
+	<a href="PDO.html"><span title="PDO">PDO</span></a>::ATTR_ORACLE_NULLS =&gt; <a href="PDO.html"><span title="PDO">PDO</span></a>::NULL_NATURAL,
+	<a href="PDO.html"><span title="PDO">PDO</span></a>::ATTR_STRINGIFY_FETCHES =&gt; <span class="php-kw">false</span>,
+	<a href="PDO.html"><span title="PDO">PDO</span></a>::ATTR_EMULATE_PREPARES =&gt; <span class="php-kw">false</span>,
+]</code>
+				
+	<div class="expandable-collapsedView">
+		The default PDO connection options.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The default PDO connection options.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$options">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="errors" id="$errors">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Database.DatabaseDriver.html#35-49" title="Go to source code">$errors</a></var> = [
+	<span class="php-str">'server has gone away'</span>,
+	<span class="php-str">'no connection to the server'</span>,
+	<span class="php-str">'Lost connection'</span>,
+	<span class="php-str">'is dead or not enabled'</span>,
+	<span class="php-str">'Error while sending'</span>,
+	<span class="php-str">'decryption failed or bad record mac'</span>,
+	<span class="php-str">'server closed the connection unexpectedly'</span>,
+	<span class="php-str">'SSL connection has been closed unexpectedly'</span>,
+	<span class="php-str">'Error writing data to the connection'</span>,
+	<span class="php-str">'Resource deadlock avoided'</span>,
+]</code>
+				
+	<div class="expandable-collapsedView">
+		The PDO error messages.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The PDO error messages.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$errors">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

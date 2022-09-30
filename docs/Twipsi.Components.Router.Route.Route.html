@@ -1,0 +1,1847 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Router\Route\Route |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.Matcher.html">Matcher</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Router.Route.html">Route</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Router.Route.ControllerRoute.html">
+							ControllerRoute
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Router.Route.LoadableRoute.html">
+							LoadableRoute
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Router.Route.RedirectRoute.html">
+							RedirectRoute
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Router.Route.Route.html">
+							Route
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Router.Route.ViewRoute.html">
+							ViewRoute
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Router.Route.FluentSetter.html">
+							FluentSetter
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Router.Route.Serializable.html">
+							Serializable
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Router.Route.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Router.Route.Route.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Router.html">Router</a>\<a href="namespace-Twipsi.Components.Router.Route.html">Route</a>\<a href="Twipsi.Components.Router.Route.Route.html">Route</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+			<tr><th><code>abstract</code></th></tr>
+
+		<tr>
+			<th><code>uses</code></th>
+			<td>
+<code><a href="Twipsi.Components.Router.Route.FluentSetter.html"><span title="Twipsi\Components\Router\Route\FluentSetter">FluentSetter</span></a>, <a href="Twipsi.Components.Router.Route.Serializable.html"><span title="Twipsi\Components\Router\Route\Serializable">Serializable</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Router\Route\Route</span></b>
+
+
+		uses
+			<a href="Twipsi.Components.Router.Route.FluentSetter.html"><span title="Twipsi\Components\Router\Route\FluentSetter">FluentSetter</span></a>, 
+			<a href="Twipsi.Components.Router.Route.Serializable.html"><span title="Twipsi\Components\Router\Route\Serializable">Serializable</span></a>
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Router.Route.ControllerRoute.html"><span>Twipsi\Components\Router\Route\ControllerRoute</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Router.Route.LoadableRoute.html"><span>Twipsi\Components\Router\Route\LoadableRoute</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Router.Route.RedirectRoute.html"><span>Twipsi\Components\Router\Route\RedirectRoute</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Router.Route.ViewRoute.html"><span>Twipsi\Components\Router\Route\ViewRoute</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Router.Route.Route.html#20" title="Go to source code">Twipsi\Components\Router\Route\Route.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#135-148" title="Go to source code">__construct</a>(<span>string <var>$uri</var></span>, <span>mixed <var>$callback</var></span>, <span>array <var>$methods</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Route constructor.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Route constructor.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Router.Route.ControllerRoute.html#___construct">						<code>Twipsi\Components\Router\Route\ControllerRoute::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Router.Route.LoadableRoute.html#___construct">						<code>Twipsi\Components\Router\Route\LoadableRoute::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Router.Route.RedirectRoute.html#___construct">						<code>Twipsi\Components\Router\Route\RedirectRoute::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Router.Route.ViewRoute.html#___construct">						<code>Twipsi\Components\Router\Route\ViewRoute::__construct()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="render" id="_render">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					abstract
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#150-156" title="Go to source code">render</a>(): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Initiate route rendering and return a valid response.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Initiate route rendering and return a valid response.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Router.Exceptions.InvalidRouteException.html"><span>Twipsi\Components\Router\Exceptions\InvalidRouteException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Router.Route.ControllerRoute.html#_render">						<code>Twipsi\Components\Router\Route\ControllerRoute::render()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Router.Route.LoadableRoute.html#_render">						<code>Twipsi\Components\Router\Route\LoadableRoute::render()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Router.Route.RedirectRoute.html#_render">						<code>Twipsi\Components\Router\Route\RedirectRoute::render()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Router.Route.ViewRoute.html#_render">						<code>Twipsi\Components\Router\Route\ViewRoute::render()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_render">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setUrl" id="_setUrl">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#158-169" title="Go to source code">setUrl</a>(<span>string <var>$uri</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set provided uri for the route.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set provided uri for the route.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setUrl">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getUrl" id="_getUrl">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#171-179" title="Go to source code">getUrl</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Return stored route url with the prefix.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return stored route url with the prefix.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getUrl">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="runFallback" id="_runFallback">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#181-190" title="Go to source code">runFallback</a>(): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Run the fallback closure.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Run the fallback closure.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_runFallback">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setFallback" id="_setFallback">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#192-201" title="Go to source code">setFallback</a>(<span>mixed <var>$closure</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set a fallback closure if controller returns null.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set a fallback closure if controller returns null.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setFallback">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasFallback" id="_hasFallback">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#203-211" title="Go to source code">hasFallback</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if we have a fallback closure.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if we have a fallback closure.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasFallback">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setCallback" id="_setCallback">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#213-222" title="Go to source code">setCallback</a>(<span>mixed <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set provided callback for the route.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set provided callback for the route.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setCallback">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getCallback" id="_getCallback">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#224-232" title="Go to source code">getCallback</a>(): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Return stored route callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return stored route callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getCallback">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setName" id="_setName">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#234-243" title="Go to source code">setName</a>(<span>string <var>$name</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set provided name for the route.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set provided name for the route.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setName">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getName" id="_getName">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#245-253" title="Go to source code">getName</a>(): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Return stored route name.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return stored route name.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getName">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setPrefix" id="_setPrefix">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#255-264" title="Go to source code">setPrefix</a>(<span>string <var>$prefix</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set provided prefix for the route.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set provided prefix for the route.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setPrefix">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getPrefix" id="_getPrefix">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#266-274" title="Go to source code">getPrefix</a>(): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Return stored route prefix.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return stored route prefix.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getPrefix">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setContext" id="_setContext">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#276-285" title="Go to source code">setContext</a>(<span>string <var>$context</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set provided context for the route.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set provided context for the route.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setContext">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getContext" id="_getContext">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#287-295" title="Go to source code">getContext</a>(): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Return stored route context.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return stored route context.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getContext">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setCustomRegex" id="_setCustomRegex">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#297-306" title="Go to source code">setCustomRegex</a>(<span>string <var>$regex</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set a custom regex pattern to match against uri.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set a custom regex pattern to match against uri.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setCustomRegex">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getCustomRegex" id="_getCustomRegex">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#308-316" title="Go to source code">getCustomRegex</a>(): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the custom regex pattern.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the custom regex pattern.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getCustomRegex">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setRouteScheme" id="_setRouteScheme">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#318-327" title="Go to source code">setRouteScheme</a>(<span>string <var>$scheme</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the route scheme.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the route scheme.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setRouteScheme">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getRouteScheme" id="_getRouteScheme">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#329-337" title="Go to source code">getRouteScheme</a>(): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		get the route scheme.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>get the route scheme.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getRouteScheme">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="value" id="_value">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#339-348" title="Go to source code">value</a>(<span>string <var>$key</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the value of a parameter.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the value of a parameter.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_value">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setParameterValues" id="_setParameterValues">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#350-359" title="Go to source code">setParameterValues</a>(<span>array <var>$parameters</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set a set of parameters and values.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set a set of parameters and values.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setParameterValues">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getParameterValues" id="_getParameterValues">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#361-369" title="Go to source code">getParameterValues</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return saved parameter values.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return saved parameter values.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getParameterValues">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setAllowedRequestMethods" id="_setAllowedRequestMethods">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#371-382" title="Go to source code">setAllowedRequestMethods</a>(<span>string ...<var>$methods</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set provided request methods for the route.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set provided request methods for the route.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setAllowedRequestMethods">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAllowedRequestMethods" id="_getAllowedRequestMethods">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#384-392" title="Go to source code">getAllowedRequestMethods</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return stored route request methods.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return stored route request methods.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAllowedRequestMethods">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setParameterRegex" id="_setParameterRegex">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#394-404" title="Go to source code">setParameterRegex</a>(<span>array <var>$regexes</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set default condition regex for the route.
+used on lowest level parameter unless unique one is set.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set default condition regex for the route.
+used on lowest level parameter unless unique one is set.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setParameterRegex">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getParameterRegex" id="_getParameterRegex">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#406-414" title="Go to source code">getParameterRegex</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return stored route default condition regex.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return stored route default condition regex.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getParameterRegex">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setDefaultParameterRegex" id="_setDefaultParameterRegex">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#416-425" title="Go to source code">setDefaultParameterRegex</a>(<span>string <var>$regex</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set default regex for the route.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set default regex for the route.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setDefaultParameterRegex">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getDefaultParameterRegex" id="_getDefaultParameterRegex">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#427-435" title="Go to source code">getDefaultParameterRegex</a>(): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Return stored route default regex.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return stored route default regex.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getDefaultParameterRegex">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setParameterConditions" id="_setParameterConditions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#437-459" title="Go to source code">setParameterConditions</a>(<span>array <var>$conditions</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set condition regex for the parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set condition regex for the parameters.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setParameterConditions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getParameterConditions" id="_getParameterConditions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#461-469" title="Go to source code">getParameterConditions</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return stored parameter condition regexes.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return stored parameter condition regexes.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getParameterConditions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setParameterExceptions" id="_setParameterExceptions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#471-493" title="Go to source code">setParameterExceptions</a>(<span>array <var>$exceptions</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set exception values for the parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set exception values for the parameters.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setParameterExceptions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getParameterExceptions" id="_getParameterExceptions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#495-503" title="Go to source code">getParameterExceptions</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return stored parameter condition values.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return stored parameter condition values.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getParameterExceptions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setOptionalParameters" id="_setOptionalParameters">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#505-514" title="Go to source code">setOptionalParameters</a>(<span>array <var>$parameters</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set optional parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set optional parameters.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setOptionalParameters">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getOptionalParameters" id="_getOptionalParameters">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#516-524" title="Go to source code">getOptionalParameters</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the optional parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the optional parameters.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getOptionalParameters">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setMiddlewares" id="_setMiddlewares">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#526-535" title="Go to source code">setMiddlewares</a>(<span>array <var>$middlewares</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set middlewares for the route.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set middlewares for the route.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setMiddlewares">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getMiddlewares" id="_getMiddlewares">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Router.Route.Route.html#537-545" title="Go to source code">getMiddlewares</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return stored middlewares of the route.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return stored middlewares of the route.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getMiddlewares">#</a>
+		</td>
+	</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Components.Router.Route.FluentSetter.html"><span>Twipsi\Components\Router\Route\FluentSetter</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Router.Route.FluentSetter.html#_name">name()</a>, <a href="Twipsi.Components.Router.Route.FluentSetter.html#_prefix">prefix()</a>, <a href="Twipsi.Components.Router.Route.FluentSetter.html#_context">context()</a>, <a href="Twipsi.Components.Router.Route.FluentSetter.html#_default">default()</a>, <a href="Twipsi.Components.Router.Route.FluentSetter.html#_fallback">fallback()</a>, <a href="Twipsi.Components.Router.Route.FluentSetter.html#_scheme">scheme()</a>, <a href="Twipsi.Components.Router.Route.FluentSetter.html#_custom">custom()</a>, <a href="Twipsi.Components.Router.Route.FluentSetter.html#_regex">regex()</a>, <a href="Twipsi.Components.Router.Route.FluentSetter.html#_condition">condition()</a>, <a href="Twipsi.Components.Router.Route.FluentSetter.html#_exception">exception()</a>, <a href="Twipsi.Components.Router.Route.FluentSetter.html#_optional">optional()</a>, <a href="Twipsi.Components.Router.Route.FluentSetter.html#_middleware">middleware()</a>, <a href="Twipsi.Components.Router.Route.FluentSetter.html#_mergeRoutePropertiesWith">mergeRoutePropertiesWith()</a></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Components.Router.Route.Serializable.html"><span>Twipsi\Components\Router\Route\Serializable</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Router.Route.Serializable.html#___sleep">__sleep()</a>, <a href="Twipsi.Components.Router.Route.Serializable.html#___wakeup">__wakeup()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="name" id="$name">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#24-29" title="Go to source code">$name</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$name">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="uri" id="$uri">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#31-36" title="Go to source code">$uri</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$uri">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="callback" id="$callback">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">mixed</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#38-43" title="Go to source code">$callback</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$callback">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fallback" id="$fallback">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">mixed</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#45-50" title="Go to source code">$fallback</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$fallback">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="prefix" id="$prefix">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#52-57" title="Go to source code">$prefix</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$prefix">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="context" id="$context">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#59-64" title="Go to source code">$context</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$context">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="customRegex" id="$customRegex">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#66-71" title="Go to source code">$customRegex</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$customRegex">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="scheme" id="$scheme">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#73-78" title="Go to source code">$scheme</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$scheme">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="defaultParameterRegex" id="$defaultParameterRegex">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#80-85" title="Go to source code">$defaultParameterRegex</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$defaultParameterRegex">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="allowedRequestMethods" id="$allowedRequestMethods">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#87-92" title="Go to source code">$allowedRequestMethods</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$allowedRequestMethods">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="parameterConditions" id="$parameterConditions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#94-99" title="Go to source code">$parameterConditions</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$parameterConditions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="parameterExceptions" id="$parameterExceptions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#101-105" title="Go to source code">$parameterExceptions</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$parameterExceptions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="parameterRegex" id="$parameterRegex">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#107-112" title="Go to source code">$parameterRegex</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$parameterRegex">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="middlewares" id="$middlewares">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#114-119" title="Go to source code">$middlewares</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$middlewares">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="optionalParameters" id="$optionalParameters">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#121-126" title="Go to source code">$optionalParameters</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$optionalParameters">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="parameterValues" id="$parameterValues">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Router.Route.Route.html#128-133" title="Go to source code">$parameterValues</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$parameterValues">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

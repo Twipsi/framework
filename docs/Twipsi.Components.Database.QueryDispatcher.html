@@ -1,0 +1,1314 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Database\QueryDispatcher |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Builder.html">Builder</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Connections.html">Connections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Drivers.html">Drivers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Language.html">Language</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Database.DatabaseDriver.html">
+							DatabaseDriver
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.DatabaseManager.html">
+							DatabaseManager
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Database.QueryDispatcher.html">
+							QueryDispatcher
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Database.HandlesTransactions.html">
+							HandlesTransactions
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.LogsQueries.html">
+							LogsQueries
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.MocksQueries.html">
+							MocksQueries
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Database.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Database.QueryDispatcher.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Database.html">Database</a>\<a href="Twipsi.Components.Database.QueryDispatcher.html">QueryDispatcher</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+			<tr><th><code>final</code></th></tr>
+		<tr>
+			<th><code>uses</code></th>
+			<td>
+<code><a href="Twipsi.Components.Database.LogsQueries.html"><span title="Twipsi\Components\Database\LogsQueries">LogsQueries</span></a>, <a href="Twipsi.Components.Database.MocksQueries.html"><span title="Twipsi\Components\Database\MocksQueries">MocksQueries</span></a>, <a href="Twipsi.Components.Database.HandlesTransactions.html"><span title="Twipsi\Components\Database\HandlesTransactions">HandlesTransactions</span></a>, <a href="Twipsi.Support.Traits.Timer.html"><span title="Twipsi\Support\Traits\Timer">Timer</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Database.QueryDispatcher.html#20" title="Go to source code">Twipsi\Components\Database\QueryDispatcher.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#59-67" title="Go to source code">__construct</a>(<span><a href="Twipsi.Components.Database.Interfaces.IDatabaseConnection.html"><span title="Twipsi\Components\Database\Interfaces\IDatabaseConnection">IDatabaseConnection</span></a> <var>$connection</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct Query dispatcher.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct Query dispatcher.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="init" id="_init">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#69-94" title="Go to source code">init</a>(<span>string <var>$query</var></span>, <span>array <var>$bindings</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Initialize the built-up query callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Initialize the built-up query callback.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_init">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="completeQuery" id="_completeQuery">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#96-115" title="Go to source code">completeQuery</a>(<span>string <var>$query</var></span>, <span>array <var>$bindings</var></span>, <span>float <var>$time</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Register and log the query.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register and log the query.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_completeQuery">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="runQuery" id="_runQuery">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#117-133" title="Go to source code">runQuery</a>(<span>string <var>$query</var></span>, <span>array <var>$bindings</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Run the query callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Run the query callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_runQuery">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="tryAgain" id="_tryAgain">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#135-157" title="Go to source code">tryAgain</a>(<span>string <var>$query</var></span>, <span>array <var>$bindings</var></span>, <span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>, <span><a href="Twipsi.Components.Database.Exceptions.QueryException.html"><span title="Twipsi\Components\Database\Exceptions\QueryException">QueryException</span></a> <var>$e</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Attempt to connect again through the driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Attempt to connect again through the driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_tryAgain">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="prepare" id="_prepare">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#159-177" title="Go to source code">prepare</a>(<span>string <var>$query</var></span>): <a href="PDOStatement.html"><span title="PDOStatement">PDOStatement</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Prepare query for transmission using defined "fetch mode".
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Prepare query for transmission using defined &quot;fetch mode&quot;.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_prepare">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="bind" id="_bind">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#179-199" title="Go to source code">bind</a>(<span><a href="PDOStatement.html"><span title="PDOStatement">PDOStatement</span></a> <var>$statement</var></span>, <span>array <var>$bindings</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Parse and bind values to the specified query.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Parse and bind values to the specified query.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_bind">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="processBindings" id="_processBindings">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#201-220" title="Go to source code">processBindings</a>(<span>array <var>$bindings</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Parse and process bindings before binding to query.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Parse and process bindings before binding to query.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_processBindings">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="raw" id="_raw">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#222-241" title="Go to source code">raw</a>(<span>string <var>$query</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Execute a raw query directly and return the result.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Execute a raw query directly and return the result.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Database.Exceptions.QueryException.html"><span>Twipsi\Components\Database\Exceptions\QueryException</span></a>|<a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_raw">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="introduce" id="_introduce">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#243-263" title="Go to source code">introduce</a>(<span>string <var>$query</var></span>, <span>array <var>$bindings</var> = []</span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Transmit the query returning the executed status.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Transmit the query returning the executed status.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Database.Exceptions.QueryException.html"><span>Twipsi\Components\Database\Exceptions\QueryException</span></a>|<a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_introduce">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="select" id="_select">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#265-286" title="Go to source code">select</a>(<span>string <var>$query</var></span>, <span>array <var>$bindings</var> = []</span>, <span>bool <var>$first</var> = <span class="php-kw">false</span></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Initialize a Select operation and return the result.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Initialize a Select operation and return the result.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Database.Exceptions.QueryException.html"><span>Twipsi\Components\Database\Exceptions\QueryException</span></a>|<a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_select">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="affect" id="_affect">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#288-311" title="Go to source code">affect</a>(<span>string <var>$query</var></span>, <span>array <var>$bindings</var> = []</span>): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Affect existing data and return the affected data count.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Affect existing data and return the affected data count.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Database.Exceptions.QueryException.html"><span>Twipsi\Components\Database\Exceptions\QueryException</span></a>|<a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_affect">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="while" id="_while">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#313-338" title="Go to source code">while</a>(<span>string <var>$query</var></span>, <span>array <var>$bindings</var> = []</span>): <a href="Generator.html"><span title="Generator">Generator</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Query the results and return the generator.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Query the results and return the generator.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Database.Exceptions.QueryException.html"><span>Twipsi\Components\Database\Exceptions\QueryException</span></a>|<a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_while">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="first" id="_first">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#340-351" title="Go to source code">first</a>(<span>string <var>$query</var></span>, <span>array <var>$bindings</var> = []</span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Initialize a Select operation and return the first result.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Initialize a Select operation and return the first result.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_first">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="insert" id="_insert">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#353-367" title="Go to source code">insert</a>(<span>string <var>$query</var></span>, <span>array <var>$bindings</var> = []</span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Initialize an Insert operation and return the state.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Initialize an Insert operation and return the state.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Database.Exceptions.QueryException.html"><span>Twipsi\Components\Database\Exceptions\QueryException</span></a>|<a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_insert">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="update" id="_update">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#369-380" title="Go to source code">update</a>(<span>string <var>$query</var></span>, <span>array <var>$bindings</var> = []</span>): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Initialize an Update operation and return the affected rows count.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Initialize an Update operation and return the affected rows count.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Database.Exceptions.QueryException.html"><span>Twipsi\Components\Database\Exceptions\QueryException</span></a>|<a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_update">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="delete" id="_delete">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#382-393" title="Go to source code">delete</a>(<span>string <var>$query</var></span>, <span>array <var>$bindings</var> = []</span>): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Initialize a Delete operation and return the affected rows count.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Initialize a Delete operation and return the affected rows count.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_delete">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setStatusModified" id="_setStatusModified">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#395-406" title="Go to source code">setStatusModified</a>(<span>bool <var>$state</var> = <span class="php-kw">true</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the connection status to modify.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the connection status to modify.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setStatusModified">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasBeenModified" id="_hasBeenModified">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#408-416" title="Go to source code">hasBeenModified</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the connection status has been modified.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the connection status has been modified.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasBeenModified">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="queryDuration" id="_queryDuration">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#418-426" title="Go to source code">queryDuration</a>(): float</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the total query duration.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the total query duration.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_queryDuration">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resetQueryDuration" id="_resetQueryDuration">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#428-436" title="Go to source code">resetQueryDuration</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Reset query duration.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Reset query duration.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resetQueryDuration">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="disconnect" id="_disconnect">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#438-446" title="Go to source code">disconnect</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Disconnect PDO.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Disconnect PDO.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_disconnect">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="lastInserted" id="_lastInserted">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#448-456" title="Go to source code">lastInserted</a>(): int|string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the last inserted id.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the last inserted id.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_lastInserted">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setEventDispatcher" id="_setEventDispatcher">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#458-467" title="Go to source code">setEventDispatcher</a>(<span><a href="Twipsi.Components.Events.EventHandler.html"><span title="Twipsi\Components\Events\EventHandler">EventHandler</span></a> <var>$dispatcher</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the event handler.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the event handler.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setEventDispatcher">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getConnection" id="_getConnection">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.QueryDispatcher.html#469-476" title="Go to source code">getConnection</a>(): <a href="Twipsi.Components.Database.Interfaces.IDatabaseConnection.html"><span title="Twipsi\Components\Database\Interfaces\IDatabaseConnection">IDatabaseConnection</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get the database connection.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the database connection.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getConnection">#</a>
+		</td>
+	</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Components.Database.LogsQueries.html"><span>Twipsi\Components\Database\LogsQueries</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Database.LogsQueries.html#_logQuery">logQuery()</a>, <a href="Twipsi.Components.Database.LogsQueries.html#_formatQuery">formatQuery()</a>, <a href="Twipsi.Components.Database.LogsQueries.html#_getQueryLog">getQueryLog()</a>, <a href="Twipsi.Components.Database.LogsQueries.html#_resetQueryLog">resetQueryLog()</a>, <a href="Twipsi.Components.Database.LogsQueries.html#_isLoggingQueries">isLoggingQueries()</a>, <a href="Twipsi.Components.Database.LogsQueries.html#_enableQueryLog">enableQueryLog()</a>, <a href="Twipsi.Components.Database.LogsQueries.html#_disableQueryLog">disableQueryLog()</a></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Components.Database.MocksQueries.html"><span>Twipsi\Components\Database\MocksQueries</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Database.MocksQueries.html#_mock">mock()</a>, <a href="Twipsi.Components.Database.MocksQueries.html#_startQueryLog">startQueryLog()</a>, <a href="Twipsi.Components.Database.MocksQueries.html#_mocking">mocking()</a></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Components.Database.HandlesTransactions.html"><span>Twipsi\Components\Database\HandlesTransactions</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Database.HandlesTransactions.html#_transaction">transaction()</a>, <a href="Twipsi.Components.Database.HandlesTransactions.html#_beginTransaction">beginTransaction()</a>, <a href="Twipsi.Components.Database.HandlesTransactions.html#_commit">commit()</a>, <a href="Twipsi.Components.Database.HandlesTransactions.html#_rollback">rollback()</a>, <a href="Twipsi.Components.Database.HandlesTransactions.html#_registerSavePoint">registerSavePoint()</a>, <a href="Twipsi.Components.Database.HandlesTransactions.html#_releaseSavePoint">releaseSavePoint()</a>, <a href="Twipsi.Components.Database.HandlesTransactions.html#_rollbackSavePoint">rollbackSavePoint()</a>, <a href="Twipsi.Components.Database.HandlesTransactions.html#_tryTransactionAgain">tryTransactionAgain()</a>, <a href="Twipsi.Components.Database.HandlesTransactions.html#_handleTransactionException">handleTransactionException()</a>, <a href="Twipsi.Components.Database.HandlesTransactions.html#_handleCommitException">handleCommitException()</a>, <a href="Twipsi.Components.Database.HandlesTransactions.html#_supportsSavePoints">supportsSavePoints()</a>, <a href="Twipsi.Components.Database.HandlesTransactions.html#_flushTransactions">flushTransactions()</a>, <a href="Twipsi.Components.Database.HandlesTransactions.html#_isNestedTransaction">isNestedTransaction()</a></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Support.Traits.Timer.html"><span>Twipsi\Support\Traits\Timer</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Support.Traits.Timer.html#_startTimer">startTimer()</a>, <a href="Twipsi.Support.Traits.Timer.html#_stopTimer">stopTimer()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="connection" id="$connection">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Database.Interfaces.IDatabaseConnection.html"><span title="Twipsi\Components\Database\Interfaces\IDatabaseConnection">IDatabaseConnection</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Database.QueryDispatcher.html#24-29" title="Go to source code">$connection</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$connection">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="lastInsertID" id="$lastInsertID">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int|string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Database.QueryDispatcher.html#31-36" title="Go to source code">$lastInsertID</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$lastInsertID">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="statusModified" id="$statusModified">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">bool</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Database.QueryDispatcher.html#38-43" title="Go to source code">$statusModified</a></var> = <span class="php-kw">false</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$statusModified">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="totalDuration" id="$totalDuration">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">float</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Database.QueryDispatcher.html#45-50" title="Go to source code">$totalDuration</a></var> = <span class="php-num">0.0</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$totalDuration">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="event" id="$event">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Events.EventHandler.html"><span title="Twipsi\Components\Events\EventHandler">EventHandler</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Database.QueryDispatcher.html#52-57" title="Go to source code">$event</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$event">#</a>
+		</td>
+	</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties used from <a href="Twipsi.Components.Database.LogsQueries.html"><span>Twipsi\Components\Database\LogsQueries</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Components.Database.LogsQueries.html#$queryLog">$queryLog</a></var>, <var><a href="Twipsi.Components.Database.LogsQueries.html#$shouldLogQueries">$shouldLogQueries</a></var></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties used from <a href="Twipsi.Components.Database.MocksQueries.html"><span>Twipsi\Components\Database\MocksQueries</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Components.Database.MocksQueries.html#$mocking">$mocking</a></var></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties used from <a href="Twipsi.Components.Database.HandlesTransactions.html"><span>Twipsi\Components\Database\HandlesTransactions</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Components.Database.HandlesTransactions.html#$transactionDepth">$transactionDepth</a></var></code>				</td>
+			</tr>
+		</table>
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

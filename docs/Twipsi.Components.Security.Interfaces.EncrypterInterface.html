@@ -1,0 +1,461 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Interface Twipsi\Components\Security\Interfaces\EncrypterInterface |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.Csrf.html">Csrf</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.Encrypters.html">Encrypters</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Security.Interfaces.html">Interfaces</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+
+		<div class="menu-section">
+			<h3>Interfaces</h3>
+			<ul>
+					<li class="active">
+						<a href="Twipsi.Components.Security.Interfaces.EncrypterInterface.html">
+							EncrypterInterface
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Security.Interfaces.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Security.Interfaces.EncrypterInterface.html">Interface</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Interface <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Security.html">Security</a>\<a href="namespace-Twipsi.Components.Security.Interfaces.html">Interfaces</a>\<a href="Twipsi.Components.Security.Interfaces.EncrypterInterface.html">EncrypterInterface</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Security\Interfaces\EncrypterInterface</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Security.Encrypters.Hmac.html"><span>Twipsi\Components\Security\Encrypters\Hmac</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Security\Interfaces\EncrypterInterface">EncrypterInterface</span></b>
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Security.Encrypters.OpenSSL.html"><span>Twipsi\Components\Security\Encrypters\OpenSSL</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Security\Interfaces\EncrypterInterface">EncrypterInterface</span></b>
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Security.Encrypters.Sodium.html"><span>Twipsi\Components\Security\Encrypters\Sodium</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Security\Interfaces\EncrypterInterface">EncrypterInterface</span></b>
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Security.Interfaces.EncrypterInterface.html#15" title="Go to source code">Twipsi\Components\Security\Interfaces\EncrypterInterface.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="generate" id="_generate">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Security.Interfaces.EncrypterInterface.html#17-20" title="Go to source code">generate</a>(<span>mixed <var>$algorithm</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Generate a valid salt key for sodium.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Generate a valid salt key for sodium.</p>
+</div>
+
+
+
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.Hmac.html#_generate">						<code>Twipsi\Components\Security\Encrypters\Hmac::generate()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.OpenSSL.html#_generate">						<code>Twipsi\Components\Security\Encrypters\OpenSSL::generate()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.Sodium.html#_generate">						<code>Twipsi\Components\Security\Encrypters\Sodium::generate()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_generate">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hash" id="_hash">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Security.Interfaces.EncrypterInterface.html#22-27" title="Go to source code">hash</a>(<span>string <var>$data</var></span>, <span>string <var>$iv</var></span>, <span>string <var>$method</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Create MAC for the encryption.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create MAC for the encryption.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Security.Interfaces.UnknownAlgorithmException.html"><span>Twipsi\Components\Security\Interfaces\UnknownAlgorithmException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.Hmac.html#_hash">						<code>Twipsi\Components\Security\Encrypters\Hmac::hash()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.OpenSSL.html#_hash">						<code>Twipsi\Components\Security\Encrypters\OpenSSL::hash()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.Sodium.html#_hash">						<code>Twipsi\Components\Security\Encrypters\Sodium::hash()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hash">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validate" id="_validate">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Security.Interfaces.EncrypterInterface.html#29-32" title="Go to source code">validate</a>(<span>array <var>$data</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the decoded hash is valid.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the decoded hash is valid.</p>
+</div>
+
+
+
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.Hmac.html#_validate">						<code>Twipsi\Components\Security\Encrypters\Hmac::validate()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.OpenSSL.html#_validate">						<code>Twipsi\Components\Security\Encrypters\OpenSSL::validate()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.Sodium.html#_validate">						<code>Twipsi\Components\Security\Encrypters\Sodium::validate()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validate">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="decrypt" id="_decrypt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Security.Interfaces.EncrypterInterface.html#34-39" title="Go to source code">decrypt</a>(<span>string <var>$data</var></span>): string|bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Decrypt data using sodium lib.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Decrypt data using sodium lib.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Security.Interfaces.DecrypterException.html"><span>Twipsi\Components\Security\Interfaces\DecrypterException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.Hmac.html#_decrypt">						<code>Twipsi\Components\Security\Encrypters\Hmac::decrypt()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.OpenSSL.html#_decrypt">						<code>Twipsi\Components\Security\Encrypters\OpenSSL::decrypt()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.Sodium.html#_decrypt">						<code>Twipsi\Components\Security\Encrypters\Sodium::decrypt()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_decrypt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="encrypt" id="_encrypt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Security.Interfaces.EncrypterInterface.html#41-46" title="Go to source code">encrypt</a>(<span>string <var>$data</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Encrypt data using sodium lib.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Encrypt data using sodium lib.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Components.Security.Interfaces.EncrypterException.html"><span>Twipsi\Components\Security\Interfaces\EncrypterException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.Hmac.html#_encrypt">						<code>Twipsi\Components\Security\Encrypters\Hmac::encrypt()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.OpenSSL.html#_encrypt">						<code>Twipsi\Components\Security\Encrypters\OpenSSL::encrypt()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Security.Encrypters.Sodium.html#_encrypt">						<code>Twipsi\Components\Security\Encrypters\Sodium::encrypt()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_encrypt">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

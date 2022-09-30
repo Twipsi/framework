@@ -1,0 +1,457 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Url\UrlBuilder |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Url.Redirector.html">
+							Redirector
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Url.SignatureVerifier.html">
+							SignatureVerifier
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Url.SignedUrl.html">
+							SignedUrl
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Url.UrlBuilder.html">
+							UrlBuilder
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Url.UrlGenerator.html">
+							UrlGenerator
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Url.UrlItem.html">
+							UrlItem
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Url.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Url.UrlBuilder.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Url.html">Url</a>\<a href="Twipsi.Components.Url.UrlBuilder.html">UrlBuilder</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+			<tr><th><code>final</code></th></tr>
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Url.UrlBuilder.html#7" title="Go to source code">Twipsi\Components\Url\UrlBuilder.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="build" id="_build">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlBuilder.html#31-50" title="Go to source code">build</a>(<span>string <var>$uri</var></span>, <span>array <var>$defaults</var></span>, <span>array <var>$optionals</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Match the uri tokens against default parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Match the uri tokens against default parameters.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_build">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="replaceParameterHolderWithValues" id="_replaceParameterHolderWithValues">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlBuilder.html#52-75" title="Go to source code">replaceParameterHolderWithValues</a>(<span>array <var>$matches</var></span>, <span>array <var>$optionals</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Replace the tokens with corresponding values.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Replace the tokens with corresponding values.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_replaceParameterHolderWithValues">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isParameterOptional" id="_isParameterOptional">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlBuilder.html#77-91" title="Go to source code">isParameterOptional</a>(<span>string <var>$parameter</var></span>, <span>array <var>$optionals</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a parameter is an optional parameter.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a parameter is an optional parameter.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isParameterOptional">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="attachRemainingParameters" id="_attachRemainingParameters">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlBuilder.html#93-107" title="Go to source code">attachRemainingParameters</a>(<span>string <var>$uri</var></span>, <span>array <var>$parameters</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Attach the remaining values to the url.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Attach the remaining values to the url.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_attachRemainingParameters">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+		<table class="table" id="constants">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Constants</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="PARAMETER_SELECTOR" id="PARAMETER_SELECTOR">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Url.UrlBuilder.html#9-12" title="Go to source code">PARAMETER_SELECTOR</a> = <span class="php-str">"#\&#123;(.*?)}#s"</span></code>
+
+	<div class="expandable-collapsedView">
+		The tokens holding the variadic parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The tokens holding the variadic parameters.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#PARAMETER_SELECTOR">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="REGEX_SELECTOR" id="REGEX_SELECTOR">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Url.UrlBuilder.html#14-17" title="Go to source code">REGEX_SELECTOR</a> = <span class="php-str">":"</span></code>
+
+	<div class="expandable-collapsedView">
+		The selector to identify inline parameter regex.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The selector to identify inline parameter regex.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#REGEX_SELECTOR">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="OPTIONAL_SELECTOR" id="OPTIONAL_SELECTOR">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Url.UrlBuilder.html#19-22" title="Go to source code">OPTIONAL_SELECTOR</a> = <span class="php-str">"?"</span></code>
+
+	<div class="expandable-collapsedView">
+		The identifier for optional parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The identifier for optional parameters.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#OPTIONAL_SELECTOR">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="defaults" id="$defaults">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Url.UrlBuilder.html#24-29" title="Go to source code">$defaults</a></var> = []</code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$defaults">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

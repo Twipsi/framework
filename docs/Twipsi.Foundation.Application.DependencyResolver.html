@@ -1,0 +1,505 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Foundation\Application\DependencyResolver |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Foundation.Application.html">Application</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Bootstrapers.html">Bootstrapers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.ComponentProviders.html">ComponentProviders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Middleware.html">Middleware</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Foundation.Application.AliasRegistry.html">
+							AliasRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.Application.html">
+							Application
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.BindingRegistry.html">
+							BindingRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.ComponentRegistry.html">
+							ComponentRegistry
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Foundation.Application.DependencyResolver.html">
+							DependencyResolver
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.ImplantRegistry.html">
+							ImplantRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.InstanceRegistry.html">
+							InstanceRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.IOCManager.html">
+							IOCManager
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.PathRegistry.html">
+							PathRegistry
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Foundation.Application.ApplicationAccessor.html">
+							ApplicationAccessor
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesBootstrap.html">
+							HandlesBootstrap
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesComponents.html">
+							HandlesComponents
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesEnvironment.html">
+							HandlesEnvironment
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesLocale.html">
+							HandlesLocale
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesPaths.html">
+							HandlesPaths
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Foundation.Application.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Foundation.Application.DependencyResolver.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Foundation.html">Foundation</a>\<a href="namespace-Twipsi.Foundation.Application.html">Application</a>\<a href="Twipsi.Foundation.Application.DependencyResolver.html">DependencyResolver</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Foundation.Application.DependencyResolver.html#21" title="Go to source code">Twipsi\Foundation\Application\DependencyResolver.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.DependencyResolver.html#28-45" title="Go to source code">__construct</a>(<span><a href="Twipsi.Foundation.Application.Application.html"><span title="Twipsi\Foundation\Application\Application">Application</span></a> <var>$app</var></span>, <span>array <var>$parameters</var> = []</span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Dependency resolver constructor.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Dependency resolver constructor.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resolveApplicables" id="_resolveApplicables">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.DependencyResolver.html#47-70" title="Go to source code">resolveApplicables</a>(<span>array <var>$traits</var></span>): ?array</code>
+
+
+	<div class="expandable-collapsedView">
+		Resolve trait based inheritence.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Resolve trait based inheritence.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resolveApplicables">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resolve" id="_resolve">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.DependencyResolver.html#73-103" title="Go to source code">resolve</a>(<span>array <var>$dependencies</var></span>): array|null</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.DependencyResolverException.html"><span>Twipsi\Foundation\Exceptions\DependencyResolverException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resolve">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasParameterOverride" id="_hasParameterOverride">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.DependencyResolver.html#105-127" title="Go to source code">hasParameterOverride</a>(<span><a href="ReflectionParameter.html"><span title="ReflectionParameter">ReflectionParameter</span></a> <var>$parameter</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if we have a custom value override for the dependecy parameter.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if we have a custom value override for the dependecy parameter.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasParameterOverride">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getParameterOverride" id="_getParameterOverride">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.DependencyResolver.html#129-150" title="Go to source code">getParameterOverride</a>(<span><a href="ReflectionParameter.html"><span title="ReflectionParameter">ReflectionParameter</span></a> <var>$parameter</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the override value of the dependecy parameter.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the override value of the dependecy parameter.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getParameterOverride">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="handleClassParameter" id="_handleClassParameter">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.DependencyResolver.html#152-169" title="Go to source code">handleClassParameter</a>(<span><a href="ReflectionParameter.html"><span title="ReflectionParameter">ReflectionParameter</span></a> <var>$parameter</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Handle class type dependency parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Handle class type dependency parameters.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_handleClassParameter">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="handleNormalParameter" id="_handleNormalParameter">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.DependencyResolver.html#171-194" title="Go to source code">handleNormalParameter</a>(<span><a href="ReflectionParameter.html"><span title="ReflectionParameter">ReflectionParameter</span></a> <var>$parameter</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Handle primitive type dependency parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Handle primitive type dependency parameters.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_handleNormalParameter">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="parameters" id="$parameters">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Support.Bags.ArrayBag.html"><span title="Twipsi\Support\Bags\ArrayBag">ArrayBag</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Application.DependencyResolver.html#23-26" title="Go to source code">$parameters</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		Custom parameter container.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Custom parameter container.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$parameters">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="app" id="$app">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Foundation.Application.Application.html"><span title="Twipsi\Foundation\Application\Application">Application</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Application.DependencyResolver.html#31" title="Go to source code">$app</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$app">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

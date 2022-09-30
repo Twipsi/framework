@@ -1,0 +1,792 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Url\UrlGenerator |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Url.Redirector.html">
+							Redirector
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Url.SignatureVerifier.html">
+							SignatureVerifier
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Url.SignedUrl.html">
+							SignedUrl
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Url.UrlBuilder.html">
+							UrlBuilder
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Url.UrlGenerator.html">
+							UrlGenerator
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Url.UrlItem.html">
+							UrlItem
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Url.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Url.UrlGenerator.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Url.html">Url</a>\<a href="Twipsi.Components.Url.UrlGenerator.html">UrlGenerator</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+			<tr><th><code>final</code></th></tr>
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Url.UrlGenerator.html#25" title="Go to source code">Twipsi\Components\Url\UrlGenerator.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#55-65" title="Go to source code">__construct</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>, <span><a href="Twipsi.Components.Router.RouteBag.html"><span title="Twipsi\Components\Router\RouteBag">RouteBag</span></a> <var>$routes</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Url generator constructor.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Url generator constructor.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="route" id="_route">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#67-81" title="Go to source code">route</a>(<span>string <var>$name</var></span>, <span>array <var>$parameters</var> = []</span>): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Find a route based on a name and generate url.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Find a route based on a name and generate url.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_route">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="fromRoute" id="_fromRoute">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#83-101" title="Go to source code">fromRoute</a>(<span><a href="Twipsi.Components.Router.Route.Route.html"><span title="Twipsi\Components\Router\Route\Route">Route</span></a> <var>$route</var></span>, <span>array <var>$parameters</var> = []</span>): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Convert router uri to a compiled url based on parameters.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Convert router uri to a compiled url based on parameters.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_fromRoute">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="action" id="_action">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#103-119" title="Go to source code">action</a>(<span>string|array <var>$action</var></span>, <span>array <var>$parameters</var> = []</span>): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the url based on a controller action
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the url based on a controller action</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_action">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="signed" id="_signed">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#121-132" title="Go to source code">signed</a>(<span>string <var>$name</var></span>, <span>array <var>$parameters</var> = []</span>, <span>int|string|null <var>$expires</var> = <span class="php-kw">null</span></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Generate a safe signed url with signature or/and expiry.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Generate a safe signed url with signature or/and expiry.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_signed">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="secure" id="_secure">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#134-143" title="Go to source code">secure</a>(<span>string <var>$url</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Generate a secure (https) url.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Generate a secure (https) url.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_secure">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="current" id="_current">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#145-153" title="Go to source code">current</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the current URL from the request.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the current URL from the request.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_current">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="previous" id="_previous">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#155-171" title="Go to source code">previous</a>(<span>string <var>$fallback</var> = <span class="php-str">'/'</span></span>, <span>bool|null <var>$secure</var> = <span class="php-kw">null</span></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the previous url the request or the session.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the previous url the request or the session.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_previous">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="intended" id="_intended">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#173-184" title="Go to source code">intended</a>(<span>string <var>$fallback</var> = <span class="php-str">'/'</span></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the intended url from the session while also removing it.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the intended url from the session while also removing it.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_intended">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="compile" id="_compile">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#186-213" title="Go to source code">compile</a>(<span>string <var>$url</var></span>, <span>bool|null <var>$secure</var> = <span class="php-kw">null</span></span>): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Compile the path to a valid url.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Compile the path to a valid url.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_compile">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="scheme" id="_scheme">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#215-228" title="Go to source code">scheme</a>(<span>bool|null <var>$secure</var> = <span class="php-kw">null</span></span>): string|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the possible url scheme.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the possible url scheme.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_scheme">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setSessionLoader" id="_setSessionLoader">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#230-239" title="Go to source code">setSessionLoader</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the session loader.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the session loader.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setSessionLoader">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getSession" id="_getSession">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#241-249" title="Go to source code">getSession</a>(): <a href="Twipsi.Components.Session.SessionItem.html"><span title="Twipsi\Components\Session\SessionItem">SessionItem</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Load and get the session.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Load and get the session.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getSession">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setSystemKey" id="_setSystemKey">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#251-260" title="Go to source code">setSystemKey</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$callback</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the key resolver callback.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the key resolver callback.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setSystemKey">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getSystemKey" id="_getSystemKey">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Url.UrlGenerator.html#262-270" title="Go to source code">getSystemKey</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the system key.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the system key.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getSystemKey">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="request" id="$request">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Url.UrlGenerator.html#27-32" title="Go to source code">$request</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$request">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="session" id="$session">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Closure.html"><span title="Closure">Closure</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Url.UrlGenerator.html#34-39" title="Go to source code">$session</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$session">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="keyResolver" id="$keyResolver">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Closure.html"><span title="Closure">Closure</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Url.UrlGenerator.html#41-46" title="Go to source code">$keyResolver</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$keyResolver">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="routes" id="$routes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Router.RouteBag.html"><span title="Twipsi\Components\Router\RouteBag">RouteBag</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Url.UrlGenerator.html#48-53" title="Go to source code">$routes</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$routes">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

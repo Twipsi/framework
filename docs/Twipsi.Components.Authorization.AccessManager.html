@@ -1,0 +1,1099 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Authorization\AccessManager |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.Exceptions.html">Exceptions</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li class="active">
+						<a href="Twipsi.Components.Authorization.AccessManager.html">
+							AccessManager
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Authorization.Policy.html">
+							Policy
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Authorization.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Authorization.AccessManager.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>\<a href="Twipsi.Components.Authorization.AccessManager.html">AccessManager</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+		<tr>
+			<th><code>uses</code></th>
+			<td>
+<code><a href="Twipsi.Support.Applicables.App.html"><span title="Twipsi\Support\Applicables\App">App</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Authorization.AccessManager.html#29" title="Go to source code">Twipsi\Components\Authorization\AccessManager.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#33-46" title="Go to source code">__construct</a>(
+	<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$userLoader</var></span>,
+	<span><a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span title="Twipsi\Support\Bags\RecursiveArrayBag">RecursiveArrayBag</span></a> <var>$rules</var> = <span class="php-kw">new</span> <a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span title="Twipsi\Support\Bags\RecursiveArrayBag">RecursiveArrayBag</span></a>()</span>,
+	<span>array <var>$beforeCallbacks</var> = []</span>,
+	<span>array <var>$afterCallbacks</var> = []</span>,
+)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct action provider.
+var userLoader -&gt; The closure to retrieve the auth user.
+var rules -&gt; The rules assigned to…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct action provider.
+var userLoader -&gt; The closure to retrieve the auth user.
+var rules -&gt; The rules assigned to actions.
+var beforeCallbacks -&gt; array containing before authorization callbacks.
+var afterCallbacks -&gt; array containing after authorization callbacks.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="create" id="_create">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#48-77" title="Go to source code">create</a>(<span>string <var>$action</var></span>, <span>callable|array|string <var>$callable</var></span>): <b><span class="active" title="Twipsi\Components\Authorization\AccessManager">AccessManager</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Create a rule for a specific action.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Create a rule for a specific action.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_create">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="createCallback" id="_createCallback">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#79-114" title="Go to source code">createCallback</a>(<span>string <var>$action</var></span>, <span>string <var>$callback</var></span>): <a href="Closure.html"><span title="Closure">Closure</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Build a valid callback from the provided callback string.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Build a valid callback from the provided callback string.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createCallback">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="has" id="_has">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#116-122" title="Go to source code">has</a>(<span>string|array <var>$actions</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a user has specific action(s).
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a user has specific action(s).</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_has">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="allows" id="_allows">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#124-130" title="Go to source code">allows</a>(<span>string <var>$action</var></span>, <span>mixed ...<var>$arguments</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a action should be authorized.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a action should be authorized.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_allows">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="denies" id="_denies">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#132-138" title="Go to source code">denies</a>(<span>string <var>$action</var></span>, <span>mixed ...<var>$arguments</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a action should be denied.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a action should be denied.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_denies">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="any" id="_any">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#140-153" title="Go to source code">any</a>(<span>string|array <var>$actions</var></span>, <span>mixed ...<var>$arguments</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a any of the listed actions are authorized.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a any of the listed actions are authorized.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_any">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="none" id="_none">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#155-161" title="Go to source code">none</a>(<span>string|array <var>$actions</var></span>, <span>mixed ...<var>$arguments</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if none of the listed actions are authorized.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if none of the listed actions are authorized.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_none">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="check" id="_check">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#163-176" title="Go to source code">check</a>(<span>string|array <var>$actions</var></span>, <span>mixed ...<var>$arguments</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if all of the listed actions are authorized.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if all of the listed actions are authorized.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_check">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="authorize" id="_authorize">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#178-196" title="Go to source code">authorize</a>(<span>string <var>$action</var></span>, <span>mixed ...<var>$arguments</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Process the action authorization and return exception if failed.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Process the action authorization and return exception if failed.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_authorize">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="process" id="_process">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#198-235" title="Go to source code">process</a>(<span>string <var>$action</var></span>, <span>mixed ...<var>$arguments</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Process the action authorization.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Process the action authorization.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_process">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="processBeforeCallbacks" id="_processBeforeCallbacks">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#237-256" title="Go to source code">processBeforeCallbacks</a>(<span>?<a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a> <var>$user</var></span>, <span>string <var>$action</var></span>, <span>mixed ...<var>$arguments</var></span>): ?bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Process all the provided before callbacks.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Process all the provided before callbacks.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_processBeforeCallbacks">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="processAfterCallbacks" id="_processAfterCallbacks">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#258-276" title="Go to source code">processAfterCallbacks</a>(<span>?<a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a> <var>$user</var></span>, <span>string <var>$action</var></span>, <span>bool <var>$result</var></span>, <span>mixed ...<var>$arguments</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Process all the provided after callbacks.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Process all the provided after callbacks.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_processAfterCallbacks">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="processAuthorization" id="_processAuthorization">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#278-302" title="Go to source code">processAuthorization</a>(<span>?<a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a> <var>$user</var></span>, <span>string <var>$action</var></span>, <span>mixed ...<var>$arguments</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Process authorization for the requested action.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Process authorization for the requested action.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_processAuthorization">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resolvePolicy" id="_resolvePolicy">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#304-348" title="Go to source code">resolvePolicy</a>(<span>string <var>$action</var></span>, <span><a href="Twipsi.Components.Authorization.Policy.html"><span title="Twipsi\Components\Authorization\Policy">Policy</span></a> <var>$policy</var></span>): bool|<a href="Closure.html"><span title="Closure">Closure</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Attempt to resolve the policy based on actions.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Attempt to resolve the policy based on actions.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resolvePolicy">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="userCanResolveAuthorization" id="_userCanResolveAuthorization">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#350-375" title="Go to source code">userCanResolveAuthorization</a>(<span>?<a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a> <var>$user</var></span>, <span>callable|string|array <var>$callable</var></span>, <span>string <var>$method</var> = <span class="php-kw">null</span></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the current user can resolve authorization method.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the current user can resolve authorization method.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_userCanResolveAuthorization">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="actionAllowsGuests" id="_actionAllowsGuests">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#377-397" title="Go to source code">actionAllowsGuests</a>(<span>string <var>$class</var></span>, <span>string <var>$method</var> = <span class="php-kw">null</span></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a policy action allows guests.
+Action methods first parameter should be nullable.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a policy action allows guests.
+Action methods first parameter should be nullable.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_actionAllowsGuests">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="closureAllowsGuests" id="_closureAllowsGuests">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#399-413" title="Go to source code">closureAllowsGuests</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$closure</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a policy closure allows guests.
+Closures first parameter should be nullable.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a policy closure allows guests.
+Closures first parameter should be nullable.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_closureAllowsGuests">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getPolicy" id="_getPolicy">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#415-433" title="Go to source code">getPolicy</a>(<span>string <var>$class</var></span>): ?<a href="Twipsi.Components.Authorization.Policy.html"><span title="Twipsi\Components\Authorization\Policy">Policy</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Get policy object for a policy class.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get policy object for a policy class.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getPolicy">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="before" id="_before">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#435-441" title="Go to source code">before</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$closure</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set a callback to be executed before authorization.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set a callback to be executed before authorization.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_before">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="after" id="_after">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#443-449" title="Go to source code">after</a>(<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$closure</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set a callback to be executed after authorization.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set a callback to be executed after authorization.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_after">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="rules" id="_rules">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#451-457" title="Go to source code">rules</a>(): <a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span title="Twipsi\Support\Bags\RecursiveArrayBag">RecursiveArrayBag</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Return the container with all the rules.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return the container with all the rules.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_rules">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="user" id="_user">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#459-467" title="Go to source code">user</a>(<span><a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a> <var>$user</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Add user to user loader.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add user to user loader.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_user">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="loadUser" id="_loadUser">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Authorization.AccessManager.html#469-475" title="Go to source code">loadUser</a>(): ?<a href="Twipsi.Components.User.Interfaces.IAuthenticatable.html"><span title="Twipsi\Components\User\Interfaces\IAuthenticatable">IAuthenticatable</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Load the requested user.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Load the requested user.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_loadUser">#</a>
+		</td>
+	</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Support.Applicables.App.html"><span>Twipsi\Support\Applicables\App</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Support.Applicables.App.html#_appendApp">appendApp()</a>, <a href="Twipsi.Support.Applicables.App.html#_getApplication">getApplication()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="userLoader" id="$userLoader">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Closure.html"><span title="Closure">Closure</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Authorization.AccessManager.html#41" title="Go to source code">$userLoader</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$userLoader">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="rules" id="$rules">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span title="Twipsi\Support\Bags\RecursiveArrayBag">RecursiveArrayBag</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Authorization.AccessManager.html#42" title="Go to source code">$rules</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$rules">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="beforeCallbacks" id="$beforeCallbacks">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Authorization.AccessManager.html#43" title="Go to source code">$beforeCallbacks</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$beforeCallbacks">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="afterCallbacks" id="$afterCallbacks">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Authorization.AccessManager.html#44" title="Go to source code">$afterCallbacks</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$afterCallbacks">#</a>
+		</td>
+	</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties used from <a href="Twipsi.Support.Applicables.App.html"><span>Twipsi\Support\Applicables\App</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Support.Applicables.App.html#$app">$app</a></var></code>				</td>
+			</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

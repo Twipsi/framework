@@ -1,0 +1,1168 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Foundation\Application\ComponentRegistry |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Foundation.Application.html">Application</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Bootstrapers.html">Bootstrapers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.ComponentProviders.html">ComponentProviders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Console.html">Console</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.Middleware.html">Middleware</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Foundation.Application.AliasRegistry.html">
+							AliasRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.Application.html">
+							Application
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.BindingRegistry.html">
+							BindingRegistry
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Foundation.Application.ComponentRegistry.html">
+							ComponentRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.DependencyResolver.html">
+							DependencyResolver
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.ImplantRegistry.html">
+							ImplantRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.InstanceRegistry.html">
+							InstanceRegistry
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.IOCManager.html">
+							IOCManager
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.PathRegistry.html">
+							PathRegistry
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Foundation.Application.ApplicationAccessor.html">
+							ApplicationAccessor
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesBootstrap.html">
+							HandlesBootstrap
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesComponents.html">
+							HandlesComponents
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesEnvironment.html">
+							HandlesEnvironment
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesLocale.html">
+							HandlesLocale
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Foundation.Application.HandlesPaths.html">
+							HandlesPaths
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Foundation.Application.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Foundation.Application.ComponentRegistry.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Foundation.html">Foundation</a>\<a href="namespace-Twipsi.Foundation.Application.html">Application</a>\<a href="Twipsi.Foundation.Application.ComponentRegistry.html">ComponentRegistry</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+		<tr>
+			<th><code>extends</code></th>
+			<td>
+<code><a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span title="Twipsi\Support\Bags\RecursiveArrayBag">RecursiveArrayBag</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Support.Bags.ArrayBag.html"><span>Twipsi\Support\Bags\ArrayBag</span></a>
+
+		implements
+			<a href="IteratorAggregate.html"><span title="IteratorAggregate">IteratorAggregate</span></a>, 
+			<a href="Countable.html"><span title="Countable">Countable</span></a>
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span>Twipsi\Support\Bags\RecursiveArrayBag</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Foundation\Application\ComponentRegistry</span></b>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#18" title="Go to source code">Twipsi\Foundation\Application\ComponentRegistry.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#41-49" title="Go to source code">__construct</a>(<span><a href="Twipsi.Foundation.Application.Application.html"><span title="Twipsi\Foundation\Application\Application">Application</span></a> <var>$app</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct the registry.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct the registry.</p>
+</div>
+
+
+
+
+		<h4>Overrides</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Support.Bags.RecursiveArrayBag.html#___construct">						<code>Twipsi\Support\Bags\RecursiveArrayBag::__construct()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="boot" id="_boot">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#51-67" title="Go to source code">boot</a>(): <b><span class="active" title="Twipsi\Foundation\Application\ComponentRegistry">ComponentRegistry</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Boot all the component providers.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Boot all the component providers.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_boot">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="register" id="_register">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#69-111" title="Go to source code">register</a>(<span>string|<a href="Twipsi.Foundation.ComponentProvider.html"><span title="Twipsi\Foundation\ComponentProvider">ComponentProvider</span></a> <var>$provider</var></span>): <a href="Twipsi.Foundation.ComponentProvider.html"><span title="Twipsi\Foundation\ComponentProvider">ComponentProvider</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Register a component provider.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Register a component provider.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_register">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="loadDeferredComponentProviders" id="_loadDeferredComponentProviders">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#113-123" title="Go to source code">loadDeferredComponentProviders</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Load deferred component providers.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Load deferred component providers.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_loadDeferredComponentProviders">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="loadDeferredProvider" id="_loadDeferredProvider">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#125-146" title="Go to source code">loadDeferredProvider</a>(<span>string <var>$abstract</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Load a deferred component provider.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Load a deferred component provider.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_loadDeferredProvider">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="bootProvider" id="_bootProvider">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#148-160" title="Go to source code">bootProvider</a>(<span><a href="Twipsi.Foundation.ComponentProvider.html"><span title="Twipsi\Foundation\ComponentProvider">ComponentProvider</span></a> <var>$provider</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Run The boot method ont he provider.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Run The boot method ont he provider.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_bootProvider">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="providers" id="_providers">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#162-170" title="Go to source code">providers</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the provider components.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the provider components.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_providers">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="framework" id="_framework">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#172-180" title="Go to source code">framework</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the framework components.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the framework components.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_framework">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="application" id="_application">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#182-190" title="Go to source code">application</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the application components.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the application components.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_application">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="always" id="_always">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#192-200" title="Go to source code">always</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the always loadable components.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the always loadable components.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_always">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="deferred" id="_deferred">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#202-210" title="Go to source code">deferred</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the deferred components.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the deferred components.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_deferred">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="loaded" id="_loaded">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#212-220" title="Go to source code">loaded</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the loaded components.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the loaded components.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_loaded">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getInstance" id="_getInstance">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#222-232" title="Go to source code">getInstance</a>(<span>string <var>$provider</var></span>): <a href="Twipsi.Foundation.ComponentProvider.html"><span title="Twipsi\Foundation\ComponentProvider">ComponentProvider</span></a>|null</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the providers instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the providers instance.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getInstance">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasBeenLoaded" id="_hasBeenLoaded">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#234-248" title="Go to source code">hasBeenLoaded</a>(<span>string|<a href="Twipsi.Foundation.ComponentProvider.html"><span title="Twipsi\Foundation\ComponentProvider">ComponentProvider</span></a> <var>$provider</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if a component has been loaded.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if a component has been loaded.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasBeenLoaded">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isApplicationComponentProvider" id="_isApplicationComponentProvider">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#250-264" title="Go to source code">isApplicationComponentProvider</a>(<span>string|<a href="Twipsi.Foundation.ComponentProvider.html"><span title="Twipsi\Foundation\ComponentProvider">ComponentProvider</span></a> <var>$provider</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the component source is the application.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the component source is the application.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isApplicationComponentProvider">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isFrameworkComponentProvider" id="_isFrameworkComponentProvider">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#266-280" title="Go to source code">isFrameworkComponentProvider</a>(<span>string|<a href="Twipsi.Foundation.ComponentProvider.html"><span title="Twipsi\Foundation\ComponentProvider">ComponentProvider</span></a> <var>$provider</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the component source is the framework.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the component source is the framework.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isFrameworkComponentProvider">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isAlwaysComponentProvider" id="_isAlwaysComponentProvider">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#282-296" title="Go to source code">isAlwaysComponentProvider</a>(<span>string|<a href="Twipsi.Foundation.ComponentProvider.html"><span title="Twipsi\Foundation\ComponentProvider">ComponentProvider</span></a> <var>$provider</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the component is always loaded.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the component is always loaded.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isAlwaysComponentProvider">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isDeferredComponentProvider" id="_isDeferredComponentProvider">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#298-312" title="Go to source code">isDeferredComponentProvider</a>(<span>string|<a href="Twipsi.Foundation.ComponentProvider.html"><span title="Twipsi\Foundation\ComponentProvider">ComponentProvider</span></a> <var>$provider</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the component is deferred.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the component is deferred.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isDeferredComponentProvider">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isDeferredAbstract" id="_isDeferredAbstract">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#314-324" title="Go to source code">isDeferredAbstract</a>(<span>string <var>$abstract</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the abstract is deferred.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the abstract is deferred.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isDeferredAbstract">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isLoadedComponentProvider" id="_isLoadedComponentProvider">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#326-340" title="Go to source code">isLoadedComponentProvider</a>(<span>string|<a href="Twipsi.Foundation.ComponentProvider.html"><span title="Twipsi\Foundation\ComponentProvider">ComponentProvider</span></a> <var>$provider</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the component is loaded.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the component is loaded.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isLoadedComponentProvider">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isRegistered" id="_isRegistered">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#342-350" title="Go to source code">isRegistered</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if we have registered the component laoders.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if we have registered the component laoders.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isRegistered">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isBooted" id="_isBooted">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#352-360" title="Go to source code">isBooted</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if we have booted the component laoders.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if we have booted the component laoders.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isBooted">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setRegistered" id="_setRegistered">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#362-370" title="Go to source code">setRegistered</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the registered laoders to true;
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the registered laoders to true;</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setRegistered">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setBooted" id="_setBooted">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#372-380" title="Go to source code">setBooted</a>(): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set the booted laoders to true;
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the booted laoders to true;</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setBooted">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isFrameworkType" id="_isFrameworkType">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#382-392" title="Go to source code">isFrameworkType</a>(<span>string <var>$provider</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if its a framework component provider.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if its a framework component provider.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isFrameworkType">#</a>
+		</td>
+	</tr>
+		</table>
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods inherited from <a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span>Twipsi\Support\Bags\RecursiveArrayBag</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_all">all()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_selected">selected()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_recursiveMerge">recursiveMerge()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_keys">keys()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_set">set()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_push">push()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_gather">gather()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_implode">implode()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_get">get()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_pull">pull()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_has">has()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_find">find()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_search">search()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_contains">contains()</a>, <a href="Twipsi.Support.Bags.RecursiveArrayBag.html#_delete">delete()</a></code>				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods inherited from <a href="Twipsi.Support.Bags.ArrayBag.html"><span>Twipsi\Support\Bags\ArrayBag</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Support.Bags.ArrayBag.html#___invoke">__invoke()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_filter">filter()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_replace">replace()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_merge">merge()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_add">add()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_shift">shift()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_empty">empty()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_getIterator">getIterator()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_count">count()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_first">first()</a>, <a href="Twipsi.Support.Bags.ArrayBag.html#_last">last()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="app" id="$app">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Foundation.Application.Application.html"><span title="Twipsi\Foundation\Application\Application">Application</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#20-25" title="Go to source code">$app</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$app">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="registered" id="$registered">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">bool</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#27-32" title="Go to source code">$registered</a></var> = <span class="php-kw">false</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$registered">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="booted" id="$booted">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">bool</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Foundation.Application.ComponentRegistry.html#34-39" title="Go to source code">$booted</a></var> = <span class="php-kw">false</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$booted">#</a>
+		</td>
+	</tr>
+		</table>
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties inherited from <a href="Twipsi.Support.Bags.RecursiveArrayBag.html"><span>Twipsi\Support\Bags\RecursiveArrayBag</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Support.Bags.RecursiveArrayBag.html#$parameters">$parameters</a></var></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

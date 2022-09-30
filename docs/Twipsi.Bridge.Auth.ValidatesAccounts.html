@@ -1,0 +1,351 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Trait Twipsi\Bridge\Auth\ValidatesAccounts |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Bridge.Auth.html">Auth</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.Middlewares.html">Middlewares</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.User.html">User</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Bridge.Auth.RedirectsLogins.html">
+							RedirectsLogins
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Bridge.Auth.ThrottlesLogins.html">
+							ThrottlesLogins
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Bridge.Auth.ValidatesAccounts.html">
+							ValidatesAccounts
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Bridge.Auth.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Bridge.Auth.ValidatesAccounts.html">Trait</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Trait <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Bridge.html">Bridge</a>\<a href="namespace-Twipsi.Bridge.Auth.html">Auth</a>\<a href="Twipsi.Bridge.Auth.ValidatesAccounts.html">ValidatesAccounts</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Bridge\Auth\ValidatesAccounts</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Authentication.Middlewares.RedirectIfAccountInvalid.html"><span>Twipsi\Components\Authentication\Middlewares\RedirectIfAccountInvalid</span></a>
+
+		implements
+			<a href="Twipsi.Foundation.Middleware.MiddlewareInterface.html"><span title="Twipsi\Foundation\Middleware\MiddlewareInterface">MiddlewareInterface</span></a>
+
+		uses
+			<b><span class="active" title="Twipsi\Bridge\Auth\ValidatesAccounts">ValidatesAccounts</span></b>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Bridge.Auth.ValidatesAccounts.html#23" title="Go to source code">Twipsi\Bridge\Auth\ValidatesAccounts.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="validateAccount" id="_validateAccount">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ValidatesAccounts.html#25-43" title="Go to source code">validateAccount</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>, <span><a href="App.Models.Authentication.User.html"><span title="App\Models\Authentication\User">User</span></a> <var>$user</var></span>): <a href="Twipsi.Components.Http.Response.Interfaces.ResponseInterface.html"><span title="Twipsi\Components\Http\Response\Interfaces\ResponseInterface">ResponseInterface</span></a>|bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the account is all valid.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the account is all valid.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateAccount">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isSuspended" id="_isSuspended">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ValidatesAccounts.html#45-67" title="Go to source code">isSuspended</a>(<span><a href="App.Models.Authentication.User.html"><span title="App\Models\Authentication\User">User</span></a> <var>$user</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the user account is suspended.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the user account is suspended.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isSuspended">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isDeactivated" id="_isDeactivated">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ValidatesAccounts.html#69-78" title="Go to source code">isDeactivated</a>(<span><a href="App.Models.Authentication.User.html"><span title="App\Models\Authentication\User">User</span></a> <var>$user</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the user account is deactivated.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the user account is deactivated.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isDeactivated">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="releaseSuspension" id="_releaseSuspension">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ValidatesAccounts.html#80-89" title="Go to source code">releaseSuspension</a>(<span><a href="App.Models.Authentication.User.html"><span title="App\Models\Authentication\User">User</span></a> <var>$user</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Release the suspension fo a user.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Release the suspension fo a user.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_releaseSuspension">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="abortWithSuspendedResponse" id="_abortWithSuspendedResponse">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ValidatesAccounts.html#91-111" title="Go to source code">abortWithSuspendedResponse</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>, <span><a href="App.Models.Authentication.User.html"><span title="App\Models\Authentication\User">User</span></a> <var>$user</var></span>): <a href="Twipsi.Components.Http.Response.Interfaces.ResponseInterface.html"><span title="Twipsi\Components\Http\Response\Interfaces\ResponseInterface">ResponseInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Abort with suspended validation error.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Abort with suspended validation error.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_abortWithSuspendedResponse">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="abortWithDeactivatedResponse" id="_abortWithDeactivatedResponse">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Bridge.Auth.ValidatesAccounts.html#113-133" title="Go to source code">abortWithDeactivatedResponse</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>, <span><a href="App.Models.Authentication.User.html"><span title="App\Models\Authentication\User">User</span></a> <var>$user</var></span>): <a href="Twipsi.Components.Http.Response.Interfaces.ResponseInterface.html"><span title="Twipsi\Components\Http\Response\Interfaces\ResponseInterface">ResponseInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Abort with deactivated validation error.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Abort with deactivated validation error.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_abortWithDeactivatedResponse">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

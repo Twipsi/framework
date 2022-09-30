@@ -1,0 +1,440 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Trait Twipsi\Components\Database\Builder\BuildsPagination |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.Builder.html">Builder</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Connections.html">Connections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Drivers.html">Drivers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Language.html">Language</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Database.Builder.QueryBuilder.html">
+							QueryBuilder
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Database.Builder.BuildsHavings.html">
+							BuildsHavings
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.Builder.BuildsJoins.html">
+							BuildsJoins
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Database.Builder.BuildsPagination.html">
+							BuildsPagination
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.Builder.BuildsWheres.html">
+							BuildsWheres
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Database.Builder.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Database.Builder.BuildsPagination.html">Trait</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Trait <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Database.html">Database</a>\<a href="namespace-Twipsi.Components.Database.Builder.html">Builder</a>\<a href="Twipsi.Components.Database.Builder.BuildsPagination.html">BuildsPagination</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Database\Builder\BuildsPagination</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span>Twipsi\Components\Database\Builder\QueryBuilder</span></a>
+
+
+		uses
+			<a href="Twipsi.Components.Database.Builder.BuildsWheres.html"><span title="Twipsi\Components\Database\Builder\BuildsWheres">BuildsWheres</span></a>, 
+			<a href="Twipsi.Components.Database.Builder.BuildsJoins.html"><span title="Twipsi\Components\Database\Builder\BuildsJoins">BuildsJoins</span></a>, 
+			<a href="Twipsi.Components.Database.Builder.BuildsHavings.html"><span title="Twipsi\Components\Database\Builder\BuildsHavings">BuildsHavings</span></a>, 
+			<b><span class="active" title="Twipsi\Components\Database\Builder\BuildsPagination">BuildsPagination</span></b>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Database.Builder.BuildsPagination.html#9" title="Go to source code">Twipsi\Components\Database\Builder\BuildsPagination.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="page" id="_page">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsPagination.html#11-22" title="Go to source code">page</a>(<span>int <var>$page</var></span>, <span>int <var>$rows</var> = <span class="php-num">15</span></span>): <a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a>|<b><span class="active" title="Twipsi\Components\Database\Builder\BuildsPagination">BuildsPagination</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set offset and limit for a page automatically.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set offset and limit for a page automatically.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_page">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="nextPage" id="_nextPage">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsPagination.html#24-41" title="Go to source code">nextPage</a>(<span>int <var>$rows</var> = <span class="php-num">15</span></span>, <span>int <var>$id</var> = <span class="php-num">0</span></span>, <span>string <var>$column</var> = <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsPagination">self</span></b>::IDCOLUMN</span>): <a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a>|<b><span class="active" title="Twipsi\Components\Database\Builder\BuildsPagination">BuildsPagination</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Get the next page rows.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the next page rows.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_nextPage">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="prevPage" id="_prevPage">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsPagination.html#43-59" title="Go to source code">prevPage</a>(<span>int <var>$rows</var> = <span class="php-num">15</span></span>, <span>int <var>$id</var> = <span class="php-num">0</span></span>, <span>string <var>$column</var> = <b><span class="active" title="Twipsi\Components\Database\Builder\BuildsPagination">self</span></b>::IDCOLUMN</span>): <a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a>|<b><span class="active" title="Twipsi\Components\Database\Builder\BuildsPagination">BuildsPagination</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Get the prev page rows.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the prev page rows.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Exception.html"><span>Exception</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_prevPage">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="paginate" id="_paginate">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsPagination.html#61-67" title="Go to source code">paginate</a>(<span>int <var>$rows</var> = <span class="php-num">15</span></span>, <span>string <var>$name</var> = <span class="php-str">'page'</span></span>, <span>int <var>$page</var> = <span class="php-kw">null</span></span>)</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_paginate">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="countTotalResultsOfQuery" id="_countTotalResultsOfQuery">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Builder.BuildsPagination.html#69-83" title="Go to source code">countTotalResultsOfQuery</a>(): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Count all the results without limiting.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Count all the results without limiting.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.ApplicationManagerException.html"><span>Twipsi\Foundation\Exceptions\ApplicationManagerException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_countTotalResultsOfQuery">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,530 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Database\Language\MysqlLanguage |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Builder.html">Builder</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Connections.html">Connections</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Drivers.html">Drivers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.Language.html">Language</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Database.Language.Expression.html">
+							Expression
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.Language.Join.html">
+							Join
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.Language.Language.html">
+							Language
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Database.Language.MysqlLanguage.html">
+							MysqlLanguage
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.Language.SQLiteLanguage.html">
+							SQLiteLanguage
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Database.Language.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Database.Language.MysqlLanguage.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Database.html">Database</a>\<a href="namespace-Twipsi.Components.Database.Language.html">Language</a>\<a href="Twipsi.Components.Database.Language.MysqlLanguage.html">MysqlLanguage</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+			<tr><th><code>final</code></th></tr>
+		<tr>
+			<th><code>extends</code></th>
+			<td>
+<code><a href="Twipsi.Components.Database.Language.Language.html"><span title="Twipsi\Components\Database\Language\Language">Language</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Database.Language.Language.html"><span>Twipsi\Components\Database\Language\Language</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Database\Language\MysqlLanguage</span></b>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Database.Language.MysqlLanguage.html#8" title="Go to source code">Twipsi\Components\Database\Language\MysqlLanguage.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="supportsSavePoints" id="_supportsSavePoints">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Language.MysqlLanguage.html#10-18" title="Go to source code">supportsSavePoints</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the driver supports save points.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the driver supports save points.</p>
+</div>
+
+
+
+
+		<h4>Overrides</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Database.Language.Language.html#_supportsSavePoints">						<code>Twipsi\Components\Database\Language\Language::supportsSavePoints()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_supportsSavePoints">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getScheme" id="_getScheme">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Language.MysqlLanguage.html#20-38" title="Go to source code">getScheme</a>(<span>string <var>$statement</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the statement scheme map to build.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the statement scheme map to build.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+		<h4>Overrides</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Database.Language.Language.html#_getScheme">						<code>Twipsi\Components\Database\Language\Language::getScheme()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getScheme">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="toInsertIgnore" id="_toInsertIgnore">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Language.MysqlLanguage.html#40-51" title="Go to source code">toInsertIgnore</a>(<span><a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a> <var>$query</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Build an insert statement based on query builder data.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Build an insert statement based on query builder data.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+		<h4>Overrides</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Database.Language.Language.html#_toInsertIgnore">						<code>Twipsi\Components\Database\Language\Language::toInsertIgnore()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_toInsertIgnore">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="toValues" id="_toValues">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Language.MysqlLanguage.html#53-66" title="Go to source code">toValues</a>(<span><a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a> <var>$query</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Build the values of an insert statement.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Build the values of an insert statement.</p>
+</div>
+
+
+
+
+		<h4>Overrides</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Database.Language.Language.html#_toValues">						<code>Twipsi\Components\Database\Language\Language::toValues()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_toValues">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="toUpsert" id="_toUpsert">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Language.MysqlLanguage.html#68-79" title="Go to source code">toUpsert</a>(<span><a href="Twipsi.Components.Database.Builder.QueryBuilder.html"><span title="Twipsi\Components\Database\Builder\QueryBuilder">QueryBuilder</span></a> <var>$query</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Build an upsert statement based on query builder data.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Build an upsert statement based on query builder data.</p>
+</div>
+
+
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Twipsi.Foundation.Exceptions.NotSupportedException.html"><span>Twipsi\Foundation\Exceptions\NotSupportedException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
+
+		<h4>Overrides</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Database.Language.Language.html#_toUpsert">						<code>Twipsi\Components\Database\Language\Language::toUpsert()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_toUpsert">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="quoteValue" id="_quoteValue">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Language.MysqlLanguage.html#81-92" title="Go to source code">quoteValue</a>(<span>string <var>$value</var></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Wrap a value in quotes.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Wrap a value in quotes.</p>
+</div>
+
+
+
+
+		<h4>Overrides</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Database.Language.Language.html#_quoteValue">						<code>Twipsi\Components\Database\Language\Language::quoteValue()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_quoteValue">#</a>
+		</td>
+	</tr>
+		</table>
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods inherited from <a href="Twipsi.Components.Database.Language.Language.html"><span>Twipsi\Components\Database\Language\Language</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Database.Language.Language.html#_toExpression">toExpression()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toExists">toExists()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toInsert">toInsert()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toSelect">toSelect()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toUpdate">toUpdate()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toDelete">toDelete()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toAggregate">toAggregate()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toColumns">toColumns()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toUpdateColumns">toUpdateColumns()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toInsertColumns">toInsertColumns()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toTable">toTable()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toAlias">toAlias()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toJoins">toJoins()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_compileJoin">compileJoin()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toWhere">toWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeWheres">makeWheres()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_compileWheres">compileWheres()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toGroups">toGroups()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toHavings">toHavings()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeHavings">makeHavings()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toOrders">toOrders()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeOrders">makeOrders()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toLimit">toLimit()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toOffset">toOffset()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_toUnions">toUnions()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeDistinct">makeDistinct()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeRawWhere">makeRawWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeNormalWhere">makeNormalWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeInWhere">makeInWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeNotInWhere">makeNotInWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeNullWhere">makeNullWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeNotNullWhere">makeNotNullWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeBetweenWhere">makeBetweenWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeNotBetweenWhere">makeNotBetweenWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeDateWhere">makeDateWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeTimeWhere">makeTimeWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeDayWhere">makeDayWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeMonthWhere">makeMonthWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeYearWhere">makeYearWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeComparedWhere">makeComparedWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeNestedWhere">makeNestedWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeExistsWhere">makeExistsWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeNotExistsWhere">makeNotExistsWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeSubWhere">makeSubWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeRowedWhere">makeRowedWhere()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeRawHaving">makeRawHaving()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeNormalHaving">makeNormalHaving()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeNullHaving">makeNullHaving()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeNotNullHaving">makeNotNullHaving()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeBetweenHaving">makeBetweenHaving()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeNotBetweenHaving">makeNotBetweenHaving()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_makeNestedHaving">makeNestedHaving()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_buildRegisterSavePointExpression">buildRegisterSavePointExpression()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_buildReleaseSavePointExpression">buildReleaseSavePointExpression()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_buildRollbackSavePointExpression">buildRollbackSavePointExpression()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_quoteTable">quoteTable()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_quote">quote()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_quoteAliasValue">quoteAliasValue()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_quoteString">quoteString()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_tokenize">tokenize()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_columnize">columnize()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_setPrefix">setPrefix()</a>, <a href="Twipsi.Components.Database.Language.Language.html#_getPrefix">getPrefix()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties inherited from <a href="Twipsi.Components.Database.Language.Language.html"><span>Twipsi\Components\Database\Language\Language</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Components.Database.Language.Language.html#$prefix">$prefix</a></var>, <var><a href="Twipsi.Components.Database.Language.Language.html#$interchange">$interchange</a></var></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,523 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Interface Twipsi\Components\Events\Interfaces\EventInterface |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Events.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.Traits.html">Traits</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+
+		<div class="menu-section">
+			<h3>Interfaces</h3>
+			<ul>
+					<li class="active">
+						<a href="Twipsi.Components.Events.Interfaces.EventInterface.html">
+							EventInterface
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Events.Interfaces.ListenerInterface.html">
+							ListenerInterface
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Events.Interfaces.ShouldBroadcast.html">
+							ShouldBroadcast
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Events.Interfaces.ShouldQueue.html">
+							ShouldQueue
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Events.Interfaces.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Events.Interfaces.EventInterface.html">Interface</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Interface <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Events.html">Events</a>\<a href="namespace-Twipsi.Components.Events.Interfaces.html">Interfaces</a>\<a href="Twipsi.Components.Events.Interfaces.EventInterface.html">EventInterface</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Events\Interfaces\EventInterface</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationAttemptedEvent.html"><span>Twipsi\Components\Authentication\Events\AuthenticationAttemptedEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationAuthenticatedEvent.html"><span>Twipsi\Components\Authentication\Events\AuthenticationAuthenticatedEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationFailedEvent.html"><span>Twipsi\Components\Authentication\Events\AuthenticationFailedEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationLockoutEvent.html"><span>Twipsi\Components\Authentication\Events\AuthenticationLockoutEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationLoginEvent.html"><span>Twipsi\Components\Authentication\Events\AuthenticationLoginEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationLogoutEvent.html"><span>Twipsi\Components\Authentication\Events\AuthenticationLogoutEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationValidatedEvent.html"><span>Twipsi\Components\Authentication\Events\AuthenticationValidatedEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationVerifiedEvent.html"><span>Twipsi\Components\Authentication\Events\AuthenticationVerifiedEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Authorization.Events.AuthorizationProcessedEvent.html"><span>Twipsi\Components\Authorization\Events\AuthorizationProcessedEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Database.Events.QueryCompletedEvent.html"><span>Twipsi\Components\Database\Events\QueryCompletedEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Database.Events.StatementPreparedEvent.html"><span>Twipsi\Components\Database\Events\StatementPreparedEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Database.Events.TransactionBeganEvent.html"><span>Twipsi\Components\Database\Events\TransactionBeganEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Database.Events.TransactionCommitedEvent.html"><span>Twipsi\Components\Database\Events\TransactionCommitedEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Database.Events.TransactionRolledbackEvent.html"><span>Twipsi\Components\Database\Events\TransactionRolledbackEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Mailer.Events.MailFailedEvent.html"><span>Twipsi\Components\Mailer\Events\MailFailedEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Mailer.Events.MailSendingEvent.html"><span>Twipsi\Components\Mailer\Events\MailSendingEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Mailer.Events.MailSentEvent.html"><span>Twipsi\Components\Mailer\Events\MailSentEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Notification.Events.NotificationSentEvent.html"><span>Twipsi\Components\Notification\Events\NotificationSentEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Password.Events.PasswordResetEvent.html"><span>Twipsi\Components\Password\Events\PasswordResetEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Password.Events.PasswordSentEvent.html"><span>Twipsi\Components\Password\Events\PasswordSentEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Router.Events.RouteMatchedEvent.html"><span>Twipsi\Components\Router\Events\RouteMatchedEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	<li>
+<a href="Twipsi.Components.Router.Events.RouteNotFoundEvent.html"><span>Twipsi\Components\Router\Events\RouteNotFoundEvent</span></a>
+
+		implements
+			<b><span class="active" title="Twipsi\Components\Events\Interfaces\EventInterface">EventInterface</span></b>
+
+		uses
+			<a href="Twipsi.Components.Events.Traits.Dispatchable.html"><span title="Twipsi\Components\Events\Traits\Dispatchable">Dispatchable</span></a>, 
+			<a href="Twipsi.Support.Traits.Serializable.html"><span title="Twipsi\Support\Traits\Serializable">Serializable</span></a>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Events.Interfaces.EventInterface.html#15" title="Go to source code">Twipsi\Components\Events\Interfaces\EventInterface.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="payload" id="_payload">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Events.Interfaces.EventInterface.html#17-22" title="Go to source code">payload</a>(): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Return the event payload.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return the event payload.</p>
+</div>
+
+
+
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationAttemptedEvent.html#_payload">						<code>Twipsi\Components\Authentication\Events\AuthenticationAttemptedEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationAuthenticatedEvent.html#_payload">						<code>Twipsi\Components\Authentication\Events\AuthenticationAuthenticatedEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationFailedEvent.html#_payload">						<code>Twipsi\Components\Authentication\Events\AuthenticationFailedEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationLockoutEvent.html#_payload">						<code>Twipsi\Components\Authentication\Events\AuthenticationLockoutEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationLoginEvent.html#_payload">						<code>Twipsi\Components\Authentication\Events\AuthenticationLoginEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationLogoutEvent.html#_payload">						<code>Twipsi\Components\Authentication\Events\AuthenticationLogoutEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationValidatedEvent.html#_payload">						<code>Twipsi\Components\Authentication\Events\AuthenticationValidatedEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Authentication.Events.AuthenticationVerifiedEvent.html#_payload">						<code>Twipsi\Components\Authentication\Events\AuthenticationVerifiedEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Authorization.Events.AuthorizationProcessedEvent.html#_payload">						<code>Twipsi\Components\Authorization\Events\AuthorizationProcessedEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Database.Events.QueryCompletedEvent.html#_payload">						<code>Twipsi\Components\Database\Events\QueryCompletedEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Database.Events.StatementPreparedEvent.html#_payload">						<code>Twipsi\Components\Database\Events\StatementPreparedEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Database.Events.TransactionBeganEvent.html#_payload">						<code>Twipsi\Components\Database\Events\TransactionBeganEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Database.Events.TransactionCommitedEvent.html#_payload">						<code>Twipsi\Components\Database\Events\TransactionCommitedEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Database.Events.TransactionRolledbackEvent.html#_payload">						<code>Twipsi\Components\Database\Events\TransactionRolledbackEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Mailer.Events.MailFailedEvent.html#_payload">						<code>Twipsi\Components\Mailer\Events\MailFailedEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Mailer.Events.MailSendingEvent.html#_payload">						<code>Twipsi\Components\Mailer\Events\MailSendingEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Mailer.Events.MailSentEvent.html#_payload">						<code>Twipsi\Components\Mailer\Events\MailSentEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Notification.Events.NotificationSentEvent.html#_payload">						<code>Twipsi\Components\Notification\Events\NotificationSentEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Password.Events.PasswordResetEvent.html#_payload">						<code>Twipsi\Components\Password\Events\PasswordResetEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Password.Events.PasswordSentEvent.html#_payload">						<code>Twipsi\Components\Password\Events\PasswordSentEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Router.Events.RouteMatchedEvent.html#_payload">						<code>Twipsi\Components\Router\Events\RouteMatchedEvent::payload()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Router.Events.RouteNotFoundEvent.html#_payload">						<code>Twipsi\Components\Router\Events\RouteNotFoundEvent::payload()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_payload">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

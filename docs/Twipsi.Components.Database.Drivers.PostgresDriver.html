@@ -1,0 +1,511 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Database\Drivers\PostgresDriver |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Builder.html">Builder</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Connections.html">Connections</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Database.Drivers.html">Drivers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.Language.html">Language</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Database.Drivers.MySqlDriver.html">
+							MySqlDriver
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Database.Drivers.PostgresDriver.html">
+							PostgresDriver
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Database.Drivers.SQLiteDriver.html">
+							SQLiteDriver
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Database.Drivers.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Database.Drivers.PostgresDriver.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Database.html">Database</a>\<a href="namespace-Twipsi.Components.Database.Drivers.html">Drivers</a>\<a href="Twipsi.Components.Database.Drivers.PostgresDriver.html">PostgresDriver</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+			<tr><th><code>final</code></th></tr>
+		<tr>
+			<th><code>extends</code></th>
+			<td>
+<code><a href="Twipsi.Components.Database.DatabaseDriver.html"><span title="Twipsi\Components\Database\DatabaseDriver">DatabaseDriver</span></a></code>			</td>
+		</tr>
+		<tr>
+			<th><code>implements</code></th>
+			<td>
+<code><a href="Twipsi.Components.Database.Interfaces.IDatabaseDriver.html"><span title="Twipsi\Components\Database\Interfaces\IDatabaseDriver">IDatabaseDriver</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Database.DatabaseDriver.html"><span>Twipsi\Components\Database\DatabaseDriver</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Database\Drivers\PostgresDriver</span></b>
+
+		implements
+			<a href="Twipsi.Components.Database.Interfaces.IDatabaseDriver.html"><span title="Twipsi\Components\Database\Interfaces\IDatabaseDriver">IDatabaseDriver</span></a>
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Database.Drivers.PostgresDriver.html#20" title="Go to source code">Twipsi\Components\Database\Drivers\PostgresDriver.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Drivers.PostgresDriver.html#28-33" title="Go to source code">__construct</a>(<span><a href="Twipsi.Foundation.ConfigRegistry.html"><span title="Twipsi\Foundation\ConfigRegistry">ConfigRegistry</span></a> <var>$config</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct Database driver.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct Database driver.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="connect" id="_connect">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Drivers.PostgresDriver.html#36-42" title="Go to source code">connect</a>(<span>array <var>$options</var> = []</span>): <a href="PDO.html"><span title="PDO">PDO</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Initialize database connection.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Initialize database connection.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Database.Interfaces.IDatabaseDriver.html#_connect">						<code>Twipsi\Components\Database\Interfaces\IDatabaseDriver::connect()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_connect">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setEncode" id="_setEncode">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Drivers.PostgresDriver.html#44-49" title="Go to source code">setEncode</a>(<span><a href="PDO.html"><span title="PDO">PDO</span></a> <var>$connection</var></span>, <span>string <var>$charset</var></span>, <span>string <var>$collation</var> = <span class="php-str">''</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set connection encoding.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set connection encoding.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setEncode">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setTimezone" id="_setTimezone">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Drivers.PostgresDriver.html#51-56" title="Go to source code">setTimezone</a>(<span><a href="PDO.html"><span title="PDO">PDO</span></a> <var>$connection</var></span>, <span>string <var>$timezone</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set connection timezone.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set connection timezone.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setTimezone">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setModes" id="_setModes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Database.Drivers.PostgresDriver.html#58-63" title="Go to source code">setModes</a>(<span><a href="PDO.html"><span title="PDO">PDO</span></a> <var>$connection</var></span>, <span>array <var>$modes</var></span>, <span>bool <var>$strict</var> = <span class="php-kw">true</span></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Set connection modes.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set connection modes.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setModes">#</a>
+		</td>
+	</tr>
+		</table>
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods inherited from <a href="Twipsi.Components.Database.DatabaseDriver.html"><span>Twipsi\Components\Database\DatabaseDriver</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Database.DatabaseDriver.html#_createConnection">createConnection()</a>, <a href="Twipsi.Components.Database.DatabaseDriver.html#_buildOptions">buildOptions()</a>, <a href="Twipsi.Components.Database.DatabaseDriver.html#_connectWithPdo">connectWithPdo()</a>, <a href="Twipsi.Components.Database.DatabaseDriver.html#_tryAgain">tryAgain()</a>, <a href="Twipsi.Components.Database.DatabaseDriver.html#_isConnectionError">isConnectionError()</a>, <a href="Twipsi.Components.Database.DatabaseDriver.html#_getOptions">getOptions()</a>, <a href="Twipsi.Components.Database.DatabaseDriver.html#_setOptions">setOptions()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+		<table class="table" id="constants">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Constants</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="SQL_MODES" id="SQL_MODES">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Database.Drivers.PostgresDriver.html#22-26" title="Go to source code">SQL_MODES</a> = []</code>
+
+	<div class="expandable-collapsedView">
+		Sql default variable options to set.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Sql default variable options to set.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#SQL_MODES">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="config" id="$config">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Foundation.ConfigRegistry.html"><span title="Twipsi\Foundation\ConfigRegistry">ConfigRegistry</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Database.Drivers.PostgresDriver.html#31" title="Go to source code">$config</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$config">#</a>
+		</td>
+	</tr>
+		</table>
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties inherited from <a href="Twipsi.Components.Database.DatabaseDriver.html"><span>Twipsi\Components\Database\DatabaseDriver</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="Twipsi.Components.Database.DatabaseDriver.html#$options">$options</a></var>, <var><a href="Twipsi.Components.Database.DatabaseDriver.html#$errors">$errors</a></var></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

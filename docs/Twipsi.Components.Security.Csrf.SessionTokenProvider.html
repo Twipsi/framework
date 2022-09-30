@@ -1,0 +1,480 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Security\Csrf\SessionTokenProvider |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Security.Csrf.html">Csrf</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.Csrf.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.Csrf.Middlewares.html">Middlewares</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.Encrypters.html">Encrypters</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.Interfaces.html">Interfaces</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Security.Csrf.CookieTokenProvider.html">
+							CookieTokenProvider
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Security.Csrf.SessionTokenProvider.html">
+							SessionTokenProvider
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Security.Csrf.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Security.Csrf.SessionTokenProvider.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Security.html">Security</a>\<a href="namespace-Twipsi.Components.Security.Csrf.html">Csrf</a>\<a href="Twipsi.Components.Security.Csrf.SessionTokenProvider.html">SessionTokenProvider</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+		<tr>
+			<th><code>implements</code></th>
+			<td>
+<code><a href="Twipsi.Components.Security.Csrf.Interfaces.TokenProviderInterface.html"><span title="Twipsi\Components\Security\Csrf\Interfaces\TokenProviderInterface">TokenProviderInterface</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Security.Csrf.SessionTokenProvider.html#21" title="Go to source code">Twipsi\Components\Security\Csrf\SessionTokenProvider.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Security.Csrf.SessionTokenProvider.html#28-34" title="Go to source code">__construct</a>(<span>?<a href="Twipsi.Components.Session.SessionItem.html"><span title="Twipsi\Components\Session\SessionItem">SessionItem</span></a> <var>$session</var></span>, <span>string <var>$csrfKey</var></span>, <span>int <var>$csrfLength</var></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Token provider constructor
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Token provider constructor</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setToken" id="_setToken">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Security.Csrf.SessionTokenProvider.html#36-50" title="Go to source code">setToken</a>(<span>?<a href="Twipsi.Components.Http.Interfaces.StateProviderInterface.html"><span title="Twipsi\Components\Http\Interfaces\StateProviderInterface">StateProviderInterface</span></a> <var>$origin</var></span>): <a href="Twipsi.Components.Security.Csrf.Interfaces.TokenProviderInterface.html"><span title="Twipsi\Components\Security\Csrf\Interfaces\TokenProviderInterface">TokenProviderInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Set token from session if available or generate a new one.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set token from session if available or generate a new one.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Security.Csrf.Interfaces.TokenProviderInterface.html#_setToken">						<code>Twipsi\Components\Security\Csrf\Interfaces\TokenProviderInterface::setToken()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setToken">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getToken" id="_getToken">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Security.Csrf.SessionTokenProvider.html#52-58" title="Go to source code">getToken</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get instance token.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get instance token.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Security.Csrf.Interfaces.TokenProviderInterface.html#_getToken">						<code>Twipsi\Components\Security\Csrf\Interfaces\TokenProviderInterface::getToken()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getToken">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="hasToken" id="_hasToken">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Security.Csrf.SessionTokenProvider.html#60-66" title="Go to source code">hasToken</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if instance has token.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if instance has token.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Security.Csrf.Interfaces.TokenProviderInterface.html#_hasToken">						<code>Twipsi\Components\Security\Csrf\Interfaces\TokenProviderInterface::hasToken()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_hasToken">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="refreshToken" id="_refreshToken">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Security.Csrf.SessionTokenProvider.html#68-76" title="Go to source code">refreshToken</a>(): <a href="Twipsi.Components.Security.Csrf.Interfaces.TokenProviderInterface.html"><span title="Twipsi\Components\Security\Csrf\Interfaces\TokenProviderInterface">TokenProviderInterface</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Generate and save a new instance token.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Generate and save a new instance token.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Security.Csrf.Interfaces.TokenProviderInterface.html#_refreshToken">						<code>Twipsi\Components\Security\Csrf\Interfaces\TokenProviderInterface::refreshToken()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_refreshToken">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="validateToken" id="_validateToken">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Security.Csrf.SessionTokenProvider.html#78-88" title="Go to source code">validateToken</a>(<span>string <var>$token</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the provided tokens match.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the provided tokens match.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Security.Csrf.Interfaces.TokenProviderInterface.html#_validateToken">						<code>Twipsi\Components\Security\Csrf\Interfaces\TokenProviderInterface::validateToken()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_validateToken">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="generateToken" id="_generateToken">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Security.Csrf.SessionTokenProvider.html#90-96" title="Go to source code">generateToken</a>(<span>int <var>$length</var> = <span class="php-num">32</span></span>): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Generate a token.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Generate a token.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Security.Csrf.Interfaces.TokenProviderInterface.html#_generateToken">						<code>Twipsi\Components\Security\Csrf\Interfaces\TokenProviderInterface::generateToken()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_generateToken">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,1816 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Http\Response\Response |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.Interfaces.html">Interfaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.Middlewares.html">Middlewares</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Http.Response.html">Response</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.Response.Interfaces.html">Interfaces</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Http.Response.FileResponse.html">
+							FileResponse
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.Response.JsonResponse.html">
+							JsonResponse
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.Response.RedirectResponse.html">
+							RedirectResponse
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Http.Response.Response.html">
+							Response
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.Response.ResponseFactory.html">
+							ResponseFactory
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.Response.ResponseHeaderBag.html">
+							ResponseHeaderBag
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Http.Response.ViewResponse.html">
+							ViewResponse
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Http.Response.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Http.Response.Response.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Http.html">Http</a>\<a href="namespace-Twipsi.Components.Http.Response.html">Response</a>\<a href="Twipsi.Components.Http.Response.Response.html">Response</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+		<tr>
+			<th><code>implements</code></th>
+			<td>
+<code><a href="Twipsi.Components.Http.Response.Interfaces.ResponseInterface.html"><span title="Twipsi\Components\Http\Response\Interfaces\ResponseInterface">ResponseInterface</span></a>, <a href="Stringable.html"><span title="Stringable">Stringable</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Twipsi\Components\Http\Response\Response</span></b>
+
+		implements
+			<a href="Twipsi.Components.Http.Response.Interfaces.ResponseInterface.html"><span title="Twipsi\Components\Http\Response\Interfaces\ResponseInterface">ResponseInterface</span></a>, 
+			<a href="Stringable.html"><span title="Stringable">Stringable</span></a>
+
+	<ul class="classTree">
+	<li>
+<a href="Twipsi.Components.Http.Response.FileResponse.html"><span>Twipsi\Components\Http\Response\FileResponse</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Http.Response.JsonResponse.html"><span>Twipsi\Components\Http\Response\JsonResponse</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Http.Response.RedirectResponse.html"><span>Twipsi\Components\Http\Response\RedirectResponse</span></a>
+
+
+	</li>
+	<li>
+<a href="Twipsi.Components.Http.Response.ViewResponse.html"><span>Twipsi\Components\Http\Response\ViewResponse</span></a>
+
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Http.Response.Response.html#26" title="Go to source code">Twipsi\Components\Http\Response\Response.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#162-173" title="Go to source code">__construct</a>(<span>null|array|string <var>$content</var></span>, <span>int <var>$code</var> = <span class="php-num">200</span></span>, <span>array <var>$headers</var> = []</span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Response constructor
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Response constructor</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Http.Response.FileResponse.html#___construct">						<code>Twipsi\Components\Http\Response\FileResponse::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Http.Response.JsonResponse.html#___construct">						<code>Twipsi\Components\Http\Response\JsonResponse::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Http.Response.RedirectResponse.html#___construct">						<code>Twipsi\Components\Http\Response\RedirectResponse::__construct()</code></a>				</li>
+				<li>
+<a href="Twipsi.Components.Http.Response.ViewResponse.html#___construct">						<code>Twipsi\Components\Http\Response\ViewResponse::__construct()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__toString" id="___toString">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#175-184" title="Go to source code">__toString</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Return response as a compiled string.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return response as a compiled string.</p>
+</div>
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Stringable.html#___toString">						<code>Stringable::__toString()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___toString">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="prepare" id="_prepare">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#186-236" title="Go to source code">prepare</a>(<span><a href="Twipsi.Components.Http.HttpRequest.html"><span title="Twipsi\Components\Http\HttpRequest">HttpRequest</span></a> <var>$request</var></span>): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Prepare and fix up the response before sending.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Prepare and fix up the response before sending.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_prepare">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="sendHeaders" id="_sendHeaders">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#238-263" title="Go to source code">sendHeaders</a>(): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Send the response headers to the client.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Send the response headers to the client.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_sendHeaders">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="send" id="_send">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#265-281" title="Go to source code">send</a>(): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Send the response to the client.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Send the response to the client.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_send">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setContent" id="_setContent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#291-299" title="Go to source code">setContent</a>(<span>mixed <var>$content</var></span>): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the document content.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the document content.</p>
+</div>
+
+
+
+
+		<h4>Overriden by</h4>
+		<ul>
+				<li>
+<a href="Twipsi.Components.Http.Response.JsonResponse.html#_setContent">						<code>Twipsi\Components\Http\Response\JsonResponse::setContent()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setContent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getContent" id="_getContent">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#301-307" title="Go to source code">getContent</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the document content.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the document content.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getContent">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setVersion" id="_setVersion">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#309-317" title="Go to source code">setVersion</a>(<span>string <var>$version</var></span>): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the http protocol version.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the http protocol version.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setVersion">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getVersion" id="_getVersion">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#319-325" title="Go to source code">getVersion</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the http protocol version.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the http protocol version.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getVersion">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setCode" id="_setCode">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#327-346" title="Go to source code">setCode</a>(<span>int <var>$code</var></span>, <span>string <var>$text</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the http response status code.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the http response status code.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setCode">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getCode" id="_getCode">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#348-354" title="Go to source code">getCode</a>(): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the http response status code.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the http response status code.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getCode">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setCharset" id="_setCharset">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#356-364" title="Go to source code">setCharset</a>(<span>string <var>$charset</var></span>): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the http response charset.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the http response charset.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setCharset">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getCharset" id="_getCharset">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#366-372" title="Go to source code">getCharset</a>(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the http response charset.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the http response charset.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getCharset">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isCacheable" id="_isCacheable">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#374-391" title="Go to source code">isCacheable</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if we can cache the response
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if we can cache the response</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isCacheable">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isFresh" id="_isFresh">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#393-399" title="Go to source code">isFresh</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if the response is considered "Fresh".
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if the response is considered &quot;Fresh&quot;.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isFresh">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="makeStale" id="_makeStale">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#401-412" title="Go to source code">makeStale</a>(): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Make the reponse stale by setting the Age header.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Make the reponse stale by setting the Age header.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_makeStale">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="mustRevalidate" id="_mustRevalidate">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#414-422" title="Go to source code">mustRevalidate</a>()</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if response needs revalidation.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if response needs revalidation.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_mustRevalidate">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getMaxAge" id="_getMaxAge">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#424-444" title="Go to source code">getMaxAge</a>(): ?int</code>
+
+
+	<div class="expandable-collapsedView">
+		Return the Maximum age of the response in seconds.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return the Maximum age of the response in seconds.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getMaxAge">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAge" id="_getAge">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#446-458" title="Go to source code">getAge</a>(): int</code>
+
+
+	<div class="expandable-collapsedView">
+		Return the Age of the response in seconds.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return the Age of the response in seconds.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAge">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getExpires" id="_getExpires">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#460-480" title="Go to source code">getExpires</a>(): ?string</code>
+
+
+	<div class="expandable-collapsedView">
+		The Expires HTTP header contains the date/time after which the
+response is considered expired.
+Note - If the value is 0…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The Expires HTTP header contains the date/time after which the
+response is considered expired.
+Note - If the value is 0 the response is considered expired.
+Format should be 'Wed, 21 Oct 2015 07:28:00 GMT'.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getExpires">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setExpires" id="_setExpires">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#482-502" title="Go to source code">setExpires</a>(<span><a href="DateTime.html"><span title="DateTime">DateTime</span></a>|string <var>$date</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the Expires header value of the response.
+Format should be 'Wed, 21 Oct 2015 07:28:00 GMT'.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the Expires header value of the response.
+Format should be 'Wed, 21 Oct 2015 07:28:00 GMT'.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setExpires">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setDate" id="_setDate">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#504-519" title="Go to source code">setDate</a>(<span><a href="DateTime.html"><span title="DateTime">DateTime</span></a>|string <var>$date</var></span>): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		The Date general HTTP header contains the date and time at which
+the message was originated.
+Format should be 'Wed, 21…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The Date general HTTP header contains the date and time at which
+the message was originated.
+Format should be 'Wed, 21 Oct 2015 07:28:00 GMT'.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setDate">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getLifeTime" id="_getLifeTime">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#521-530" title="Go to source code">getLifeTime</a>(): ?int</code>
+
+
+	<div class="expandable-collapsedView">
+		Get the remaining time the response is considered fresh  in seconds before
+the response turns stale and will need…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get the remaining time the response is considered fresh  in seconds before
+the response turns stale and will need revalidation.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getLifeTime">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setLastModified" id="_setLastModified">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#532-553" title="Go to source code">setLastModified</a>(<span><a href="DateTime.html"><span title="DateTime">DateTime</span></a>|string <var>$date</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		The Last-Modified response HTTP header contains a date and time
+when the origin server believes the resource was last…
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The Last-Modified response HTTP header contains a date and time
+when the origin server believes the resource was last modified.
+Format should be 'Wed, 21 Oct 2015 07:28:00 GMT'.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setLastModified">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setEtag" id="_setEtag">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#555-574" title="Go to source code">setEtag</a>(<span>string <var>$etag</var> = <span class="php-kw">null</span></span>, <span>bool <var>$weak</var> = <span class="php-kw">false</span></span>): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		The ETag (or entity tag) HTTP response header is an identifier
+for a specific version of a resource.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>The ETag (or entity tag) HTTP response header is an identifier
+for a specific version of a resource.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setEtag">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setNotModified" id="_setNotModified">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#576-589" title="Go to source code">setNotModified</a>(): <b><span class="active" title="Twipsi\Components\Http\Response\Response">Response</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Converts the response to a valid 304 response.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Converts the response to a valid 304 response.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setNotModified">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isValid" id="_isValid">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#591-597" title="Go to source code">isValid</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if response status code is valid.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if response status code is valid.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isValid">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isInformational" id="_isInformational">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#599-605" title="Go to source code">isInformational</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if response status code is informational.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if response status code is informational.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isInformational">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isSuccessfull" id="_isSuccessfull">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#607-613" title="Go to source code">isSuccessfull</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if response status code is successfull.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if response status code is successfull.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isSuccessfull">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isRedirect" id="_isRedirect">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#615-621" title="Go to source code">isRedirect</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if response status code is a redirect.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if response status code is a redirect.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isRedirect">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isRedirection" id="_isRedirection">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#623-629" title="Go to source code">isRedirection</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if response status code is a redirection.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if response status code is a redirection.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isRedirection">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isServerError" id="_isServerError">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#631-637" title="Go to source code">isServerError</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if response status code is a server error.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if response status code is a server error.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isServerError">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isClientError" id="_isClientError">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#639-645" title="Go to source code">isClientError</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if response status code is a client error.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if response status code is a client error.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isClientError">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isNotFound" id="_isNotFound">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#647-653" title="Go to source code">isNotFound</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if response status code is a not found.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if response status code is a not found.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isNotFound">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isForbidden" id="_isForbidden">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#655-661" title="Go to source code">isForbidden</a>(): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Check if response status code is a forbidden.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Check if response status code is a forbidden.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isForbidden">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="closeOutputBuffers" id="_closeOutputBuffers">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Http.Response.Response.html#663-676" title="Go to source code">closeOutputBuffers</a>(<span>int <var>$targetLevel</var></span>): void</code>
+
+
+	<div class="expandable-collapsedView">
+		Cleans or flushes output buffers up to target level.
+@ Taken From Symphony framework
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Cleans or flushes output buffers up to target level.
+@ Taken From Symphony framework</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_closeOutputBuffers">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+		<table class="table" id="constants">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Constants</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="HTTP_RESPONSE_CODES" id="HTTP_RESPONSE_CODES">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.Response.Response.html#28-106" title="Go to source code">HTTP_RESPONSE_CODES</a> = [
+	<span class="php-num">100</span> =&gt; <span class="php-str">'Continue'</span>,
+	<span class="php-num">101</span> =&gt; <span class="php-str">'Switching Protocols'</span>,
+	<span class="php-num">102</span> =&gt; <span class="php-str">'Processing'</span>,
+	<span class="php-num">103</span> =&gt; <span class="php-str">'Early Hints'</span>,
+	<span class="php-num">200</span> =&gt; <span class="php-str">'OK'</span>,
+	<span class="php-num">201</span> =&gt; <span class="php-str">'Created'</span>,
+	<span class="php-num">202</span> =&gt; <span class="php-str">'Accepted'</span>,
+	<span class="php-num">203</span> =&gt; <span class="php-str">'Non-Authoritative Information'</span>,
+	<span class="php-num">204</span> =&gt; <span class="php-str">'No Content'</span>,
+	<span class="php-num">205</span> =&gt; <span class="php-str">'Reset Content'</span>,
+	<span class="php-num">206</span> =&gt; <span class="php-str">'Partial Content'</span>,
+	<span class="php-num">207</span> =&gt; <span class="php-str">'Multi-Status'</span>,
+	<span class="php-num">208</span> =&gt; <span class="php-str">'Already Reported'</span>,
+	<span class="php-num">226</span> =&gt; <span class="php-str">'IM Used'</span>,
+	<span class="php-num">300</span> =&gt; <span class="php-str">'Multiple Choices'</span>,
+	<span class="php-num">301</span> =&gt; <span class="php-str">'Moved Permanently'</span>,
+	<span class="php-num">302</span> =&gt; <span class="php-str">'Found'</span>,
+	<span class="php-num">303</span> =&gt; <span class="php-str">'See Other'</span>,
+	<span class="php-num">304</span> =&gt; <span class="php-str">'Not Modified'</span>,
+	<span class="php-num">305</span> =&gt; <span class="php-str">'Use Proxy'</span>,
+	<span class="php-num">306</span> =&gt; <span class="php-str">'Switch Proxy'</span>,
+	<span class="php-num">307</span> =&gt; <span class="php-str">'Temporary Redirect'</span>,
+	<span class="php-num">308</span> =&gt; <span class="php-str">'Permanent Redirect'</span>,
+	<span class="php-num">400</span> =&gt; <span class="php-str">'Bad Request'</span>,
+	<span class="php-num">401</span> =&gt; <span class="php-str">'Unauthorized'</span>,
+	<span class="php-num">402</span> =&gt; <span class="php-str">'Payment Required'</span>,
+	<span class="php-num">403</span> =&gt; <span class="php-str">'Forbidden'</span>,
+	<span class="php-num">404</span> =&gt; <span class="php-str">'Not Found'</span>,
+	<span class="php-num">405</span> =&gt; <span class="php-str">'Method Not Allowed'</span>,
+	<span class="php-num">406</span> =&gt; <span class="php-str">'Not Acceptable'</span>,
+	<span class="php-num">407</span> =&gt; <span class="php-str">'Proxy Authentication Required'</span>,
+	<span class="php-num">408</span> =&gt; <span class="php-str">'Request Timeout'</span>,
+	<span class="php-num">409</span> =&gt; <span class="php-str">'Conflict'</span>,
+	<span class="php-num">410</span> =&gt; <span class="php-str">'Gone'</span>,
+	<span class="php-num">411</span> =&gt; <span class="php-str">'Length Required'</span>,
+	<span class="php-num">412</span> =&gt; <span class="php-str">'Precondition Failed'</span>,
+	<span class="php-num">413</span> =&gt; <span class="php-str">'Content Too Large'</span>,
+	<span class="php-num">414</span> =&gt; <span class="php-str">'URI Too Long'</span>,
+	<span class="php-num">415</span> =&gt; <span class="php-str">'Unsupported Media Type'</span>,
+	<span class="php-num">416</span> =&gt; <span class="php-str">'Range Not Satisfiable'</span>,
+	<span class="php-num">417</span> =&gt; <span class="php-str">'Expectation Failed'</span>,
+	<span class="php-num">418</span> =&gt; <span class="php-str">'I\'m a teapot'</span>,
+	<span class="php-num">419</span> =&gt; <span class="php-str">'Page Expired'</span>,
+	<span class="php-num">421</span> =&gt; <span class="php-str">'Misdirected Request'</span>,
+	<span class="php-num">422</span> =&gt; <span class="php-str">'Unprocessable Content'</span>,
+	<span class="php-num">423</span> =&gt; <span class="php-str">'Locked'</span>,
+	<span class="php-num">424</span> =&gt; <span class="php-str">'Failed Dependency'</span>,
+	<span class="php-num">425</span> =&gt; <span class="php-str">'Too Early'</span>,
+	<span class="php-num">426</span> =&gt; <span class="php-str">'Upgrade Required'</span>,
+	<span class="php-num">428</span> =&gt; <span class="php-str">'Precondition Required'</span>,
+	<span class="php-num">429</span> =&gt; <span class="php-str">'Too Many Requests'</span>,
+	<span class="php-num">431</span> =&gt; <span class="php-str">'Request Header Fields Too Large'</span>,
+	<span class="php-num">451</span> =&gt; <span class="php-str">'Unavailable For Legal Reasons'</span>,
+	<span class="php-num">500</span> =&gt; <span class="php-str">'Internal Server Error'</span>,
+	<span class="php-num">501</span> =&gt; <span class="php-str">'Not Implemented'</span>,
+	<span class="php-num">502</span> =&gt; <span class="php-str">'Bad Gateway'</span>,
+	<span class="php-num">503</span> =&gt; <span class="php-str">'Service Unavailable'</span>,
+	<span class="php-num">504</span> =&gt; <span class="php-str">'Gateway Timeout'</span>,
+	<span class="php-num">505</span> =&gt; <span class="php-str">'HTTP Version Not Supported'</span>,
+	<span class="php-num">506</span> =&gt; <span class="php-str">'Variant Also Negotiates'</span>,
+	<span class="php-num">507</span> =&gt; <span class="php-str">'Insufficient Storage'</span>,
+	<span class="php-num">508</span> =&gt; <span class="php-str">'Loop Detected'</span>,
+	<span class="php-num">510</span> =&gt; <span class="php-str">'Not Extended'</span>,
+	<span class="php-num">511</span> =&gt; <span class="php-str">'Network Authentication Required'</span>,
+]</code>
+
+	<div class="expandable-collapsedView">
+		List of valid Http response codes.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>List of valid Http response codes.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#HTTP_RESPONSE_CODES">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="HTTP_RESPONSE_CACHEABLE_RESPONSES" id="HTTP_RESPONSE_CACHEABLE_RESPONSES">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.Response.Response.html#108-113" title="Go to source code">HTTP_RESPONSE_CACHEABLE_RESPONSES</a> = [<span class="php-num">200</span>, <span class="php-num">203</span>, <span class="php-num">300</span>, <span class="php-num">301</span>, <span class="php-num">302</span>, <span class="php-num">404</span>, <span class="php-num">410</span>]</code>
+
+	<div class="expandable-collapsedView">
+		List of cachable status codes.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>List of cachable status codes.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#HTTP_RESPONSE_CACHEABLE_RESPONSES">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="HTTP_RESPONSE_REDIRECT_CODES" id="HTTP_RESPONSE_REDIRECT_CODES">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.Response.Response.html#115-120" title="Go to source code">HTTP_RESPONSE_REDIRECT_CODES</a> = [<span class="php-num">201</span>, <span class="php-num">301</span>, <span class="php-num">302</span>, <span class="php-num">303</span>, <span class="php-num">307</span>, <span class="php-num">308</span>]</code>
+
+	<div class="expandable-collapsedView">
+		List of status codes that point to a redirect.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>List of status codes that point to a redirect.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#HTTP_RESPONSE_REDIRECT_CODES">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="HTTP_RESPONSE_304_HEADER_EXCEPTIONS" id="HTTP_RESPONSE_304_HEADER_EXCEPTIONS">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.Response.Response.html#122-133" title="Go to source code">HTTP_RESPONSE_304_HEADER_EXCEPTIONS</a> = [
+	<span class="php-str">'Allow'</span>,
+	<span class="php-str">'Content-Encoding'</span>,
+	<span class="php-str">'Content-Language'</span>,
+	<span class="php-str">'Content-Length'</span>,
+	<span class="php-str">'Content-MD5'</span>,
+	<span class="php-str">'Content-Type'</span>,
+	<span class="php-str">'Last-Modified'</span>,
+]</code>
+
+	<div class="expandable-collapsedView">
+		List of headers that should not be sent if response is 304.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>List of headers that should not be sent if response is 304.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#HTTP_RESPONSE_304_HEADER_EXCEPTIONS">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="HTTP_RESPONSE_NO_CONTENT" id="HTTP_RESPONSE_NO_CONTENT">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code><a href="source-Twipsi.Components.Http.Response.Response.html#135-140" title="Go to source code">HTTP_RESPONSE_NO_CONTENT</a> = [<span class="php-num">204</span>, <span class="php-num">304</span>]</code>
+
+	<div class="expandable-collapsedView">
+		List of response codes that should not have a content.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>List of response codes that should not have a content.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#HTTP_RESPONSE_NO_CONTENT">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="headers" id="$headers">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Twipsi.Components.Http.Response.ResponseHeaderBag.html"><span title="Twipsi\Components\Http\Response\ResponseHeaderBag">ResponseHeaderBag</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.Response.Response.html#142-145" title="Go to source code">$headers</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		Header bag with headers to be sent.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Header bag with headers to be sent.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$headers">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="text" id="$text">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.Response.Response.html#147-150" title="Go to source code">$text</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		Http response status text.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Http response status text.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$text">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="charset" id="$charset">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.Response.Response.html#152-155" title="Go to source code">$charset</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		Http response content charset.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Http response content charset.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$charset">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="version" id="$version">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.Response.Response.html#157-160" title="Go to source code">$version</a></var></code>
+				
+	<div class="expandable-collapsedView">
+		Http protocol version.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Http protocol version.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$version">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="content" id="$content">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">null|array|string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.Response.Response.html#165" title="Go to source code">$content</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$content">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="code" id="$code">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Http.Response.Response.html#165" title="Go to source code">$code</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$code">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

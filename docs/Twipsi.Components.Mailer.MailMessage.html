@@ -1,0 +1,770 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class Twipsi\Components\Mailer\MailMessage |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.html">Twipsi</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Bridge.html">Bridge</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.html">Components</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authentication.html">Authentication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Authorization.html">Authorization</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Broadcasting.html">Broadcasting</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Cookie.html">Cookie</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Database.html">Database</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Events.html">Events</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.File.html">File</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Mailer.Events.html">Events</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Model.html">Model</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Notification.html">Notification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Password.html">Password</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Queue.html">Queue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.RateLimiter.html">RateLimiter</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Router.html">Router</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Security.html">Security</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Session.html">Session</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Translator.html">Translator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Url.html">Url</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.User.html">User</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.Validator.html">Validator</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Components.View.html">View</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Facades.html">Facades</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Foundation.html">Foundation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Twipsi.Support.html">Support</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Mailer.Mailer.html">
+							Mailer
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Mailer.MailManager.html">
+							MailManager
+						</a>
+					</li>
+					<li class="active">
+						<a href="Twipsi.Components.Mailer.MailMessage.html">
+							MailMessage
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Mailer.Markdown.html">
+							Markdown
+						</a>
+					</li>
+					<li>
+						<a href="Twipsi.Components.Mailer.MessageBag.html">
+							MessageBag
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li>
+						<a href="Twipsi.Components.Mailer.UsesNotification.html">
+							UsesNotification
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Twipsi.Components.Mailer.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Twipsi.Components.Mailer.MailMessage.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-Twipsi.html">Twipsi</a>\<a href="namespace-Twipsi.Components.html">Components</a>\<a href="namespace-Twipsi.Components.Mailer.html">Mailer</a>\<a href="Twipsi.Components.Mailer.MailMessage.html">MailMessage</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+		<tr>
+			<th><code>uses</code></th>
+			<td>
+<code><a href="Twipsi.Components.Mailer.UsesNotification.html"><span title="Twipsi\Components\Mailer\UsesNotification">UsesNotification</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Twipsi.Components.Mailer.MailMessage.html#19" title="Go to source code">Twipsi\Components\Mailer\MailMessage.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#23-36" title="Go to source code">__construct</a>(<span><a href="Symfony.Component.Mime.Email.html"><span title="Symfony\Component\Mime\Email">Email</span></a> <var>$message</var></span>, <span>null|<a href="Twipsi.Components.Notification.Messages.MailMessage.html"><span title="Twipsi\Components\Notification\Messages\MailMessage">MailMessage</span></a> <var>$notifyMessage</var> = <span class="php-kw">null</span></span>)</code>
+
+
+	<div class="expandable-collapsedView">
+		Construct mailer message.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Construct mailer message.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="subject" id="_subject">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#38-50" title="Go to source code">subject</a>(<span>string <var>$subject</var></span>): <a href="Twipsi.Components.Mailer.SimpleMessage.html"><span title="Twipsi\Components\Mailer\SimpleMessage">SimpleMessage</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the message subject.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the message subject.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_subject">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="priority" id="_priority">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#52-64" title="Go to source code">priority</a>(<span>int <var>$level</var></span>): <b><span class="active" title="Twipsi\Components\Mailer\MailMessage">MailMessage</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the priority of the mail.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the priority of the mail.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_priority">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="from" id="_from">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#66-79" title="Go to source code">from</a>(<span>string <var>$email</var></span>, <span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Mailer\MailMessage">MailMessage</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the from address.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the from address.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_from">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="sender" id="_sender">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#81-94" title="Go to source code">sender</a>(<span>string <var>$email</var></span>, <span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Mailer\MailMessage">MailMessage</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the sender address.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the sender address.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_sender">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="to" id="_to">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#96-115" title="Go to source code">to</a>(<span>array|string <var>$addresses</var></span>, <span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Mailer\MailMessage">MailMessage</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the recipients.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the recipients.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_to">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="replyTo" id="_replyTo">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#117-136" title="Go to source code">replyTo</a>(<span>array|string <var>$addresses</var></span>, <span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Mailer\MailMessage">MailMessage</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the replyTo addresses.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the replyTo addresses.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_replyTo">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="cc" id="_cc">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#138-157" title="Go to source code">cc</a>(<span>array|string <var>$addresses</var></span>, <span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Mailer\MailMessage">MailMessage</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the CC addresses.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the CC addresses.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_cc">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="bcc" id="_bcc">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#159-178" title="Go to source code">bcc</a>(<span>array|string <var>$addresses</var></span>, <span>string|null <var>$name</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Twipsi\Components\Mailer\MailMessage">MailMessage</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Set the BCC addresses.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Set the BCC addresses.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_bcc">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="attach" id="_attach">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#180-193" title="Go to source code">attach</a>(<span><a href="Twipsi.Components.Mailer.FileItem.html"><span title="Twipsi\Components\Mailer\FileItem">FileItem</span></a>|string <var>$file</var></span>, <span>array <var>$options</var> = []</span>): <b><span class="active" title="Twipsi\Components\Mailer\MailMessage">MailMessage</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Attach files to the mail.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Attach files to the mail.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_attach">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="rawData" id="_rawData">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#195-209" title="Go to source code">rawData</a>(<span>array <var>$data</var></span>, <span>string <var>$name</var></span>, <span>array <var>$options</var> = []</span>): <b><span class="active" title="Twipsi\Components\Mailer\MailMessage">MailMessage</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Add raw data to the mail.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Add raw data to the mail.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_rawData">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getSymfonyMessage" id="_getSymfonyMessage">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#211-219" title="Go to source code">getSymfonyMessage</a>(): <a href="Symfony.Component.Mime.Email.html"><span title="Symfony\Component\Mime\Email">Email</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Return the symfony email message.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Return the symfony email message.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getSymfonyMessage">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="buildAddressBag" id="_buildAddressBag">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#221-239" title="Go to source code">buildAddressBag</a>(<span>array <var>$addresses</var></span>): array</code>
+
+
+	<div class="expandable-collapsedView">
+		Build all the addresses.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Build all the addresses.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_buildAddressBag">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__call" id="___call">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#241-252" title="Go to source code">__call</a>(<span>string <var>$method</var></span>, <span>array <var>$parameters</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Call any Email object methods.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Call any Email object methods.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___call">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__get" id="___get">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Twipsi.Components.Mailer.MailMessage.html#254-264" title="Go to source code">__get</a>(<span>string <var>$property</var></span>): mixed</code>
+
+
+	<div class="expandable-collapsedView">
+		Get any Email object properties.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Get any Email object properties.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___get">#</a>
+		</td>
+	</tr>
+		</table>
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Twipsi.Components.Mailer.UsesNotification.html"><span>Twipsi\Components\Mailer\UsesNotification</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Twipsi.Components.Mailer.UsesNotification.html#_mergeNotificationMessage">mergeNotificationMessage()</a>, <a href="Twipsi.Components.Mailer.UsesNotification.html#_mergeAddresses">mergeAddresses()</a>, <a href="Twipsi.Components.Mailer.UsesNotification.html#_mergeSubject">mergeSubject()</a>, <a href="Twipsi.Components.Mailer.UsesNotification.html#_mergeAttachments">mergeAttachments()</a>, <a href="Twipsi.Components.Mailer.UsesNotification.html#_mergeAdditional">mergeAdditional()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="message" id="$message">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap"><a href="Symfony.Component.Mime.Email.html"><span title="Symfony\Component\Mime\Email">Email</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Mailer.MailMessage.html#29" title="Go to source code">$message</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$message">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="notifyMessage" id="$notifyMessage">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">null|<a href="Twipsi.Components.Notification.Messages.MailMessage.html"><span title="Twipsi\Components\Notification\Messages\MailMessage">MailMessage</span></a></code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Twipsi.Components.Mailer.MailMessage.html#29" title="Go to source code">$notifyMessage</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$notifyMessage">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>
