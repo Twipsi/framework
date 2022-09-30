@@ -1,0 +1,9 @@
+parameters:
+	paths:
+		- src
+	level: 5
+	ignoreErrors:
+		- "#Access to an undefined property#"
+		- "#Call to an undefined method#"
+		- '#Call to an undefined static method Twipsi\\Facades\\[a-zA-Z0-9\\_]+::[a-zA-Z0-9\\_]()#'
+		- '#Static call to instance method Twipsi\\Facades\\[a-zA-Z0-9\\_]+::[a-zA-Z0-9\\_]()#'
