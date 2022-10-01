@@ -1,6 +1,5 @@
 {
   "name": "twipsi/framework",
-  "version": "0.8.1",
   "description": "The Twipsi PHP MVC Framework",
   "keywords": ["twipsi","mvc","framework"],
   "homepage": "http://www.github.com/twipsi/framework",
@@ -31,6 +30,11 @@
     "phpstan/phpstan": "^1.4"
   },
   "autoload": {
+      "files": [
+          "src/Twipsi/Helpers/App.php",
+          "src/Twipsi/Helpers/Asset.php",
+          "src/Twipsi/Helpers/Auth.php"
+      ],
       "psr-4": {
           "Twipsi\\": "src/Twipsi/"
       }

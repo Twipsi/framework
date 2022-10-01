@@ -29,11 +29,11 @@ class Application extends IOCManager
      *
      * @var string
      */
-    public const version = '1.0.0';
+    public const version = '0.8.1';
 
     /**
      * The current context.
-     * 
+     *
      * @var Closure|null
      */
     protected ?Closure $context = null;
@@ -52,8 +52,6 @@ class Application extends IOCManager
         $this->registerApplication();
 
         $this->loadBaseComponents();
-
-        $this->loadHelpers();
     }
 
     /**
@@ -82,13 +80,13 @@ class Application extends IOCManager
 
     /**
      * Return the configuration cache file.
-     * 
+     *
      * @return string
      */
-    public function configurationCacheFile(): string 
+    public function configurationCacheFile(): string
     {
-        $path = !is_null($context = $this->getContext()) 
-            ?  'config.'.$context.'.php' 
+        $path = !is_null($context = $this->getContext())
+            ?  'config.'.$context.'.php'
             :  'config.php';
 
         return $this->nav()->bootPath('cache/'.$path);
@@ -96,7 +94,7 @@ class Application extends IOCManager
 
     /**
      * Check if the configuration is cached.
-     * 
+     *
      * @return bool
      */
     public function isConfigurationCached(): bool
@@ -106,17 +104,17 @@ class Application extends IOCManager
 
     /**
      * Return the routes cache file.
-     * 
+     *
      * @return string
      */
-    public function routeCacheFile(): string 
+    public function routeCacheFile(): string
     {
         return $this->nav()->bootPath('cache/routes.php');
     }
 
     /**
      * Check if the routes are cached.
-     * 
+     *
      * @return bool
      */
     public function isRoutesCached(): bool
@@ -126,13 +124,13 @@ class Application extends IOCManager
 
     /**
      * Return the components cache file.
-     * 
+     *
      * @return string
      */
-    public function componentCacheFile(): string 
+    public function componentCacheFile(): string
     {
-        $path = !is_null($context = $this->getContext()) 
-            ?  'components.'.$context.'.php' 
+        $path = !is_null($context = $this->getContext())
+            ?  'components.'.$context.'.php'
             :  'components.php';
 
         return $this->nav()->bootPath('cache/'.$path);
@@ -140,7 +138,7 @@ class Application extends IOCManager
 
     /**
      * Check if the components are cached.
-     * 
+     *
      * @return bool
      */
     public function isComponentsCached(): bool
@@ -150,17 +148,17 @@ class Application extends IOCManager
 
     /**
      * Return the events cache file.
-     * 
+     *
      * @return string
      */
-    public function eventsCacheFile(): string 
+    public function eventsCacheFile(): string
     {
         return $this->nav()->bootPath('cache/events.php');
     }
 
     /**
      * Check if the events are cached.
-     * 
+     *
      * @return bool
      */
     public function isEventsCached(): bool
@@ -170,9 +168,9 @@ class Application extends IOCManager
 
     /**
      * Set the current context.
-     * 
+     *
      * @param Closure $loader
-     * 
+     *
      * @return void
      */
     public function setContext(Closure $loader): void
@@ -182,15 +180,15 @@ class Application extends IOCManager
 
     /**
      * Get the current context.
-     * 
+     *
      * @return string|null
      */
-    public function getContext(): ?string 
+    public function getContext(): ?string
     {
         // If we havnt poststrapped we dont know the route context
         // so we return the default.
         if($this->isPoststrapped()) {
-            return !is_null($this->context) 
+            return !is_null($this->context)
             ? call_user_func($this->context, $this)
             : null;
         }
@@ -200,10 +198,10 @@ class Application extends IOCManager
 
     /**
      * Check if we are in debug mode.
-     * 
+     *
      * @return bool
      */
-    public function isDebugEnabled(): bool 
+    public function isDebugEnabled(): bool
     {
         return (bool)$this->get('config')->get('system.debug');
     }
@@ -227,12 +225,12 @@ class Application extends IOCManager
 
     /**
      * Check if the abstract is bound already.
-     * 
+     *
      * @param string $abstract
-     * 
+     *
      * @return bool
      */
-    public function bound(string $abstract): bool 
+    public function bound(string $abstract): bool
     {
         return $this->components()->isDeferredAbstract($abstract)
             || parent::bound($abstract);
@@ -250,7 +248,7 @@ class Application extends IOCManager
 
     /**
      * Return instance registry.
-     * 
+     *
      * @return InstanceRegistry
      */
     public function instances(): InstanceRegistry
@@ -260,7 +258,7 @@ class Application extends IOCManager
 
     /**
      * Return binding registry.
-     * 
+     *
      * @return BindingRegistry
      */
     public function bindings(): BindingRegistry
@@ -270,10 +268,10 @@ class Application extends IOCManager
 
     /**
      * Return rebinding callbacks.
-     * 
+     *
      * @return array<string,array<int|Closure>>
      */
-    public function rebindings(): array 
+    public function rebindings(): array
     {
         return $this->bindings->rebindings;
     }
@@ -290,32 +288,21 @@ class Application extends IOCManager
 
     /**
      * Check if system is down for maintenance.
-     * 
+     *
      * @return bool
      */
-    public function isUnderMaintenance(): bool 
+    public function isUnderMaintenance(): bool
     {
         return $this->get('config')->get('system.maintenance');
     }
 
     /**
-     * Load all system helper functions.
-     *
-     * @return void
-     */
-    protected function loadHelpers(): void
-    {
-        (new FileBag($this->paths->get('path.helpers'), 'php'))
-            ->includeAll();
-    }
-
-    /**
      * Exit the application with a response.
-     * 
+     *
      * @param int $code
      * @param string $message
      * @param array<int,string> $headers
-     * 
+     *
      * @return void
      */
     public function exit(int $code, string $message = "", array $headers = []): void
