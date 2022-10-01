@@ -2,7 +2,7 @@
   "name": "twipsi/framework",
   "description": "The Twipsi PHP MVC Framework",
   "keywords": ["twipsi","mvc","framework"],
-  "homepage": "http://www.github.com/twipsi/framework",
+  "homepage": "https://www.github.com/twipsi/framework",
   "license": "MIT",
   "authors": [
       {
