@@ -10,6 +10,17 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
 
+    strategy:
+      fail-fast: true
+      matrix:
+        php: [ '8.0', 8.1 ]
+        stability: [ prefer-lowest, prefer-stable ]
+        include:
+          - php: 8.2
+            stability: prefer-stable --ignore-platform-req=php+
+
+    name: PHP ${{ matrix.php }} - ${{ matrix.stability }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -17,7 +28,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.1
+          php-version: ${{ matrix.php }}
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, pdo_sqlite, gd, gmp
           ini-values: error_reporting=E_ALL
           tools: composer:v2
@@ -28,9 +39,9 @@ jobs:
         with:
           timeout_minutes: 5
           max_attempts: 5
-          command: composer update --prefer-dist --no-interaction --no-progress
+          command: composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-progress
 
-      - name: PHPUnit Tests
+      - name: Run unit Tests
         uses: vendor/bin/phpunit --verbose
         env:
           TEST_NAME: Twipsi
