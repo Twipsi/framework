@@ -42,7 +42,7 @@ jobs:
           command: composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-progress
 
       - name: Run unit Tests
-        uses: vendor/bin/phpunit --verbose
+        uses: php-actions/phpunit@v9
         env:
           TEST_NAME: Twipsi
         with:
