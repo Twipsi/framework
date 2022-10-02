@@ -45,10 +45,6 @@ jobs:
         run: vendor/bin/phpunit --verbose
         env:
           TEST_NAME: Twipsi
-        with:
-          bootstrap: vendor/autoload.php
-          configuration: phpunit.xml
-          args: --coverage-text
 
       - name: PHPStan Static Analysis
         uses: php-actions/phpstan@v3
