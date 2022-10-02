@@ -16,7 +16,7 @@ use Twipsi\Components\Database\Interfaces\IDatabaseConnection;
 use Twipsi\Components\Database\Language\Language;
 use Twipsi\Components\Database\Language\SQLiteLanguage;
 
-class SQLiteConnection extends Connection implements IDatabaseConnection
+final class SQLiteConnection extends Connection implements IDatabaseConnection
 {
     /**
      * Build mysql Query builder.

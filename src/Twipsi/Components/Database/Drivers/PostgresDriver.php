@@ -20,46 +20,40 @@ use Twipsi\Foundation\ConfigRegistry;
 final class PostgresDriver extends DatabaseDriver implements IDatabaseDriver
 {
     /**
-     * Sql default variable options to set.
+     * The configuration registry.
+     *
+     * @var ConfigRegistry
      */
-    protected const SQL_MODES = [
-    ];
+    protected ConfigRegistry $config;
 
     /**
      * Construct Database driver.
+     *
+     * @param ConfigRegistry $config
      */
-    public function __construct(protected ConfigRegistry $config)
+    public function __construct(ConfigRegistry $config)
     {
+        $this->config = $config;
     }
 
+    /**
+     * Attempt to reconnect.
+     *
+     * @return PDO
+     */
+    public function reconnect(): PDO
+    {
+        return $this->connect();
+    }
 
     /**
      * Initialize database connection.
+     *
+     * @param array $options
+     * @return PDO
      */
     public function connect(array $options = []): PDO
     {
-        return $this->createConnection($this->config, $options);
+        // TO IMPLEMENT
     }
-
-    /**
-     * Set connection encoding.
-     */
-    public function setEncode(PDO $connection, string $charset, string $collation = ''): void
-    {
-    }
-
-    /**
-     * Set connection timezone.
-     */
-    public function setTimezone(PDO $connection, string $timezone): void
-    {
-    }
-
-    /**
-     * Set connection modes.
-     */
-    public function setModes(PDO $connection, array $modes, bool $strict = true): void
-    {
-    }
-
 }

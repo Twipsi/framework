@@ -64,8 +64,6 @@ final class SQLiteDriver extends DatabaseDriver implements IDatabaseDriver
             return $this->createConnection('sqlite::memory:', $this->config, $options);
         }
 
-        var_dump($this->config['database']);
-
         if(! $path = realpath($this->config['database'])) {
             throw new InvalidArgumentException('Database information path is invalid');
         }

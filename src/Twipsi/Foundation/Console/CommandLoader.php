@@ -47,15 +47,18 @@ class CommandLoader implements CommandLoaderInterface
     public function get(string $name): Command
     {
         // TODO: Implement get() method.
+        return new Command();
     }
 
     public function has(string $name): bool
     {
         // TODO: Implement has() method.
+        return false;
     }
 
     public function getNames(): array
     {
         // TODO: Implement getNames() method.
+        return [];
     }
 }

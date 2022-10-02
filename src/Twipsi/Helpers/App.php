@@ -15,10 +15,7 @@ use Twipsi\Facades\Request;
 use Twipsi\Facades\Routes;
 use Twipsi\Facades\Cookie;
 use Twipsi\Facades\Session;
-
-use Twipsi\Foundation\Debug;
-use Twipsi\Support\Str;
-use Twipsi\Components\Events\Interfaces\EventDataInterface;
+use Twipsi\Components\Events\Interfaces\EventInterface;
 
 /**
  * Define the "app" function helper in global scope.
@@ -82,9 +79,9 @@ if (!function_exists("config")) {
  */
 if (!function_exists("event")) {
     /**
-     * Facade function to dispatch event listners.
+     * Facade function to dispatch event listeners.
      */
-    function event(EventDataInterface|string $event, ...$args): void
+    function event(EventInterface|string $event, ...$args): void
     {
         Event::dispatch($event, ...$args);
     }
@@ -105,23 +102,6 @@ if (!function_exists("route")) {
         }
         
         return rtrim($url, "/");
-    }
-}
-
-/**
- * Define the "config" function helper in global scope.
- */
-if (!function_exists("debug")) {
-    /**
-     * Facade function to return configuration data.
-     */
-    function debug(string $message, $trace = null): void
-    {
-        if ($message === "dump") {
-            Debug::dump();
-        }
-
-        Debug::log($message);
     }
 }
 
@@ -187,7 +167,7 @@ if (!function_exists("__")) {
  */
 if (!function_exists("session")) {
     /**
-     * Facade function to retireve session data
+     * Facade function to retrieve session data
      */
     function session(string $key): ?string
     {
@@ -200,7 +180,7 @@ if (!function_exists("session")) {
  */
 if (!function_exists("old")) {
     /**
-     * Facade function to retireve session input data
+     * Facade function to retrieve session input data
      */
     function old(string $key): ?string
     {

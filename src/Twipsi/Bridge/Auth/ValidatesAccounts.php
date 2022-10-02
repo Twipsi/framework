@@ -12,10 +12,10 @@ declare(strict_types=1);
 
 namespace Twipsi\Bridge\Auth;
 
-use App\Models\Authentication\User;
 use Twipsi\Components\Http\HttpRequest;
 use Twipsi\Components\Http\Response\Interfaces\ResponseInterface as Response;
 use Twipsi\Components\Http\Response\JsonResponse;
+use Twipsi\Components\User\Interfaces\IAuthenticatable;
 use Twipsi\Facades\Redirect;
 use Twipsi\Facades\Translate;
 use Twipsi\Support\Chronos;
@@ -26,10 +26,10 @@ trait ValidatesAccounts
      * Check if the account is all valid.
      *
      * @param HttpRequest $request
-     * @param User $user
+     * @param IAuthenticatable $user
      * @return Response|bool
      */
-    protected function validateAccount(HttpRequest $request, User $user): Response|bool
+    protected function validateAccount(HttpRequest $request, IAuthenticatable $user): Response|bool
     {
         // If the user is suspended abort.
         if($this->isSuspended($user)) {
@@ -45,10 +45,10 @@ trait ValidatesAccounts
     /**
      * Check if the user account is suspended.
      * 
-     * @param User $user
+     * @param IAuthenticatable $user
      * @return bool
      */
-    protected function isSuspended(User $user): bool
+    protected function isSuspended(IAuthenticatable $user): bool
     {
         if(property_exists($user, 'suspended_until')) {
  
@@ -69,10 +69,10 @@ trait ValidatesAccounts
     /**
      * Check if the user account is deactivated.
      * 
-     * @param User $user
+     * @param IAuthenticatable $user
      * @return bool
      */
-    protected function isDeactivated(User $user): bool
+    protected function isDeactivated(IAuthenticatable $user): bool
     {
         return property_exists($user, 'deactivated_at') && !is_null($user->deactivated_at);
     }
@@ -80,10 +80,10 @@ trait ValidatesAccounts
     /**
      * Release the suspension fo a user.
      * 
-     * @param User $user
+     * @param IAuthenticatable $user
      * @return void
      */
-    protected function releaseSuspension(User $user): void
+    protected function releaseSuspension(IAuthenticatable $user): void
     {
         $user->set('suspended_until', null)->save();
     }
@@ -92,12 +92,12 @@ trait ValidatesAccounts
      * Abort with suspended validation error.
      *
      * @param HttpRequest $request
-     * @param User $user
+     * @param IAuthenticatable $user
      * @return Response
      */
-    protected function abortWithSuspendedResponse(HttpRequest $request, User $user): Response 
+    protected function abortWithSuspendedResponse(HttpRequest $request, IAuthenticatable $user): Response
     {
-        $days = Chronos::date()->travel($user->suspended_until)->differenceInDays();
+        $days = Chronos::date()->travel($user->get('suspended_until'))->differenceInDays();
 
         $this->logout($request);
 
@@ -114,12 +114,12 @@ trait ValidatesAccounts
      * Abort with deactivated validation error.
      *
      * @param HttpRequest $request
-     * @param User $user
+     * @param IAuthenticatable $user
      * @return Response
      */
-    protected function abortWithDeactivatedResponse(HttpRequest $request, User $user): Response 
+    protected function abortWithDeactivatedResponse(HttpRequest $request, IAuthenticatable $user): Response
     {
-        $date = Chronos::date($user->deactivated_at)->getDateTime();
+        $date = Chronos::date($user->get('deactivated_at'))->getDateTime();
 
         $this->logout($request);
 

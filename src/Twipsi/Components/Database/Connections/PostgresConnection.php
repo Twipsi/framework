@@ -12,9 +12,18 @@ declare(strict_types=1);
 
 namespace Twipsi\Components\Database\Connections;
 
-use Twipsi\Components\Database\Connections\Connection;
-use Twipsi\Components\Database\Interfaces\IDatabaseConnection;
+use Twipsi\Components\Database\Language\Language;
+use Twipsi\Components\Database\Language\PostgresLanguage;
 
-class PostgresConnection extends Connection implements IDatabaseConnection
+final class PostgresConnection extends Connection
 {
+    /**
+     * Build postgres Query builder.
+     *
+     * @return Language
+     */
+    public function getExpressionLanguage(): Language
+    {
+        return $this->prependPrefixTo(new PostgresLanguage());
+    }
 }
