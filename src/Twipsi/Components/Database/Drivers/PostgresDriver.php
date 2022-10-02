@@ -55,5 +55,6 @@ final class PostgresDriver extends DatabaseDriver implements IDatabaseDriver
     public function connect(array $options = []): PDO
     {
         // TO IMPLEMENT
+        return new PDO('');
     }
 }
