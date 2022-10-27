@@ -34,7 +34,7 @@ class SubscribeEventListeners
 
     /**
      * Construct Bootstrapper.
-     * 
+     *
      * @param Application $app
      */
     public function __construct(protected Application $app)
@@ -51,7 +51,7 @@ class SubscribeEventListeners
     public function invoke(): void
     {
         if(Env::get('CACHE_EVENTS', false)) {
-            
+
             if($this->app->isEventsCached()) {
 
                 // If we have events cached then just load it in the event subscriber.
@@ -90,16 +90,17 @@ class SubscribeEventListeners
 
     /**
      * Parse the listeners and build the collection.
-     * 
+     *
      * @param array $listeners
-     * 
+     *
      * @return array
      */
     protected function collectEventListeners(array $listeners): array
     {
+        $cpath = '\App\Events\Listeners\\';
         foreach ($listeners as $listener) {
 
-            $abs = str_replace([$this->app->path('path.base'), '.php'], '', $this->path.DIRECTORY_SEPARATOR.$listener);
+            $abs = str_replace([$this->app->path('path.base'), '.php'], '', $cpath.$listener);
 
             $reflection = new ObjectBag($abs);
 
@@ -147,10 +148,10 @@ class SubscribeEventListeners
 
     /**
      * Get the events the listener methods listen to.
-     * 
+     *
      * @param ObjectBag $reflection
      * @param string $method
-     * 
+     *
      * @return array|null
      */
     protected function listenerResolvesToEvents(ObjectBag $reflection, string $method): null|array
@@ -170,9 +171,9 @@ class SubscribeEventListeners
 
     /**
      * Find any resolvable classes and their corresponding events.
-     * 
+     *
      * @param ObjectBag $reflection
-     * 
+     *
      * @return array|null
      */
     protected function findResolvableMethods(ObjectBag $reflection): ?array

@@ -34,11 +34,7 @@ class RouteMatcher
             return $route;
         }
 
-        throw new RouteNotFoundException(
-            sprintf('Route (%s) with request method [%s] is not allowed.',
-                $request->url()->getPath(),
-                $request->getMethod()
-            ));
+        return null;
     }
 
     /**

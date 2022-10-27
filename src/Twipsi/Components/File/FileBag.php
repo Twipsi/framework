@@ -53,7 +53,7 @@ class FileBag implements IteratorAggregate, Countable
 
         foreach ($iterator as $file) {
 
-            if ($file->isDir() || (!is_null($extension) && 
+            if ($file->isDir() || (!is_null($extension) &&
                 $file->getExtension() !== str_replace('.', '', $extension))) {
 
                 continue;
@@ -80,6 +80,11 @@ class FileBag implements IteratorAggregate, Countable
             DIRECTORY_SEPARATOR);
     }
 
+    protected function parseFile(string $path): string
+    {
+        return ltrim($path, DIRECTORY_SEPARATOR);
+    }
+
     /**
      * Return array of files if called.
      *
@@ -104,7 +109,7 @@ class FileBag implements IteratorAggregate, Countable
         }
 
         $filteredParameters = array_filter($this->files, function ($k) use ($exceptions) {
-            return !in_array($k, $exceptions);
+            return !in_array($this->parseFile($k), $exceptions);
         }, ARRAY_FILTER_USE_KEY);
 
         return $filteredParameters;
@@ -114,13 +119,13 @@ class FileBag implements IteratorAggregate, Countable
      * Return all the absolute file names in file array using exceptions.
      *
      * @param string ...$exceptions
-     * 
+     *
      * @return array
      */
     public function listAbsolute(string ...$exceptions): array
     {
         foreach($this->list(...$exceptions) as $file ) {
-            $abs[] = $this->location.$file;
+            $abs[] = $this->location.$this->parseFile($file);
         }
 
         return $abs ?? [];
@@ -139,6 +144,8 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function replace(string $what, string $with, string $file): FileBag
     {
+      $file = $this->parseFile($file);
+
         try {
             $content = $this->get($file);
             $this->put($file, str_replace($what, $with, $content));
@@ -162,6 +169,8 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function get(string $file, mixed $default = null): string
     {
+      $file = $this->parseFile($file);
+
         if (!$this->has($file) && null !== $default) {
             return $default;
         }
@@ -182,6 +191,8 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function has(string $file): bool
     {
+      $file = $this->parseFile($file);
+
         if (!in_array($file, $this->files)) {
             return false;
         }
@@ -202,6 +213,8 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function put(string $file, mixed $value, int $mode = 0777): FileBag
     {
+      $file = $this->parseFile($file);
+
         if (!is_dir($dir = dirname($this->location . $file))) {
 
             (new DirectoryManager())->make($dir, $mode, true);
@@ -230,6 +243,8 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function push(string $file, mixed $value): FileBag
     {
+      $file = $this->parseFile($file);
+
         if (!@file_put_contents($this->location . $file, $value, FILE_APPEND)) {
             throw new FileException("Could not push to file [$this->location.$file]");
         }
@@ -249,6 +264,8 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function prepend(string $file, mixed $value): FileBag
     {
+      $file = $this->parseFile($file);
+
         try {
             $content = $this->get($file);
             $this->put($file, $value . $content);
@@ -273,6 +290,8 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function contains(string $file, mixed $value): bool
     {
+      $file = $this->parseFile($file);
+
         try {
             $content = $this->get($file);
             return false !== strpos($content, $value);
@@ -295,6 +314,8 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function chmod(string $file, ?int $mode = null): string|FileBag
     {
+      $file = $this->parseFile($file);
+
         if (is_null($mode) && $this->has($file)) {
             return substr(sprintf('%o', fileperms($this->location . $file)), -4);
         }
@@ -318,6 +339,8 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function move(string $file, string $location): FileBag
     {
+      $file = $this->parseFile($file);
+
         if ($this->has($file) && rename($this->location . $file, $location)) {
             return $this;
         }
@@ -337,6 +360,8 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function copy(string $file, string $location): FileBag
     {
+      $file = $this->parseFile($file);
+
         if ($this->has($file) && copy($this->location . $file, $location)) {
             return $this;
         }
@@ -355,6 +380,8 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function modified(string $file): int|bool
     {
+      $file = $this->parseFile($file);
+
         if ($this->has($file) && $time = filemtime($this->location . $file)) {
             return $time;
         }
@@ -364,7 +391,7 @@ class FileBag implements IteratorAggregate, Countable
 
     /**
      * Include all the files adding filename as key.
-     * 
+     *
      * @return mixed
      */
     public function includeAll(): mixed
@@ -376,7 +403,7 @@ class FileBag implements IteratorAggregate, Countable
 
             foreach($files as $file) {
                 $section = Str::hay(mb_strtolower(basename($file)))->before('.');
-                $required[$section] = include $location . $file;
+                $required[$section] = require $location . $file;
             }
 
             return $required ?? [];
@@ -404,6 +431,8 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function delete(string $file): FileBag
     {
+      $file = $this->parseFile($file);
+
         unset($this->files[$file]);
         @unlink($this->location . $file);
 

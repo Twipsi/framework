@@ -33,7 +33,7 @@ class ViewLocator
     /**
      * View finder constructor
      */
-    public function __construct(protected string $path, protected string $theme, array $extensions = null) 
+    public function __construct(protected string $path, protected string $theme, array $extensions = null)
     {
         if (!is_null($extensions)) {
             $this->extensions = $extensions;
@@ -82,7 +82,7 @@ class ViewLocator
      */
     protected function buildBaseViewDirectory(string $path): string
     {
-        if (is_dir($fullPath = trim($path, "/") . "/" . $this->theme)) {
+        if (is_dir($fullPath = rtrim($path, "/") . "/" . $this->theme)) {
             return $fullPath;
         }
 
@@ -158,10 +158,10 @@ class ViewLocator
 
     /**
      * Flush the found files.
-     * 
+     *
      * @return void
      */
-    public function flushLocator(): void 
+    public function flushLocator(): void
     {
         $this->found = [];
     }

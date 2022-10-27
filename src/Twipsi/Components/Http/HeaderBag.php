@@ -155,7 +155,7 @@ class HeaderBag extends Container implements \Stringable
   */
   public function has(string $key) : bool
   {
-    if ('cache-control' === $key = Str::hay($key)->header()) {
+    if ('cache-control' === ($key = Str::hay($key)->header())) {
       return !empty($this->cacheControl->all());
     }
 

@@ -21,14 +21,14 @@ class EventProvider extends ComponentProvider
 {
     /**
      * Boot component provider.
-     * 
+     *
      * @return void
      */
-    public function boot(): void 
+    public function boot(): void
     {
         $this->app->nav()
-            ->set('path.events', 
-                    $this->app->path('path.base').'\App\Events\Listeners'
+            ->set('path.events',
+                    $this->app->path('path.base').'/app/Events/Listeners'
             );
     }
 

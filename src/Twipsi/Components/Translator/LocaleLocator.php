@@ -66,7 +66,7 @@ class LocaleLocator
      */
     protected function buildBaseLocaleDirectory(string $path): string
     {
-        if (is_dir($fullPath = trim($path, "/"))) {
+        if (is_dir($fullPath = rtrim($path, "/"). DIRECTORY_SEPARATOR)) {
             return $fullPath;
         }
 

@@ -52,7 +52,7 @@ class ViewFactory
     /**
      * View factory constructor
      */
-    public function __construct(protected ViewLocator $locator, protected ViewCache $cache, array $extensions = null) 
+    public function __construct(protected ViewLocator $locator, protected ViewCache $cache, array $extensions = null)
     {
         if (!is_null($extensions)) {
             $this->extensions = $extensions;
@@ -88,7 +88,7 @@ class ViewFactory
     /**
      * Build the view instance.
      */
-    protected function buildView(string $view, FileItem $file, array $data): View 
+    protected function buildView(string $view, FileItem $file, array $data): View
     {
         return new View($this->engine, $this->getExtractor($file->getPath()), $view, $file, $data);
     }
@@ -112,7 +112,8 @@ class ViewFactory
      */
     protected function getViewExtension(string $path): ?string
     {
-        $extension = Str::hay($path)->after(".");
+        $parts = explode('/', $path);
+        $extension = Str::hay(end($parts))->after(".");
 
         return Arr::hay(array_keys($this->extensions))->contains($extension)
             ? $extension

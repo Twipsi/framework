@@ -13,14 +13,18 @@ declare(strict_types=1);
 
 namespace Twipsi\Components\Http;
 
-use Locale;
-use ResourceBundle;
-use Twipsi\Components\Http\Exceptions\MalformedUrlException;
 use Twipsi\Components\Url\UrlItem;
+use Twipsi\Components\Http\HeaderBag;
 use Twipsi\Support\Bags\RecursiveArrayBag;
 use Twipsi\Components\Http\Exceptions\MaliciousRequestException;
 use InvalidArgumentException;
 use Twipsi\Components\Http\Exceptions\NotSupportedException;
+
+use Twipsi\Components\Http\HandlesInput;
+use Twipsi\Components\Http\HandlesSession;
+use Twipsi\Components\Http\HandlesCookies;
+use Twipsi\Components\Http\HandlesUser;
+use Twipsi\Components\Http\HandlesValidation;
 
 class HttpRequest
 {
@@ -163,18 +167,17 @@ class HttpRequest
     /**
     * Content of the request.
     */
-    protected mixed $requestContent = null;
+    protected string|null $requestContent = null;
 
     /**
      * Construct a new HttpRequest.
-     *
-     * @param array $headers
-     * @param array $get
-     * @param array $post
-     * @param array $files
-     * @param array $cookies
+     * 
+     * @param array|null $headers
+     * @param array|null $get
+     * @param array|null $post
+     * @param array|null $files
+     * @param array|null $cookies
      * @param array $properties
-     * @throws MalformedUrlException|MaliciousRequestException
      */
     public function __construct(array $headers = [], array $get = [], array $post = [], array $files = [], array $cookies = [], array $properties = [])
     {
@@ -190,6 +193,8 @@ class HttpRequest
         }
 
         $this->setUrl(new UrlItem($this->headers->find('unencoded-url', 'request-uri')));
+
+        return $this;
     }
 
     /**
@@ -268,9 +273,8 @@ class HttpRequest
     }
 
     /**
-     * Set UrlItem object and update params.
-     * @throws MaliciousRequestException
-     */
+    * Set UrlItem object and update params.
+    */
     public function setUrl(UrlItem $url): void
     {
         $this->url = $url;
@@ -301,16 +305,20 @@ class HttpRequest
     */
     public function setLocale(string $locale): void
     {
-        if (class_exists(ResourceBundle::class, false)) {
-            if (! in_array($locale, ResourceBundle::getLocales(''))) {
+        if (class_exists(I18Nv2_Language::class, false)) {
+            if (! \I18Nv2_Language::isValidCode($locale)) {
+                throw new InvalidArgumentException(sprintf('Requested locale is not valid: "%s"', $locale));
+            }
+        } elseif (class_exists(\ResourceBundle::class, false)) {
+            if (! in_array($locale, \ResourceBundle::getLocales(''))) {
                 throw new InvalidArgumentException(sprintf('Requested locale is not valid: "%s"', $locale));
             }
         }
 
         $this->locale = $locale;
 
-        if (class_exists(Locale::class, false)) {
-            Locale::setDefault($locale);
+        if (class_exists(\Locale::class, false)) {
+            \Locale::setDefault($locale);
         }
     }
 
@@ -445,7 +453,7 @@ class HttpRequest
     }
 
     /**
-    * Check if an encoding is accepted.
+    * Check if a encoding is accepted.
     */
     public function isEncodingAccepted(string $encoding): bool
     {
@@ -539,39 +547,35 @@ class HttpRequest
     }
 
     /**
-     * Check if a method is the request method.
-     * @throws NotSupportedException
-     */
+    * Check if a method is the request method.
+    */
     public function isRequestMethod(string $method): bool
     {
         return ($this->getMethod() === strtoupper($method));
     }
 
     /**
-     * Check if the request method is safe type method.
-     * @throws NotSupportedException
-     */
+    * Check if the request method is safe type method.
+    */
     public function isRequestMethodSafe(): bool
     {
-        return in_array($this->getMethod(), self::$requestTypeSafe, true);
+        return in_array($this->getMethod(), static::$requestTypeSafe, true);
     }
 
     /**
-     * Check if the request method is type with data.
-     * @throws NotSupportedException
-     */
+    * Check if the request method is type with data.
+    */
     public function isRequestMethodData(): bool
     {
-        return in_array($this->getMethod(), self::$requestTypeData, true);
+        return in_array($this->getMethod(), static::$requestTypeData, true);
     }
 
     /**
-     * Check if the request method is read method
-     * @throws NotSupportedException
-     */
+    * Check if the request method is read method
+    */
     public function isRequestMethodRead(): bool
     {
-        return in_array($this->getMethod(), self::$readTypeData, true);
+        return in_array($this->getMethod(), static::$readTypeData, true);
     }
 
     /**
@@ -624,7 +628,7 @@ class HttpRequest
     public function getDocumentRoot(): string
     {
         if (! $root = $this->headers->find('document-root', 'context-document-root')) {
-            return dirname($this->headers->get('script-filename') ?? '');
+            return \dirname($this->headers->get('script-filename') ?? '');
         }
 
         return $root;
@@ -653,7 +657,7 @@ class HttpRequest
     public function getPort(): ?int
     {
         if ($urlPort = $this->url->getPort()) {
-            return $urlPort;
+            return (int)$urlPort;
         }
 
         if (empty($this->headers->get('http-host'))) {

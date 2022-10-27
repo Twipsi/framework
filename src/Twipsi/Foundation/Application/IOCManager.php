@@ -44,7 +44,7 @@ class IOCManager implements \ArrayAccess
 
   /**
    * Resolved abstracts container.
-   * 
+   *
    * @var array
    */
   protected array $resolved = [];
@@ -256,10 +256,10 @@ class IOCManager implements \ArrayAccess
 
   /**
    * Rebind an abstract with a callback.
-   * 
+   *
    * @param string $abstract
    * @param Closure $callback
-   * 
+   *
    * @return void
    */
   public function rebind(string $abstract, Closure $callback) : void
@@ -275,7 +275,7 @@ class IOCManager implements \ArrayAccess
     }
   }
 
-  public function extend(string $abstract, Closure $callback): void 
+  public function extend(string $abstract, Closure $callback): void
   {
     $abstract = $this->getAlias($abstract);
 
@@ -317,12 +317,12 @@ class IOCManager implements \ArrayAccess
 
   /**
    * Rebuild the abstract.
-   * 
+   *
    * @param string $abstract
-   * 
+   *
    * @return void
    */
-  public function rebuild(string $abstract): void 
+  public function rebuild(string $abstract): void
   {
     $instance = $this->make($abstract);
 
@@ -347,7 +347,7 @@ class IOCManager implements \ArrayAccess
     return $this->aliases->alias($abstract);
   }
 
-  public function isResolved(string $abstract): bool 
+  public function isResolved(string $abstract): bool
   {
     return $this->instances->has($abstract) || isset($this->resolved[$abstract]);
   }

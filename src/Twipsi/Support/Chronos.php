@@ -55,7 +55,7 @@ final class Chronos
      *
      * @var string
      */
-    protected string $timezone = "GMT";
+    protected string $timezone = "Europe/Budapest";
 
     /**
      * Second date to compare.
@@ -162,7 +162,6 @@ final class Chronos
             );
         }
 
-        $this->timezone = $timezone;
         $this->date->setTimezone($zone);
 
         return $this;

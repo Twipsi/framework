@@ -50,7 +50,8 @@ class SubscribeRoutes
 
                 // Build the collection and cache it.
                 $this->saveCache(
-                    $collection = $this->app->get('route.routes')->packRoutes()
+                    $collection = $this->app->get('route.factory')
+                      ->routes()->packRoutes()
                 );
             }
         }

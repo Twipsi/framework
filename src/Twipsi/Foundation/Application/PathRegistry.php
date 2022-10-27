@@ -127,7 +127,7 @@ class PathRegistry extends Container
 
         return $base . "database";
     }
-    
+
     /**
      * Set the helpers directory path.
      */

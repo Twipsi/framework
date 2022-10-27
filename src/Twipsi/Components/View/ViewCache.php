@@ -37,7 +37,7 @@ class ViewCache
     /**
      * View cache constructor
      */
-    public function __construct(string $cachePath, protected bool $useCache, string $compileTo = null) 
+    public function __construct(string $cachePath, protected bool $useCache, string $compileTo = null)
     {
         if (empty($cachePath)) {
             throw new InvalidArgumentException(
@@ -45,7 +45,7 @@ class ViewCache
             );
         }
 
-        $this->cachePath = trim($cachePath, "/");
+        $this->cachePath = rtrim($cachePath, "/");
 
         if (!is_null($compileTo)) {
             $this->compileTo = $compileTo;

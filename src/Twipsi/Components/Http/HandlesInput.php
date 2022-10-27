@@ -143,12 +143,12 @@ trait HandlesInput
 
     /**
      * Return an input value as a boolean.
-     * 
+     *
      * @param string $key
-     * 
+     *
      * @return bool
      */
-    public function bool(string $key): bool 
+    public function bool(string $key): bool
     {
         $value = $this->getInputSource()->get($key);
 
@@ -166,8 +166,8 @@ trait HandlesInput
      */
     public function isJson(): bool
     {
-        return $this->headers->has("Content-Type") &&
-            Str::hay($this->headers->get("Content-Type")[0])->resembles(
+        return !is_null($this->headers->has("Content-Type")) &&
+            Str::hay($this->headers->get("Content-Type")[0] ?? '')->resembles(
                 "json",
                 "/json",
                 "+json"
