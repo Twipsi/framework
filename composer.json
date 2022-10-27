@@ -1,5 +1,6 @@
 {
   "name": "twipsi/framework",
+  "version": "0.8.2",
   "description": "The Twipsi PHP MVC Framework",
   "keywords": ["twipsi","mvc","framework"],
   "homepage": "https://www.github.com/twipsi/framework",
