@@ -171,7 +171,7 @@ class HttpRequest
 
     /**
      * Construct a new HttpRequest.
-     * 
+     *
      * @param array|null $headers
      * @param array|null $get
      * @param array|null $post
@@ -305,11 +305,13 @@ class HttpRequest
     */
     public function setLocale(string $locale): void
     {
-        if (class_exists(I18Nv2_Language::class, false)) {
-            if (! \I18Nv2_Language::isValidCode($locale)) {
-                throw new InvalidArgumentException(sprintf('Requested locale is not valid: "%s"', $locale));
-            }
-        } elseif (class_exists(\ResourceBundle::class, false)) {
+        // if (class_exists(I18Nv2_Language::class, false)) {
+        //     if (! \I18Nv2_Language::isValidCode($locale)) {
+        //         throw new InvalidArgumentException(sprintf('Requested locale is not valid: "%s"', $locale));
+        //     }
+        // }
+
+        if (class_exists(\ResourceBundle::class, false)) {
             if (! in_array($locale, \ResourceBundle::getLocales(''))) {
                 throw new InvalidArgumentException(sprintf('Requested locale is not valid: "%s"', $locale));
             }
