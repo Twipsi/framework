@@ -41,7 +41,7 @@ class ViewCache
     {
         if (empty($cachePath)) {
             throw new InvalidArgumentException(
-                "Please provide a path to cahce views."
+                "Please provide a path to cache views."
             );
         }
 

@@ -44,11 +44,13 @@ class FileBag implements IteratorAggregate, Countable
      */
     public function __construct(string $location, ?string $extension = null)
     {
+        if(!is_dir($this->location = $this->parsePath($location) . DIRECTORY_SEPARATOR)) {
+          return;
+        }
+
         // Get the iterator for the firectory and sub folders.
         $iterator = new RecursiveIteratorIterator(
-            new RecursiveDirectoryIterator(
-                $this->location = $this->parsePath($location) . DIRECTORY_SEPARATOR
-            )
+            new RecursiveDirectoryIterator($this->location)
         );
 
         foreach ($iterator as $file) {

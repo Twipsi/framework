@@ -55,7 +55,7 @@ final class Chronos
      *
      * @var string
      */
-    protected string $timezone = "Europe/Budapest";
+    protected static string $timezone = "Europe/Budapest";
 
     /**
      * Second date to compare.
@@ -88,7 +88,7 @@ final class Chronos
             : $date;
         }
 
-        $this->setTimeZone(Config::get('system.timezone'));
+        $this->setTimeZone(Config::get('system.timezone') ?? static::$timezone);
     }
 
     /**
@@ -446,7 +446,7 @@ final class Chronos
         }
 
         $travel->format($this->dateTimeFormat);
-        $travel->setTimezone(new DateTimeZone($this->timezone));
+        $travel->setTimezone(new DateTimeZone(static::$timezone));
 
         $this->travel = $travel->diff($this->date);
 
@@ -620,5 +620,23 @@ final class Chronos
                 "Travel date object is empty ( You must set end date with travel() before calling daysPassed()"
             );
         }
+    }
+
+    /**
+     * Set the default static timezone to the class.
+     *
+     * @param string $timezone
+     * @return void
+     * @throws InvalidArgumentException
+     */
+    public static function setChronosTimezone(string $timezone): void
+    {
+        if (! $zone = new DateTimeZone($timezone)) {
+            throw new InvalidArgumentException(
+                sprintf("The requested timezone [%s] is not supported", $timezone)
+            );
+        }
+
+        static::$timezone = $timezone;
     }
 }

@@ -119,9 +119,9 @@ class BootstrapConfiguration
 
     /**
      * Save the cache to file.
-     * 
+     *
      * @param array $config
-     * 
+     *
      * @return void
      */
     protected function saveCache(array $config): void
@@ -142,7 +142,10 @@ class BootstrapConfiguration
     protected function setSystemDefaults(ConfigRegistry $config): void
     {
         // Set the default timezone.
-        date_default_timezone_set($config->get('system.timezone', 'UTC'));
+        date_default_timezone_set($config->get('system.timezone', 'GMT'));
+
+        // Set the chronos timezone.
+        \Twipsi\Support\Chronos::setChronosTimezone($config->get('system.timezone', 'GMT'));
 
         // Set the default encoding
         mb_internal_encoding('UTF-8');

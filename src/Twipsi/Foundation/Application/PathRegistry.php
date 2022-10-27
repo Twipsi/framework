@@ -133,19 +133,11 @@ class PathRegistry extends Container
      */
     public function helpersPath(string $path = ""): string
     {
-        $base = !empty($this->basePath)
-            ? $this->basePath . DIRECTORY_SEPARATOR
-            : "";
-
         if (!empty($path)) {
-            return $base .
-                "Twipsi" .
-                DIRECTORY_SEPARATOR .
-                "Helpers" .
-                $this->formatPath($path);
+            return dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . "Helpers" . $this->formatPath($path);
         }
 
-        return $base . "Twipsi" . DIRECTORY_SEPARATOR . "Helpers";
+        return dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . "Helpers";
     }
 
     /**
