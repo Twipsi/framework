@@ -21,8 +21,7 @@ use Twipsi\Components\Database\QueryDispatcher;
 use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Twipsi\Foundation\Exceptions\NotSupportedException;
 use Twipsi\Support\Arr;
-use Twipsi\Support\Bags\RecursiveArrayBag;
-use Twipsi\Support\Str;
+use Twipsi\Support\Bags\ArrayBag;
 
 final class QueryBuilder
 {
@@ -958,11 +957,11 @@ final class QueryBuilder
      * Get the result of the select query as an array container.
      *
      * @param string ...$columns
-     * @return RecursiveArrayBag
+     * @return ArrayBag
      * @throws ApplicationManagerException
      * @throws NotSupportedException
      */
-    public function collect(string ...$columns): RecursiveArrayBag
+    public function collect(string ...$columns): ArrayBag
     {
         empty($columns)
             ?: $this->columns = $columns;
@@ -976,7 +975,7 @@ final class QueryBuilder
             $container[] = (array)$result;
         }
 
-        return new RecursiveArrayBag($container ?? []);
+        return new ArrayBag($container ?? []);
     }
 
     /**
