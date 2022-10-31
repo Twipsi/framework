@@ -23,7 +23,7 @@ class ExceptionChecker
   */
   public static function url( UrlItem $url, array $exceptions ) : bool
   {
-    return Arr::hay( $exceptions )->attempt( function( $exception ) use( $url ) {
+    return Arr::attempt($exceptions, function( $exception ) use( $url ) {
 
       if( $exception !== '/' ) {
         $exception = '/'.rtrim( ltrim( $exception, '/' ), '/' );

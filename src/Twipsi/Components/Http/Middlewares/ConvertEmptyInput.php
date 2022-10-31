@@ -56,7 +56,7 @@ class ConvertEmptyInput implements MiddlewareInterface
   protected function normalize( InputBag $bag ) : void
   {
     $cleaned = $this->clean( $bag->all( ...$this->exceptionKeys ) );
-    $bag->replace( $bag->merge( $cleaned )->all() );
+    $bag->override( $bag->merge( $cleaned )->all() );
   }
 
   /**

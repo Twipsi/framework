@@ -51,7 +51,7 @@ final class ValidatorException extends \Exception
     public static function with(array $messages): ValidatorException
     {
         $validator = Factory::create([], []);
-        $validator->errors()->merge($messages);
+        $validator->errors()->inject($messages);
 
         return new static($validator);
     }

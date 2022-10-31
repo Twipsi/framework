@@ -39,21 +39,21 @@ class PathRegistry extends Container
      */
     protected function bindSystemPaths(): void
     {
-        $this->set("path.base", $this->basePath());
-        $this->set("path.environment", $this->basePath());
-        $this->set("path.boot", $this->bootPath());
-        $this->set("path.app", $this->applicationPath());
-        $this->set("path.config", $this->configPath());
-        $this->set("path.database", $this->databasePath());
-        $this->set("path.helpers", $this->helpersPath());
-        $this->set("path.middlewares", $this->middlewarePath());
-        $this->set("path.locale", $this->languagePath());
-        $this->set("path.public", $this->publicPath());
-        $this->set("path.resources", $this->resourcePath());
-        $this->set("path.assets", $this->assetsPath());
-        $this->set("path.routes", $this->routePath());
-        $this->set("path.storage", $this->storagePath());
-        $this->set("path.cache", $this->cachePath());
+        $this->set("path.base", $this->basePath(), false);
+        $this->set("path.environment", $this->basePath(), false);
+        $this->set("path.boot", $this->bootPath(), false);
+        $this->set("path.app", $this->applicationPath(), false);
+        $this->set("path.config", $this->configPath(), false);
+        $this->set("path.database", $this->databasePath(), false);
+        $this->set("path.helpers", $this->helpersPath(), false);
+        $this->set("path.middlewares", $this->middlewarePath(), false);
+        $this->set("path.locale", $this->languagePath(), false);
+        $this->set("path.public", $this->publicPath(), false);
+        $this->set("path.resources", $this->resourcePath(), false);
+        $this->set("path.assets", $this->assetsPath(), false);
+        $this->set("path.routes", $this->routePath(), false);
+        $this->set("path.storage", $this->storagePath(), false);
+        $this->set("path.cache", $this->cachePath(), false);
     }
 
     /**

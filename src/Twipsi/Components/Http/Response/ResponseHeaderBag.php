@@ -114,7 +114,7 @@ class ResponseHeaderBag extends HeaderBag
   */
   public function merge(array|ArrayBag $parameters) : static
   {
-    parent::merge($parameters);
+    parent::inject($parameters);
 
     if (! $this->has('date')) {
       $this->createStamp();
@@ -142,9 +142,9 @@ class ResponseHeaderBag extends HeaderBag
   /**
   * Set a header key/value pair converted to friendly case.
   */
-  public function set(string $key, mixed $value) : static
+  public function set(string $key, mixed $value, bool $recursive = true) : static
   {
-    parent::set($key, $value);
+    parent::set($key, $value, $recursive);
 
     if (in_array(Str::hay($key)->header(), self::CACHE_CONTROL_REFORMABLE_HEADERS)) {
       $this->reformCacheControl();

@@ -87,7 +87,7 @@ class CsrfTokenVerification implements MiddlewareInterface
     if (self::CSRF_METHOD === 'COOKIE') {
 
       return new CookieTokenProvider(
-        $request->cookies->get(self::CSRF_COOKIE_KEY),
+        $request->cookies()->get(self::CSRF_COOKIE_KEY),
         $this->configuration->get('security.csrf_length')
       );
     }
@@ -169,7 +169,7 @@ class CsrfTokenVerification implements MiddlewareInterface
   protected function handleCsrfToken(Request $request) : Request
   {
     // Generate new token on every request
-    if (self::CSRF_MODE === 'REFRESH_ON_TIMEOUT') {
+    if (self::CSRF_MODE === 'REFRESH_ON_REQUEST') {
       $this->tokenProvider->refreshToken();
     }
 
@@ -182,7 +182,7 @@ class CsrfTokenVerification implements MiddlewareInterface
       $request->session->delete(self::CSRF_SESSION_KEY);
     }
 
-    // Add token to a cookie and pass it to the response
+      // Add token to a cookie and pass it to the response
     $this->queueCookieForResponse($request);
 
     return $request;

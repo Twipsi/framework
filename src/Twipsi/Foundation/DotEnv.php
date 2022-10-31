@@ -122,7 +122,7 @@ class DotEnv
      */
     protected function parseLine(string $line): array
     {
-        return Arr::hay($line)->pair('=');
+        return Arr::pair([$line], '=');
     }
 
     /**

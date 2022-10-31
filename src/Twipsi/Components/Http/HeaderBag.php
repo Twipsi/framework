@@ -12,19 +12,19 @@ declare(strict_types=1);
 
 namespace Twipsi\Components\Http;
 
+use Stringable;
 use Twipsi\Support\Bags\ArrayBag as Container;
-use Twipsi\Components\Http\CacheControl;
 use Twipsi\Support\Str;
 
-class HeaderBag extends Container implements \Stringable
+class HeaderBag extends Container implements Stringable
 {
   /**
-  * Cache controll directives storage.
+  * Cache control directives storage.
   */
   protected CacheControl $cacheControl;
 
   /**
-  * Headerbag constructor.
+  * Header-bag constructor.
   */
   public function __construct(array $headers = [])
   {
@@ -60,7 +60,7 @@ class HeaderBag extends Container implements \Stringable
   /**
   * Return selected headers converted to friendly case.
   */
-  public function selected(string ...$keys) : array
+  public function selected(string ...$keys) : static
   {
     if (! empty(func_get_args())) {
 
@@ -121,13 +121,13 @@ class HeaderBag extends Container implements \Stringable
   /**
   * Set a header key/value pair converted to friendly case.
   */
-  public function set(string $key, mixed $value) : static
+  public function set(string $key, mixed $value, bool $recursive = true) : static
   {
     if ('cache-control' === $key = Str::hay($key)->header()) {
       $this->cacheControl->extractCacheDirectives($value);
     }
 
-    return parent::set($key, $value);
+    return parent::set($key, $value, $recursive);
   }
 
   /**
@@ -153,31 +153,35 @@ class HeaderBag extends Container implements \Stringable
   /**
   * Check if a header exists.
   */
-  public function has(string $key) : bool
+  public function has(string ...$keys) : bool
   {
-    if ('cache-control' === ($key = Str::hay($key)->header())) {
-      return !empty($this->cacheControl->all());
-    }
+      foreach($keys as $key) {
+          if ('cache-control' === ($key = Str::hay($key)->header())) {
+              return !empty($this->cacheControl->all());
+          }
+      }
 
-    return parent::has($key);
+    return parent::has(...$keys);
   }
 
   /**
   * Delete a header.
   */
-  public function delete(string $key) : static
+  public function delete(string ...$keys) : static
   {
-    if ('cache-control' === $key = Str::hay($key)->header()) {
-      $this->cacheControl->replace([]);
-    }
+      foreach($keys as $key) {
+          if ('cache-control' === $key = Str::hay($key)->header()) {
+              $this->cacheControl->replace([]);
+          }
+      }
 
-    return parent::delete($key);
+    return parent::delete(...$keys);
   }
 
   /**
-  * Find first occurance with value.
+  * Find first occurrence with value.
   */
-  public function find(...$order) :? string
+  public function find(string ...$order) : mixed
   {
     foreach ($order as $key) {
 

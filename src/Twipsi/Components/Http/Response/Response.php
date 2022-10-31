@@ -329,7 +329,7 @@ class Response implements ResponseInterface, \Stringable
   */
   public function setCode(int $code, string $text = null) : Response
   {
-    if (! Arr::hay(self::HTTP_RESPONSE_CODES)->has($code)) {
+    if (! Arr::has(self::HTTP_RESPONSE_CODES, $code)) {
       throw new InvalidArgumentException(sprintf("The requested response code [%s] is not valid", $code));
     }
 
@@ -376,7 +376,7 @@ class Response implements ResponseInterface, \Stringable
   */
   public function isCacheable() : bool
   {
-    if (! Arr::hay(self::HTTP_RESPONSE_CACHEABLE_RESPONSES)->contains($this->code)
+    if (! Arr::exists(self::HTTP_RESPONSE_CACHEABLE_RESPONSES, $this->code)
         || $this->headers->cacheControl()->has('no-store')
         || $this->headers->cacheControl()->has('private')
       ){
@@ -617,7 +617,7 @@ class Response implements ResponseInterface, \Stringable
   */
   public function isRedirect() : bool
   {
-    return Arr::hay(self::HTTP_RESPONSE_REDIRECT_CODES)->contains($this->code);
+    return Arr::exists(self::HTTP_RESPONSE_REDIRECT_CODES, $this->code);
   }
 
   /**

@@ -18,7 +18,7 @@ use Twipsi\Components\Http\Response\ViewResponse;
 use Twipsi\Components\Http\Response\FileResponse;
 use Twipsi\Components\Url\Redirector;
 
-use Twipsi\Support\Bags\RecursiveArrayBag;
+use Twipsi\Support\Bags\ArrayBag;
 use Twipsi\Components\Http\Response\Interfaces\ResponseInterface;
 
 class ResponseFactory
@@ -43,7 +43,7 @@ class ResponseFactory
       return $this->build($content->__toString(), $code,  $headers);
     }
 
-    if ($content instanceof RecursiveArrayBag
+    if ($content instanceof ArrayBag
       || is_array($content)) {
 
       return $this->json($content, $code, $headers = []);

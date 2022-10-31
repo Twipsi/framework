@@ -13,7 +13,7 @@ declare(strict_types=1);
 namespace Twipsi\Components\Session\Drivers;
 
 use Twipsi\Support\Chronos;
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 use Twipsi\Components\Session\Interfaces\SessionDriverInterface;
 
 class ArraySessionDriver implements SessionDriverInterface

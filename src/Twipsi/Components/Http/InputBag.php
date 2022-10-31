@@ -14,21 +14,21 @@ namespace Twipsi\Components\Http;
 
 use Twipsi\Support\Str;
 use Twipsi\Support\Jso;
-use Twipsi\Support\Bags\RecursiveArrayBag;
+use Twipsi\Support\Bags\ArrayBag;
 
-class InputBag extends RecursiveArrayBag
+class InputBag extends ArrayBag
 {
   /**
   * Container of original data.
   */
-  private RecursiveArrayBag $original;
+  private ArrayBag $original;
 
   /**
   * Input bag constructor.
   */
   public function __construct(HttpRequest $request, array $data = [])
   {
-    $this->original = new RecursiveArrayBag( $data );
+    $this->original = new ArrayBag( $data );
 
     if ($request->isRequestMethodData()) {
 
@@ -48,7 +48,7 @@ class InputBag extends RecursiveArrayBag
   /**
   * Returns the original input data.
   */
-  public function original() : RecursiveArrayBag
+  public function original() : ArrayBag
   {
     return $this->original;
   }

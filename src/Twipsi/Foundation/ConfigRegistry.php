@@ -32,16 +32,17 @@ class ConfigRegistry extends ArrayAccessibleBag
      *
      * @param string $key
      * @param mixed $value
+     * @param bool $recursive
      * @return static
      */
-    public function push(string $key, mixed $value): static
+    public function push(string $key, mixed $value, bool $recursive = true): static
     {
         $section = $this->get($key);
 
         if (!is_null($section)) {
 
             $section = $section->merge($value);
-            $this->set($key, $section);
+            $this->set($key, $section, $recursive);
         }
 
         return $this;

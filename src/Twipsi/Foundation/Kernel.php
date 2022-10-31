@@ -12,7 +12,6 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation;
 
-use App\Events\Listeners\RouteNotFound;
 use Closure;
 use Throwable;
 use Twipsi\Components\Http\HttpRequest;
@@ -27,7 +26,7 @@ use Twipsi\Foundation\Middleware\MiddlewareCollector;
 use Twipsi\Foundation\Middleware\MiddlewareHandler;
 use Twipsi\Foundation\Middleware\MiddlewareLoader;
 use Twipsi\Support\Arr;
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 
 class Kernel
 {
@@ -225,7 +224,7 @@ class Kernel
             return;
         }
 
-        foreach (Arr::hay($this->middlewares->all())->flatten() as $middleware) {
+        foreach (Arr::flatten($this->middlewares->all()) as $middleware) {
 
             if (!is_null($middleware)) {
                 $object = $this->app->make($middleware);

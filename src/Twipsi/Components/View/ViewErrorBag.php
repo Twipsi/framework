@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Components\View;
 
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 use Twipsi\Components\Mailer\MessageBag;
 
 class ViewErrorBag extends Container

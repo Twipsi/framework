@@ -56,7 +56,7 @@ final class RouteBag extends ArrayBag
         }
 
         // Register the named route.
-        parent::set($name, $route);
+        parent::set($name, $route, false);
     }
 
     /**
@@ -154,7 +154,7 @@ final class RouteBag extends ArrayBag
                 $route->setFactory(new ControllerFactory($this->app));
             }
 
-            $this->set($name, $route);
+            $this->set($name, $route, false);
         }
     }
 }

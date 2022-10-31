@@ -219,8 +219,8 @@ class Application extends IOCManager
      */
     public function make(string $abstract, array $parameters = []) : mixed
     {
-        // Get the abstract pointer if there are any registeres as an alias.
-        $this->loadIfProviderIsDeferred($abstract = $this->aliases->find($abstract));
+        // Get the abstract pointer if there are any registers as an alias.
+        $this->loadIfProviderIsDeferred($abstract = $this->aliases->resolve($abstract));
 
         return parent::make($abstract, $parameters);
     }

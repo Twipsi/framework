@@ -64,7 +64,7 @@ class Encrypter
   {
     $algorithm = strtolower($algorithm);
 
-    return Arr::hay($this->supportedAlgorithms)->has($algorithm);
+    return Arr::has($this->supportedAlgorithms, $algorithm);
   }
 
   /**

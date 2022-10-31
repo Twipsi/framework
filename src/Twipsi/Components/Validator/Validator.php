@@ -14,17 +14,15 @@ namespace Twipsi\Components\Validator;
 
 use \RuntimeException;
 use Twipsi\Foundation\Exceptions\NotSupportedException;
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 use Twipsi\Components\Mailer\MessageBag;
 use Twipsi\Components\File\UploadedFile;
-use Twipsi\Components\Validator\DatabaseVerifier;
 use Twipsi\Components\Validator\Managers\ManagesMessages;
 use Twipsi\Components\Validator\Managers\ManagesImplicitRules;
 use Twipsi\Components\Validator\Managers\ManagesDependentRules;
 use Twipsi\Components\Validator\Managers\ManagesTypeRules;
 use Twipsi\Components\Validator\Managers\ManagesStringRules;
 use Twipsi\Components\Validator\Managers\ManagesSizeRules;
-use Twipsi\Components\Validator\ParsesRules;
 use Twipsi\Components\Translator\Translator;
 use Twipsi\Support\Arr;
 
@@ -210,7 +208,7 @@ class Validator
     public function failsafe(string ...$keys): ?array
     {
         return ! empty(func_get_args())
-            ? Arr::hay($this->validated())->only(...$keys)
+            ? Arr::only($this->validated(), ...$keys)
             : $this->validated();
     }
 

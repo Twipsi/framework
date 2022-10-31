@@ -14,7 +14,7 @@ namespace Twipsi\Components\Translator;
 
 use Twipsi\Components\User\Interfaces\ILocalizable as Localizable;
 use Twipsi\Support\Arr;
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 
 class Translator
 {

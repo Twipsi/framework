@@ -12,87 +12,124 @@ declare(strict_types=1);
 
 namespace Twipsi\Components\Security\Csrf;
 
+use Twipsi\Components\Http\Interfaces\StateProviderInterface;
+use Twipsi\Components\Security\Csrf\Interfaces\TokenProviderInterface;
 use Twipsi\Components\Session\SessionItem;
 use Twipsi\Support\Hasher;
 use Twipsi\Support\KeyGenerator;
-use Twipsi\Components\Security\Csrf\Interfaces\TokenProviderInterface;
-use Twipsi\Components\Http\Interfaces\StateProviderInterface;
 
 class SessionTokenProvider implements TokenProviderInterface
 {
-  /**
-  * Session Token.
-  */
-  private string $token;
+    /**
+     * Session Token.
+     *
+     * @var string
+     */
+    private string $token;
 
-  /**
-  * Token provider constructor
-  */
-  public function __construct(?SessionItem $session, private string $csrfKey, private int $csrfLength)
-  {
-    $this->setToken($session);
-  }
+    /**
+     * The csrf key name.
+     *
+     * @var string
+     */
+    private readonly string $csrfKey;
 
-  /**
-  * Set token from session if available or generate a new one.
-  */
-  public function setToken(?StateProviderInterface $origin) : TokenProviderInterface
-  {
-    if (null !== $origin && $origin->has($this->csrfKey)) {
-      $this->token = $origin->csrf();
+    /**
+     * The csrf token length.
+     *
+     * @var int
+     */
+    private readonly int $csrfLength;
+
+    /**
+     * Token provider constructor.
+     *
+     * @param SessionItem|null $session
+     * @param string $csrfKey
+     * @param int $csrfLength
+     */
+    public function __construct(?SessionItem $session, string $csrfKey, int $csrfLength)
+    {
+        $this->csrfKey = $csrfKey;
+        $this->csrfLength = $csrfLength;
+
+        $this->setToken($session);
     }
 
-    if (! $this->token) {
-      $this->token = $this->generateToken($this->csrfLength);
+    /**
+     * Check if instance has token.
+     *
+     * @return bool
+     */
+    public function hasToken(): bool
+    {
+        return ! is_null($this->token);
     }
 
-    return $this;
-  }
-
-  /**
-  * Get instance token.
-  */
-  public function getToken() : ?string
-  {
-    return $this->token;
-  }
-
-  /**
-  * Check if instance has token.
-  */
-  public function hasToken() : bool
-  {
-    return null !== $this->token;
-  }
-
-  /**
-  * Generate and save a new instance token.
-  */
-  public function refreshToken() : TokenProviderInterface
-  {
-    $this->token = $this->generateToken($this->csrfLength);
-
-    return $this;
-  }
-
-  /**
-  * Check if the provided tokens match.
-  */
-  public function validateToken(string $token) : bool
-  {
-    if (is_string($sessionToken = $this->getToken()) && is_string($token)) {
-      return Hasher::checkHash($sessionToken, $token);
+    /**
+     * Generate and save a new instance token.
+     *
+     * @return TokenProviderInterface
+     */
+    public function refreshToken(): TokenProviderInterface
+    {
+        $this->token = $this->generateToken($this->csrfLength);
+        var_dump('refreshing token');
+        return $this;
     }
 
-    return false;
-  }
+    /**
+     * Generate a new token.
+     *
+     * @param int $length
+     * @return string
+     */
+    public function generateToken(int $length = 32): string
+    {
+        return KeyGenerator::generateSecureKey($length);
+    }
 
-  /**
-  * Generate a token.
-  */
-  public function generateToken(int $length = 32) : string
-  {
-    return KeyGenerator::generateSecureKey($length);
-  }
+    /**
+     * Check if the provided tokens match.
+     *
+     * @param string $token
+     * @return bool
+     */
+    public function validateToken(string $token): bool
+    {
+        if (is_string($sessionToken = $this->getToken()) && !empty($token)) {
+            return Hasher::checkHash($sessionToken, $token);
+        }
 
+        return false;
+    }
+
+    /**
+     * Get the instance token.
+     *
+     * @return string|null
+     */
+    public function getToken(): ?string
+    {
+        return $this->token;
+    }
+
+    /**
+     * Set token from session if available or generate a new one.
+     *
+     * @param StateProviderInterface|null $origin
+     * @return TokenProviderInterface
+     */
+    public function setToken(null|StateProviderInterface $origin): TokenProviderInterface
+    {
+        if (!is_null($origin) && $origin->has($this->csrfKey)) {
+            $this->token = $origin->csrf();
+        }
+
+        if (!$this->token) {
+            $this->token = $this->generateToken($this->csrfLength);
+        }
+
+        return $this;
+    }
 }

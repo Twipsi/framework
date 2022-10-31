@@ -17,7 +17,7 @@ use Twipsi\Components\File\Exceptions\FileNotFoundException;
 use Twipsi\Components\File\FileBag;
 use Twipsi\Components\File\FileItem;
 use Twipsi\Foundation\Application\Application;
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 
 class AttachComponentProviders
 {
@@ -65,7 +65,7 @@ class AttachComponentProviders
         }
 
         // Merge the cache data into the registry.
-        $this->app->components()->recursiveMerge($cache);
+        $this->app->components()->merge($cache);
 
         $cache = is_array($cache) ? new Container($cache) : $cache;
 
@@ -105,7 +105,7 @@ class AttachComponentProviders
      */
     protected function shouldRebuildCache(array $cache, array $providers): bool 
     {
-        return is_null($cache) || $cache['providers'] != $providers;
+        return empty($cache) || $cache['providers'] != $providers;
     }
 
         /**
@@ -128,7 +128,7 @@ class AttachComponentProviders
             $instance = new $provider($this->app);
 
             // Register the providers as source.
-            if($this->app->components->isFrameworkType($provider)) {
+            if($this->app->components()->isFrameworkType($provider)) {
                 $cache->push('framework', $provider);
 
             } else {

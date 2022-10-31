@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Components\File;
 
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 use InvalidArgumentException;
 
 class UploadedFileBag extends Container
@@ -40,13 +40,13 @@ class UploadedFileBag extends Container
   /**
   * Set an http file into the container.
   */
-  public function set(string $key, mixed $value) : static
+  public function set(string $key, mixed $value, bool $recursive = true) : static
   {
     if (! is_array($value) && ! $value instanceof UploadedFile) {
       throw new InvalidArgumentException('Unexpected file data recieved, data should be an array or object.');
     }
 
-    return parent::set($key, $this->compile($value));
+    return parent::set($key, $this->compile($value), $recursive);
   }
 
   /**

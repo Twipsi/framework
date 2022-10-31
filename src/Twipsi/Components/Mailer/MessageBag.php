@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Components\Mailer;
 
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 
 class MessageBag extends Container
 {

@@ -336,7 +336,7 @@ class IOCManager implements \ArrayAccess
   */
   public function getAlias(string $abstract) : string
   {
-    return $this->aliases->find($abstract);
+    return $this->aliases->resolve($abstract);
   }
 
   /**

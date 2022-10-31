@@ -135,7 +135,7 @@ trait HandlesInput
         }
 
         if(is_array($key)) {
-            return $this->getInputSource()->selected(...$key);
+            return $this->getInputSource()->selected(...$key)->all();
         }
 
         return $this->getInputSource()->get($key);

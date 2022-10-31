@@ -13,7 +13,7 @@ declare(strict_types=1);
 namespace Twipsi\Foundation\Application;
 
 use Twipsi\Foundation\ComponentProvider;
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 
 class ComponentRegistry extends Container
 {
@@ -32,7 +32,7 @@ class ComponentRegistry extends Container
     protected bool $registered = false;
 
     /**
-     * If we have booted the laoders.
+     * If we have booted the loaders.
      * 
      * @var bool
      */
@@ -75,14 +75,14 @@ class ComponentRegistry extends Container
      */
     public function register(string|ComponentProvider $provider): ComponentProvider
     {
-        // Get the laoder class name.
+        // Get the loader class name.
         $class = is_string($provider) ? $provider : get_class($provider);
 
         if($this->hasBeenLoaded($provider)) {
             return $this->getInstance($class);
         }
 
-        // Register to application container incase we load it late.
+        // Register to application container in case we load it late.
         if(! $this->isApplicationComponentProvider($provider) 
             && ! $this->isFrameworkComponentProvider($provider)) {
 
@@ -95,12 +95,12 @@ class ComponentRegistry extends Container
             }
         }
 
-        // Load the provider instance if its a class.
+        // Load the provider instance if it's a class.
         $instance = is_string($provider) ? new $provider($this->app) : $provider;
 
         // Save to loaded and register provider.
         $this->set("loaded.{$class}", $instance);
-        $instance->register($this->app);
+        $instance->register();
 
         // If we have booted the component providers then boot.
         if($this->isBooted()) {
@@ -131,7 +131,7 @@ class ComponentRegistry extends Container
      */
     public function loadDeferredProvider(string $abstract): void 
     {
-        // If its not a deferred provider exit.
+        // If it's not a deferred provider exit.
         if(! $this->isDeferredAbstract($abstract)) {
             return;
         }
@@ -146,7 +146,7 @@ class ComponentRegistry extends Container
     }
 
     /**
-     * Run The boot method ont he provider.
+     * Run The boot method on the provider.
      * 
      * @param ComponentProvider $provider
      * 
@@ -260,7 +260,7 @@ class ComponentRegistry extends Container
             $provider = get_class($provider);
         }
 
-        return ! is_null($this->search($provider, 'application'));
+        return $this->exists($provider, 'application');
     }
 
     /**
@@ -276,7 +276,7 @@ class ComponentRegistry extends Container
             $provider = get_class($provider);
         }
 
-        return ! is_null($this->search($provider, 'framework'));
+        return $this->exists($provider, 'framework');
     }
 
     /**
@@ -292,7 +292,7 @@ class ComponentRegistry extends Container
             $provider = get_class($provider);
         }
 
-        return ! is_null($this->search($provider, 'always'));
+        return $this->exists($provider, 'always');
     }
 
     /**
@@ -308,7 +308,7 @@ class ComponentRegistry extends Container
             $provider = get_class($provider);
         }
 
-        return ! is_null($this->search($provider, 'deferred'));
+        return $this->exists($provider, 'deferred');
     }
 
     /**
@@ -370,7 +370,7 @@ class ComponentRegistry extends Container
     }
 
     /**
-     * Set the booted laoders to true;
+     * Set the booted loaders to true;
      * 
      * @return void
      */
@@ -380,7 +380,7 @@ class ComponentRegistry extends Container
     }
 
     /**
-     * Check if its a framework component provider.
+     * Check if it's a framework component provider.
      * 
      * @param string $provider
      * 

@@ -14,7 +14,7 @@ namespace Twipsi\Foundation\Middleware;
 
 use Twipsi\Components\Router\Route\Route;
 use Twipsi\Foundation\Application\Application;
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 
 class MiddlewareHandler
 {
@@ -57,7 +57,7 @@ class MiddlewareHandler
   */
   public function collect(Route $route) : MiddlewareCollector
   {
-    return $this->collector->collect($route);
+    return $this->collector->build($route);
   }
 
 }

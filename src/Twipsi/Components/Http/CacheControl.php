@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Components\Http;
 
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 use Twipsi\Support\Arr;
 
 class CacheControl extends Container implements \Stringable
@@ -34,8 +34,8 @@ class CacheControl extends Container implements \Stringable
   */
   public function extractCacheDirectives(string $header)
   {
-    $directives = Arr::hay([$header])->separate(',');
-    $this->replace(Arr::hay($directives)->pair('='));
+    $directives = Arr::separate([$header], ',');
+    $this->replace(Arr::pair($directives, '='));
   }
 
   /**
@@ -146,7 +146,7 @@ class CacheControl extends Container implements \Stringable
   * no-transform indicates that any intermediary (regardless of whether it implements a cache)
   * shouldn't transform the response contents.
   */
-  public function transform(bool $state = true) : CacheControl
+  public function notransform(bool $state = true) : CacheControl
   {
     if (!$state) {
       $this->set('no-transform', true );

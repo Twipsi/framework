@@ -186,7 +186,7 @@ class ExceptionHandler
                 ->json(['message' => $e->getMessage(), 'errors' => $e->errors()], $e->status)
 
             : $this->app->get('redirector')->to($e->redirectUrl ?? Url::previous())
-                ->withInput(Arr::hay($request->input()->all())->except(...$this->nonFlashable))
+                ->withInput(Arr::except($request->input()->all(), ...$this->nonFlashable))
                 ->withErrors($e->errors());
     }
 

@@ -29,7 +29,7 @@ class BootstrapAliases
      */
     public function invoke(): void
     {
-        $this->app->aliases()->merge(
+        $this->app->aliases()->inject(
             $this->app->config->get('component.aliases')
         );
     }

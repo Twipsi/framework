@@ -23,7 +23,7 @@ use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Twipsi\Support\Applicables\App;
 use Twipsi\Support\Arr;
 use Twipsi\Support\Bags\ObjectBag;
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 use Twipsi\Support\Str;
 
 class AccessManager
@@ -149,7 +149,7 @@ class AccessManager
             return $this->check($action, ...$arguments);
         });
 
-        return Arr::hay($actions)->searchAny($authorized);
+        return Arr::existsAny($actions, ...$authorized);
     }
 
     /**
@@ -172,7 +172,7 @@ class AccessManager
             return $this->process($action, ...$arguments);
         });
 
-        return Arr::hay($checked)->search($actions);
+        return Arr::exists($checked, ...$actions);
     }
 
     /**

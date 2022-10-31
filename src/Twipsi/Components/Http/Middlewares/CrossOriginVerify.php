@@ -36,7 +36,7 @@ class CrossOriginVerify implements MiddlewareInterface
       return true;
     }
 
-    if( !Arr::hay( $this->acceptedOrigins )->contains( $origin ) ) {
+    if( !Arr::exists($this->acceptedOrigins, $origin)) {
       throw new InvalidOriginException( 'Cross-Origin Request Blocked: The server does not accept requests from origin "'.$origin.'"', 400 );
     }
 

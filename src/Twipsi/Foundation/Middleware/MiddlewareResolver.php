@@ -17,7 +17,7 @@ use Twipsi\Components\Http\Exceptions\HttpResponseException;
 use Twipsi\Components\Http\Response\Interfaces\ResponseInterface;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\Middleware\Exceptions\InvalidMiddlewareException;
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 
 class MiddlewareResolver
 {

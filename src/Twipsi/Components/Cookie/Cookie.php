@@ -227,7 +227,7 @@ class Cookie implements StateProviderInterface
         //Check if name contains any illegal chars.
         self::parseName(Str::hay($cookie)->before('='));
 
-        $parameters = Arr::hay(Arr::hay([$cookie])->separate(';'))->pair('=');
+        $parameters = Arr::pair(Arr::separate([$cookie],';'), '=');
         $cookie = array_splice($parameters, 0, 1);
 
         [$name, $value] = [

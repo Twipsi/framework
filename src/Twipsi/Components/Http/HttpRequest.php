@@ -14,17 +14,10 @@ declare(strict_types=1);
 namespace Twipsi\Components\Http;
 
 use Twipsi\Components\Url\UrlItem;
-use Twipsi\Components\Http\HeaderBag;
-use Twipsi\Support\Bags\RecursiveArrayBag;
+use Twipsi\Support\Bags\ArrayBag;
 use Twipsi\Components\Http\Exceptions\MaliciousRequestException;
 use InvalidArgumentException;
 use Twipsi\Components\Http\Exceptions\NotSupportedException;
-
-use Twipsi\Components\Http\HandlesInput;
-use Twipsi\Components\Http\HandlesSession;
-use Twipsi\Components\Http\HandlesCookies;
-use Twipsi\Components\Http\HandlesUser;
-use Twipsi\Components\Http\HandlesValidation;
 
 class HttpRequest
 {
@@ -122,7 +115,7 @@ class HttpRequest
     /**
     * Additional request data.
     */
-    public RecursiveArrayBag $properties;
+    public ArrayBag $properties;
 
     /**
     * $_SERVER data.
@@ -181,7 +174,7 @@ class HttpRequest
      */
     public function __construct(array $headers = [], array $get = [], array $post = [], array $files = [], array $cookies = [], array $properties = [])
     {
-        $this->properties  = new RecursiveArrayBag($properties);
+        $this->properties  = new ArrayBag($properties);
         $this->headers  = new HeaderBag($headers);
         $this->setRequestData($this, $post);
         $this->setQueryData($this, $get);

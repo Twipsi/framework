@@ -15,7 +15,7 @@ namespace Twipsi\Components\Session;
 use Twipsi\Support\Str;
 use Twipsi\Support\Arr;
 use Twipsi\Support\KeyGenerator;
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 use Twipsi\Components\Session\Interfaces\SessionDriverInterface;
 use Twipsi\Components\Http\Interfaces\StateProviderInterface;
 
@@ -83,8 +83,8 @@ class SessionItem extends Container implements StateProviderInterface
       $data = unserialize($data);
     }
 
-    if (null !== $data && false !== $data && is_array($data)) {
-      $this->merge($data);
+    if (is_array($data) && !empty($data)) {
+      $this->inject($data);
     }
   }
 
@@ -363,7 +363,7 @@ class SessionItem extends Container implements StateProviderInterface
     $difference = array_diff($this->get('_flash.prev', []), func_get_args());
     $this->set('_flash.prev', $difference);
 
-    array_walk(func_get_args(), function($value, $key) {
+    array_walk($keys, function($value, $key) {
       $this->delete($key);
     });
 
@@ -389,7 +389,7 @@ class SessionItem extends Container implements StateProviderInterface
   */
   public function persistFlash(...$keys) : SessionItem
   {
-    $flashes = Arr::hay($this->get('_flash.next', []))->unique(func_get_args());
+    $flashes = Arr::unique($this->get('_flash.next', []), func_get_args());
     $difference = array_diff($this->get('_flash.prev', []), func_get_args());
 
     $this->set('_flash.next', $flashes);

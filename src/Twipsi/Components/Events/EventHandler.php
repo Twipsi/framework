@@ -140,7 +140,7 @@ final class EventHandler
      */
     public function setCollection(array $collection): void
     {
-        $this->listeners->merge($collection);
+        $this->listeners->inject($collection);
     }
 
     /**

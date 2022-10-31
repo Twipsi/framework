@@ -14,7 +14,7 @@ namespace Twipsi\Foundation\Middleware;
 
 use RuntimeException;
 use Twipsi\Components\Router\Route\Route;
-use Twipsi\Support\Bags\RecursiveArrayBag as Container;
+use Twipsi\Support\Bags\ArrayBag as Container;
 use Twipsi\Support\Str;
 
 class MiddlewareCollector extends Container
@@ -35,7 +35,7 @@ class MiddlewareCollector extends Container
   /**
   * Collect all the middlewares needed to be executed
   */
-  public function collect(Route $route) : MiddlewareCollector
+  public function build(Route $route) : MiddlewareCollector
   {
     // Collect all the general middlewares.
     $this->set('general', $this->collectGeneralMiddlewares());

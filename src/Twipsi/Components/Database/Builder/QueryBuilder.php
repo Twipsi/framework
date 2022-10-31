@@ -300,7 +300,7 @@ final class QueryBuilder
      */
     public function addSelect(array|string|Expression|QueryBuilder ...$columns): QueryBuilder
     {
-        foreach (Arr::hay($columns)->flatten() as $alias => $column) {
+        foreach (Arr::collapse($columns) as $alias => $column) {
 
             // If we have a sub query in the select statement
             // register the query to be executed.
@@ -542,7 +542,7 @@ final class QueryBuilder
     {
         $bindings = !empty($bindings) ? $bindings : $this->bindings;
 
-        $flat = Arr::hay($bindings)->flatten();
+        $flat = Arr::flatten($bindings);
 
         return array_values(array_filter($flat, function($value) {
             return !$value instanceof Expression;

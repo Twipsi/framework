@@ -115,7 +115,7 @@ class ViewFactory
         $parts = explode('/', $path);
         $extension = Str::hay(end($parts))->after(".");
 
-        return Arr::hay(array_keys($this->extensions))->contains($extension)
+        return in_array($extension, array_keys($this->extensions))
             ? $extension
             : null;
     }
