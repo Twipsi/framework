@@ -13,9 +13,8 @@ declare(strict_types=1);
 
 namespace Twipsi\Support;
 
+use Error;
 use RuntimeException;
-use ValueError;
-use Twipsi\Support\KeyGenerator;
 use InvalidArgumentException;
 use Twipsi\Components\Security\Exceptions\UnknownAlgorithmException;
 
@@ -26,9 +25,7 @@ class Hasher
      * 
      * @param string $data
      * @param int $rounds
-     * 
      * @return string
-     * 
      * @throws UnknownAlgorithmException
      */
     public static function hashBcrypt(string $data, int $rounds = 10): string
@@ -38,7 +35,7 @@ class Hasher
                 'cost' => $rounds
             ]);
 
-        } catch (ValueError) {
+        } catch (Error) {
             throw new UnknownAlgorithmException("The requested algorithm Bcrypt is not supported");
         }
     }
@@ -48,9 +45,7 @@ class Hasher
      * 
      * @param string $data
      * @param array $options
-     * 
      * @return string
-     * 
      * @throws UnknownAlgorithmException
      */
     public static function hashArgon(string $data, array $options = []): string
@@ -62,26 +57,23 @@ class Hasher
                 'threads' => $options['threads'] ?? 1,
             ]);
 
-        } catch (ValueError) {
+        } catch (Error) {
             throw new UnknownAlgorithmException("The requested algorithm Argon is not supported");
         }
     }
 
     /**
      * Check if a value matches the hash.
-     * 
+     *
      * @param string $value
      * @param string $hash
-     * @param string $method [bcrypt, argon2i]
-     * 
+     * @param string|null $method [bcrypt, argon2i]
      * @return bool
-     * 
-     * @throws RuntimeException
      */
     public static function verifyPassword(string $value, string $hash, string $method = null): bool
     {
         if(!is_null($method) && static::hashInfo($hash)['algoName'] !== $method) {
-            throw new RuntimeException(sprintf("The provided hash isnt using the [%s] algorithm", $method));
+            throw new RuntimeException(sprintf("The provided hash isn't using the [%s] algorithm", $method));
         }
 
         return password_verify($value, $hash);
@@ -91,7 +83,6 @@ class Hasher
      * Get information about the hash.
      * 
      * @param string $hash
-     * 
      * @return array
      */
     public static function hashInfo(string $hash): array
@@ -100,10 +91,9 @@ class Hasher
     }
 
     /**
-     * Create a fast hash (dont use for security purposes).
+     * Create a fast hash (don't use for security purposes).
      * 
      * @param string $data
-     * 
      * @return string
      */
     public static function hashFast(string $data): string
@@ -116,7 +106,6 @@ class Hasher
      * 
      * @param string $key
      * @param string $method
-     * 
      * @return string
      */
     public static function hashRandom(string $key, string $method = 'sha256'): string
@@ -143,9 +132,7 @@ class Hasher
      * 
      * @param string $hash
      * @param string $token
-     * 
      * @return bool
-     * 
      * @throws InvalidArgumentException
      */
     public static function checkHash(string $hash, string $token): bool
