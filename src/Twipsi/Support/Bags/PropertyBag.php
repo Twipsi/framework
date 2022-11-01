@@ -37,7 +37,6 @@ class PropertyBag
     * Return all the properties excluding exceptions.
     *
     * @param string ...$exceptions
-    *
     * @return array
     */
     public function all(string ...$exceptions): array
@@ -59,7 +58,6 @@ class PropertyBag
      * Return all the properties with the selection key in one array
      *
      * @param string ...$keys
-     *
      * @return array
      */
     public function selected(string ...$keys): array
@@ -114,7 +112,7 @@ class PropertyBag
     /**
      * Set a parameter into class property.
      *
-     * @param string $key
+     * @param string|int $key
      * @param mixed $value
      * @return static
      */
@@ -129,7 +127,6 @@ class PropertyBag
      * Set multiple properties and values.
      * 
      * @param array $data
-     * 
      * @return static
      */
     public function merge(array $data): static
@@ -145,7 +142,6 @@ class PropertyBag
      * Get a property.
      *
      * @param string $property
-     *
      * @return mixed
      */
     public function get(string $property): mixed
@@ -179,7 +175,6 @@ class PropertyBag
      * Remove a property from the class.
      * 
      * @param string $property
-     * 
      * @return static
      */
     public function delete(string $property): static

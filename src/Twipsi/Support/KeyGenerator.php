@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Support;
 
-use Twipsi\Support\Str;
+use Exception;
 
 class KeyGenerator
 {
@@ -21,8 +21,8 @@ class KeyGenerator
      * Generate a random secure key.
      *
      * @param int $length
-     *
      * @return string
+     * @throws Exception
      */
     public static function generateSecureKey(int $length = 32): string
     {
@@ -30,11 +30,11 @@ class KeyGenerator
     }
 
     /**
-     * Generate an alphanumeric key lowercased.
+     * Generate an alphanumeric key lowercase.
      *
      * @param int $length
-     *
      * @return string
+     * @throws Exception
      */
     public static function generateAlphanumeric(int $length = 32): string
     {
@@ -45,8 +45,8 @@ class KeyGenerator
      * Generate a varbinary key.
      *
      * @param int $length
-     *
      * @return string
+     * @throws Exception
      */
     public static function generateByteKey(int $length = 32): string
     {
@@ -54,11 +54,11 @@ class KeyGenerator
     }
 
     /**
-     * Generate a universaly unique identifier key.
+     * Generate a universally unique identifier key.
      *
      * @param int $length
-     *
      * @return string
+     * @throws Exception
      */
     public static function generateUUIDKey(int $length = 32): string
     {
@@ -77,7 +77,6 @@ class KeyGenerator
      * Generate a complex system key.
      *
      * @param int $length
-     *
      * @return string
      */
     public static function generateSystemKey(int $length = 64): string
@@ -97,7 +96,6 @@ class KeyGenerator
      * Base encode string stripping special characters.
      *
      * @param string $string
-     *
      * @return string
      */
     public static function baseEncode(string $string): string

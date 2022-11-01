@@ -15,13 +15,27 @@ namespace Twipsi\Support;
 
 class Str
 {
-    public function __construct(protected string $haystack){}
+    /**
+     * The string to manage.
+     *
+     * @var string
+     */
+    protected string $haystack;
 
     /**
-     * Initialize Str object static.
+     * Construct String.
+     *
+     * @param string $haystack
+     */
+    public function __construct(string $haystack)
+    {
+        $this->haystack = $haystack;
+    }
+
+    /**
+     * Initialize Str object statically.
      *
      * @param string $string
-     *
      * @return Str
      */
     public static function hay(string $string): Str
@@ -34,7 +48,6 @@ class Str
      *
      * @param string $from
      * @param string $to
-     *
      * @return string
      */
     public function convert(string $from, string $to): string
@@ -56,7 +69,6 @@ class Str
      * Transform names to camelcase using a separator.
      *
      * @param string $separator
-     *
      * @return string
      */
     public function camelize(string $separator): string
@@ -71,13 +83,14 @@ class Str
      */
     public function capitelize(): string
     {
-        return preg_replace_callback(
-            '/(?=[A-Z])/',
+        $capital = preg_replace_callback('/(?=[A-Z])/',
             function ($match) {
-                return ucfirst($match[0]);
+                return ucfirst($match[0]).' ';
             },
             $this->haystack
         );
+
+        return ucfirst($capital);
     }
 
     /**
@@ -87,8 +100,7 @@ class Str
      */
     public function snake(): string
     {
-        return preg_replace_callback(
-            '/(?=[A-Z])/',
+        return preg_replace_callback('/([A-Z])+/',
             function ($match) {
                 return strtolower('_'.$match[0]);
             },
@@ -100,7 +112,6 @@ class Str
      * Wrap a string between a character.
      *
      * @param string $wrapper
-     *
      * @return string
      */
     public function wrap(string $wrapper): string
@@ -114,7 +125,6 @@ class Str
      * @param int|null $start
      * @param int|null $end
      * @param string $mode
-     *
      * @return string
      */
     public function pull(?int $start, ?int $end, string $mode = '8bit'): string
@@ -126,7 +136,6 @@ class Str
      * Slice content of the start of a string.
      *
      * @param string $prefix
-     *
      * @return string
      */
     public function sliceStart(string $prefix): string
@@ -142,7 +151,6 @@ class Str
      * Slice content of the end of a string.
      *
      * @param string $prefix
-     *
      * @return string
      */
     public function sliceEnd(string $prefix): string
@@ -161,14 +169,13 @@ class Str
      */
     public function transliterate(): string
     {
-        return transliterator_transliterate("Hex-Any/Java", $this->haystack);
+        return Normalizer::transliterate($this->haystack);
     }
 
     /**
      * Get the first character in a string or compare it to a provided one.
      *
      * @param string|null $compare
-     *
      * @return string|bool
      */
     public function first(string $compare = null): string|bool
@@ -184,7 +191,6 @@ class Str
      * Get the last character in a string or compare it to a provided one.
      *
      * @param string|null $compare
-     *
      * @return string|bool
      */
     public function last(string $compare = null): string|bool
@@ -221,7 +227,6 @@ class Str
      *
      * @param string $value
      * @param bool $sensitive
-     *
      * @return int
      */
     public function index(string $value, bool $sensitive = false): int
@@ -237,7 +242,6 @@ class Str
      * Remove characters in a string.
      *
      * @param string ...$args
-     *
      * @return string
      */
     public function remove(string ...$args): string
@@ -250,7 +254,6 @@ class Str
      * 
      * @param string|array $what
      * @param array|string $with
-     * 
      * @return string
      */
     public function replace(string|array $what, array|string $with): string
@@ -262,7 +265,6 @@ class Str
      * Check if string contains a needle.
      *
      * @param string $needle
-     *
      * @return bool
      */
     public function has(string $needle = ''): bool
@@ -274,7 +276,6 @@ class Str
      * Check if string contains any character in the list.
      *
      * @param string $list
-     *
      * @return bool
      */
     public function contains(string $list = ''): bool
@@ -286,7 +287,6 @@ class Str
      * Check if string consists of a part of values.
      *
      * @param string ...$values
-     *
      * @return bool
      */
     public function resembles(string ...$values): bool
@@ -306,35 +306,17 @@ class Str
      * Slugify a string.
      *
      * @param string $separator
-     *
      * @return string
      */
     public function slugify(string $separator = '-'): string
     {
-        $title = $this->transliterate();
-
-        // Convert all dashes/underscores into separator
-        $flip = $separator === '-' ? '_' : '-';
-
-        $title = preg_replace('!['.preg_quote($flip).']+!u', $separator, $title);
-
-        // Replace @ with the word 'at'
-        $title = str_replace('@', $separator.'at'.$separator, $title);
-
-        // Remove all characters that are not the separator, letters, numbers, or whitespace.
-        $title = preg_replace('![^'.preg_quote($separator).'\pL\pN\s]+!u', '', strtolower($title));
-
-        // Replace all separator characters and whitespace by a single separator
-        $title = preg_replace('!['.preg_quote($separator).'\s]+!u', $separator, $title);
-
-        return trim($title, $separator);
+        return Normalizer::slugify($this->haystack, $separator);
     }
 
     /**
      * Retrieve string content after the first occurrence of a specific needle.
      *
      * @param string $needle
-     *
      * @return string|null
      */
     public function after(string $needle): ?string
@@ -350,7 +332,6 @@ class Str
      * Retrieve string content before the first occurrence of a specific needle.
      *
      * @param string $needle
-     *
      * @return string|null
      */
     public function before(string $needle): ?string
@@ -366,7 +347,6 @@ class Str
      * Retrieve string content after the last occurrence of a specific needle.
      *
      * @param string $needle
-     *
      * @return string|null
      */
     public function afterLast(string $needle): ?string
@@ -382,7 +362,6 @@ class Str
      * Retrieve string content before the last occurrence of a specific needle.
      *
      * @param string $needle
-     *
      * @return string|null
      */
     public function beforeLast(string $needle): ?string
@@ -399,7 +378,6 @@ class Str
      *
      * @param string $start
      * @param string $end
-     *
      * @return array|null
      */
     public function between(string $start, string $end): ?array
@@ -430,7 +408,6 @@ class Str
      *
      * @param string $start
      * @param string $end
-     *
      * @return string|null
      */
     public function betweenFirst(string $start, string $end): ?string
@@ -448,7 +425,6 @@ class Str
      *
      * @param string $start
      * @param string $end
-     *
      * @return string|null
      */
     public function betweenLast(string $start, string $end): ?string

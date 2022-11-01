@@ -16,24 +16,24 @@ use Twipsi\Components\Cookie\CookieBag;
 
 trait Cookies
 {
-  protected CookieBag $cookies;
+    protected CookieBag $cookies;
 
-  /**
-  * Set the cookies instance.
-  */
-  public function appendCookies(CookieBag $cookies) : static
-  {
-    $this->cookies = $cookies;
+    /**
+     * Set the cookies instance.
+     */
+    public function appendCookies(CookieBag $cookies): static
+    {
+        $this->cookies = $cookies;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-  * Get the cookies instance.
-  */
-  public function getCookies()
-  {
-    return $this->cookies;
-  }
+    /**
+     * Get the cookies instance.
+     */
+    public function getCookies()
+    {
+        return $this->cookies;
+    }
 
 }

@@ -12,17 +12,16 @@ declare(strict_types=1);
 
 namespace Twipsi\Support\Traits;
 
-use \Closure;
+use Closure;
 use Twipsi\Facades\App;
 
 trait Localizable
 {
     /**
      * Run a closure with a different locale and then revert.
-     * 
-     * @param string $locale
+     *
+     * @param string|null $locale
      * @param Closure $callback
-     * 
      * @return mixed
      */
     public function withLocale(?string $locale, Closure $callback): mixed

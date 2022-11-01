@@ -15,55 +15,85 @@ namespace Twipsi\Support;
 
 class Jso
 {
-    public function __construct(protected mixed $haystack){}
+    /**
+     * The JSON data.
+     *
+     * @var mixed
+     */
+    protected mixed $haystack;
 
     /**
-    * Set the data we are working on.
-    */
+     * Construct JSO.
+     *
+     * @param mixed $haystack
+     */
+    public function __construct(mixed $haystack)
+    {
+        $this->haystack = $haystack;
+    }
+
+    /**
+     * Set the data we are working on.
+     *
+     * @param mixed $data
+     * @return Jso
+     */
     public static function hay(mixed $data): Jso
     {
         return new self($data);
     }
 
     /**
-    * Encode data to json.
-    */
+     * Encode data to json.
+     *
+     * @param int $flags
+     * @return string
+     */
     public function encode(int $flags = 0): string
     {
         return json_encode($this->haystack, $flags);
     }
 
     /**
-    * Decode Json data.
-    */
+     * Decode Json data.
+     *
+     * @param bool|null $associative
+     * @return mixed
+     */
     public function decode(?bool $associative = null): mixed
     {
         return json_decode($this->haystack, $associative);
     }
 
     /**
-    * Check if data is a valid json.
-    */
+     * Check if data is a valid json.
+     *
+     * @return bool
+     */
     public function json(): bool
     {
         if (is_array($this->haystack) || is_null($this->haystack)) {
             return false;
         }
 
-        return isset($this->haystack[0]) ? $this->haystack[0] === '{' : false;
+        return isset($this->haystack[0]) && $this->haystack[0] === '{';
     }
 
     /**
-    * Get last json error.
-    */
+     * Get last json error.
+     *
+     * @return int
+     */
     public static function error(): int
     {
         return json_last_error();
     }
 
     /**
-    * Check if json conversion was valid.
-    */
+     * Check if json conversion was valid.
+     *
+     * @return bool
+     */
     public static function valid(): bool
     {
         return json_last_error() === JSON_ERROR_NONE;

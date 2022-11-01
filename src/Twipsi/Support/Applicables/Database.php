@@ -16,24 +16,24 @@ use Twipsi\Components\Database\DatabaseManager;
 
 trait Database
 {
-  protected DatabaseManager $db;
+    protected DatabaseManager $db;
 
-  /**
-  * Set the cookies instance.
-  */
-  public function appendDatabase(DatabaseManager $connector) : static
-  {
-    $this->db = $connector;
+    /**
+     * Set the cookies instance.
+     */
+    public function appendDatabase(DatabaseManager $connector): static
+    {
+        $this->db = $connector;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-  * Get the cookies instance.
-  */
-  public function getDatabase()
-  {
-    return $this->db;
-  }
+    /**
+     * Get the cookies instance.
+     */
+    public function getDatabase()
+    {
+        return $this->db;
+    }
 
 }

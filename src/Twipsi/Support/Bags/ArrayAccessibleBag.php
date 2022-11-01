@@ -21,7 +21,6 @@ class ArrayAccessibleBag extends ArrayBag implements ArrayAccess
      * Check if offset exists.
      *
      * @param mixed $offset
-     *
      * @return bool
      */
     public function offsetExists(mixed $offset): bool
@@ -33,7 +32,6 @@ class ArrayAccessibleBag extends ArrayBag implements ArrayAccess
      * Get offset value.
      *
      * @param mixed $offset
-     *
      * @return mixed
      */
     public function offsetGet(mixed $offset): mixed
@@ -47,7 +45,6 @@ class ArrayAccessibleBag extends ArrayBag implements ArrayAccess
      *
      * @param mixed $offset
      * @param mixed $value
-     *
      * @return void
      */
     public function offsetSet(mixed $offset, mixed $value): void
@@ -59,7 +56,6 @@ class ArrayAccessibleBag extends ArrayBag implements ArrayAccess
      * Delete offset.
      *
      * @param mixed $offset
-     *
      * @return void
      */
     public function offsetUnset(mixed $offset): void

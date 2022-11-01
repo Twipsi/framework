@@ -16,24 +16,24 @@ use Twipsi\Components\Http\HttpRequest;
 
 trait Request
 {
-  protected HttpRequest $request;
+    protected HttpRequest $request;
 
-  /**
-  * Set the request instance
-  */
-  public function appendRequest(HttpRequest $request) : static
-  {
-    $this->request = $request;
+    /**
+     * Set the request instance
+     */
+    public function appendRequest(HttpRequest $request): static
+    {
+        $this->request = $request;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-  * Get the request instance
-  */
-  public function getRequest()
-  {
-    return $this->request;
-  }
+    /**
+     * Get the request instance
+     */
+    public function getRequest()
+    {
+        return $this->request;
+    }
 
 }

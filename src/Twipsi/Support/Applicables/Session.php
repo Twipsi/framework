@@ -16,24 +16,24 @@ use Twipsi\Components\Session\SessionItem;
 
 trait Session
 {
-  protected SessionItem $session;
+    protected SessionItem $session;
 
-  /**
-  * Set the session instance
-  */
-  public function appendSession(SessionItem $session) : static
-  {
-    $this->session = $session;
+    /**
+     * Set the session instance
+     */
+    public function appendSession(SessionItem $session): static
+    {
+        $this->session = $session;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-  * Get the session instance
-  */
-  public function getSession()
-  {
-    return $this->session;
-  }
+    /**
+     * Get the session instance
+     */
+    public function getSession()
+    {
+        return $this->session;
+    }
 
 }

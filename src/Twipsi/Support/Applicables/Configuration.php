@@ -16,24 +16,24 @@ use Twipsi\Foundation\ConfigRegistry;
 
 trait Configuration
 {
-  protected ConfigRegistry $config;
+    protected ConfigRegistry $config;
 
-  /**
-  * Set the config instance
-  */
-  public function appendConfiguration(ConfigRegistry $config) : static
-  {
-    $this->config = $config;
+    /**
+     * Set the config instance
+     */
+    public function appendConfiguration(ConfigRegistry $config): static
+    {
+        $this->config = $config;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-  * Get a config element.
-  */
-  public function config(string $config) : mixed
-  {
-    return $this->config->get($config);
-  }
+    /**
+     * Get a config element.
+     */
+    public function config(string $config): mixed
+    {
+        return $this->config->get($config);
+    }
 
 }

@@ -21,7 +21,6 @@ trait Arrayable
      * Return all the public properties as named array.
      * 
      * @param bool $strict - only get base class properties
-     * 
      * @return array
      */
     public function toArray(bool $strict = false): array

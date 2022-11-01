@@ -16,23 +16,23 @@ use Twipsi\Foundation\Application\Application;
 
 trait App
 {
-  protected Application $app;
+    protected Application $app;
 
-  /**
-  * Set the config instance
-  */
-  public function appendApp(Application $app) : static
-  {
-    $this->app = $app;
+    /**
+     * Set the config instance
+     */
+    public function appendApp(Application $app): static
+    {
+        $this->app = $app;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-  * Get a config element.
-  */
-  public function getApplication() : mixed
-  {
-    return $this->app;
-  }
+    /**
+     * Get a config element.
+     */
+    public function getApplication(): mixed
+    {
+        return $this->app;
+    }
 }

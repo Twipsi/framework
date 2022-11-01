@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Twipsi\Support\Bags;
 
 use ReflectionClass;
+use ReflectionException;
 use ReflectionMethod;
 use InvalidArgumentException;
 use ReflectionParameter;
@@ -31,7 +32,6 @@ class ObjectBag
      * Construct our reflection class.
      * 
      * @param string $class
-     * 
      * @throws InvalidArgumentException
      */
     public function __construct(string $class)
@@ -84,11 +84,12 @@ class ObjectBag
     }
 
     /**
-     * Return a new instacne with the parameters provided.
-     * 
+     * Return a new instance with the parameters provided.
+     *
      * @param array $dependencies
-     * 
+     *
      * @return object
+     * @throws ReflectionException
      */
     public function instantiateWithParameters(array $dependencies): object
     {
@@ -99,7 +100,6 @@ class ObjectBag
      * Check if a class implements an interface.
      * 
      * @param string $interface
-     * 
      * @return bool
      */
     public function implements(string $interface): bool
@@ -111,7 +111,6 @@ class ObjectBag
      * Check if a class extends a class.
      * 
      * @param string $class
-     * 
      * @return bool
      */
     public function extends(string $class): bool
@@ -121,21 +120,20 @@ class ObjectBag
 
     /**
      * Get the value of a property.
-     * 
+     *
      * @param string $name
-     * 
      * @return mixed
+     * @throws ReflectionException
      */
     public function property(string $name): mixed
     {
-        return $this->class->getProperty($name)?->getValue();
+        return $this->class->getProperty($name)->getValue();
     }
 
     /**
      * Check if a property exists.
      * 
      * @param string $name
-     * 
      * @return bool
      */
     public function exists(string $name): bool
@@ -147,7 +145,6 @@ class ObjectBag
      * Check if class has a method.
      * 
      * @param string $method
-     * 
      * @return bool
      */
     public function has(string $method): bool 
@@ -157,10 +154,10 @@ class ObjectBag
 
     /**
      * Get a method from a class.
-     * 
+     *
      * @param string $method
-     * 
      * @return ReflectionMethod
+     * @throws ReflectionException
      */
     public function method(string $method): ReflectionMethod
     {
@@ -169,10 +166,10 @@ class ObjectBag
 
     /**
      * Get class method parameters.
-     * 
+     *
      * @param string $method
-     * 
      * @return array
+     * @throws ReflectionException
      */
     public function methodParameters(string $method): array
     {
@@ -180,11 +177,11 @@ class ObjectBag
     }
 
     /**
-     * Check if a property is initalized.
-     * 
+     * Check if a property is initialized.
+     *
      * @param string $name
-     * 
      * @return bool
+     * @throws ReflectionException
      */
     public function initialized(string $name): bool
     {
@@ -192,11 +189,10 @@ class ObjectBag
     }
 
     /**
-     * If we dont have an override invoke reflectionClass methods.
+     * If we don't have an override invoke reflectionClass methods.
      * 
      * @param string $method
      * @param array|null $args
-     * 
      * @return mixed
      */
     public function __call(string $method, array $args = null): mixed

@@ -14,6 +14,10 @@ namespace Twipsi\Facades;
 
 use Twipsi\Facades\Interfaces\FacadeInterface;
 
+/**
+ * @method static getLocale()
+ * @method static setLocale(string $locale)
+ */
 class App extends Facade implements FacadeInterface
 {
   /**
@@ -31,5 +35,4 @@ class App extends Facade implements FacadeInterface
   {
     return 'Twipsi\Foundation\Application\Application';
   }
-
 }

@@ -17,26 +17,27 @@ use ReflectionProperty;
 
 trait Serializable
 {
-  /**
-   * Called when an object gets serialized.
-   * 
-   * @return array
-   */
-  public function __sleep() : array
-  {
-    $properties = (new ReflectionClass($this))
+    /**
+     * Called when an object gets serialized.
+     *
+     * @return array
+     */
+    public function __sleep(): array
+    {
+        $properties = (new ReflectionClass($this))
             ->getProperties(ReflectionProperty::IS_PUBLIC);
 
-    foreach ($properties as $property) {
-      $saved[] = $property->getName();
+        foreach ($properties as $property) {
+            $saved[] = $property->getName();
+        }
+
+        return $saved ?? [];
     }
 
-    return $saved ?? [];
-  }
-
-  /**
-  * Restore the object with additional logics.
-  */
-  public function __wakeup() : void {}
-
+    /**
+     * Restore the object with additional logics.
+     */
+    public function __wakeup(): void
+    {
+    }
 }
