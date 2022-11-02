@@ -1113,17 +1113,25 @@ class ArrayBag implements IteratorAggregate, Countable
         );
     }
 
-
-
-
-
-    public function debug(): bool
+    /**
+     * Dump the collection and exit.
+     *
+     * @return void
+     */
+    public function debug(): void
     {
-        return $this->count() === 1;
+        $this->dump();
+        exit(1);
     }
-    public function dump(): bool
+
+    /**
+     * Dump the collection.
+     *
+     * @return void
+     */
+    public function dump(): void
     {
-        return $this->count() === 1;
+        var_dump($this->parameters);
     }
 
     /**
