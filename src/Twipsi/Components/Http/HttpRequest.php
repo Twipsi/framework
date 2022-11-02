@@ -17,7 +17,7 @@ use Twipsi\Components\Url\UrlItem;
 use Twipsi\Support\Bags\ArrayBag;
 use Twipsi\Components\Http\Exceptions\MaliciousRequestException;
 use InvalidArgumentException;
-use Twipsi\Components\Http\Exceptions\NotSupportedException;
+use Twipsi\Foundation\Exceptions\NotSupportedException;
 
 class HttpRequest
 {

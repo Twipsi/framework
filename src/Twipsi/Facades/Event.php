@@ -16,7 +16,7 @@ use Twipsi\Components\Events\Interfaces\EventInterface;
 use Twipsi\Facades\Interfaces\FacadeInterface;
 
 /**
- * @method static dispatch(string|EventInterface $event, $param, array $args)
+ * @method static dispatch(EventInterface|string $event, ...$args)
  */
 class Event extends Facade implements FacadeInterface
 {

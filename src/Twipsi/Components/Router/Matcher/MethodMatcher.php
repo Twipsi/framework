@@ -2,7 +2,7 @@
 
 namespace Twipsi\Components\Router\Matcher;
 
-use Twipsi\Components\Http\Exceptions\NotSupportedException;
+use Twipsi\Foundation\Exceptions\NotSupportedException;
 use Twipsi\Components\Http\HttpRequest;
 use Twipsi\Components\Router\Route\Route;
 

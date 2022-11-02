@@ -89,7 +89,6 @@ class DotEnv
      * Check if the line is commented out.
      * 
      * @param string $line
-     * 
      * @return bool
      */
     protected function isCommented(string $line): bool
@@ -101,7 +100,6 @@ class DotEnv
      * Check if a value is variadic.
      * 
      * @param string $line
-     * 
      * @return bool
      */
     protected function IsVariadic(string $line): bool 
@@ -117,7 +115,6 @@ class DotEnv
      * Parse the line.
      * 
      * @param string $line
-     * 
      * @return array<string,string>
      */
     protected function parseLine(string $line): array
@@ -129,7 +126,6 @@ class DotEnv
      * Apply environment vars to ENV and SERVER.
      * 
      * @param array<string,string|Closure> $variables
-     * 
      * @return void
      */
     protected function putEnv(array $variables): void

@@ -14,11 +14,10 @@ namespace Twipsi\Foundation;
 class Env
 {
     /**
-     * Get an enviroment variable.
+     * Get an environment variable.
      * 
      * @param string $key
      * @param mixed $default
-     * 
      * @return mixed
      */
     public static function get(string $key, mixed $default): mixed 

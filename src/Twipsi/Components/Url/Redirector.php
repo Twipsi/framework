@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Components\Url;
 
-use Twipsi\Components\Http\Exceptions\NotSupportedException;
+use Twipsi\Foundation\Exceptions\NotSupportedException;
 use Twipsi\Components\Http\HttpRequest;
 use Twipsi\Components\Http\Response\RedirectResponse;
 use Twipsi\Components\Router\Exceptions\RouteNotFoundException;

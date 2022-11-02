@@ -72,11 +72,11 @@ class ExceptionHandler
      * Report an exception.
      *
      * @param Throwable $e
-     *
      * @return void
      */
     public function report(Throwable $e): void
     {
+        //@ To Implement with a 3rd party lib.
         //LOG ERROR;
     }
 
@@ -85,7 +85,6 @@ class ExceptionHandler
      * 
      * @param HttpRequest $request
      * @param Throwable $e
-     * 
      * @return Response
      */
     public function render(HttpRequest $request, Throwable $e): Response
@@ -122,7 +121,6 @@ class ExceptionHandler
      * Convert any placeholder exceptions to their final form.
      *
      * @param Throwable $e
-     *
      * @return Throwable
      */
     protected function convertException(Throwable $e): Throwable
@@ -144,7 +142,6 @@ class ExceptionHandler
      *
      * @param HttpRequest $request
      * @param Throwable $e
-     *
      * @return Response
      */
     protected function renderHttpResponse(HttpRequest $request, Throwable $e): Response
@@ -160,7 +157,6 @@ class ExceptionHandler
      *
      * @param HttpRequest $request
      * @param AuthenticationException $e
-     *
      * @return Response
      */
     protected function renderAuthenticationResponse(HttpRequest $request, AuthenticationException $e): Response
@@ -176,7 +172,6 @@ class ExceptionHandler
      * 
      * @param HttpRequest $request
      * @param ValidatorException $e
-     *
      * @return Response
      */
     protected function renderValidatorResponse(HttpRequest $request, ValidatorException $e): Response
@@ -194,7 +189,6 @@ class ExceptionHandler
      * Build a Json response.
      *
      * @param Throwable $e
-     *
      * @return JsonResponse
      */
     protected function buildJsonResponse(Throwable $e): JsonResponse
@@ -210,7 +204,6 @@ class ExceptionHandler
      * Build the Json body.
      *
      * @param Throwable $e
-     *
      * @return array<string|mixed>
      */
     protected function buildJsonBody(Throwable $e): array
@@ -234,7 +227,6 @@ class ExceptionHandler
      *
      * @param HttpRequest $request
      * @param Throwable $e
-     *
      * @return Response
      */
     protected function buildHttpResponse(HttpRequest $request, Throwable $e): Response
@@ -256,7 +248,6 @@ class ExceptionHandler
      * Render the final exception response based on status code.
      * 
      * @param HttpException $e
-     *
      * @return Response
      */
     protected function renderHttpException(HttpException $e): Response
@@ -282,7 +273,6 @@ class ExceptionHandler
      * Create a new response from the exception.
      * 
      * @param Throwable $e
-     * 
      * @return Response
      */
     protected function buildResponseFromException(Throwable $e): Response
@@ -298,7 +288,6 @@ class ExceptionHandler
      * Use Whoops renderer to render the exception.
      * 
      * @param Throwable $e
-     * 
      * @return string
      */
     protected function renderExceptionWithWhoops(Throwable $e): string
@@ -327,7 +316,6 @@ class ExceptionHandler
      * Locate the view file for the exception based on status code.
      *
      * @param HttpException $e
-     *
      * @return string|null
      */
     protected function locateExceptionView(HttpException $e): ?string
@@ -357,7 +345,6 @@ class ExceptionHandler
      * 
      * @param Response $response
      * @param HttpRequest $request
-     * 
      * @return Response
      */
     protected function prepareResponse(Response $response, HttpRequest $request): Response

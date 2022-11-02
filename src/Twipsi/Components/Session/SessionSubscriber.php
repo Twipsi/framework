@@ -13,7 +13,7 @@ declare(strict_types=1);
 namespace Twipsi\Components\Session;
 
 use Twipsi\Components\Cookie\CookieBag;
-use Twipsi\Components\Http\Exceptions\NotSupportedException;
+use Twipsi\Foundation\Exceptions\NotSupportedException;
 use Twipsi\Components\Security\Encrypter;
 use Twipsi\Components\Session\Drivers\ArraySessionDriver;
 use Twipsi\Components\Session\Drivers\CookieSessionDriver;

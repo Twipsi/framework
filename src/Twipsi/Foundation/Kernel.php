@@ -13,10 +13,10 @@ declare(strict_types=1);
 namespace Twipsi\Foundation;
 
 use Closure;
+use Exception;
 use Throwable;
 use Twipsi\Components\Http\HttpRequest;
 use Twipsi\Components\Http\Response\Interfaces\ResponseInterface;
-use Twipsi\Components\Router\Exceptions\RouteNotFoundException;
 use Twipsi\Components\Router\Route\Route;
 use Twipsi\Components\Router\Router;
 use Twipsi\Foundation\Application\Application;
@@ -102,7 +102,6 @@ class Kernel
      * Run the request through the system and return a valid response.
      *
      * @param HttpRequest $request
-     *
      * @return ResponseInterface
      */
     public function run(HttpRequest $request): ResponseInterface
@@ -133,17 +132,16 @@ class Kernel
      * Dispatch the router and return the response.
      *
      * @param HttpRequest $request
-     *
      * @return ResponseInterface
-     * @throws ApplicationManagerException
-     * @throws RouteNotFoundException|NotSupportedException
+     * @throws NotSupportedException
+     * @throws ApplicationManagerException|NotSupportedException
      */
     protected function dispatch(HttpRequest $request): ResponseInterface
     {
         try{
             $route = $this->router->match($request);
 
-        } catch(RouteNotFoundException $e) {
+        } catch(Exception $e) {
 
             // Load the system components.
              $this->bootstrapComponents();
@@ -169,7 +167,6 @@ class Kernel
      * 
      * @param MiddlewareHandler $handler
      * @param Route $route
-     * 
      * @return MiddlewareCollector
      */
     protected function handleMiddlewares(MiddlewareHandler $handler, Route $route): MiddlewareCollector
@@ -189,7 +186,6 @@ class Kernel
      *
      * @param HttpRequest $request
      * @param ResponseInterface $response
-     *
      * @return void
      * @throws ApplicationManagerException
      */
@@ -214,7 +210,6 @@ class Kernel
      *
      * @param HttpRequest $request
      * @param ResponseInterface $response
-     *
      * @return void
      * @throws ApplicationManagerException
      */
@@ -238,9 +233,12 @@ class Kernel
 
     /**
      * Handle custom exception handling.
-     * @ ToImplement
+     *
+     * @param HttpRequest $request
+     * @param Throwable $e
+     * @return ResponseInterface
      */
-    protected function handleException(HttpRequest $request, Throwable $e): ResponseInterface 
+    protected function handleException(HttpRequest $request, Throwable $e): ResponseInterface
     {
         $this->app->get(ExceptionHandler::class)->report($e);
         return $this->app->get(ExceptionHandler::class)->render($request, $e);
