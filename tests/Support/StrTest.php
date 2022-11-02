@@ -1,9 +1,7 @@
 <?php
 
-namespace Twipsi\Tests\Bags;
+namespace Twipsi\Tests\Support;
 
-use InvalidArgumentException;
-use Twipsi\Support\Bags\ArrayBag;
 use PHPUnit\Framework\TestCase;
 use Twipsi\Support\Str;
 
