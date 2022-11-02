@@ -5,4 +5,5 @@ parameters:
 	ignoreErrors:
 		- "#Access to an undefined property#"
 		- "#Call to an undefined method#"
+		- "#Unused element#"
 		- '#Static call to instance method Twipsi\\Facades\\[a-zA-Z0-9\\_]+::[a-zA-Z0-9\\_]()#'

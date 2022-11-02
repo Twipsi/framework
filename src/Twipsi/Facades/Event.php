@@ -12,25 +12,28 @@ declare(strict_types=1);
 
 namespace Twipsi\Facades;
 
-use Twipsi\Facades\Facade;
+use Twipsi\Components\Events\Interfaces\EventInterface;
 use Twipsi\Facades\Interfaces\FacadeInterface;
 
+/**
+ * @method static dispatch(string|EventInterface $event, $param, array $args)
+ */
 class Event extends Facade implements FacadeInterface
 {
-  /**
-  * Get the accessor name.
-  */
-  public static function getFacadeAccessorName() : string
-  {
-    return 'events';
-  }
+    /**
+     * Get the accessor name.
+     */
+    public static function getFacadeAccessorName(): string
+    {
+        return 'events';
+    }
 
-  /**
-  * Get the class with namespace to load.
-  */
-  public static function getFacadeClassName() : string
-  {
-    return 'Twipsi\Components\Events\EventHandler';
-  }
+    /**
+     * Get the class with namespace to load.
+     */
+    public static function getFacadeClassName(): string
+    {
+        return 'Twipsi\Components\Events\EventHandler';
+    }
 
 }

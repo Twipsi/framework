@@ -17,22 +17,25 @@ use Twipsi\Facades\Interfaces\FacadeInterface;
 /**
  * @method static getLocale()
  * @method static setLocale(string $locale)
+ * @method static make(mixed $abstract)
+ * @method static path(string $string)
+ * @method static get(string $string)
  */
 class App extends Facade implements FacadeInterface
 {
-  /**
-  * Get the accessor name.
-  */
-  public static function getFacadeAccessorName() : string
-  {
-    return 'app';
-  }
+    /**
+     * Get the accessor name.
+     */
+    public static function getFacadeAccessorName(): string
+    {
+        return 'app';
+    }
 
-  /**
-  * Get the class with namespace to load.
-  */
-  public static function getFacadeClassName() : string
-  {
-    return 'Twipsi\Foundation\Application\Application';
-  }
+    /**
+     * Get the class with namespace to load.
+     */
+    public static function getFacadeClassName(): string
+    {
+        return 'Twipsi\Foundation\Application\Application';
+    }
 }

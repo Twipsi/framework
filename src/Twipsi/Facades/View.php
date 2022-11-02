@@ -12,24 +12,23 @@ declare(strict_types=1);
 
 namespace Twipsi\Facades;
 
-use Twipsi\Facades\Facade;
 use Twipsi\Facades\Interfaces\FacadeInterface;
 
 class View extends Facade implements FacadeInterface
 {
-  /**
-  * Get the accessor name.
-  */
-  public static function getFacadeAccessorName() : string
-  {
-    return 'view.factory';
-  }
+    /**
+     * Get the accessor name.
+     */
+    public static function getFacadeAccessorName(): string
+    {
+        return 'view.factory';
+    }
 
-  /**
-  * Get the class with namespace to load.
-  */
-  public static function getFacadeClassName() : string
-  {
-    return 'Twipsi\Components\View\View';
-  }
+    /**
+     * Get the class with namespace to load.
+     */
+    public static function getFacadeClassName(): string
+    {
+        return 'Twipsi\Components\View\View';
+    }
 }

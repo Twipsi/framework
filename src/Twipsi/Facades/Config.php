@@ -14,22 +14,27 @@ namespace Twipsi\Facades;
 
 use Twipsi\Facades\Interfaces\FacadeInterface;
 
+/**
+ * @method static push(string $int, array $array)
+ * @method static set(string $int, mixed $int1)
+ * @method static get(string $argument, mixed $default)
+ */
 class Config extends Facade implements FacadeInterface
 {
-  /**
-  * Get the accessor name.
-  */
-  public static function getFacadeAccessorName() : string
-  {
-    return 'config';
-  }
+    /**
+     * Get the accessor name.
+     */
+    public static function getFacadeAccessorName(): string
+    {
+        return 'config';
+    }
 
-  /**
-  * Get the class with namespace to load.
-  */
-  public static function getFacadeClassName() : string
-  {
-    return 'Twipsi\Foundation\ConfigRegistry';
-  }
+    /**
+     * Get the class with namespace to load.
+     */
+    public static function getFacadeClassName(): string
+    {
+        return 'Twipsi\Foundation\ConfigRegistry';
+    }
 
 }

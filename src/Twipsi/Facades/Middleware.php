@@ -16,20 +16,20 @@ use Twipsi\Facades\Interfaces\FacadeInterface;
 
 class Middleware extends Facade implements FacadeInterface
 {
-  /**
-  * Get the accessor name.
-  */
-  public static function getFacadeAccessorName() : string
-  {
-    return 'middleware';
-  }
+    /**
+     * Get the accessor name.
+     */
+    public static function getFacadeAccessorName(): string
+    {
+        return 'middleware';
+    }
 
-  /**
-  * Get the class with namespace to load.
-  */
-  public static function getFacadeClassName() : string
-  {
-    return 'Twipsi\Foundation\Middleware\MiddlewareHandler';
-  }
+    /**
+     * Get the class with namespace to load.
+     */
+    public static function getFacadeClassName(): string
+    {
+        return 'Twipsi\Foundation\Middleware\MiddlewareHandler';
+    }
 
 }

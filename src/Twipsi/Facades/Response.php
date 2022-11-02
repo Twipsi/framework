@@ -12,25 +12,24 @@ declare(strict_types=1);
 
 namespace Twipsi\Facades;
 
-use Twipsi\Facades\Facade;
 use Twipsi\Facades\Interfaces\FacadeInterface;
 
 class Response extends Facade implements FacadeInterface
 {
-  /**
-  * Get the accessor name.
-  */
-  public static function getFacadeAccessorName() : string
-  {
-    return 'response';
-  }
+    /**
+     * Get the accessor name.
+     */
+    public static function getFacadeAccessorName(): string
+    {
+        return 'response';
+    }
 
-  /**
-  * Get the class with namespace to load.
-  */
-  public static function getFacadeClassName() : string
-  {
-    return 'Twipsi\Components\Response\Response';
-  }
+    /**
+     * Get the class with namespace to load.
+     */
+    public static function getFacadeClassName(): string
+    {
+        return 'Twipsi\Components\Response\Response';
+    }
 
 }

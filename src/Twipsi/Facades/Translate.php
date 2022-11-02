@@ -12,24 +12,26 @@ declare(strict_types=1);
 
 namespace Twipsi\Facades;
 
-use Twipsi\Facades\Facade;
 use Twipsi\Facades\Interfaces\FacadeInterface;
 
+/**
+ * @method static get(string $text) mixed
+ */
 class Translate extends Facade implements FacadeInterface
 {
-  /**
-  * Get the accessor name.
-  */
-  public static function getFacadeAccessorName() : string
-  {
-    return 'translator';
-  }
+    /**
+     * Get the accessor name.
+     */
+    public static function getFacadeAccessorName(): string
+    {
+        return 'translator';
+    }
 
-  /**
-  * Get the class with namespace to load.
-  */
-  public static function getFacadeClassName() : string
-  {
-    return 'Twipsi\Components\Translator\Translator';
-  }
+    /**
+     * Get the class with namespace to load.
+     */
+    public static function getFacadeClassName(): string
+    {
+        return 'Twipsi\Components\Translator\Translator';
+    }
 }

@@ -14,22 +14,25 @@ namespace Twipsi\Facades;
 
 use Twipsi\Facades\Interfaces\FacadeInterface;
 
+/**
+ * @method static check(array|string $action, $param, array $args)
+ */
 class Access extends Facade implements FacadeInterface
 {
-  /**
-  * Get the accessor name.
-  */
-  public static function getFacadeAccessorName() : string
-  {
-    return 'auth.access';
-  }
+    /**
+     * Get the accessor name.
+     */
+    public static function getFacadeAccessorName(): string
+    {
+        return 'auth.access';
+    }
 
-  /**
-  * Get the class with namespace to load.
-  */
-  public static function getFacadeClassName() : string
-  {
-    return 'Twipsi\Components\Authorization\AccessManager';
-  }
+    /**
+     * Get the class with namespace to load.
+     */
+    public static function getFacadeClassName(): string
+    {
+        return 'Twipsi\Components\Authorization\AccessManager';
+    }
 
 }
