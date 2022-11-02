@@ -74,6 +74,7 @@ class DotEnv
 
                 $env = [array_key_first($env) => fn($variables) 
                     => $variables[Str::hay(array_values($env)[0])->betweenFirst('"${', '}"')]
+                        . Str::hay(array_values($env)[0])->afterLast('}"')
                 ];
             }
 

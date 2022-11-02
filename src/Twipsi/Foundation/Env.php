@@ -20,7 +20,7 @@ class Env
      * @param mixed $default
      * @return mixed
      */
-    public static function get(string $key, mixed $default): mixed 
+    public static function get(string $key, mixed $default = null): mixed
     {
         $value = getenv($key) ?: ($_SERVER[$key] ?? null);
 
