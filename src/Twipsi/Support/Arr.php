@@ -1188,7 +1188,7 @@ class Arr
      */
     protected static function shouldHandleRecursive(array $haystack, string|int $key): bool
     {
-        return is_string($key) && Str::hay($key)->contains('.')
+        return is_string($key) && (strpbrk($key, '.') !== false)
             && (empty($haystack) || static::isRecursive($haystack));
     }
 }
