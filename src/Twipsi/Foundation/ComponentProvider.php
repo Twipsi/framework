@@ -18,11 +18,15 @@ abstract class ComponentProvider
 {
     /**
      * Application instance.
+     *
+     * @var Application
      */
     protected Application $app;
 
     /**
      * Service provider constructor.
+     *
+     * @param Application $app
      */
     public function __construct(Application $app)
     {

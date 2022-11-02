@@ -39,20 +39,30 @@ abstract class ComponentManager
     protected array $customResolvers = [];
 
     /**
+     * The Application instance.
+     *
+     * @var Application
+     */
+    protected Application $app;
+
+    /**
      * Construct component manager.
      * 
      * @param Application $app
      */
-    public function __construct(protected Application $app){}
+    public function __construct(Application $app)
+    {
+        $this->app = $app;
+    }
 
     /**
      * Returns the current driver from the container.
-     * 
+     *
      * @param string|null $driver
-     * 
+     * @param mixed ...$args
      * @return mixed
      */
-    public function driver(string $driver = null): mixed
+    public function driver(string $driver = null, mixed ...$args): mixed
     {
         $driver = $driver 
             ?? $this->default 
@@ -60,8 +70,9 @@ abstract class ComponentManager
 
         // Save the drivers in an array to be accessible later without
         // rebuilding them, while also being able to build another driver version
-        return $this->drivers[$driver] ??
-            ($this->drivers[$driver] = $this->resolve($driver));
+        return $this->drivers[$driver]
+            ?? $this->resolveCustomDriver($driver, ...$args)
+            ?? ($this->drivers[$driver] = $this->resolve($driver));
     }
 
     /**
@@ -69,7 +80,6 @@ abstract class ComponentManager
      * 
      * @param string $driver
      * @param mixed ...$args
-     * 
      * @return mixed
      */
     public function resolveCustomDriver(string $driver, mixed ...$args): mixed 
@@ -80,12 +90,23 @@ abstract class ComponentManager
 
         return null;
     }
+
+    /**
+     * Override a resolved driver.
+     *
+     * @param string $driver
+     * @param object $object
+     * @return void
+     */
+    public function override(string $driver, object $object): void
+    {
+        $this->drivers[$driver] = $object;
+    }
     
     /**
      * Forget an already resolved driver. 
      * 
      * @param string $driver
-     * 
      * @return void
      */
     public function forget(string $driver): void
@@ -97,12 +118,11 @@ abstract class ComponentManager
      * Check if we have a resolved driver.
      * 
      * @param string $driver
-     * 
      * @return bool
      */
     public function has(string $driver): bool
     {
-        return isset($this->drivers[$driver]);
+        return isset($this->drivers[$driver]) || isset($this->customResolvers[$driver]);
     }
 
     /**
@@ -110,7 +130,6 @@ abstract class ComponentManager
      * 
      * @param string $driver
      * @param Closure $callback
-     * 
      * @return void
      */
     public function extend(string $driver, Closure $callback): void
@@ -122,7 +141,6 @@ abstract class ComponentManager
      * Set a custom default driver.
      * 
      * @param string $driver
-     * 
      * @return void
      */
     public function setDefaultDriver(string $driver): void 
@@ -135,19 +153,19 @@ abstract class ComponentManager
      * 
      * @param string $method
      * @param array<int,mixed> $parameters
-     * 
      * @return mixed
      */
     public function __call(string $method, array $parameters): mixed
     {
-        return $this->driver()->{$method}(...$parameters);
+        return is_object(($driver = $this->driver()))
+            ? $driver->{$method}(...$parameters)
+            : $driver;
     }
 
     /**
      * Resolves the requested driver.
      * 
      * @param string $driver
-     * 
      * @return mixed
      */
     abstract protected function resolve(string $driver): mixed;
