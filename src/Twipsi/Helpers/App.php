@@ -8,14 +8,17 @@
  * file that was distributed with this source code.
  */
 
+use Twipsi\Components\Events\Interfaces\EventInterface;
+use Twipsi\Components\Router\Route\Route;
+use \Twipsi\Components\Cookie\Cookie as CookieItem;
 use Twipsi\Facades\App;
 use Twipsi\Facades\Config;
+use Twipsi\Facades\Cookie;
 use Twipsi\Facades\Event;
 use Twipsi\Facades\Request;
 use Twipsi\Facades\Routes;
-use Twipsi\Facades\Cookie;
 use Twipsi\Facades\Session;
-use Twipsi\Components\Events\Interfaces\EventInterface;
+use Twipsi\Facades\Translate;
 
 /**
  * Define the "app" function helper in global scope.
@@ -95,13 +98,13 @@ if (!function_exists("route")) {
     /**
      * Facade function to access the router.
      */
-    function route(string $route): mixed
+    function route(string $route): ?string
     {
-        if(is_null($url = Routes::byName($route)?->getUrl())) {
-          return null;
+        if(($url = Routes::byName($route)) instanceof Route) {
+            return rtrim($url->getUrl(), "/");
         }
-        
-        return rtrim($url, "/");
+
+        return null;
     }
 }
 
@@ -116,19 +119,19 @@ if (!function_exists("_env")) {
     {
         $value = getenv($key) ?: ($_SERVER[$key] ?? null);
 
-        if(is_numeric($value)) {
+        if (is_numeric($value)) {
             $value = (int)$value;
         }
 
-        if($value === 'true') {
+        if ($value === 'true') {
             $value = true;
         }
 
-        if($value === 'false') {
+        if ($value === 'false') {
             $value = false;
         }
 
-        if (! is_null($default)) {
+        if (!is_null($default)) {
             return $value ?? $default;
         }
 
@@ -143,9 +146,13 @@ if (!function_exists("csrf_token")) {
     /**
      * Facade function to get csrf token.
      */
-    function csrf_token(): ?string
+    function csrf_token(): mixed
     {
-        return Cookie::getQueuedCookies("_csrf")?->getValue();
+        if(($cookie = Cookie::getQueuedCookies("_csrf")) instanceof CookieItem) {
+            return $cookie->getValue();
+        }
+
+        return null;
     }
 }
 
@@ -156,9 +163,9 @@ if (!function_exists("__")) {
     /**
      * Facade function to translate data.
      */
-    function __(string $text): ?string
+    function __(string $text): mixed
     {
-        return $text;
+        return Translate::get($text);
     }
 }
 
@@ -169,7 +176,7 @@ if (!function_exists("session")) {
     /**
      * Facade function to retrieve session data
      */
-    function session(string $key): ?string
+    function session(string $key): mixed
     {
         return Session::get($key);
     }
@@ -182,7 +189,7 @@ if (!function_exists("old")) {
     /**
      * Facade function to retrieve session input data
      */
-    function old(string $key): ?string
+    function old(string $key): mixed
     {
         return Session::getInput($key);
     }

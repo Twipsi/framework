@@ -8,8 +8,8 @@
  * file that was distributed with this source code.
  */
 
-use Twipsi\Facades\App;
 use Twipsi\Facades\Access;
+use Twipsi\Facades\App;
 
 /**
  * Define the "auth" function helper in global scope.

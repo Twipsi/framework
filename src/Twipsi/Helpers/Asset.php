@@ -16,10 +16,11 @@ use Twipsi\Support\Str;
  */
 if (!function_exists("asset")) {
     /**
-     * Function to return the assets path.
+     * Function to return the assets' path.
      *
      * We will try to find it in public compiled assets,
      * otherwise return the resource.
+     * @throws Exception
      */
     function asset(string $extension): string
     {
@@ -27,7 +28,7 @@ if (!function_exists("asset")) {
         $ext = "/" . trim($extension, "/");
 
         // Check fi the required asset exists.
-        if (! is_file($asset = App::path("path.assets") . $ext)) {
+        if (!is_file($asset = App::path("path.assets") . $ext)) {
             throw new Exception("Resource not found [$asset]", 404);
         }
 
@@ -45,6 +46,7 @@ if (!function_exists("css")) {
      *
      * We will try to find it in public compiled assets,
      * otherwise return the resource.
+     * @throws Exception
      */
     function css(string $css): string
     {
@@ -52,7 +54,7 @@ if (!function_exists("css")) {
         $ext = "/css/" . trim($css, "/");
 
         // Check fi the required asset exists.
-        if (! is_file($asset = App::path("path.assets") . $ext)) {
+        if (!is_file($asset = App::path("path.assets") . $ext)) {
             throw new Exception("Resource not found [$asset]", 404);
         }
 
@@ -70,6 +72,7 @@ if (!function_exists("js")) {
      *
      * We will try to find it in public compiled assets,
      * otherwise return the resource.
+     * @throws Exception
      */
     function js(string $js): string
     {
@@ -77,7 +80,7 @@ if (!function_exists("js")) {
         $ext = "/js/" . trim($js, "/");
 
         // Check fi the required asset exists.
-        if (! is_file($asset = App::path("path.assets") . $ext)) {
+        if (!is_file($asset = App::path("path.assets") . $ext)) {
             throw new Exception("Resource not found [$asset]", 404);
         }
 
@@ -92,6 +95,7 @@ if (!function_exists("js")) {
 if (!function_exists("img")) {
     /**
      * Function to return the assets path of an image.
+     * @throws Exception
      */
     function img(string $image): string
     {
@@ -99,7 +103,7 @@ if (!function_exists("img")) {
         $ext = "/img/" . trim($image, "/");
 
         // Check fi the required asset exists.
-        if (! is_file($asset = App::path("path.assets") . $ext)) {
+        if (!is_file($asset = App::path("path.assets") . $ext)) {
             throw new Exception("Resource not found [$asset]", 404);
         }
 
@@ -114,6 +118,7 @@ if (!function_exists("img")) {
 if (!function_exists("media")) {
     /**
      * Function to return the assets path of a media.
+     * @throws Exception
      */
     function media(string $image): string
     {
@@ -121,7 +126,7 @@ if (!function_exists("media")) {
         $ext = "/media/" . trim($image, "/");
 
         // Check fi the required asset exists.
-        if (! is_file($asset = App::path("path.assets") . $ext)) {
+        if (!is_file($asset = App::path("path.assets") . $ext)) {
             throw new Exception("Resource not found [$asset]", 404);
         }
 
@@ -136,6 +141,7 @@ if (!function_exists("media")) {
 if (!function_exists("data")) {
     /**
      * Function to return the assets path of an image.
+     * @throws Exception
      */
     function data(string $file): string
     {
@@ -143,7 +149,7 @@ if (!function_exists("data")) {
         $ext = "/data/" . trim($file, "/");
 
         // Check fi the required asset exists.
-        if (! is_file($asset = App::path("path.assets") . $ext)) {
+        if (!is_file($asset = App::path("path.assets") . $ext)) {
             throw new Exception("Resource not found [$asset]", 404);
         }
 
@@ -158,6 +164,7 @@ if (!function_exists("data")) {
 if (!function_exists("svg")) {
     /**
      * Function to return the svg icon content.
+     * @throws Exception
      */
     function svg(string $file, $class = null): string
     {
@@ -165,20 +172,20 @@ if (!function_exists("svg")) {
         $ext = "/media/icons/" . trim($file, "/");
 
         // Check fi the required asset exists.
-        if (! is_file($asset = App::path("path.assets") . $ext)) {
+        if (!is_file($asset = App::path("path.assets") . $ext)) {
             throw new Exception("Resource not found [$asset]", 404);
         }
 
         $cls = array("svg-icon");
 
-        if ( !empty($class) ) {
+        if (!empty($class)) {
             $cls = array_merge($cls, explode(" ", $class));
         }
 
         $svg_content = file_get_contents($asset);
 
         $output = "<!--begin::Svg Icon | path: $file-->\n";
-        $output .= "<span class=\"".implode(" ", $cls) . "\">" . $svg_content . "</span>";
+        $output .= "<span class=\"" . implode(" ", $cls) . "\">" . $svg_content . "</span>";
         $output .= "\n<!--end::Svg Icon-->";
 
         return $output;
