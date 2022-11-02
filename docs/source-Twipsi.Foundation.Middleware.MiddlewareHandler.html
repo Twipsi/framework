@@ -113,7 +113,7 @@
 </td></tr><tr id="21" class="source-line"><td><a class="source-lineNum" href="#21">21: </a></td><td>  <span class="php-comment">/**
 </span></td></tr><tr id="22" class="source-line"><td><a class="source-lineNum" href="#22">22: </a></td><td><span class="php-comment">  * Middleware subscriber.
 </span></td></tr><tr id="23" class="source-line"><td><a class="source-lineNum" href="#23">23: </a></td><td><span class="php-comment">  */</span>
-</td></tr><tr id="24" class="source-line"><td><a class="source-lineNum" href="#24">24: </a></td><td>  <span class="php-kw">protected</span> MiddlewareSubscriber <span class="php-var">$subscriber</span>;
+</td></tr><tr id="24" class="source-line"><td><a class="source-lineNum" href="#24">24: </a></td><td>  <span class="php-kw">protected</span> MiddlewareRepository <span class="php-var">$subscriber</span>;
 </td></tr><tr id="25" class="source-line"><td><a class="source-lineNum" href="#25">25: </a></td><td>
 </td></tr><tr id="26" class="source-line"><td><a class="source-lineNum" href="#26">26: </a></td><td>  <span class="php-comment">/**
 </span></td></tr><tr id="27" class="source-line"><td><a class="source-lineNum" href="#27">27: </a></td><td><span class="php-comment">  * Middleware resolver.
@@ -130,7 +130,7 @@
 </span></td></tr><tr id="38" class="source-line"><td><a class="source-lineNum" href="#38">38: </a></td><td><span class="php-comment">  */</span>
 </td></tr><tr id="39" class="source-line"><td><a class="source-lineNum" href="#39">39: </a></td><td>  <span class="php-kw">public</span> <span class="php-kw">function</span> __construct(Application <span class="php-var">$application</span>, <span class="php-kw">array</span> <span class="php-var">$middlewares</span>)
 </td></tr><tr id="40" class="source-line"><td><a class="source-lineNum" href="#40">40: </a></td><td>  {
-</td></tr><tr id="41" class="source-line"><td><a class="source-lineNum" href="#41">41: </a></td><td>    <span class="php-var">$this</span>-&gt;subscriber = <span class="php-kw">new</span> MiddlewareSubscriber(...<span class="php-var">$middlewares</span>);
+</td></tr><tr id="41" class="source-line"><td><a class="source-lineNum" href="#41">41: </a></td><td>    <span class="php-var">$this</span>-&gt;subscriber = <span class="php-kw">new</span> MiddlewareRepository(...<span class="php-var">$middlewares</span>);
 </td></tr><tr id="42" class="source-line"><td><a class="source-lineNum" href="#42">42: </a></td><td>    <span class="php-var">$this</span>-&gt;collector = <span class="php-kw">new</span> MiddlewareCollector(<span class="php-var">$this</span>-&gt;subscriber);
 </td></tr><tr id="43" class="source-line"><td><a class="source-lineNum" href="#43">43: </a></td><td>
 </td></tr><tr id="44" class="source-line"><td><a class="source-lineNum" href="#44">44: </a></td><td>    <span class="php-var">$this</span>-&gt;resolver = <span class="php-kw">new</span> MiddlewareResolver(<span class="php-var">$application</span>, <span class="php-var">$this</span>-&gt;subscriber);

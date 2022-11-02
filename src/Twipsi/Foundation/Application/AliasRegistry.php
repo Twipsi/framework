@@ -49,7 +49,6 @@ class AliasRegistry extends Container
             'mail.markdown' => \Twipsi\Components\Mailer\Markdown::class,
             'encrypter' => \Twipsi\Components\Security\Encrypter::class,
             'notification' => \Twipsi\Components\Notification\NotificationManager::class,
-            'middleware' => Middleware\MiddlewareHandler::class,
             'directory' => \Twipsi\Components\File\DirectoryManager::class,
             'route.router' => \Twipsi\Components\Router\Router::class,
             'route.factory' => \Twipsi\Components\Router\RouteFactory::class,

@@ -22,27 +22,30 @@ use Twipsi\Components\Router\Router;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Twipsi\Foundation\Exceptions\NotSupportedException;
+use Twipsi\Foundation\Middleware\Exceptions\InvalidMiddlewareException;
 use Twipsi\Foundation\Middleware\MiddlewareCollector;
 use Twipsi\Foundation\Middleware\MiddlewareHandler;
 use Twipsi\Foundation\Middleware\MiddlewareLoader;
+use Twipsi\Foundation\Middleware\MiddlewareRepository;
+use Twipsi\Foundation\Middleware\MiddlewareResolver;
 use Twipsi\Support\Arr;
 use Twipsi\Support\Bags\ArrayBag as Container;
 
 class Kernel
 {
     /**
+     * The application object.
+     *
+     * @var Application
+     */
+    protected Application $app;
+
+    /**
      * The hook's container.
      *
      * @var Container
      */
     protected Container $hooks;
-
-    /**
-     * The middleware collection.
-     *
-     * @var Container
-     */
-    protected Container $middlewares;
 
     /**
      * THe router component.
@@ -54,9 +57,16 @@ class Kernel
     /**
      * The middleware component.
      *
-     * @var MiddlewareHandler
+     * @var MiddlewareRepository
      */
-    protected MiddlewareHandler $middleware;
+    protected MiddlewareRepository $middleware;
+
+    /**
+     * The middleware collection.
+     *
+     * @var Container
+     */
+    protected Container $middlewares;
 
     /**
      * The bootstrap classes.
@@ -88,14 +98,16 @@ class Kernel
      *
      * @param Application $app
      */
-    public function __construct(protected Application $app)
+    public function __construct(Application $app)
     {
+        $this->app = $app;
         $this->hooks = new Container();
 
         // Load the middlewares.
         $this->middleware = (new MiddlewareLoader($this->app))
             ->load($this->app->path('path.middlewares'));
 
+        MiddlewareResolver::setApplication($this->app);
     }
 
     /**
@@ -134,7 +146,7 @@ class Kernel
      * @param HttpRequest $request
      * @return ResponseInterface
      * @throws NotSupportedException
-     * @throws ApplicationManagerException|NotSupportedException
+     * @throws ApplicationManagerException|NotSupportedException|InvalidMiddlewareException
      */
     protected function dispatch(HttpRequest $request): ResponseInterface
     {
@@ -164,19 +176,25 @@ class Kernel
 
     /**
      * Handle the middlewares.
-     * 
-     * @param MiddlewareHandler $handler
+     *
+     * @param MiddlewareRepository $repository
      * @param Route $route
      * @return MiddlewareCollector
+     * @throws ApplicationManagerException
+     * @throws InvalidMiddlewareException
      */
-    protected function handleMiddlewares(MiddlewareHandler $handler, Route $route): MiddlewareCollector
+    protected function handleMiddlewares(MiddlewareRepository $repository, Route $route): MiddlewareCollector
     {
         // Collect all the middlewares applied for the route.
-        $middlewares = $handler->collect($route);
+        $middlewares = (new MiddlewareCollector($repository))
+            ->build($route);
 
         // Resolve the middleware collection and collect the hooks
         // they sent back to be handled by the response.
-        $this->hooks = $handler->resolve($middlewares);
+        MiddlewareResolver::resolve($middlewares);
+
+        // Get the registered hooks sent back.
+        $this->hooks = MiddlewareResolver::getHooks();
 
         return $middlewares;
     }

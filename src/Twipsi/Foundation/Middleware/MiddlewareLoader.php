@@ -20,29 +20,37 @@ use Twipsi\Support\Str;
 class MiddlewareLoader
 {
     /**
-     * Middleware constructor.
+     * The application object.
      *
-     * @param protected Application $app
+     * @var Application
      */
-    public function __construct(protected Application $app){}
+    protected Application $app;
 
     /**
-     * Load the middlehandler.
+     * Middleware constructor.
+     *
+     * @param Application $app
+     */
+    public function __construct(Application $app)
+    {
+        $this->app = $app;
+    }
+
+    /**
+     * Load the middleware handler.
      *
      * @param string $path
-     *
-     * @return [type]
+     * @return MiddlewareRepository
      */
-    public function load(string $path)
+    public function load(string $path): MiddlewareRepository
     {
-        return new MiddlewareHandler($this->app, $this->discover($path));
+        return new MiddlewareRepository(...$this->discover($path));
     }
-    
+
     /**
      * Discover middleware files.
      *
      * @param string $where
-     *
      * @return array
      */
     public function discover(string $where): array
@@ -52,17 +60,14 @@ class MiddlewareLoader
         }
 
         foreach (glob($where . "/*.php") as $filename) {
+
             if (Str::hay($filename)->resembles('general')) {
                 $general = include $filename;
-                continue;
             }
-
-            if (Str::hay($filename)->resembles('group')) {
+            elseif (Str::hay($filename)->resembles('group')) {
                 $group = include $filename;
-                continue;
             }
-
-            if (Str::hay($filename)->resembles('simple')) {
+            elseif (Str::hay($filename)->resembles('simple')) {
                 $simple = include $filename;
             }
         }

@@ -16,8 +16,8 @@ use Twipsi\Components\Http\HttpRequest as Request;
 
 interface MiddlewareInterface
 {
-  /**
-  * Resolve middleware logics.
-  */
-  public function resolve(Request $request, ...$args);
+    /**
+     * Resolve middleware logics.
+     */
+    public function resolve(Request $request, ...$args);
 }
