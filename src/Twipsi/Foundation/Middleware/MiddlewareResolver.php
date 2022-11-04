@@ -19,7 +19,7 @@ use Twipsi\Components\Http\Response\Response;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Twipsi\Foundation\Middleware\Exceptions\InvalidMiddlewareException;
-use Twipsi\Support\Bags\ArrayBag as Container;
+use Twipsi\Support\Bags\SimpleBag as Container;
 
 class MiddlewareResolver
 {
@@ -28,14 +28,25 @@ class MiddlewareResolver
      *
      * @var Application
      */
-    protected static Application $app;
+    protected Application $app;
 
     /**
      * Middleware response hooks.
      *
      * @var Container
      */
-    protected static Container $hooks;
+    protected Container $hooks;
+
+    /**
+     * Construct Resolver.
+     *
+     * @param Application $app
+     */
+    public function __construct(Application $app)
+    {
+        $this->app = $app;
+        $this->hooks = new Container();
+    }
 
     /**
      * Resolve middleware collection.
@@ -45,22 +56,22 @@ class MiddlewareResolver
      * @throws ApplicationManagerException
      * @throws InvalidMiddlewareException
      */
-    public static function resolve(MiddlewareCollector $collection): void
+    public function resolve(MiddlewareCollector $collection): void
     {
         if ($collection->has('general')) {
-            self::resolveGeneralMiddlewares($collection->get('general'));
+            $this->resolveGeneralMiddlewares($collection->get('general'));
         }
 
         if ($collection->has('group')) {
-            self::resolveGroupMiddlewares($collection->get('group'));
+            $this->resolveGroupMiddlewares($collection->get('group'));
         }
 
         if ($collection->has('single')) {
-            self::resolveSingleMiddlewares($collection->get('single'));
+            $this->resolveSingleMiddlewares($collection->get('single'));
         }
 
         if ($collection->has('custom')) {
-            self::resolveCustomMiddlewares($collection->get('custom'));
+            $this->resolveCustomMiddlewares($collection->get('custom'));
         }
     }
 
@@ -72,9 +83,9 @@ class MiddlewareResolver
      * @throws ApplicationManagerException
      * @throws InvalidMiddlewareException
      */
-    protected static function resolveGeneralMiddlewares(array $middlewares): void
+    protected function resolveGeneralMiddlewares(array $middlewares): void
     {
-        static::handle($middlewares);
+        $this->handle($middlewares);
     }
 
     /**
@@ -85,9 +96,9 @@ class MiddlewareResolver
      * @throws ApplicationManagerException
      * @throws InvalidMiddlewareException
      */
-    protected static function resolveGroupMiddlewares(array $middlewares): void
+    protected function resolveGroupMiddlewares(array $middlewares): void
     {
-        static::handle($middlewares);
+        $this->handle($middlewares);
     }
 
     /**
@@ -98,9 +109,9 @@ class MiddlewareResolver
      * @throws ApplicationManagerException
      * @throws InvalidMiddlewareException
      */
-    protected static function resolveSingleMiddlewares(array $middlewares): void
+    protected function resolveSingleMiddlewares(array $middlewares): void
     {
-        static::handle($middlewares);
+        $this->handle($middlewares);
     }
 
     /**
@@ -111,9 +122,9 @@ class MiddlewareResolver
      * @throws ApplicationManagerException
      * @throws InvalidMiddlewareException
      */
-    protected static function resolveCustomMiddlewares(array $middlewares): void
+    protected function resolveCustomMiddlewares(array $middlewares): void
     {
-        static::handle($middlewares);
+        $this->handle($middlewares);
     }
 
     /**
@@ -123,17 +134,13 @@ class MiddlewareResolver
      * @return void
      * @throws ApplicationManagerException|InvalidMiddlewareException
      */
-    protected static function handle(array $middlewares): void
+    protected function handle(array $middlewares): void
     {
-        if(! isset(static::$hooks)) {
-            static::$hooks = new Container();
-        }
-
         foreach ($middlewares as $middleware) {
 
             // If the middleware returns a closure add it the hooks for later processing.
-            if (($resolved = static::dispatch($middleware)) instanceof Closure) {
-                static::$hooks->set(is_array($middleware) ? $middleware[0] : $middleware, $resolved);
+            if (($resolved = $this->dispatch($middleware)) instanceof Closure) {
+                $this->hooks->set(is_array($middleware) ? $middleware[0] : $middleware, $resolved);
             }
 
             // If we are returning a response, then exit the application with an exception.
@@ -151,7 +158,7 @@ class MiddlewareResolver
      * @throws ApplicationManagerException
      * @throws InvalidMiddlewareException
      */
-    protected static function dispatch(string|array $middleware): ResponseInterface|Closure|bool
+    protected function dispatch(string|array $middleware): ResponseInterface|Closure|bool
     {
         // If it is a single or custom check for custom arguments.
         if (is_array($middleware)) {
@@ -159,7 +166,7 @@ class MiddlewareResolver
         }
 
         // Make class through the application.
-        $middleware = self::$app->make($middleware);
+        $middleware = $this->app->make($middleware);
 
         // If it's not a valid middleware interface exit.
         if (!$middleware instanceof MiddlewareInterface) {
@@ -169,21 +176,10 @@ class MiddlewareResolver
         }
 
         if (isset($args) && is_array($args)) {
-            return $middleware->resolve(self::$app->get('request'), ...$args);
+            return $middleware->resolve($this->app->get('request'), ...$args);
         }
 
-        return $middleware->resolve(self::$app->get('request'));
-    }
-
-    /**
-     * Set the application object.
-     *
-     * @param Application $app
-     * @return void
-     */
-    public static function setApplication(Application $app): void
-    {
-        static::$app = $app;
+        return $middleware->resolve($this->app->get('request'));
     }
 
     /**
@@ -191,8 +187,8 @@ class MiddlewareResolver
      *
      * @return Container
      */
-    public static function getHooks(): Container
+    public function getHooks(): Container
     {
-        return static::$hooks;
+        return $this->hooks;
     }
 }

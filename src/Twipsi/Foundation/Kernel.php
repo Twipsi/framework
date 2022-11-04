@@ -24,12 +24,11 @@ use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Twipsi\Foundation\Exceptions\NotSupportedException;
 use Twipsi\Foundation\Middleware\Exceptions\InvalidMiddlewareException;
 use Twipsi\Foundation\Middleware\MiddlewareCollector;
-use Twipsi\Foundation\Middleware\MiddlewareHandler;
 use Twipsi\Foundation\Middleware\MiddlewareLoader;
 use Twipsi\Foundation\Middleware\MiddlewareRepository;
 use Twipsi\Foundation\Middleware\MiddlewareResolver;
 use Twipsi\Support\Arr;
-use Twipsi\Support\Bags\ArrayBag as Container;
+use Twipsi\Support\Bags\SimpleBag as Container;
 
 class Kernel
 {
@@ -106,8 +105,6 @@ class Kernel
         // Load the middlewares.
         $this->middleware = (new MiddlewareLoader($this->app))
             ->load($this->app->path('path.middlewares'));
-
-        MiddlewareResolver::setApplication($this->app);
     }
 
     /**
@@ -189,12 +186,12 @@ class Kernel
         $middlewares = (new MiddlewareCollector($repository))
             ->build($route);
 
-        // Resolve the middleware collection and collect the hooks
-        // they sent back to be handled by the response.
-        MiddlewareResolver::resolve($middlewares);
+        // Resolve the middleware collection.
+        ($resolver = new MiddlewareResolver($this->app))
+            ->resolve($middlewares);
 
         // Get the registered hooks sent back.
-        $this->hooks = MiddlewareResolver::getHooks();
+        $this->hooks = $resolver->getHooks();
 
         return $middlewares;
     }
