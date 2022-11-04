@@ -4,6 +4,7 @@ namespace Twipsi\Tests\Foundation;
 
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
+use Twipsi\Components\Http\Exceptions\HttpResponseException;
 use Twipsi\Components\Http\HttpRequest;
 use Twipsi\Components\Router\Route\LoadableRoute;
 use Twipsi\Components\Router\Route\Route;
@@ -217,4 +218,38 @@ class MiddlewareTest extends TestCase
 
         (new MiddlewareResolver($appMock))->resolve($collMock);
     }
+
+    public function testResolverShouldRegisterHookIfClosureReturned()
+    {
+        $route = (new LoadableRoute('/', fn($v) => 'test route', ['GET']))
+            ->middleware('Twipsi\Tests\Foundation\Fakes\Middlewares\HookMiddleware');
+
+        $middlewares = (new MiddlewareCollector($this->middleware))
+            ->build($route);
+
+        ($resolver = new MiddlewareResolver(new Application()))->resolve($middlewares);
+
+        $this->assertSame(
+            array_key_first($resolver->getHooks()->all()),
+           'Twipsi\Tests\Foundation\Fakes\Middlewares\HookMiddleware'
+        );
+
+        $this->assertInstanceOf(\Closure::class,
+            array_values($resolver->getHooks()->all())[0]
+        );
+    }
+
+    public function testResolverShouldThrowExceptionIfResponseReturned()
+    {
+        $route = (new LoadableRoute('/', fn($v) => 'test route', ['GET']))
+            ->middleware('Twipsi\Tests\Foundation\Fakes\Middlewares\ResponseMiddleware');
+
+        $middlewares = (new MiddlewareCollector($this->middleware))
+            ->build($route);
+
+        $this->expectException(HttpResponseException::class);
+
+        (new MiddlewareResolver(new Application()))->resolve($middlewares);
+    }
+
 }
