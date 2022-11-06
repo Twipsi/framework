@@ -17,7 +17,7 @@ use InvalidArgumentException;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Support\Str;
 
-class MiddlewareLoader
+final class MiddlewareLoader
 {
     /**
      * The application object.

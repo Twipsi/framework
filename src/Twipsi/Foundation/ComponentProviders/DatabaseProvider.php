@@ -17,7 +17,7 @@ use Twipsi\Components\Model\Model;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\ComponentProvider;
 
-class DatabaseProvider extends ComponentProvider
+class DatabaseProvider extends ComponentProvider implements DeferredComponentProvider
 {
     /**
      * Register service provider.
@@ -35,5 +35,10 @@ class DatabaseProvider extends ComponentProvider
         });
 
         Model::setDBmanager($this->app->get('db.connector'));
+    }
+
+    public function components(): array
+    {
+        return ['db.connector', 'db.connection'];
     }
 }

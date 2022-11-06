@@ -17,7 +17,7 @@ use Twipsi\Components\File\FileItem;
 use Twipsi\Support\Arr;
 use Twipsi\Support\Str;
 
-class DotEnv
+final class DotEnv
 {
     /**
      * The path to the .env file.

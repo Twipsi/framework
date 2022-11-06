@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace Twipsi\Foundation;
 
 use Twipsi\Foundation\Application\Application;
+use Twipsi\Foundation\ComponentProviders\DeferredComponentProvider;
 
 abstract class ComponentProvider
 {

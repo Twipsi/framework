@@ -13,34 +13,35 @@ declare(strict_types=1);
 namespace Twipsi\Foundation\Application;
 
 use Twipsi\Foundation\ComponentProvider;
+use Twipsi\Support\Arr;
 use Twipsi\Support\Bags\ArrayBag as Container;
 
 class ComponentRegistry extends Container
 {
     /**
      * The application instance.
-     * 
+     *
      * @var Application
      */
     protected Application $app;
 
     /**
      * If we have registered the providers.
-     * 
+     *
      * @var bool
      */
     protected bool $registered = false;
 
     /**
      * If we have booted the loaders.
-     * 
+     *
      * @var bool
      */
     protected bool $booted = false;
 
     /**
      * Construct the registry.
-     * 
+     *
      * @param Application $app
      */
     public function __construct(Application $app)
@@ -50,7 +51,7 @@ class ComponentRegistry extends Container
 
     /**
      * Boot all the component providers.
-     * 
+     *
      * @return ComponentRegistry
      */
     public function boot(): ComponentRegistry
@@ -68,9 +69,9 @@ class ComponentRegistry extends Container
 
     /**
      * Register a component provider.
-     * 
+     *
      * @param string|ComponentProvider $provider
-     * 
+     *
      * @return ComponentProvider
      */
     public function register(string|ComponentProvider $provider): ComponentProvider
@@ -83,7 +84,7 @@ class ComponentRegistry extends Container
         }
 
         // Register to application container in case we load it late.
-        if(! $this->isApplicationComponentProvider($provider) 
+        if(! $this->isApplicationComponentProvider($provider)
             && ! $this->isFrameworkComponentProvider($provider)) {
 
             // Register the providers as source.
@@ -112,24 +113,23 @@ class ComponentRegistry extends Container
 
     /**
      * Load deferred component providers.
-     * 
+     *
      * @return void
      */
     public function loadDeferredComponentProviders(): void
     {
-        foreach($this->deferred() as $abstract => $provider) {
+        Arr::loop($this->deferred(), function($provider, $abstract) {
             $this->loadDeferredProvider($abstract);
-        }
+        });
     }
 
     /**
      * Load a deferred component provider.
-     * 
+     *
      * @param string $abstract
-     * 
      * @return void
      */
-    public function loadDeferredProvider(string $abstract): void 
+    public function loadDeferredProvider(string $abstract): void
     {
         // If it's not a deferred provider exit.
         if(! $this->isDeferredAbstract($abstract)) {
@@ -137,19 +137,20 @@ class ComponentRegistry extends Container
         }
 
         // If it has been loaded already exit.
-        if($this->isLoadedComponentProvider($provider = $this->get('deferred.'.$abstract))) {
+        if($this->isLoadedComponentProvider(
+            $provider = Arr::get($this->deferred(), $abstract)
+        )) {
             return;
         }
 
-        $this->register($instance = new $provider($this->app));
-        $this->bootProvider($instance);
+        $this->register($provider);
     }
 
     /**
      * Run The boot method on the provider.
-     * 
+     *
      * @param ComponentProvider $provider
-     * 
+     *
      * @return void
      */
     public function bootProvider(ComponentProvider $provider): void
@@ -161,7 +162,7 @@ class ComponentRegistry extends Container
 
     /**
      * Get the provider components.
-     * 
+     *
      * @return array
      */
     public function providers(): array
@@ -171,7 +172,7 @@ class ComponentRegistry extends Container
 
     /**
      * Get the framework components.
-     * 
+     *
      * @return array
      */
     public function framework(): array
@@ -181,7 +182,7 @@ class ComponentRegistry extends Container
 
     /**
      * Get the application components.
-     * 
+     *
      * @return array
      */
     public function application(): array
@@ -191,7 +192,7 @@ class ComponentRegistry extends Container
 
     /**
      * Get the always loadable components.
-     * 
+     *
      * @return array
      */
     public function always(): array
@@ -201,7 +202,7 @@ class ComponentRegistry extends Container
 
     /**
      * Get the deferred components.
-     * 
+     *
      * @return array
      */
     public function deferred(): array
@@ -211,7 +212,7 @@ class ComponentRegistry extends Container
 
     /**
      * Get the loaded components.
-     * 
+     *
      * @return array
      */
     public function loaded(): array
@@ -221,9 +222,9 @@ class ComponentRegistry extends Container
 
     /**
      * Get the providers instance.
-     * 
+     *
      * @param string $provider
-     * 
+     *
      * @return ComponentProvider|null
      */
     public function getInstance(string $provider): ?ComponentProvider
@@ -233,9 +234,9 @@ class ComponentRegistry extends Container
 
     /**
      * Check if a component has been loaded.
-     * 
+     *
      * @param string|ComponentProvider $provider
-     * 
+     *
      * @return bool
      */
     public function hasBeenLoaded(string|ComponentProvider $provider): bool
@@ -249,9 +250,9 @@ class ComponentRegistry extends Container
 
     /**
      * Check if the component source is the application.
-     * 
+     *
      * @param string|ComponentProvider $provider
-     * 
+     *
      * @return bool
      */
     public function isApplicationComponentProvider(string|ComponentProvider $provider): bool
@@ -265,9 +266,9 @@ class ComponentRegistry extends Container
 
     /**
      * Check if the component source is the framework.
-     * 
+     *
      * @param string|ComponentProvider $provider
-     * 
+     *
      * @return bool
      */
     public function isFrameworkComponentProvider(string|ComponentProvider $provider): bool
@@ -281,9 +282,9 @@ class ComponentRegistry extends Container
 
     /**
      * Check if the component is always loaded.
-     * 
+     *
      * @param string|ComponentProvider $provider
-     * 
+     *
      * @return bool
      */
     public function isAlwaysComponentProvider(string|ComponentProvider $provider): bool
@@ -297,9 +298,9 @@ class ComponentRegistry extends Container
 
     /**
      * Check if the component is deferred.
-     * 
+     *
      * @param string|ComponentProvider $provider
-     * 
+     *
      * @return bool
      */
     public function isDeferredComponentProvider(string|ComponentProvider $provider): bool
@@ -313,21 +314,21 @@ class ComponentRegistry extends Container
 
     /**
      * Check if the abstract is deferred.
-     * 
+     *
      * @param string $abstract
-     * 
+     *
      * @return bool
      */
     public function isDeferredAbstract(string $abstract): bool
     {
-        return $this->has('deferred.'.$abstract);
+        return Arr::has($this->deferred(), $abstract);
     }
 
     /**
      * Check if the component is loaded.
-     * 
+     *
      * @param string|ComponentProvider $provider
-     * 
+     *
      * @return bool
      */
     public function isLoadedComponentProvider(string|ComponentProvider $provider): bool
@@ -341,7 +342,7 @@ class ComponentRegistry extends Container
 
     /**
      * Check if we have registered the component laoders.
-     * 
+     *
      * @return bool
      */
     public function isRegistered(): bool
@@ -351,7 +352,7 @@ class ComponentRegistry extends Container
 
     /**
      * Check if we have booted the component laoders.
-     * 
+     *
      * @return bool
      */
     public function isBooted(): bool
@@ -361,29 +362,29 @@ class ComponentRegistry extends Container
 
     /**
      * Set the registered laoders to true;
-     * 
+     *
      * @return void
      */
-    public function setRegistered(): void 
+    public function setRegistered(): void
     {
         $this->registered = true;
     }
 
     /**
      * Set the booted loaders to true;
-     * 
+     *
      * @return void
      */
-    public function setBooted(): void 
+    public function setBooted(): void
     {
         $this->booted = true;
     }
 
     /**
      * Check if it's a framework component provider.
-     * 
+     *
      * @param string $provider
-     * 
+     *
      * @return bool
      */
     public function isFrameworkType(string $provider): bool

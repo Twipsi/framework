@@ -11,12 +11,12 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 #[AsCommand(name: 'test')]
 class TestCommand extends Command
 {
-    protected static $defaultName = 'test';
-
-    public function __construct()
-    {
-        parent::__construct();
-    }
+    /**
+     * The name of the command.
+     *
+     * @var string
+     */
+    protected string $name = 'test';
 
     public function handle(InputInterface $input, OutputInterface $output): void
     {

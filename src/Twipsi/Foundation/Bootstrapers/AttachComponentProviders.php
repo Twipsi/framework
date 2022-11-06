@@ -13,23 +13,24 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\Bootstrapers;
 
+use Twipsi\Components\File\Exceptions\FileException;
 use Twipsi\Components\File\Exceptions\FileNotFoundException;
 use Twipsi\Components\File\FileBag;
 use Twipsi\Components\File\FileItem;
 use Twipsi\Foundation\Application\Application;
-use Twipsi\Support\Bags\ArrayBag as Container;
+use Twipsi\Support\Bags\SimpleBag as Container;
 
 class AttachComponentProviders
 {
     /**
-     * The cache path we shoudl use.
+     * The cache path we should use.
      * 
      * @var string
      */
     protected string $cache;
 
     /**
-     * Contruct Bootstrapper.
+     * Construct Bootstrapper.
      */
     public function __construct(protected Application $app){}
 
@@ -37,10 +38,11 @@ class AttachComponentProviders
      * Invoke the bootstrapper.
      *
      * @return void
+     * @throws FileException
      */
     public function invoke(): void
     {
-        $loaders = $this->app->config->get('component.loaders')->all();
+        $loaders = $this->app->get('config')->get('component.loaders')->all();
 
         $this->setCachePath($this->app->componentCacheFile());
         $this->load($loaders);
@@ -50,10 +52,10 @@ class AttachComponentProviders
 
     /**
      * Load all the component providers.
-     * 
+     *
      * @param array $providers
-     * 
      * @return void
+     * @throws FileException
      */
     public function load(array $providers): void
     {
@@ -64,14 +66,13 @@ class AttachComponentProviders
             $cache = $this->buildComponentProviderCache($providers);
         }
 
-        // Merge the cache data into the registry.
-        $this->app->components()->merge($cache);
-
         $cache = is_array($cache) ? new Container($cache) : $cache;
+
+        // Merge the cache data into the registry.
+        $this->app->components()->inject($cache->all());
 
         // Run through the cache and load providers.
         foreach($cache->get('always') as $provider) {
-    
             $this->app->components()->register($provider);
         }
     }
@@ -100,7 +101,6 @@ class AttachComponentProviders
      * 
      * @param array $cache
      * @param array $providers
-     * 
      * @return bool
      */
     protected function shouldRebuildCache(array $cache, array $providers): bool 
@@ -108,12 +108,12 @@ class AttachComponentProviders
         return empty($cache) || $cache['providers'] != $providers;
     }
 
-        /**
+    /**
      * Build the cache and save it.
-     * 
+     *
      * @param array $providers
-     * 
      * @return Container
+     * @throws FileException
      */
     protected function buildComponentProviderCache(array $providers): Container
     {
@@ -135,12 +135,12 @@ class AttachComponentProviders
                 $cache->push('application', $provider);
             }
 
-            // If the laoder is deffered register as deferred.
+            // If the loader is deferred register as deferred.
             if ($instance->deferred()) {
                 foreach($instance->components() as $component) {
 
                     // Save the components it loads.
-                    $cache->set("deferred.{$component}", $provider);
+                    $cache->add("deferred", [$component => $provider]);
                 }
 
             } else {
@@ -153,10 +153,10 @@ class AttachComponentProviders
 
     /**
      * Save the cache to file.
-     * 
+     *
      * @param Container $cache
-     * 
      * @return Container
+     * @throws FileException
      */
     protected function saveCache(Container $cache): Container
     {
@@ -172,7 +172,6 @@ class AttachComponentProviders
      * Set the cache path.
      * 
      * @param string $path
-     * 
      * @return void
      */
     public function setCachePath(string $path): void 

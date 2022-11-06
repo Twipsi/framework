@@ -11,7 +11,7 @@
 
 namespace Twipsi\Foundation;
 
-class Env
+final class Env
 {
     /**
      * Get an environment variable.

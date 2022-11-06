@@ -36,7 +36,7 @@ class SessionProvider extends ComponentProvider
 
     // Bind the session handler to the application.
     $this->app->keep('session.store', function (Application $app) {
-      return $app->call('session.handler')->driver();
+      return $app->make('session.handler')->driver();
     });
   }
 }

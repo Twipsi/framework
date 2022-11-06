@@ -28,7 +28,7 @@ class DependencyResolver
     /**
      * Dependency resolver constructor.
      */
-    public function __construct(protected Application $app, array $parameters = [])
+    public function __construct(protected IOCManager $app, array $parameters = [])
     {
         $this->parameters = new Container();
 

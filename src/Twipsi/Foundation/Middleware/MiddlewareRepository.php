@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\Middleware;
 
-class MiddlewareRepository
+final class MiddlewareRepository
 {
     /**
      * General middlewares container.

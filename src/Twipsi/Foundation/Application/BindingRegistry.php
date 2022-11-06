@@ -13,7 +13,7 @@ declare(strict_types=1);
 namespace Twipsi\Foundation\Application;
 
 use Closure;
-use Twipsi\Foundation\Exceptions\BindingException;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Twipsi\Support\Bags\ArrayBag as Container;
 
 class BindingRegistry extends Container
@@ -50,7 +50,7 @@ class BindingRegistry extends Container
 
     // If the concrete is not valid or class does not exist exit.
     if (is_string($concrete) && !class_exists($concrete)) {
-      throw new BindingException(sprintf("The provided concrete class does not exist {%s}", $concrete));
+      throw new ApplicationManagerException(sprintf("The provided concrete class does not exist {%s}", $concrete));
     }
 
     $this->set($abstract, $concrete);

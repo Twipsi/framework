@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\Application;
 
-use Twipsi\Foundation\Exceptions\BindingException;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Twipsi\Support\Bags\ArrayBag as Container;
 
 class ImplantRegistry extends Container
@@ -24,7 +24,7 @@ class ImplantRegistry extends Container
   {
     // If there are no parameters.
     if (! $parameters) {
-      throw new BindingException(sprintf("No parameters provided to bind for abstract {%s}", $abstract));
+      throw new ApplicationManagerException(sprintf("No parameters provided to bind for abstract {%s}", $abstract));
     }
 
     $this->set($abstract, $parameters);

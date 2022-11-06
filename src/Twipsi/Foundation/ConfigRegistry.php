@@ -14,7 +14,7 @@ namespace Twipsi\Foundation;
 
 use Twipsi\Support\Bags\ArrayAccessibleBag;
 
-class ConfigRegistry extends ArrayAccessibleBag
+final class ConfigRegistry extends ArrayAccessibleBag
 {
     /**
      * Config bag constructor.

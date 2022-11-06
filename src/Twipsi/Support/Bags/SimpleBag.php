@@ -74,6 +74,20 @@ class SimpleBag implements IteratorAggregate, Countable
     }
 
     /**
+     * Add a key/value pair into a parent key.
+     *
+     * @param string $key
+     * @param array $value
+     * @return $this
+     */
+    public function add(string $key, array $value): static
+    {
+        $this->parameters[$key][array_key_first($value)] = reset($value);
+
+        return $this;
+    }
+
+    /**
      * Retrieve a parameter from parameters array.
      *
      * @param string $key

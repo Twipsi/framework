@@ -30,7 +30,7 @@ use Twipsi\Foundation\Middleware\MiddlewareResolver;
 use Twipsi\Support\Arr;
 use Twipsi\Support\Bags\SimpleBag as Container;
 
-class Kernel
+final class Kernel
 {
     /**
      * The application object.

@@ -21,7 +21,7 @@ use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Twipsi\Foundation\Middleware\Exceptions\InvalidMiddlewareException;
 use Twipsi\Support\Bags\SimpleBag as Container;
 
-class MiddlewareResolver
+final class MiddlewareResolver
 {
     /**
      * Application instance.

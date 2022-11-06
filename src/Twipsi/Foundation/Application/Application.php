@@ -341,4 +341,14 @@ class Application extends IOCManager
             }
         }
     }
+
+    /**
+     * Terminate the application.
+     *
+     * @return void
+     */
+    public function terminate(): void
+    {
+        //@Implement
+    }
 }

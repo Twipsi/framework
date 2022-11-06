@@ -17,7 +17,6 @@ use Twipsi\Components\Mailer\MailManager;
 use Twipsi\Components\Mailer\Markdown;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\ComponentProvider;
-use Twipsi\Foundation\DeferredComponentProvider;
 
 class MailerProvider extends ComponentProvider implements DeferredComponentProvider
 {

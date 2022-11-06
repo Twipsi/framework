@@ -16,13 +16,13 @@ use Exception;
 
 class BootstrapperException extends Exception
 {
-  /**
-  * Create a new exception instance.
-  *
-  * @return void
-  */
-  public function __construct(string $message)
-  {
-    parent::__construct($message, 500);
-  }
+    /**
+     * Create a bootstrapper exception.
+     *
+     * @return void
+     */
+    public function __construct(string $message)
+    {
+        parent::__construct($message, 500);
+    }
 }

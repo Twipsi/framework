@@ -23,7 +23,7 @@ trait ApplicationAccessor
       return $this->{$instance};
     }
 
-    return $this->call($instance);
+    return $this->make($instance);
   }
 
   /**
@@ -31,7 +31,7 @@ trait ApplicationAccessor
   */
   public function get($instance) : mixed
   {
-    return $this->call($instance);
+    return $this->make($instance);
   }
 
   /**
@@ -47,7 +47,7 @@ trait ApplicationAccessor
   */
   public function offsetGet(mixed $key) : mixed
   {
-    return $this->call($key);
+    return $this->make($key);
   }
 
   /**

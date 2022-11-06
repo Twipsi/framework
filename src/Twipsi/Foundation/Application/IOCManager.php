@@ -14,7 +14,9 @@ namespace Twipsi\Foundation\Application;
 
 use Closure;
 use ReflectionClass;
+use ReflectionException;
 use ReflectionFunction;
+use ReflectionMethod;
 use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Twipsi\Support\Bags\ObjectBag;
 
@@ -58,14 +60,6 @@ class IOCManager implements \ArrayAccess
     $this->instances = new InstanceRegistry;
     $this->bindings = new BindingRegistry;
     $this->implants = new ImplantRegistry;
-  }
-
-  /**
-  * Call for a registered instance.
-  */
-  public function call(string $abstract) : mixed
-  {
-    return $this->make($abstract);
   }
 
   /**
@@ -153,10 +147,29 @@ class IOCManager implements \ArrayAccess
     }
 
     // Resolve the required dependencies.
-    $dependencies = (new DependencyResolver($this, $parameters))->resolve($reflection->getDependencies());
+    $dependencies = (new DependencyResolver($this, $parameters))
+        ->resolve($reflection->getDependencies());
 
     return $reflection->instantiateWithParameters($dependencies ?? []);
   }
+
+    /**
+     * Call for a registered instance method.
+     * @throws ReflectionException
+     * @throws ApplicationManagerException
+     */
+    public function call(string|object $abstract, string $method, array $parameters = []) : mixed
+    {
+        $concrete = is_string($abstract) ? $this->concrete($abstract) : get_class($abstract);
+
+        $reflection = new ReflectionMethod($concrete, $method);
+        $dependencies = (new DependencyResolver($this, $parameters))
+            ->resolve($reflection->getParameters());
+
+        $object = is_string($abstract) ? $this->make($abstract) : $abstract;
+
+        return $object ? $object->{$method}($dependencies) : null;
+    }
 
   /**
   * Resolve class applicables.
