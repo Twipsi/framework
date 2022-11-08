@@ -2,29 +2,130 @@
 
 namespace Twipsi\Tests\Foundation;
 
+use PHPUnit\Framework\TestCase;
+use Symfony\Component\Console\Exception\CommandNotFoundException;
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Console\Output\BufferedOutput;
+use Symfony\Component\Console\Tester\CommandTester;
 use Twipsi\Foundation\Application\Application;
-use \Symfony\Component\Console\Input\StringInput;
+use Twipsi\Foundation\Console\Console;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
+use Twipsi\Tests\Foundation\Fakes\FakeCommand;
 
-class ConsoleTest
+class ConsoleTest extends TestCase
 {
-    protected Application $app;
+    protected Console $console;
+
+    protected BufferedOutput $output;
     
     /**
      * Setup test environment.
      *
      * @return void
+     * @throws ApplicationManagerException
      */
     protected function setUp(): void
     {
         $this->app = new Application();
-        $this->app->keep('console', \Twipsi\Foundation\Console\Kernel::class);
+        $this->console = new Console($this->app, $this->app->version());
+        $this->console->resolve(FakeCommand::class);
+
+        $this->output = new \Symfony\Component\Console\Output\BufferedOutput;
     }
 
-    public function testGeneral()
+    public function testConsoleShouldHandleCommandFromCLI()
     {
-        $input = new \Symfony\Component\Console\Input\ArgvInput;
-        $output = new \Symfony\Component\Console\Output\ConsoleOutput;
+        $input = new ArgvInput(['cli.php', 'test']);
 
-        $status = $app->console->run($input, $output);
+        $this->console->run($input, $this->output);
+
+        $this->assertSame($this->console->lastOutput(), 'Fake Command Executed.');
+    }
+
+    public function testConsoleShouldThrowExceptionIfNotFound()
+    {
+        $input = new ArgvInput(['cli.php', 'fake']);
+
+        $this->expectException(CommandNotFoundException::class);
+        $this->console->run($input, $this->output);
+    }
+
+    public function testConsoleShouldHandleCommandFromName()
+    {
+        $this->console->call('test', [], $this->output);
+
+        $this->assertSame($this->output->fetch(), 'Fake Command Executed.');
+    }
+
+    public function testCommandShouldBeAbleToCallAnotherCommandByName()
+    {
+        $mock = $this->createMock(\Twipsi\Tests\Foundation\Fakes\CallableCommand::class);
+
+        $mock->expects($this->any())
+            ->method('getName')
+            ->willReturn('callable');
+
+        $mock->expects($this->once())
+            ->method('isEnabled')
+            ->willReturn(true);
+
+        $mock->expects($this->once())
+            ->method('setTwipsi');
+
+        $mock->expects($this->once())
+            ->method('run')
+            ->willReturn(1);
+
+        $this->console->add($mock);
+        $this->console->call('test --name', [], $this->output);
+
+        $this->assertSame($this->output->fetch(), 'Fake Command Executed.');
+    }
+
+    public function testCommandShouldBeAbleToCallAnotherCommand()
+    {
+        $this->console->call('test --call', [], $this->output);
+
+        $this->assertSame($this->output->fetch(), 'This should not be outputed.Fake Command Executed.');
+    }
+
+    public function testCommandShouldBeAbleToCallAnotherCommandSilently()
+    {
+        $this->console->call('test --silent', [], $this->output);
+
+        $this->assertSame($this->output->fetch(), 'Fake Command Executed.');
+    }
+
+    public function testCommandShouldBeDIByApplication()
+    {
+        $command = new \Twipsi\Tests\Foundation\Fakes\CallableCommand();
+        $this->console->add($command);
+
+        $this->console->call('callable --di');
+
+        $this->assertSame($this->console->lastOutput(), 'DI is working.');
+    }
+
+    public function testCommandShouldHandleArguments()
+    {
+        $this->console->call('test --op1=hello aaa', [], $this->output);
+
+        $this->assertSame($this->output->fetch(), 'aaa.Fake Command Executed.');
+    }
+
+    public function testCommandShouldHandleArgumentsWhenSendingParameters()
+    {
+        $this->console->call('test', ['command' => 'test', 'arg1' => 'aaa', '--op1' => 'hello'], $this->output);
+
+        $this->assertSame($this->output->fetch(), 'aaa.Fake Command Executed.');
+    }
+
+    public function testCommandOutputAMeanwhilePlain()
+    {
+        $this->console->call('test --plain', [], $this->output);
+
+        $this->assertSame($this->output->fetch(),
+            'This is a plain message'."\r\n".'Fake Command Executed.'
+        );
     }
 }

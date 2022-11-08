@@ -136,16 +136,6 @@ class Kernel
     }
 
     /**
-     * @param string $command
-     * @param array $options
-     * @return null
-     */
-    public function queue(string $command, array $options)
-    {
-        //return CommandQueueManager::queue($command, $options);
-    }
-
-    /**
      * Register any handlers to handle command life cycles.
      *
      * @param int $seconds
@@ -179,9 +169,7 @@ class Kernel
     protected function getTwipsiConsole(): Console
     {
         return $this->console
-            ?? $this->console = (new Console(
-                $this->app, $this->app->version()
-            ));
+            ?? $this->app->get('console.app');
     }
 
     /**
@@ -243,6 +231,8 @@ class Kernel
     {
         $this->app->terminate();
 
+        // If we have any cycle handlers, we can call
+        // this method to run the handlers.
         foreach($this->cycleHandlers as $handler) {
             $end = Chronos::date($this->commandStart)->addSeconds($handler['tolerate']);
 

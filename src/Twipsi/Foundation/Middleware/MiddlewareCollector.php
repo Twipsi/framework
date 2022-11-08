@@ -17,7 +17,7 @@ use Twipsi\Components\Router\Route\Route;
 use Twipsi\Support\Bags\SimpleBag as Container;
 use Twipsi\Support\Str;
 
-final class MiddlewareCollector extends Container
+class MiddlewareCollector extends Container
 {
     /**
      * Middleware subscriber.

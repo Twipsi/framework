@@ -16,7 +16,7 @@ use ReflectionClass;
 use ReflectionNamedType;
 use ReflectionParameter;
 use Twipsi\Foundation\Exceptions\DependencyResolverException;
-use Twipsi\Support\Bags\ArrayBag as Container;
+use Twipsi\Support\Bags\SimpleBag as Container;
 
 class DependencyResolver
 {

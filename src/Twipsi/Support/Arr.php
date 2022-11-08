@@ -796,14 +796,14 @@ class Arr
      */
     public static function mapPair(array $haystack, Closure $callback): array
     {
-        foreach ($haystack as $value) {
+        foreach ($haystack as $key => $value) {
 
             if(is_array($value)) {
                 $result = array_merge($result ?? [],
                     static::mapPair($value, $callback)
                 );
             }
-            else if(is_array($entry = $callback($value))) {
+            else if(is_array($entry = $callback($value, $key))) {
                 $result[array_key_first($entry)] = reset($entry);
             }
         }

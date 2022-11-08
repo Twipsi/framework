@@ -16,6 +16,7 @@ use Closure;
 use Exception;
 use Symfony\Component\Console\Application as SymfonyApplication;
 use Symfony\Component\Console\Command\Command as SymfonyCommand;
+use Symfony\Component\Console\Exception\ExceptionInterface;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputDefinition;
@@ -80,11 +81,6 @@ class Console extends SymfonyApplication implements ConsoleInterface
         static::$bootstrappers[] = $callback;
     }
 
-    public static function getBootstrappers(): array
-    {
-        return static::$bootstrappers;
-    }
-
     /**
      * Bootstrap the console.
      *
@@ -111,9 +107,15 @@ class Console extends SymfonyApplication implements ConsoleInterface
             $input = $input ?: new ArgvInput()
         );
 
-        is_null($name) ?: $input->bind($this->find($name)->getDefinition());
+        if(!is_null($name)) {
+            try {
+                $input->bind($this->find($name)->getDefinition());
+            } catch (ExceptionInterface) {
+                // Do Nothing
+            }
+        }
 
-        return parent::run($input, $output);
+        return parent::run($input, $this->lastOutput = $output);
     }
 
     /**
@@ -125,7 +127,7 @@ class Console extends SymfonyApplication implements ConsoleInterface
      * @return int
      * @throws Exception
      */
-    public function call(string $command, array $parameters, OutputInterface $output = null): int
+    public function call(string $command, array $parameters = [], OutputInterface $output = null): int
     {
         if(empty($parameters)) {
             $command = $this->getCommandName(
@@ -142,7 +144,7 @@ class Console extends SymfonyApplication implements ConsoleInterface
         }
 
         return $this->run(
-            $input, $this->lastOutput = $output ?? new BufferedOutput
+            $input, $this->lastOutput = ($output ?? new BufferedOutput)
         );
     }
 

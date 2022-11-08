@@ -168,7 +168,11 @@ class IOCManager implements \ArrayAccess
 
         $object = is_string($abstract) ? $this->make($abstract) : $abstract;
 
-        return $object ? $object->{$method}($dependencies) : null;
+        if(empty($dependencies)) {
+            return $object ? $object->{$method}() : null;
+        }
+
+        return $object ? $object->{$method}(...$dependencies) : null;
     }
 
   /**

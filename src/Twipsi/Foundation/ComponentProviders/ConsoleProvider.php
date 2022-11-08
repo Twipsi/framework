@@ -2,7 +2,6 @@
 
 namespace Twipsi\Foundation\ComponentProviders;
 
-use Twipsi\Components\Session\SessionSubscriber;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\ComponentProvider;
 use Twipsi\Foundation\Console\Commands\CacheClearCommand;
@@ -15,7 +14,6 @@ use Twipsi\Foundation\Console\Commands\KeyGenerateCommand;
 use Twipsi\Foundation\Console\Commands\RouteCacheCommand;
 use Twipsi\Foundation\Console\Commands\RouteClearCommand;
 use Twipsi\Foundation\Console\Commands\RouteListCommand;
-use Twipsi\Foundation\Console\Commands\TestCommand;
 use Twipsi\Foundation\Console\Commands\ViewCacheCommand;
 use Twipsi\Foundation\Console\Commands\ViewClearCommand;
 use Twipsi\Foundation\Console\Console;
@@ -40,7 +38,6 @@ class ConsoleProvider extends ComponentProvider implements DeferredComponentProv
         'RouteList' => RouteListCommand::class,
         'ViewCache' => ViewCacheCommand::class,
         'ViewClear' => ViewClearCommand::class,
-        'TestCommand' => TestCommand::class,
     ];
 
     /**
@@ -50,12 +47,10 @@ class ConsoleProvider extends ComponentProvider implements DeferredComponentProv
      */
     public function register(): void
     {
-        var_dump('REGISTERING PROVIDER');
-
         // Bind the session handler to the application.
-//        $this->app->keep('console.app', function (Application $app) {
-//            return new SessionSubscriber($app->config, $app->encrypter);
-//        });
+        $this->app->keep('console.app', function (Application $app) {
+            return new Console($this->app, $this->app->version());
+        });
 
         foreach ($this->commands as $name => $command) {
             if(method_exists($this, $method = "register{$name}Command")) {
@@ -75,7 +70,7 @@ class ConsoleProvider extends ComponentProvider implements DeferredComponentProv
      */
     public function components(): array
     {
-        return array_values($this->commands);
+        return array_values($this->commands)+['console.app'];
     }
 
     /**
@@ -86,8 +81,6 @@ class ConsoleProvider extends ComponentProvider implements DeferredComponentProv
      */
     protected function loadCommands(array $commands): void
     {
-        var_dump('LOADING COMMANDS');
-
         Console::boot(function($console) use ($commands) {
             $console->resolveCommands($commands);
         });

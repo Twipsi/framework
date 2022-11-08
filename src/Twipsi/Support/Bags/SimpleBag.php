@@ -100,6 +100,20 @@ class SimpleBag implements IteratorAggregate, Countable
     }
 
     /**
+     * Get a value of a key and remove it from the collection.
+     *
+     * @param string $key
+     * @return mixed
+     */
+    public function pull(string $key): mixed
+    {
+        $result = $this->get($key);
+        $this->delete($key);
+
+        return $result;
+    }
+
+    /**
      * Check if parameter exists in parameters array.
      *
      * @param string $key
@@ -131,6 +145,16 @@ class SimpleBag implements IteratorAggregate, Countable
     public function empty(): bool
     {
         return !$this->parameters;
+    }
+
+    /**
+     * Return and shift first element.
+     *
+     * @return mixed
+     */
+    public function shift(): mixed
+    {
+        return array_shift($this->parameters);
     }
 
     /**
