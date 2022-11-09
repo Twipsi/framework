@@ -6,7 +6,6 @@ use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Exception\ExceptionInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Question\ConfirmationQuestion;
 use Twipsi\Foundation\Console\Command;
 use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 
@@ -30,7 +29,6 @@ class FakeCommand extends Command
         ['call', null, InputOption::VALUE_NONE, 'Test call another command'],
         ['silent', null, InputOption::VALUE_NONE, 'Test call another command'],
         ['op1', null, InputOption::VALUE_OPTIONAL, 'Test call another command', false],
-        ['plain', null, InputOption::VALUE_NONE, 'Test plain output'],
     ];
 
     protected array $arguments = [
@@ -63,10 +61,6 @@ class FakeCommand extends Command
             ['--vv' => 'yolo', 'arg1' => $this->argument('arg1')]);
         }
 
-        if($this->option('plain')) {
-            $this->plain('This is a plain message', 'normal');
-        }
-
-        $this->render->plain('Fake Command Executed');
+        $this->plain('Fake Command Executed.');
     }
 }

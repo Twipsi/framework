@@ -46,12 +46,12 @@ class CallableCommand extends Command
     public function handle(HttpRequest $request): void
     {
         if($this->option('vv')) {
-            $this->render->plain($this->argument('arg1'));
+            $this->plain($this->argument('arg1'));
         }
         else if($this->option('di')) {
-            $this->render->plain('DI is working');
+            $this->plain('DI is working.');
         } else {
-            $this->render->plain('This should not be outputed');
+            $this->plain('This should not be outputed.');
         }
     }
 }
