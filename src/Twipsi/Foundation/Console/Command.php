@@ -16,7 +16,7 @@ use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 
 abstract class Command extends SymfonyCommand
 {
-    use HandlesCalls, HandlesMeanwhileOutput, HandlesIO;
+    use HandlesCalls, HandlesSymfonyOutput, HandlesIO;
 
     /**
      * The twipsi application.

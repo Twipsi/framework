@@ -8,7 +8,7 @@ use Symfony\Component\Console\Helper\TableStyle;
 use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\Question;
 
-trait HandlesMeanwhileOutput
+trait HandlesSymfonyOutput
 {
     /**
      * Send a question to the user.

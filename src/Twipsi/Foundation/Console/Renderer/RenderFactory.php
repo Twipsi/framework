@@ -43,6 +43,19 @@ class RenderFactory
     }
 
     /**
+     * Render a debug unformatted message.
+     *
+     * @param string $message
+     * @param int $verbosity
+     * @return void
+     */
+    public function debug(string $message, int $verbosity = OutputInterface::VERBOSITY_NORMAL): void
+    {
+        $class = \Twipsi\Foundation\Console\Renderer\Debug::class;
+        $this->create($class, $message, $verbosity);
+    }
+
+    /**
      * Render a plain message.
      *
      * @param string $message

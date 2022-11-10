@@ -61,6 +61,6 @@ class FakeCommand extends Command
             ['--vv' => 'yolo', 'arg1' => $this->argument('arg1')]);
         }
 
-        $this->plain('Fake Command Executed.');
+        $this->render->debug('Fake Command Executed');
     }
 }

@@ -110,13 +110,13 @@ class ConsoleTest extends TestCase
     {
         $this->console->call('test --op1=hello aaa', [], $this->output);
 
-        $this->assertSame($this->output->fetch(), 'aaa'."\r\n".'Fake Command Executed.'."\r\n");
+        $this->assertSame($this->output->fetch(), 'aaa.'."\r\n".'Fake Command Executed.'."\r\n");
     }
 
     public function testCommandShouldHandleArgumentsWhenSendingParameters()
     {
         $this->console->call('test', ['command' => 'test', 'arg1' => 'aaa', '--op1' => 'hello'], $this->output);
 
-        $this->assertSame($this->output->fetch(), 'aaa'."\r\n".'Fake Command Executed.'."\r\n");
+        $this->assertSame($this->output->fetch(), 'aaa.'."\r\n".'Fake Command Executed.'."\r\n");
     }
 }

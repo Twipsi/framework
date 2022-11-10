@@ -11,6 +11,6 @@ class KeyGenerateCommand extends Command
      *
      * @var string
      */
-    protected string $name = 'generate-key';
+    protected string $name = 'generate:key';
 
 }
