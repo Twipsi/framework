@@ -39,11 +39,7 @@ class AxisExtractor extends PhpExtractor implements ViewExtractorInterface
     {
         $this->currentPath = $file->getPath();
 
-        // Attempt to cache the file.
-        if ($this->cache->expired($file) && $this->cache->usesCache()) {
-            $this->cache->store($file, (new ViewCompiler)->compile($file)
-            );
-        }
+        $this->compileView($file);
 
         return parent::getContent(
             $this->cache->usesCache()
@@ -51,6 +47,21 @@ class AxisExtractor extends PhpExtractor implements ViewExtractorInterface
                 : $file,
             $data
         );
+    }
+
+    /**
+     * Compile and cache the view.
+     *
+     * @param FileItem $file
+     * @return void
+     */
+    public function compileView(FileItem $file): void
+    {
+        // Attempt to cache the file.
+        if ($this->cache->expired($file) && $this->cache->usesCache()) {
+
+            $this->cache->store($file, (new ViewCompiler)->compile($file));
+        }
     }
 
     /**

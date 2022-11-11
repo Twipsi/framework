@@ -18,10 +18,13 @@ use Twipsi\Components\File\Exceptions\FileNotFoundException;
 use Twipsi\Components\File\FileBag;
 use Twipsi\Components\File\FileItem;
 use Twipsi\Foundation\Application\Application;
+use Twipsi\Foundation\Env;
 use Twipsi\Support\Bags\SimpleBag as Container;
 
 class AttachComponentProviders
 {
+    use ResolveComponentProviders;
+
     /**
      * The cache path we should use.
      * 
@@ -42,11 +45,17 @@ class AttachComponentProviders
      */
     public function invoke(): void
     {
-        $loaders = $this->app->get('config')->get('component.loaders')->all();
+        $providers = $this->app->get('config')
+            ->get('component.loaders')->all();
+
+        if(empty($providers)) {
+            return;
+        }
 
         $this->setCachePath($this->app->componentCacheFile());
-        $this->load($loaders);
+        $this->load($providers);
 
+        // Flag the components as registered in the application.
         $this->app->components()->setRegistered();
     }
 
@@ -63,16 +72,23 @@ class AttachComponentProviders
 
         // If we need to rebuild the cache then rebuild it.
         if($this->shouldRebuildCache($cache, $providers)) {
-            $cache = $this->buildComponentProviderCache($providers);
+            $repository = $this->buildComponentProviderCache($providers);
+
+            // Save the cache file.
+            $this->saveCache($repository);
+        } else if(! Env::get('CACHE_COMPONENTS', false)) {
+            $repository = $this->buildComponentProviderCache($providers);
         }
 
-        $cache = is_array($cache) ? new Container($cache) : $cache;
+        $repository = ! isset($repository)
+            ? new Container($cache)
+            : $repository;
 
         // Merge the cache data into the registry.
-        $this->app->components()->inject($cache->all());
+        $this->app->components()->inject($repository->all());
 
         // Run through the cache and load providers.
-        foreach($cache->get('always') as $provider) {
+        foreach($repository->get('always') as $provider) {
             $this->app->components()->register($provider);
         }
     }
@@ -105,67 +121,26 @@ class AttachComponentProviders
      */
     protected function shouldRebuildCache(array $cache, array $providers): bool 
     {
-        return empty($cache) || $cache['providers'] != $providers;
-    }
-
-    /**
-     * Build the cache and save it.
-     *
-     * @param array $providers
-     * @return Container
-     * @throws FileException
-     */
-    protected function buildComponentProviderCache(array $providers): Container
-    {
-        $cache = new Container([
-            'providers' => $providers, 'loaded' => [], 
-            'framework' => [], 'application' => [], 
-            'always' => [], 'deferred' => []
-        ]);
-
-        foreach($providers as $provider) {
-
-            $instance = new $provider($this->app);
-
-            // Register the providers as source.
-            if($this->app->components()->isFrameworkType($provider)) {
-                $cache->push('framework', $provider);
-
-            } else {
-                $cache->push('application', $provider);
-            }
-
-            // If the loader is deferred register as deferred.
-            if ($instance->deferred()) {
-                foreach($instance->components() as $component) {
-
-                    // Save the components it loads.
-                    $cache->add("deferred", [$component => $provider]);
-                }
-
-            } else {
-                $cache->push("always", $provider);
-            }
+        if(Env::get('CACHE_COMPONENTS', false)) {
+            return empty($cache) || $cache['providers'] != $providers;
         }
 
-        return $this->saveCache($cache);
+        return false;
     }
 
     /**
      * Save the cache to file.
      *
      * @param Container $cache
-     * @return Container
+     * @return void
      * @throws FileException
      */
-    protected function saveCache(Container $cache): Container
+    protected function saveCache(Container $cache): void
     {
         (new FileBag($dirname = dirname($this->cache)))->put(
                 str_replace($dirname, '', $this->cache),
                 '<?php return '.var_export($cache->all(), true).';'
         );
-
-        return $cache;
     }
 
     /**

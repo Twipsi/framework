@@ -4,28 +4,32 @@ namespace Twipsi\Foundation\Console\Renderer;
 
 use Symfony\Component\Console\Output\OutputInterface;
 
-class Debug extends RenderType
+class Error extends RenderType
 {
     /**
-     * The debug styles.
+     * The error styles.
      *
      * @var array
      */
     protected array $style = [
+        'bgColor' => 'red',
+        'fgColor' => 'white',
+        'title' => 'error',
     ];
 
     /**
-     * The debug mutators.
+     * The error mutators.
      *
      * @var array|string[]
      */
     protected array $mutators = [
+        'mutateHighlights',
         'mutatePunctuation',
         'mutatePaths',
     ];
 
     /**
-     * Render a debug message.
+     * Render an error message.
      *
      * @param string $message
      * @param int $verbosity
@@ -37,6 +41,6 @@ class Debug extends RenderType
 
         $arguments = array_merge($this->style, ['content' => $message]);
 
-        $this->buildView('debug', $arguments, $verbosity);
+        $this->buildView('styled', $arguments, $verbosity);
     }
 }

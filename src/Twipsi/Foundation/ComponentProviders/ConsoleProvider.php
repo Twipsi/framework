@@ -4,7 +4,11 @@ namespace Twipsi\Foundation\ComponentProviders;
 
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\ComponentProvider;
+use Twipsi\Foundation\Console\Commands\BootCacheCommand;
+use Twipsi\Foundation\Console\Commands\BootClearCommand;
 use Twipsi\Foundation\Console\Commands\CacheClearCommand;
+use Twipsi\Foundation\Console\Commands\ComponentCacheCommand;
+use Twipsi\Foundation\Console\Commands\ComponentClearCommand;
 use Twipsi\Foundation\Console\Commands\ConfigCacheCommand;
 use Twipsi\Foundation\Console\Commands\ConfigClearCommand;
 use Twipsi\Foundation\Console\Commands\EventCacheCommand;
@@ -26,7 +30,11 @@ class ConsoleProvider extends ComponentProvider implements DeferredComponentProv
      * @var array|string[]
      */
     protected array $commands = [
+        'BootClear' => BootClearCommand::class,
+        'BootCache' => BootCacheCommand::class,
         'CacheClear' => CacheClearCommand::class,
+        'ComponentCache' => ComponentCacheCommand::class,
+        'ComponentClear' => ComponentClearCommand::class,
         'ConfigCache' => ConfigCacheCommand::class,
         'ConfigClear' => ConfigClearCommand::class,
         'EventCache' => EventCacheCommand::class,

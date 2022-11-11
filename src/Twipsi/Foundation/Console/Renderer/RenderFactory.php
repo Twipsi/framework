@@ -43,7 +43,7 @@ class RenderFactory
     }
 
     /**
-     * Render a debug unformatted message.
+     * Render a debug un formatted message.
      *
      * @param string $message
      * @param int $verbosity
@@ -78,6 +78,45 @@ class RenderFactory
     public function info(string $message, int $verbosity = OutputInterface::VERBOSITY_NORMAL): void
     {
         $class = \Twipsi\Foundation\Console\Renderer\Info::class;
+        $this->create($class, $message, $verbosity);
+    }
+
+    /**
+     * Render a success message.
+     *
+     * @param string $message
+     * @param int $verbosity
+     * @return void
+     */
+    public function success(string $message, int $verbosity = OutputInterface::VERBOSITY_NORMAL): void
+    {
+        $class = \Twipsi\Foundation\Console\Renderer\Success::class;
+        $this->create($class, $message, $verbosity);
+    }
+
+    /**
+     * Render a warning message.
+     *
+     * @param string $message
+     * @param int $verbosity
+     * @return void
+     */
+    public function warning(string $message, int $verbosity = OutputInterface::VERBOSITY_NORMAL): void
+    {
+        $class = \Twipsi\Foundation\Console\Renderer\Warning::class;
+        $this->create($class, $message, $verbosity);
+    }
+
+    /**
+     * Render an error message.
+     *
+     * @param string $message
+     * @param int $verbosity
+     * @return void
+     */
+    public function error(string $message, int $verbosity = OutputInterface::VERBOSITY_NORMAL): void
+    {
+        $class = \Twipsi\Foundation\Console\Renderer\Error::class;
         $this->create($class, $message, $verbosity);
     }
 }

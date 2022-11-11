@@ -96,7 +96,7 @@ class ViewFactory
     /**
      * Return the type of driver we will need.
      */
-    protected function getExtractor(string $path): ViewExtractor
+    public function getExtractor(string $path): ViewExtractor
     {
         if (is_null($extension = $this->getViewExtension($path))) {
             throw new NotSupportedException(
@@ -161,5 +161,15 @@ class ViewFactory
     public function getQueued(): array
     {
         return $this->queue;
+    }
+
+    /**
+     * Return the view engine object.
+     *
+     * @return ViewEngine
+     */
+    public function getViewEngine(): ViewEngine
+    {
+        return $this->engine;
     }
 }

@@ -165,6 +165,20 @@ trait HandlesSymfonyOutput
     }
 
     /**
+     * Output a success message.
+     *
+     * @param string $message
+     * @param int|null|string $verbosity
+     * @return void
+     */
+    public function success(string $message, int|string $verbosity = null): void
+    {
+        $style = "<success>$message</success>";
+
+        $this->output->writeln($style, $this->getVerbosity($verbosity));
+    }
+
+    /**
      * Output an info message.
      *
      * @param string $message

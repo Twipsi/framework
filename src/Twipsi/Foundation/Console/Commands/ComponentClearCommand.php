@@ -7,22 +7,22 @@ use Twipsi\Components\File\Exceptions\FileNotFoundException;
 use Twipsi\Components\File\FileItem;
 use Twipsi\Foundation\Console\Command;
 
-#[AsCommand(name: 'routes:clear')]
-class RouteClearCommand extends Command
+#[AsCommand(name: 'components:clear')]
+class ComponentClearCommand extends Command
 {
     /**
      * The name of the command.
      *
      * @var string
      */
-    protected string $name = 'routes:clear';
+    protected string $name = 'components:clear';
 
     /**
      * The command description.
      *
      * @var string
      */
-    protected string $description = 'Delete all the route cache file';
+    protected string $description = 'Delete the components cache file';
 
     /**
      * Handle the command.
@@ -32,12 +32,12 @@ class RouteClearCommand extends Command
      */
     public function handle(): void
     {
-        if($this->app->isRoutesCached()) {
-            (new FileItem($this->app->routeCacheFile()))->delete();
+        if($this->app->isComponentsCached()) {
+            (new FileItem($this->app->componentCacheFile()))->delete();
 
-            $this->render->success('The routes cache has been deleted');
+            $this->render->success('The components cache has been deleted');
         } else {
-            $this->render->warning('No routes cache file found.');
+            $this->render->warning('No components cache file found.');
         }
     }
 }

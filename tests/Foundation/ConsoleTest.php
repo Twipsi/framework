@@ -39,7 +39,7 @@ class ConsoleTest extends TestCase
 
         $this->console->run($input, $this->output);
 
-        $this->assertSame($this->console->lastOutput(), 'Fake Command Executed.'."\r\n");
+        $this->assertSame(trim($this->console->lastOutput()), 'Fake Command Executed.');
     }
 
     public function testConsoleShouldThrowExceptionIfNotFound()
@@ -54,7 +54,7 @@ class ConsoleTest extends TestCase
     {
         $this->console->call('test', [], $this->output);
 
-        $this->assertSame($this->output->fetch(), 'Fake Command Executed.'."\r\n");
+        $this->assertSame(trim($this->output->fetch()), 'Fake Command Executed.');
     }
 
     public function testCommandShouldBeAbleToCallAnotherCommandByName()
@@ -79,21 +79,21 @@ class ConsoleTest extends TestCase
         $this->console->add($mock);
         $this->console->call('test --name', [], $this->output);
 
-        $this->assertSame($this->output->fetch(), 'Fake Command Executed.'."\r\n");
+        $this->assertSame(trim($this->output->fetch()), 'Fake Command Executed.');
     }
 
     public function testCommandShouldBeAbleToCallAnotherCommand()
     {
         $this->console->call('test --call', [], $this->output);
 
-        $this->assertSame($this->output->fetch(), 'This should not be outputed.'."\r\n".'Fake Command Executed.'."\r\n");
+        $this->assertSame(trim($this->output->fetch()), 'This should not be outputed.'."\r\n".'Fake Command Executed.');
     }
 
     public function testCommandShouldBeAbleToCallAnotherCommandSilently()
     {
         $this->console->call('test --silent', [], $this->output);
 
-        $this->assertSame($this->output->fetch(), 'Fake Command Executed.'."\r\n");
+        $this->assertSame(trim($this->output->fetch()), 'Fake Command Executed.');
     }
 
     public function testCommandShouldBeDIByApplication()
@@ -103,20 +103,20 @@ class ConsoleTest extends TestCase
 
         $this->console->call('callable --di');
 
-        $this->assertSame($this->console->lastOutput(), 'DI is working.'."\r\n");
+        $this->assertSame(trim($this->console->lastOutput()), 'DI is working.');
     }
 
     public function testCommandShouldHandleArguments()
     {
         $this->console->call('test --op1=hello aaa', [], $this->output);
 
-        $this->assertSame($this->output->fetch(), 'aaa.'."\r\n".'Fake Command Executed.'."\r\n");
+        $this->assertSame(trim($this->output->fetch()), 'aaa.'."\r\n".'Fake Command Executed.');
     }
 
     public function testCommandShouldHandleArgumentsWhenSendingParameters()
     {
         $this->console->call('test', ['command' => 'test', 'arg1' => 'aaa', '--op1' => 'hello'], $this->output);
 
-        $this->assertSame($this->output->fetch(), 'aaa.'."\r\n".'Fake Command Executed.'."\r\n");
+        $this->assertSame(trim($this->output->fetch()), 'aaa.'."\r\n".'Fake Command Executed.');
     }
 }

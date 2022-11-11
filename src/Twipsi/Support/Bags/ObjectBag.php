@@ -19,6 +19,9 @@ use ReflectionMethod;
 use InvalidArgumentException;
 use ReflectionParameter;
 
+/**
+ * @method getMethods(int $IS_PUBLIC)
+ */
 class ObjectBag
 {
     /**

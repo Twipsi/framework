@@ -7,7 +7,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 class Plain extends RenderType
 {
     /**
-     * The info styles.
+     * The plain styles.
      *
      * @var array
      */
@@ -15,7 +15,7 @@ class Plain extends RenderType
     ];
 
     /**
-     * The info mutators.
+     * The plain mutators.
      *
      * @var array|string[]
      */
@@ -25,7 +25,7 @@ class Plain extends RenderType
     ];
 
     /**
-     * Render an info message.
+     * Render a plain message.
      *
      * @param string $message
      * @param int $verbosity

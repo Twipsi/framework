@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\Bootstrapers;
 
+use Twipsi\Components\File\Exceptions\FileException;
 use Twipsi\Components\File\FileBag;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\ConfigRegistry;
@@ -91,9 +92,10 @@ class BootstrapConfiguration
      * Discover configuration files.
      *
      * @param string $where
-     * @param string $context
+     * @param string|null $context
      *
      * @return array
+     * @throws BootstrapperException
      */
     protected function discoverConfigurationFiles(string $where, string $context = null): array
     {
@@ -123,6 +125,7 @@ class BootstrapConfiguration
      * @param array $config
      *
      * @return void
+     * @throws FileException
      */
     protected function saveCache(array $config): void
     {
