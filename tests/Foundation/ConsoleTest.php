@@ -86,7 +86,8 @@ class ConsoleTest extends TestCase
     {
         $this->console->call('test --call', [], $this->output);
 
-        $this->assertSame(trim($this->output->fetch()), 'This should not be outputed.'."\r\n".'Fake Command Executed.');
+        $this->assertSame(trim(preg_replace('/\s\s+/', ' ', $this->output->fetch())),
+            'This should not be outputed.'.' Fake Command Executed.');
     }
 
     public function testCommandShouldBeAbleToCallAnotherCommandSilently()
@@ -110,13 +111,15 @@ class ConsoleTest extends TestCase
     {
         $this->console->call('test --op1=hello aaa', [], $this->output);
 
-        $this->assertSame(trim($this->output->fetch()), 'aaa.'."\r\n".'Fake Command Executed.');
+        $this->assertSame(trim(preg_replace('/\s\s+/', ' ', trim($this->output->fetch())),
+            'aaa.'.' Fake Command Executed.');
     }
 
     public function testCommandShouldHandleArgumentsWhenSendingParameters()
     {
         $this->console->call('test', ['command' => 'test', 'arg1' => 'aaa', '--op1' => 'hello'], $this->output);
 
-        $this->assertSame(trim($this->output->fetch()), 'aaa.'."\r\n".'Fake Command Executed.');
+        $this->assertSame(trim(preg_replace('/\s\s+/', ' ', trim($this->output->fetch())),
+            'aaa.'.' Fake Command Executed.');
     }
 }
