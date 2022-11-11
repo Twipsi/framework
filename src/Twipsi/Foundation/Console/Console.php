@@ -25,7 +25,9 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\StringInput;
 use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\Console\Output\OutputInterface;
+use Twipsi\Components\Events\EventHandler as Dispatcher;
 use Twipsi\Foundation\Application\Application;
+use Twipsi\Foundation\Console\Events\CommandStarted;
 use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Symfony\Component\Console\Exception\CommandNotFoundException;
 
@@ -46,6 +48,13 @@ class Console extends SymfonyApplication implements ConsoleInterface
     protected BufferedOutput|OutputInterface $lastOutput;
 
     /**
+     * The event dispatcher.
+     *
+     * @var Dispatcher|null
+     */
+    protected Dispatcher|null $dispatcher;
+
+    /**
      * Registered bootstrappers.
      *
      * @var array
@@ -58,11 +67,12 @@ class Console extends SymfonyApplication implements ConsoleInterface
      * @param Application $app
      * @param string $version
      */
-    public function __construct(Application $app, string $version)
+    public function __construct(Application $app, string $version, Dispatcher $dispatcher = null)
     {
         parent::__construct('Twipsi Framework', $version);
 
         $this->app = $app;
+        $this->dispatcher = $dispatcher;
 
         $this->setAutoExit(false);
         $this->setCatchExceptions(false);
@@ -115,7 +125,29 @@ class Console extends SymfonyApplication implements ConsoleInterface
             }
         }
 
-        return parent::run($input, $this->lastOutput = $output);
+        // Dispatch built Command started event if we have a dispatcher attached.
+        is_null($this->dispatcher)
+            ?: $this->dispatcher->dispatch(
+                CommandStarted::class,
+                $name,
+                $this->getDefinition()->getOptions(),
+            $this->getDefinition()->getArguments()
+        );
+
+
+        $result = parent::run($input, $this->lastOutput = $output);
+
+        // Dispatch built Command completed event if we have a dispatcher attached.
+        is_null($this->dispatcher)
+            ?: $this->dispatcher->dispatch(
+            CommandStarted::class,
+            $name,
+            $this->getDefinition()->getOptions(),
+            $this->getDefinition()->getArguments(),
+            $result
+        );
+
+        return $result;
     }
 
     /**
