@@ -18,9 +18,21 @@ use Twipsi\Foundation\Application\Application;
 class BootstrapAliases
 {
     /**
-     * Contruct Bootstrapper.
+     * The application instance.
+     *
+     * @var Application
      */
-    public function __construct(protected Application $app){}
+    protected Application $app;
+
+    /**
+     * Construct Bootstrapper.
+     *
+     * @param Application $app
+     */
+    public function __construct(Application $app)
+    {
+        $this->app = $app;
+    }
 
     /**
      * Invoke the bootstrapper.
@@ -30,7 +42,7 @@ class BootstrapAliases
     public function invoke(): void
     {
         $this->app->aliases()->inject(
-            $this->app->config->get('component.aliases')
+            $this->app->get('config')->get('component.aliases')
         );
     }
 }

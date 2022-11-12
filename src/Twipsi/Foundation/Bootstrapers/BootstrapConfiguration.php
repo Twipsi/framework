@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\Bootstrapers;
 
+use Twipsi\Components\File\Exceptions\DirectoryManagerException;
 use Twipsi\Components\File\Exceptions\FileException;
 use Twipsi\Components\File\FileBag;
 use Twipsi\Foundation\Application\Application;
@@ -30,10 +31,20 @@ class BootstrapConfiguration
     protected string $path;
 
     /**
-     * Contruct Bootstrapper.
+     * The application instance.
+     *
+     * @var Application
      */
-    public function __construct(protected Application $app)
+    protected Application $app;
+
+    /**
+     * Construct Bootstrapper.
+     *
+     * @param Application $app
+     */
+    public function __construct(Application $app)
     {
+        $this->app = $app;
         $this->path = $app->path('path.config');
     }
 
@@ -47,7 +58,7 @@ class BootstrapConfiguration
         // Bind the configuration closure.
         $this->app->keep('config', $this->lazyLoadConfig(...));
 
-        // Bind the enviroment to the application.
+        // Bind the environment to the application.
         $this->app->setEnvironment(
             fn() => $this->app->get('config')->get('system.env', 'production')
         );
@@ -57,8 +68,9 @@ class BootstrapConfiguration
      * Set the configuration loader for later when we have the context.
      *
      * @param Application $app
-     *
      * @return ConfigRegistry
+     * @throws BootstrapperException
+     * @throws FileException|DirectoryManagerException
      */
     protected function lazyLoadConfig(Application $app): ConfigRegistry
     {
@@ -68,7 +80,6 @@ class BootstrapConfiguration
 
                 // If we have a cache file then just initiate it.
                 $collection = require $this->app->configurationCacheFile();
-
             } else {
 
                 // Build a new configuration.
@@ -93,22 +104,20 @@ class BootstrapConfiguration
      *
      * @param string $where
      * @param string|null $context
-     *
      * @return array
      * @throws BootstrapperException
      */
     protected function discoverConfigurationFiles(string $where, string $context = null): array
     {
         // Set the context path if we have one.
-        $where = !is_null($context) ? $where . '/' . $context : $where;
-
-        if (!is_dir($where)) {
+        if (!is_dir($where = !is_null($context) ? $where . '/' . $context : $where)) {
             throw new BootstrapperException(
-                sprintf("Directory [%s] could not be found", $where)
+                sprintf("Configuration directory [%s] could not be found", $where)
             );
         }
 
-        $config = (new FileBag($where, 'php'))->includeAll();
+        $config = (new FileBag($where, 'php'))
+            ->includeAll();
 
         if (empty($config ?? []) || !isset($config['system'])) {
             throw new BootstrapperException(
@@ -123,15 +132,14 @@ class BootstrapConfiguration
      * Save the cache to file.
      *
      * @param array $config
-     *
      * @return void
-     * @throws FileException
+     * @throws FileException|DirectoryManagerException
      */
     protected function saveCache(array $config): void
     {
         (new FileBag($dirname = dirname($this->app->configurationCacheFile())))->put(
-                str_replace($dirname, '', $this->app->configurationCacheFile()),
-                '<?php return '.var_export($config, true).';'
+            str_replace($dirname, '', $this->app->configurationCacheFile()),
+            '<?php return '.var_export($config, true).';'
         );
     }
 
@@ -139,7 +147,6 @@ class BootstrapConfiguration
      * Set PHP defaults based on configuration.
      *
      * @param ConfigRegistry $config
-     *
      * @return void
      */
     protected function setSystemDefaults(ConfigRegistry $config): void
@@ -148,7 +155,9 @@ class BootstrapConfiguration
         date_default_timezone_set($config->get('system.timezone', 'GMT'));
 
         // Set the chronos timezone.
-        \Twipsi\Support\Chronos::setChronosTimezone($config->get('system.timezone', 'GMT'));
+        \Twipsi\Support\Chronos::setChronosTimezone(
+            $config->get('system.timezone', 'GMT')
+        );
 
         // Set the default encoding
         mb_internal_encoding('UTF-8');

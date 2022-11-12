@@ -15,11 +15,13 @@ namespace Twipsi\Foundation\Bootstrapers;
 
 use Closure;
 use ErrorException;
+use Throwable;
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Component\ErrorHandler\Error\FatalError;
-use Throwable;
 use Twipsi\Foundation\Application\Application;
+use Twipsi\Foundation\Env;
 use Twipsi\Foundation\ExceptionHandler;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 
 class BootstrapExceptionHandler
 {
@@ -31,7 +33,9 @@ class BootstrapExceptionHandler
     protected static Application $app;
 
     /**
-     * Contruct Bootstrapper.
+     * Construct Bootstrapper.
+     *
+     * @param Application $app
      */
     public function __construct(Application $app)
     {
@@ -54,7 +58,7 @@ class BootstrapExceptionHandler
 
         register_shutdown_function($this->redirectCall('handleShutdown'));
 
-        if (! _env('APP_ENV', 'testing')) {
+        if (! Env::get('APP_ENV', 'testing')) {
             ini_set('display_errors', 'Off');
         }
     }
@@ -64,10 +68,12 @@ class BootstrapExceptionHandler
      *
      * @param Throwable $e
      * @return void
+     * @throws ApplicationManagerException
      */
     public function console(Throwable $e): void
     {
-        $this->getExceptionHandler()->renderConsoleException(new ConsoleOutput(), $e);
+        $this->getExceptionHandler()
+            ->renderConsoleException(new ConsoleOutput(), $e);
     }
 
     /**
@@ -89,23 +95,28 @@ class BootstrapExceptionHandler
     }
 
     /**
-     * Handle incomming exceptions.
-     * 
+     * Handle incoming exceptions.
+     *
      * @param Throwable $e
-     * 
      * @return void
+     * @throws ApplicationManagerException
      */
     public function handleException(Throwable $e): void 
     {
+        // Send it to the logger.
         $this->getExceptionHandler()->report($e);
-        $this->getExceptionHandler()->render(static::$app->get('request'), $e)
+
+        // Render the actual exception.
+        $this->getExceptionHandler()
+            ->render(static::$app->get('request'), $e)
             ->send();
     }
 
     /**
      * Handle Shutdown.
-     * 
+     *
      * @return void
+     * @throws ApplicationManagerException
      */
     public function handleShutdown(): void 
     {
@@ -116,8 +127,6 @@ class BootstrapExceptionHandler
 
         // Check if the error is a fatal error.
         if(in_array($error['type'], [E_COMPILE_ERROR, E_CORE_ERROR, E_ERROR, E_PARSE])) {
-
-
             $this->handleException(
                 new FatalError($error['message'], 0, $error, 0)
             );
@@ -128,7 +137,6 @@ class BootstrapExceptionHandler
      * Redirect call to a class method loader.
      * 
      * @param string $method
-     * 
      * @return Closure
      */
     protected function redirectCall(string $method): Closure
@@ -138,11 +146,15 @@ class BootstrapExceptionHandler
 
     /**
      * Get the exception handler component.
-     * 
+     *
      * @return ExceptionHandler
+     * @throws ApplicationManagerException
      */
     protected function getExceptionHandler(): ExceptionHandler
     {
-        return static::$app->make(ExceptionHandler::class);
+        // This is extended by the application handler in twipsi.
+        return static::$app->make(
+            ExceptionHandler::class
+        );
     }
 }

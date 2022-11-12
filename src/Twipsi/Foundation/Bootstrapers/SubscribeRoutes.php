@@ -3,6 +3,7 @@
 namespace Twipsi\Foundation\Bootstrapers;
 
 use InvalidArgumentException;
+use Twipsi\Components\File\Exceptions\DirectoryManagerException;
 use Twipsi\Components\File\Exceptions\FileException;
 use Twipsi\Components\File\FileBag;
 use Twipsi\Foundation\Application\Application;
@@ -18,12 +19,20 @@ class SubscribeRoutes
     protected string $path;
 
     /**
+     * The application instance.
+     *
+     * @var Application
+     */
+    protected Application $app;
+
+    /**
      * Construct Bootstrapper.
      *
      * @param Application $app
      */
-    public function __construct(protected Application $app)
+    public function __construct(Application $app)
     {
+        $this->app = $app;
         $this->path = $app->path('path.routes');
     }
 
@@ -31,7 +40,7 @@ class SubscribeRoutes
      * Invoke the bootstrapper.
      *
      * @return void
-     * @throws FileException
+     * @throws FileException|DirectoryManagerException
      */
     public function invoke(): void
     {
@@ -42,7 +51,6 @@ class SubscribeRoutes
                 // If we have routes cached then just load it in the route bag.
                 $collection = require $this->app->routeCacheFile();
                 $this->app->get('route.routes')->unpackRoutes($collection);
-
             } else {
 
                 // Load and run the routes.
@@ -51,7 +59,8 @@ class SubscribeRoutes
                 // Build the collection and cache it.
                 $this->saveCache(
                     $collection = $this->app->get('route.factory')
-                      ->routes()->packRoutes()
+                      ->routes()
+                      ->packRoutes()
                 );
             }
         }
@@ -81,7 +90,7 @@ class SubscribeRoutes
      * @param array $listeners
      *
      * @return void
-     * @throws FileException
+     * @throws FileException|DirectoryManagerException
      */
     protected function saveCache(array $listeners): void
     {

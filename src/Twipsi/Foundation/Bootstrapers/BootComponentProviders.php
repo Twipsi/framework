@@ -18,9 +18,21 @@ use Twipsi\Foundation\Application\Application;
 class BootComponentProviders
 {
     /**
-     * Contruct Bootstrapper.
+     * The application instance.
+     *
+     * @var Application
      */
-    public function __construct(protected Application $app){}
+    protected Application $app;
+
+    /**
+     * Construct Bootstrapper.
+     *
+     * @param Application $app
+     */
+    public function __construct(Application $app)
+    {
+        $this->app = $app;
+    }
 
     /**
      * Invoke the bootstrapper.
@@ -29,6 +41,8 @@ class BootComponentProviders
      */
     public function invoke(): void
     {
-        $this->app->components()->boot()->setBooted();
+        $this->app->components()
+            ->boot()
+            ->setBooted();
     }
 }

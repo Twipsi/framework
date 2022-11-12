@@ -34,26 +34,37 @@ class BootstrapEnvironment
     protected string $contextOverride;
 
     /**
-     * Contract Bootstrapper.
+     * The application instance.
+     *
+     * @var Application
      */
-    public function __construct(protected Application $app)
+    protected Application $app;
+
+    /**
+     * Construct Bootstrapper.
+     *
+     * @param Application $app
+     */
+    public function __construct(Application $app)
     {
+        $this->app = $app;
         $this->environment = $app->environmentFile();
     }
 
     /**
      * Invoke the bootstrapper.
+     *
      * @return void
      * @throws BootstrapperException
      */
     public function invoke(): void
     {
-        // apply any custom context .env file
+        // Apply any custom context .env file
         $this->applyEnvironmentContext();
 
         // Load the .env file
         try {
-            $this->dotenv()->load();
+            $this->getDotEnv()->load();
 
         } catch (FileNotFoundException $e) {
             throw new BootstrapperException($e->getMessage());
@@ -61,13 +72,13 @@ class BootstrapEnvironment
     }
 
     /**
-     * Get the environment context.
+     * Set the environment context from the server global.
      *
      * @return void
      */
     protected function applyEnvironmentContext(): void
     {
-        if (!$context = $_SERVER['APP_ENV'] ?? null) {
+        if (! $context = ($_SERVER['APP_ENV'] ?? null)) {
             return;
         }
 
@@ -80,7 +91,6 @@ class BootstrapEnvironment
      * Set the context environment file.
      *
      * @param string $file
-     *
      * @return bool
      */
     protected function setEnvironmentFile(string $file): bool
@@ -101,7 +111,7 @@ class BootstrapEnvironment
      * @return DotEnv
      * @throws FileNotFoundException
      */
-    protected function dotenv(): DotEnv
+    protected function getDotEnv(): DotEnv
     {
         return new DotEnv($this->contextOverride ?? $this->environment);
     }

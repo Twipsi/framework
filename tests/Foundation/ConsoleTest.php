@@ -14,10 +14,20 @@ use Twipsi\Tests\Foundation\Fakes\FakeCommand;
 
 class ConsoleTest extends TestCase
 {
+    /**
+     * The Console object.
+     *
+     * @var Console
+     */
     protected Console $console;
 
+    /**
+     * The buffered output.
+     *
+     * @var BufferedOutput
+     */
     protected BufferedOutput $output;
-    
+
     /**
      * Setup test environment.
      *
@@ -26,8 +36,8 @@ class ConsoleTest extends TestCase
      */
     protected function setUp(): void
     {
-        $this->app = new Application();
-        $this->console = new Console($this->app, $this->app->version());
+        $app = new Application();
+        $this->console = new Console($app, $app->version());
         $this->console->resolve(FakeCommand::class);
 
         $this->output = new \Symfony\Component\Console\Output\BufferedOutput;

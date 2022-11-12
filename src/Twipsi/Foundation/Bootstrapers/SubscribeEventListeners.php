@@ -15,6 +15,7 @@ namespace Twipsi\Foundation\Bootstrapers;
 
 use InvalidArgumentException;
 use ReflectionException;
+use Twipsi\Components\File\Exceptions\DirectoryManagerException;
 use Twipsi\Components\File\Exceptions\FileException;
 use Twipsi\Components\File\FileBag;
 use Twipsi\Foundation\Application\Application;
@@ -32,12 +33,20 @@ class SubscribeEventListeners
     protected string $path;
 
     /**
+     * The application instance.
+     *
+     * @var Application
+     */
+    protected Application $app;
+
+    /**
      * Construct Bootstrapper.
      *
      * @param Application $app
      */
-    public function __construct(protected Application $app)
+    public function __construct(Application $app)
     {
+        $this->app = $app;
         $this->path = $app->path('path.events');
     }
 
@@ -45,7 +54,7 @@ class SubscribeEventListeners
      * Invoke the bootstrapper.
      *
      * @return void
-     * @throws FileException|ReflectionException
+     * @throws FileException|ReflectionException|DirectoryManagerException
      */
     public function invoke(): void
     {
@@ -55,7 +64,6 @@ class SubscribeEventListeners
 
                 // If we have events cached then just load it in the event subscriber.
                 $collection = require $this->app->eventsCacheFile();
-
             } else {
 
                 // Build the collection and cache it.
@@ -66,8 +74,9 @@ class SubscribeEventListeners
         }
 
         // Set the collection on the event subscriber.
-        $this->app->get('events')->setCollection($collection ?? $this->collectEventListeners(
-            $this->discover($this->path)
+        $this->app->get('events')
+            ->setCollection($collection ?? $this->collectEventListeners(
+                $this->discover($this->path)
         ));
     }
 
@@ -75,7 +84,6 @@ class SubscribeEventListeners
      * Discover event listeners.
      *
      * @param string $where
-     *
      * @return array
      */
     public function discover(string $where): array
@@ -92,13 +100,13 @@ class SubscribeEventListeners
      *
      * @param array $listeners
      * @return void
-     * @throws FileException
+     * @throws FileException|DirectoryManagerException
      */
     protected function saveCache(array $listeners): void
     {
         (new FileBag($dirname = dirname($this->app->eventsCacheFile())))->put(
-                str_replace($dirname, '', $this->app->eventsCacheFile()),
-                '<?php return '.var_export($listeners, true).';'
+            str_replace($dirname, '', $this->app->eventsCacheFile()),
+            '<?php return '.var_export($listeners, true).';'
         );
     }
 }

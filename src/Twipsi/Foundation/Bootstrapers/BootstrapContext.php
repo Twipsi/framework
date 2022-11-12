@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\Bootstrapers;
 
+use Closure;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Components\Router\Route\Route;
 use Twipsi\Foundation\Env;
@@ -20,9 +21,21 @@ use Twipsi\Foundation\Env;
 class BootstrapContext
 {
     /**
-     * Contruct Bootstrapper.
+     * The application instance.
+     *
+     * @var Application
      */
-    public function __construct(protected Application $app){}
+    protected Application $app;
+
+    /**
+     * Construct Bootstrapper.
+     *
+     * @param Application $app
+     */
+    public function __construct(Application $app)
+    {
+        $this->app = $app;
+    }
 
     /**
      * Invoke the bootstrapper.
@@ -32,9 +45,19 @@ class BootstrapContext
     public function invoke(): void
     {
         $this->app->setContext(
-            Env::get('APP_ENV', 'production') === 'testing' 
-                ? fn() => Env::get('TEST_CONTEXT', '')
-                : fn($app) => $app->get(Route::class)->getContext()
+            $this->getContextLoader()
         );
+    }
+
+    /**
+     * Get the context loading closure.
+     *
+     * @return Closure
+     */
+    protected function getContextLoader():  Closure
+    {
+        return Env::get('APP_ENV', 'production') === 'testing'
+            ? fn() => Env::get('TEST_CONTEXT', '')
+            : fn($app) => $app->get(Route::class)->getContext();
     }
 }
