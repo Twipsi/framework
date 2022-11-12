@@ -12,12 +12,15 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\Application;
 
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
+
 trait HandlesLocale
 {
     /**
      * Get the current locale.
-     * 
+     *
      * @return string
+     * @throws ApplicationManagerException
      */
     public function getLocale(): string 
     {
@@ -26,10 +29,10 @@ trait HandlesLocale
 
     /**
      * Check if current locale is locale.
-     * 
+     *
      * @param string $locale
-     * 
      * @return bool
+     * @throws ApplicationManagerException
      */
     public function isLocale(string $locale): bool 
     {
@@ -38,10 +41,10 @@ trait HandlesLocale
 
     /**
      * Set the current locale.
-     * 
+     *
      * @param string $locale
-     * 
      * @return void
+     * @throws ApplicationManagerException
      */
     public function setLocale(string $locale): void 
     {

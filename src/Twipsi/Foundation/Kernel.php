@@ -252,6 +252,7 @@ final class Kernel
      * @param HttpRequest $request
      * @param Throwable $e
      * @return ResponseInterface
+     * @throws ApplicationManagerException
      */
     protected function handleException(HttpRequest $request, Throwable $e): ResponseInterface
     {
@@ -280,7 +281,7 @@ final class Kernel
      */
     public function bootstrapComponents(): Kernel
     {
-        $this->app->bootstrap($this->bootcomponents);
+        $this->app->poststrap($this->bootcomponents);
 
         return $this;
     }

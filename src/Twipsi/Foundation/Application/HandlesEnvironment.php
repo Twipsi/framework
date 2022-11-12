@@ -44,7 +44,6 @@ trait HandlesEnvironment
      * Set the environment file.
      * 
      * @param string $file
-     * 
      * @return void
      */
     public function setEnvironmentFile(string $file): void
@@ -56,7 +55,6 @@ trait HandlesEnvironment
      * Set the environment callback.
      * 
      * @param Closure $callback
-     * 
      * @return void
      */
     public function setEnvironment(Closure $callback): void

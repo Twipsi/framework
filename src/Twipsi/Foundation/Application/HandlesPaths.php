@@ -25,7 +25,6 @@ trait HandlesPaths
      * Set current system scope paths.
      *
      * @param string $path
-     *
      * @return void
      */
     public function setBasePaths(string $path = ''): void
@@ -37,7 +36,6 @@ trait HandlesPaths
      * Return a path from the path registry.
      *
      * @param string $name
-     *
      * @return string|null
      */
     public function path(string $name): ?string

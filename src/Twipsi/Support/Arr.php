@@ -1053,6 +1053,10 @@ class Arr
      */
     public static function collapse(array $haystack, Closure $callback = null, bool $overwrite = false): array
     {
+        if(empty($haystack)) {
+            return [];
+        }
+
         array_walk_recursive($haystack,
             function ($v, $k) use (&$return, $overwrite) {
                 $overwrite

@@ -53,7 +53,6 @@ trait HandlesComponents
      * Set the component registry.
      * 
      * @param ComponentRegistry $registry
-     * 
      * @return void
      */
     public function setComponentRegistry(ComponentRegistry $registry): void 
@@ -75,7 +74,6 @@ trait HandlesComponents
      * Load the deferred loader if needed.
      * 
      * @param string $abstract
-     * 
      * @return void
      */
     protected function loadIfProviderIsDeferred(string $abstract): void 

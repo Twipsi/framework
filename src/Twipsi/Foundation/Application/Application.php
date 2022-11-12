@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Twipsi\Foundation\Application;
 
 use Closure;
+use ReflectionException;
 use Twipsi\Components\File\FileBag;
 use Twipsi\Components\Http\Exceptions\HttpException;
 use Twipsi\Components\Http\Exceptions\NotFoundHttpException;
@@ -37,6 +38,13 @@ class Application extends IOCManager
      * @var Closure|null
      */
     protected ?Closure $context = null;
+
+    /**
+     * Terminator callbacks collection.
+     *
+     * @var array
+     */
+    protected array $terminators = [];
 
     /**
      * Application constructor.
@@ -88,10 +96,11 @@ class Application extends IOCManager
     public function configurationCacheFile(): string
     {
         $path = !is_null($context = $this->getContext())
-            ?  'config.'.$context.'.php'
-            :  'config.php';
+            ? 'config.'.$context.'.php'
+            : 'config.php';
 
-        return $this->nav()->bootPath('cache/'.$path);
+        return $this->nav()
+            ->bootPath('cache/'.$path);
     }
 
     /**
@@ -111,7 +120,8 @@ class Application extends IOCManager
      */
     public function routeCacheFile(): string
     {
-        return $this->nav()->bootPath('cache/routes.php');
+        return $this->nav()
+            ->bootPath('cache/routes.php');
     }
 
     /**
@@ -132,10 +142,11 @@ class Application extends IOCManager
     public function componentCacheFile(): string
     {
         $path = !is_null($context = $this->getContext())
-            ?  'components.'.$context.'.php'
-            :  'components.php';
+            ? 'components.'.$context.'.php'
+            : 'components.php';
 
-        return $this->nav()->bootPath('cache/'.$path);
+        return $this->nav()
+            ->bootPath('cache/'.$path);
     }
 
     /**
@@ -155,7 +166,8 @@ class Application extends IOCManager
      */
     public function eventsCacheFile(): string
     {
-        return $this->nav()->bootPath('cache/events.php');
+        return $this->nav()
+            ->bootPath('cache/events.php');
     }
 
     /**
@@ -172,7 +184,6 @@ class Application extends IOCManager
      * Set the current context.
      *
      * @param Closure $loader
-     *
      * @return void
      */
     public function setContext(Closure $loader): void
@@ -187,12 +198,12 @@ class Application extends IOCManager
      */
     public function getContext(): ?string
     {
-        // If we havnt poststrapped we dont know the route context
-        // so we return the default.
+        // If we haven't poststrapped we don't know the route context,
+        // so we return the default context.
         if($this->isPoststrapped()) {
             return !is_null($this->context)
-            ? call_user_func($this->context, $this)
-            : null;
+                ? call_user_func($this->context, $this)
+                : null;
         }
 
         return null;
@@ -202,10 +213,12 @@ class Application extends IOCManager
      * Check if we are in debug mode.
      *
      * @return bool
+     * @throws ApplicationManagerException
      */
     public function isDebugEnabled(): bool
     {
-        return (bool)$this->get('config')->get('system.debug');
+        return (bool)$this->get('config')
+            ->get('system.debug');
     }
 
     /**
@@ -213,7 +226,6 @@ class Application extends IOCManager
      *
      * @param string $abstract
      * @param array<int,mixed> $parameters
-     *
      * @return mixed
      * @throws ApplicationManagerException
      */
@@ -229,7 +241,6 @@ class Application extends IOCManager
      * Check if the abstract is bound already.
      *
      * @param string $abstract
-     *
      * @return bool
      */
     public function bound(string $abstract): bool
@@ -259,6 +270,16 @@ class Application extends IOCManager
     }
 
     /**
+     * Return implant registry.
+     *
+     * @return ImplantRegistry
+     */
+    public function implants(): ImplantRegistry
+    {
+        return $this->implants;
+    }
+
+    /**
      * Return binding registry.
      *
      * @return BindingRegistry
@@ -279,6 +300,16 @@ class Application extends IOCManager
     }
 
     /**
+     * Return the extension callbacks.
+     *
+     * @return array
+     */
+    public function extensions(): array
+    {
+        return $this->bindings->extensions;
+    }
+
+    /**
      * Get the application instance.
      *
      * @return Application
@@ -292,10 +323,12 @@ class Application extends IOCManager
      * Check if system is down for maintenance.
      *
      * @return bool
+     * @throws ApplicationManagerException
      */
     public function isUnderMaintenance(): bool
     {
-        return $this->get('config')->get('system.maintenance');
+        return $this->get('config')
+            ->get('system.maintenance');
     }
 
     /**
@@ -343,12 +376,31 @@ class Application extends IOCManager
     }
 
     /**
+     * Register a terminator callback.
+     *
+     * @param Closure $callback
+     * @return $this
+     */
+    public function terminator(Closure $callback): Application
+    {
+        $this->terminators[] = $callback;
+
+        return $this;
+    }
+
+    /**
      * Terminate the application.
      *
      * @return void
+     * @throws ApplicationManagerException
      */
     public function terminate(): void
     {
-        //@Implement
+        $this->flush();
+
+        // Run the terminator callbacks if any.
+        foreach ($this->terminators as $terminator) {
+            $this->build($terminator);
+        }
     }
 }

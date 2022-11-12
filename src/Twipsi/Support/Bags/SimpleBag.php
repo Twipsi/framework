@@ -26,6 +26,27 @@ class SimpleBag implements IteratorAggregate, Countable
     }
 
     /**
+     * Inject data into the collection.
+     *
+     * @param array|SimpleBag|ArrayBag $collection
+     * @return $this
+     */
+    public function inject(array|SimpleBag|ArrayBag $collection): static
+    {
+        if($collection instanceof SimpleBag) {
+            $this->parameters += $collection->all();
+        }
+        else if($collection instanceof ArrayBag) {
+            $this->parameters += $collection->collapse()->all();
+        }
+        else {
+            $this->parameters += $collection;
+        }
+
+        return $this;
+    }
+
+    /**
      * Return array of parameters if called.
      *
      * @return array

@@ -12,58 +12,81 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\Application;
 
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
+
 trait ApplicationAccessor
 {
-  /**
-  * Send direct get request through call method
-  */
-  public function __get(string $instance) : mixed
-  {
-    if(method_exists($this, $instance)) {
-      return $this->{$instance};
+    /**
+     * Send direct get request through call method.
+     *
+     * @param string $instance
+     * @return mixed
+     * @throws ApplicationManagerException
+     */
+    public function __get(string $instance): mixed
+    {
+        if (method_exists($this, $instance)) {
+            return $this->{$instance};
+        }
+
+        return $this->make($instance);
     }
 
-    return $this->make($instance);
-  }
+    /**
+     * Get instance with get method.
+     *
+     * @param $instance
+     * @return mixed
+     * @throws ApplicationManagerException
+     */
+    public function get($instance): mixed
+    {
+        return $this->make($instance);
+    }
 
-  /**
-  * Get instance with get method
-  */
-  public function get($instance) : mixed
-  {
-    return $this->make($instance);
-  }
+    /**
+     * Check if offset exists.
+     *
+     * @param mixed $key
+     * @return bool
+     */
+    public function offsetExists(mixed $key): bool
+    {
+        return $this->instances->has($key);
+    }
 
-  /**
-  * Check if offset exists
-  */
-  public function offsetExists(mixed $key) : bool
-  {
-    return $this->instances->has($key);
-  }
+    /**
+     * Get offset value.
+     *
+     * @param mixed $key
+     * @return mixed
+     * @throws ApplicationManagerException
+     */
+    public function offsetGet(mixed $key): mixed
+    {
+        return $this->make($key);
+    }
 
-  /**
-  * Get offset value
-  */
-  public function offsetGet(mixed $key) : mixed
-  {
-    return $this->make($key);
-  }
+    /**
+     * Set offset value.
+     *
+     * @param mixed $key
+     * @param mixed $value
+     * @return void
+     */
+    public function offsetSet(mixed $key, mixed $value): void
+    {
+        $this->instances->set($key, $value);
+    }
 
-  /**
-  * Set offset value
-  */
-  public function offsetSet(mixed $key, mixed $value) : void
-  {
-    $this->instances->set($key, $value);
-  }
-
-  /**
-  * Delete offset
-  */
-  public function offsetUnset(mixed $key) : void
-  {
-    $this->instances->delete($key);
-  }
-
+    /**
+     * Delete offset.
+     *
+     * @param mixed $key
+     * @return void
+     */
+    public function offsetUnset(mixed $key): void
+    {
+        $this->instances->delete($key);
+    }
 }
