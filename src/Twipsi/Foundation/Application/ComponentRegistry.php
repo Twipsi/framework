@@ -46,6 +46,8 @@ class ComponentRegistry extends Container
      */
     public function __construct(Application $app)
     {
+        parent::__construct([]);
+
         $this->app = $app;
     }
 
@@ -71,7 +73,6 @@ class ComponentRegistry extends Container
      * Register a component provider.
      *
      * @param string|ComponentProvider $provider
-     *
      * @return ComponentProvider
      */
     public function register(string|ComponentProvider $provider): ComponentProvider
@@ -88,12 +89,9 @@ class ComponentRegistry extends Container
             && ! $this->isFrameworkComponentProvider($provider)) {
 
             // Register the providers as source.
-            if($this->isFrameworkType($provider)) {
-                $this->push('framework', $provider);
-
-            } else {
-                $this->push('application', $provider);
-            }
+            $this->isFrameworkType($provider)
+                ? $this->push('framework', $provider)
+                : $this->push('application', $provider);
         }
 
         // Load the provider instance if it's a class.
@@ -136,10 +134,10 @@ class ComponentRegistry extends Container
             return;
         }
 
+        $provider = Arr::get($this->deferred(), $abstract);
+
         // If it has been loaded already exit.
-        if($this->isLoadedComponentProvider(
-            $provider = Arr::get($this->deferred(), $abstract)
-        )) {
+        if($this->isLoadedComponentProvider($provider)) {
             return;
         }
 
@@ -150,7 +148,6 @@ class ComponentRegistry extends Container
      * Run The boot method on the provider.
      *
      * @param ComponentProvider $provider
-     *
      * @return void
      */
     public function bootProvider(ComponentProvider $provider): void
@@ -224,7 +221,6 @@ class ComponentRegistry extends Container
      * Get the providers instance.
      *
      * @param string $provider
-     *
      * @return ComponentProvider|null
      */
     public function getInstance(string $provider): ?ComponentProvider
@@ -236,7 +232,6 @@ class ComponentRegistry extends Container
      * Check if a component has been loaded.
      *
      * @param string|ComponentProvider $provider
-     *
      * @return bool
      */
     public function hasBeenLoaded(string|ComponentProvider $provider): bool
@@ -252,7 +247,6 @@ class ComponentRegistry extends Container
      * Check if the component source is the application.
      *
      * @param string|ComponentProvider $provider
-     *
      * @return bool
      */
     public function isApplicationComponentProvider(string|ComponentProvider $provider): bool
@@ -268,7 +262,6 @@ class ComponentRegistry extends Container
      * Check if the component source is the framework.
      *
      * @param string|ComponentProvider $provider
-     *
      * @return bool
      */
     public function isFrameworkComponentProvider(string|ComponentProvider $provider): bool
@@ -284,7 +277,6 @@ class ComponentRegistry extends Container
      * Check if the component is always loaded.
      *
      * @param string|ComponentProvider $provider
-     *
      * @return bool
      */
     public function isAlwaysComponentProvider(string|ComponentProvider $provider): bool
@@ -300,7 +292,6 @@ class ComponentRegistry extends Container
      * Check if the component is deferred.
      *
      * @param string|ComponentProvider $provider
-     *
      * @return bool
      */
     public function isDeferredComponentProvider(string|ComponentProvider $provider): bool
@@ -316,7 +307,6 @@ class ComponentRegistry extends Container
      * Check if the abstract is deferred.
      *
      * @param string $abstract
-     *
      * @return bool
      */
     public function isDeferredAbstract(string $abstract): bool
@@ -328,7 +318,6 @@ class ComponentRegistry extends Container
      * Check if the component is loaded.
      *
      * @param string|ComponentProvider $provider
-     *
      * @return bool
      */
     public function isLoadedComponentProvider(string|ComponentProvider $provider): bool
@@ -341,7 +330,7 @@ class ComponentRegistry extends Container
     }
 
     /**
-     * Check if we have registered the component laoders.
+     * Check if we have registered the component providers.
      *
      * @return bool
      */
@@ -351,7 +340,7 @@ class ComponentRegistry extends Container
     }
 
     /**
-     * Check if we have booted the component laoders.
+     * Check if we have booted the component providers.
      *
      * @return bool
      */
@@ -361,7 +350,7 @@ class ComponentRegistry extends Container
     }
 
     /**
-     * Set the registered laoders to true;
+     * Set the status of registered providers to true;
      *
      * @return void
      */
@@ -371,7 +360,7 @@ class ComponentRegistry extends Container
     }
 
     /**
-     * Set the booted loaders to true;
+     * Set the status of booted providers to true;
      *
      * @return void
      */
@@ -384,12 +373,10 @@ class ComponentRegistry extends Container
      * Check if it's a framework component provider.
      *
      * @param string $provider
-     *
      * @return bool
      */
     public function isFrameworkType(string $provider): bool
     {
         return str_starts_with($provider, 'Twipsi\\');
     }
-
 }
