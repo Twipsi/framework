@@ -70,17 +70,6 @@ class ConsoleProvider extends ComponentProvider implements DeferredComponentProv
     }
 
     /**
-     * The components provided.
-     *
-     * @return string[]
-     */
-    public function components(): array
-    {
-        return array_values($this->commands)
-            + ['console.app'];
-    }
-
-    /**
      * Load the commands in the console.
      *
      * @param array $commands
@@ -91,5 +80,16 @@ class ConsoleProvider extends ComponentProvider implements DeferredComponentProv
         Console::boot(function($console) use ($commands) {
             $console->resolveCommands($commands);
         });
+    }
+
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return array_values($this->commands)
+            + ['console.app'];
     }
 }

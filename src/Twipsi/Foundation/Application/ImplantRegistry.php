@@ -13,21 +13,37 @@ declare(strict_types=1);
 namespace Twipsi\Foundation\Application;
 
 use Twipsi\Foundation\Exceptions\ApplicationManagerException;
-use Twipsi\Support\Bags\ArrayBag as Container;
+use Twipsi\Support\Bags\SimpleBag as Container;
 
 class ImplantRegistry extends Container
 {
-  /**
-  * Bind a parameter dependency to an abstract.
-  */
-  public function bind(string $abstract, array $parameters) : void
-  {
-    // If there are no parameters.
-    if (! $parameters) {
-      throw new ApplicationManagerException(sprintf("No parameters provided to bind for abstract {%s}", $abstract));
+    /**
+     * Implant registry constructor.
+     *
+     * @param array $implants
+     */
+    public function __construct(array $implants = [])
+    {
+        parent::__construct($implants);
     }
 
-    $this->set($abstract, $parameters);
-  }
+    /**
+     * Bind a parameter dependency to an abstract.
+     *
+     * @param string $abstract
+     * @param array $parameters
+     * @return void
+     * @throws ApplicationManagerException
+     */
+    public function bind(string $abstract, array $parameters): void
+    {
+        // If there are no parameters.
+        if (empty($parameters)) {
+            throw new ApplicationManagerException(
+                sprintf("No parameters provided to bind for abstract {%s}", $abstract)
+            );
+        }
 
+        $this->set($abstract, $parameters);
+    }
 }

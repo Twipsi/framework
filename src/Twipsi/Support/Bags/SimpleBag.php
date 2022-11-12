@@ -125,6 +125,17 @@ class SimpleBag implements IteratorAggregate, Countable
     }
 
     /**
+     * Search for a value in the collection.
+     *
+     * @param string $value
+     * @return string|int|null
+     */
+    public function search(string $value): null|string|int
+    {
+        return false !== ($key = array_search($value, $this->parameters)) ? $key : null;
+    }
+
+    /**
      * Remove a parameter from parameters array.
      *
      * @param string $key
