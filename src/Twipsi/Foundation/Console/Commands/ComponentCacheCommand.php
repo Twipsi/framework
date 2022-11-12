@@ -46,7 +46,7 @@ class ComponentCacheCommand extends Command
         }
 
         // Save the component cache.
-        $this->saveCache($this->buildComponentProviderCache($providers));
+        $this->saveCache($this->buildComponentProviderRepository($providers));
 
         $this->render->success('The components have been successfully cached');
     }

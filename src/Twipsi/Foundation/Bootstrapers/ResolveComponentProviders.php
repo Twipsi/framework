@@ -14,7 +14,7 @@ trait ResolveComponentProviders
      * @return Container
      * @throws FileException
      */
-    protected function buildComponentProviderCache(array $providers): Container
+    protected function buildComponentProviderRepository(array $providers): Container
     {
         $repository = new Container([
             'providers' => $providers, 'loaded' => [],
@@ -23,24 +23,18 @@ trait ResolveComponentProviders
         ]);
 
         foreach($providers as $provider) {
-
             $instance = new $provider($this->app);
 
             // Register the providers as source.
-            if($this->app->components()->isFrameworkType($provider)) {
-                $repository->push('framework', $provider);
-
-            } else {
-                $repository->push('application', $provider);
-            }
+            $this->app->components()->isFrameworkType($provider)
+                ? $repository->push('framework', $provider)
+                : $repository->push('application', $provider);
 
             // If the loader is deferred register as deferred.
             if ($instance->deferred()) {
-                foreach($instance->components() as $component) {
-
-                    // Save the components it loads.
+                array_map(function($component) use($repository, $provider) {
                     $repository->add("deferred", [$component => $provider]);
-                }
+                }, $instance->components());
 
             } else {
                 $repository->push("always", $provider);
