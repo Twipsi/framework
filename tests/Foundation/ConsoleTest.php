@@ -111,7 +111,7 @@ class ConsoleTest extends TestCase
     {
         $this->console->call('test --op1=hello aaa', [], $this->output);
 
-        $this->assertSame(trim(preg_replace('/\s\s+/', ' ', trim($this->output->fetch())),
+        $this->assertSame(trim(preg_replace('/\s\s+/', ' ', $this->output->fetch())),
             'aaa.'.' Fake Command Executed.');
     }
 
@@ -119,7 +119,7 @@ class ConsoleTest extends TestCase
     {
         $this->console->call('test', ['command' => 'test', 'arg1' => 'aaa', '--op1' => 'hello'], $this->output);
 
-        $this->assertSame(trim(preg_replace('/\s\s+/', ' ', trim($this->output->fetch())),
+        $this->assertSame(trim(preg_replace('/\s\s+/', ' ', $this->output->fetch())),
             'aaa.'.' Fake Command Executed.');
     }
 }
