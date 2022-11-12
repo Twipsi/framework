@@ -20,6 +20,8 @@ class PasswordProvider extends ComponentProvider
 {
     /**
      * Register service provider.
+     *
+     * @return void
      */
     public function register(): void
     {
@@ -30,5 +32,15 @@ class PasswordProvider extends ComponentProvider
         $this->app->keep("auth.password.driver", function (Application $app) {
             return $app->get("auth.password.manager")->driver();
         });
+    }
+
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['auth.password.manager', 'auth.password.driver'];
     }
 }

@@ -19,15 +19,26 @@ use Twipsi\Foundation\ComponentProvider;
 
 class NotificationProvider extends ComponentProvider
 {
-  /**
-   * Register service provider.
-   */
-  public function register(): void
-  {
-    // Bind the notification manager to the application.
-    $this->app->keep('notification', function (Application $app) {
+    /**
+     * Register service provider.
+     *
+     * @return void
+     */
+    public function register(): void
+    {
+        // Bind the notification manager to the application.
+        $this->app->keep('notification', function (Application $app) {
+            return new NotificationManager($app);
+        });
+    }
 
-      return new NotificationManager($app);
-    });
-  }
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['notification'];
+    }
 }

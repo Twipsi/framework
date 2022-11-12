@@ -18,14 +18,26 @@ use Twipsi\Foundation\ComponentProvider;
 
 class EncrypterProvider extends ComponentProvider
 {
-  /**
-  * Register service provider.
-  */
-  public function register(): void
-  {
-    $this->app->keep('encrypter', function (Application $app) {
-      return new Encrypter($app->config->get('security.app_key'),
-                           $app->config->get('security.encrypter'));
-    });
-  }
+    /**
+     * Register service provider.
+     *
+     * @return void
+     */
+    public function register(): void
+    {
+        $this->app->keep('encrypter', function (Application $app) {
+            return new Encrypter($app->get('config')->get('security.app_key'),
+                $app->get('config')->get('security.encrypter'));
+        });
+    }
+
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['encrypter'];
+    }
 }

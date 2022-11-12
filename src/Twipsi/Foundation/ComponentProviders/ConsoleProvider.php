@@ -61,11 +61,9 @@ class ConsoleProvider extends ComponentProvider implements DeferredComponentProv
         });
 
         foreach ($this->commands as $name => $command) {
-            if(method_exists($this, $method = "register{$name}Command")) {
-                $this->{$method}();
-            } else {
-                $this->app->keep($command);
-            }
+            method_exists($this, $method = "register{$name}Command")
+                ? $this->{$method}()
+                : $this->app->keep($command);
         }
 
         $this->loadCommands($this->commands);
@@ -78,7 +76,8 @@ class ConsoleProvider extends ComponentProvider implements DeferredComponentProv
      */
     public function components(): array
     {
-        return array_values($this->commands)+['console.app'];
+        return array_values($this->commands)
+            + ['console.app'];
     }
 
     /**

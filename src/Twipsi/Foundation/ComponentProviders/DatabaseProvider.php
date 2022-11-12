@@ -21,6 +21,8 @@ class DatabaseProvider extends ComponentProvider implements DeferredComponentPro
 {
     /**
      * Register service provider.
+     *
+     * @return void
      */
     public function register(): void
     {
@@ -37,6 +39,11 @@ class DatabaseProvider extends ComponentProvider implements DeferredComponentPro
         Model::setDBmanager($this->app->get('db.connector'));
     }
 
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
     public function components(): array
     {
         return ['db.connector', 'db.connection'];

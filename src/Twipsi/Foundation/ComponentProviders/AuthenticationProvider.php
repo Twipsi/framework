@@ -22,6 +22,8 @@ class AuthenticationProvider extends ComponentProvider
 {
     /**
      * Register service provider.
+     *
+     * @return void
      */
     public function register(): void
     {
@@ -32,6 +34,8 @@ class AuthenticationProvider extends ComponentProvider
 
     /**
      * Bind all the authentication components to the application.
+     *
+     * @return void
      */
     protected function bindAuthentication(): void
     {
@@ -46,6 +50,8 @@ class AuthenticationProvider extends ComponentProvider
 
     /**
      * Bind the authenticated user to Request and Application.
+     *
+     * @return void
      */
     protected function bindUserToContainers(): void
     {
@@ -54,8 +60,7 @@ class AuthenticationProvider extends ComponentProvider
 
             $request->attachUser(function ($driver = null) use ($app) {
                 return call_user_func(
-                    $app["auth.manager"]->getUserLoader(),
-                    $driver
+                    $app["auth.manager"]->getUserLoader(), $driver
                 );
             });
         });
@@ -68,6 +73,8 @@ class AuthenticationProvider extends ComponentProvider
 
     /**
      * Bind all the authorization components to the application.
+     *
+     * @return void
      */
     protected function bindAuthorization(): void
     {
@@ -76,5 +83,15 @@ class AuthenticationProvider extends ComponentProvider
                 $app["auth.manager"]->getUserLoader()
             );
         });
+    }
+
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['auth.manager', 'auth.driver', 'auth.access', 'user'];
     }
 }

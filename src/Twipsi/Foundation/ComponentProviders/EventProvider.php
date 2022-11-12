@@ -26,10 +26,9 @@ class EventProvider extends ComponentProvider
      */
     public function boot(): void
     {
-        $this->app->nav()
-            ->set('path.events',
-                    $this->app->path('path.base').'/app/Events/Listeners'
-            );
+        $this->app->nav()->set('path.events',
+            $this->app->path('path.base').'/app/Events/Listeners'
+        );
     }
 
     /**
@@ -40,8 +39,17 @@ class EventProvider extends ComponentProvider
     public function register(): void
     {
         $this->app->keep('events', function (Application $app) {
-
             return new EventHandler($app);
         });
+    }
+
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['events'];
     }
 }

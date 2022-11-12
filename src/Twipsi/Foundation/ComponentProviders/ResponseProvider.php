@@ -40,13 +40,14 @@ class ResponseProvider extends ComponentProvider
             );
         });
 
+        // Set the application key on the url generator.
         $this->app->extend('url', function (Application $app, UrlGenerator $url) {
             $url->setSystemKey(
                 fn() => $app->get('config')->get('security.app_key')
             );
         });
 
-        // Bind the redierctor to the application.
+        // Bind the redirector to the application.
         $this->app->keep('redirector', function (Application $app) {
             return new Redirector($app->get('request'), $app->get('url'));
         });
@@ -57,4 +58,13 @@ class ResponseProvider extends ComponentProvider
         });
     }
 
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['url', 'redirector', 'response'];
+    }
 }

@@ -20,17 +20,29 @@ use Twipsi\Foundation\ComponentProvider;
 
 class RateLimiterProvider extends ComponentProvider
 {
-  /**
-   * Register service provider.
-   */
-  public function register(): void
-  {
-    // Bind the notification manager to the application.
-    $this->app->keep('ratelimiter', function (Application $app) {
+    /**
+     * Register service provider.
+     *
+     * @return void
+     */
+    public function register(): void
+    {
+        // Bind the notification manager to the application.
+        $this->app->keep('ratelimiter', function (Application $app) {
+            $limiter = new LimiterCache($app->get('config')
+                ->get('cache.limiter'));
 
-        $limiter = new LimiterCache($app->config->get('cache.limiter'));
+            return new RateLimiter($limiter);
+        });
+    }
 
-        return new RateLimiter($limiter);
-    });
-  }
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['ratelimiter'];
+    }
 }

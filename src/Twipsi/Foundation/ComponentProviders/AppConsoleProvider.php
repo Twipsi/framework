@@ -17,8 +17,7 @@ abstract class AppConsoleProvider extends ComponentProvider implements DeferredC
      *
      * @var array|string[]
      */
-    protected array $commands = [
-    ];
+    protected array $commands = [];
 
     /**
      * Set the schedule for any commands.

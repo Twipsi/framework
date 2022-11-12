@@ -17,14 +17,26 @@ use Twipsi\Foundation\ComponentProvider;
 
 class CookieProvider extends ComponentProvider
 {
-  /**
-  * Register service provider.
-  */
-  public function register(): void
-  {
-    // Bind the session handler to the application.
-    $this->app->keep('cookie', function (Application $app) {
-      return $app->request->cookies();
-    });
-  }
+    /**
+     * Register service provider.
+     *
+     * @return void
+     */
+    public function register(): void
+    {
+        // Bind the cookie handler to the application.
+        $this->app->keep('cookie', function (Application $app) {
+            return $app->get('request')->cookies();
+        });
+    }
+
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['cookie'];
+    }
 }

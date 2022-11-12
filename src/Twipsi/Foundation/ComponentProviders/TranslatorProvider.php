@@ -20,25 +20,37 @@ use Twipsi\Foundation\ComponentProvider;
 
 class TranslatorProvider extends ComponentProvider
 {
-  /**
-   * Register service provider.
-   */
-  public function register(): void
-  {
-    // Bind the translator to the application.
-    $this->app->keep('translator', function (Application $app) {
+    /**
+     * Register service provider.
+     *
+     * @return void
+     */
+    public function register(): void
+    {
+        // Bind the translator to the application.
+        $this->app->keep('translator', function (Application $app) {
+            $locator = new LocaleLocator($app->path('path.locale'));
 
-        $locator = new LocaleLocator($app->path('path.locale'));
+            $translator = new Translator($locator,
+                $app->get('config')
+                    ->get('system.locale', 'en')
+            );
 
-        $translator = new Translator($locator, 
-          $app->config->get('system.locale', 'en')
-        );
+            $translator->attachUserToTranslator(function () {
+                return call_user_func($this->app["auth.manager"]->getUserLoader());
+            });
 
-        $translator->attachUserToTranslator(function () {
-          return call_user_func($this->app["auth.manager"]->getUserLoader());
+            return $translator;
         });
+    }
 
-        return $translator;
-    });
-  }
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['translator'];
+    }
 }

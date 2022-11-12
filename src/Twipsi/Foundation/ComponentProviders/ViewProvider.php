@@ -21,39 +21,50 @@ use Twipsi\Foundation\ComponentProvider;
 
 class ViewProvider extends ComponentProvider
 {
-  /**
-   * Register service provider.
-   */
-  public function register(): void
-  {
-    // Bind the view factory to the application.
-    $this->app->keep('view.factory', function (Application $app) {
+    /**
+     * Register service provider.
+     *
+     * @return void
+     */
+    public function register(): void
+    {
+        // Bind the view factory to the application.
+        $this->app->keep('view.factory', function (Application $app) {
+            $factory = new ViewFactory($app->get('view.locator'), $app->get('view.cache'));
 
-      $factory = new ViewFactory($app->get('view.locator'), $app->get('view.cache'));
+            // Queue the application to inject components.
+            $factory->queue("__app", $app);
 
-      // Queue the application to inject components.
-      $factory->queue("__app", $app);
+            return $factory;
+        });
 
-      return $factory;
-    });
+        // Bind the view locator to the application.
+        $this->app->keep('view.locator', function (Application $app) {
 
-    // Bind the view locator to the application.
-    $this->app->keep('view.locator', function (Application $app) {
+            return new ViewLocator(
+                $app->get('config')->get('view.path'),
+                $app->get('config')->get('view.theme')
+            );
+        });
 
-      return new ViewLocator(
-        $app->config->get('view.path'),
-        $app->config->get('view.theme')
-      );
-    });
+        // Bind the view cache to the application.
+        $this->app->keep('view.cache', function (Application $app) {
 
-    // Bind the view cache to the application.
-    $this->app->keep('view.cache', function (Application $app) {
+            return new ViewCache(
+                $app->get('config')->get('view.cache.path'),
+                $app->get('config')->get('view.cache.usecache'),
+                $app->get('config')->get('view.cache.extension')
+            );
+        });
+    }
 
-      return new ViewCache(
-        $app->config->get('view.cache.path'),
-        $app->config->get('view.cache.usecache'),
-        $app->config->get('view.cache.extension')
-      );
-    });
-  }
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['view.factory', 'view.locator', 'view.cache'];
+    }
 }

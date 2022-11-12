@@ -22,6 +22,8 @@ class RouterProvider extends ComponentProvider
 {
     /**
      * Register service provider.
+     *
+     * @return void
      */
     public function register(): void
     {
@@ -33,10 +35,8 @@ class RouterProvider extends ComponentProvider
         // Bind the router to the application.
         $this->app->keep('route.router', function (Application $app) {
             return new Router(
-                $app->get('request'),
-                $app->get('route.factory'),
-                $app->get('events'),
-                $app
+                $app->get('request'), $app->get('route.factory'),
+                $app->get('events'), $app
             );
         });
 
@@ -46,4 +46,13 @@ class RouterProvider extends ComponentProvider
         });
     }
 
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['route.factory', 'route.router', 'route.routes'];
+    }
 }

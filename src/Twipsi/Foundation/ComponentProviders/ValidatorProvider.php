@@ -21,26 +21,34 @@ use Twipsi\Foundation\ComponentProvider;
 
 class ValidatorProvider extends ComponentProvider
 {
-  /**
-   * Register service provider.
-   */
-  public function register(): void
-  {
-    // Bind the validator factory to the application.
-    $this->app->keep('validator', function (Application $app) {
+    /**
+     * Register service provider.
+     *
+     * @return void
+     */
+    public function register(): void
+    {
+        // Bind the validator factory to the application.
+        $this->app->keep('validator', function (Application $app) {
+            $dbverifier = new DatabaseVerifier($app->get('db.connection'));
 
-        $dbverifier = new DatabaseVerifier($app->get('db.connection'));
+            return new ValidatorFactory($app->get('translator'), $dbverifier);
+        });
 
-        return new ValidatorFactory($app->translator, $dbverifier);
-    });
+        // Append validator to request object.
+        $this->app->rebind('request', function (Application $app, HttpRequest $request) {
 
-    // Append validator to request object. 
-    $this->app->rebind('request', function (Application $app, HttpRequest $request) {
+            $request->setValidator(fn() => $app->get('validator'));
+        });
+    }
 
-        $request->setValidator(
-            fn () => $app->validator
-        );
-    });
-
-  }
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['validator'];
+    }
 }

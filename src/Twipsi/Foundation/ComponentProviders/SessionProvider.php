@@ -19,24 +19,36 @@ use Twipsi\Foundation\ComponentProvider;
 
 class SessionProvider extends ComponentProvider
 {
-  /**
-  * Register service provider.
-  */
-  public function register(): void
-  {
-    // Bind the session handler to the application.
-    $this->app->keep('session.subscriber', function (Application $app) {
-      return new SessionSubscriber($app->config, $app->encrypter);
-    });
+    /**
+     * Register service provider.
+     *
+     * @return void
+     */
+    public function register(): void
+    {
+        // Bind the session handler to the application.
+        $this->app->keep('session.subscriber', function (Application $app) {
+            return new SessionSubscriber($app->get('config'), $app->get('encrypter'));
+        });
 
-    // Bind the session handler to the application.
-    $this->app->keep('session.handler', function (Application $app) {
-      return new SessionHandler($app->get('session.subscriber'));
-    });
+        // Bind the session handler to the application.
+        $this->app->keep('session.handler', function (Application $app) {
+            return new SessionHandler($app->get('session.subscriber'));
+        });
 
-    // Bind the session handler to the application.
-    $this->app->keep('session.store', function (Application $app) {
-      return $app->make('session.handler')->driver();
-    });
-  }
+        // Bind the session handler to the application.
+        $this->app->keep('session.store', function (Application $app) {
+            return $app->make('session.handler')->driver();
+        });
+    }
+
+    /**
+     * The components provided.
+     *
+     * @return string[]
+     */
+    public function components(): array
+    {
+        return ['session.subscriber', 'session.handler', 'session.store'];
+    }
 }
