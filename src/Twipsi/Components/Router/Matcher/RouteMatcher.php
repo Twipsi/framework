@@ -12,11 +12,10 @@ declare(strict_types=1);
 
 namespace Twipsi\Components\Router\Matcher;
 
-use Twipsi\Components\Http\Exceptions\NotSupportedException;
 use Twipsi\Components\Http\HttpRequest;
-use Twipsi\Components\Router\Exceptions\RouteNotFoundException;
 use Twipsi\Components\Router\Route\Route;
 use Twipsi\Components\Router\RouteBag;
+use Twipsi\Foundation\Exceptions\NotSupportedException;
 
 class RouteMatcher
 {

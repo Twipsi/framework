@@ -12,10 +12,12 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\ComponentProviders;
 
+use ReflectionException;
 use Twipsi\Components\Session\SessionHandler;
 use Twipsi\Components\Session\SessionSubscriber;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\ComponentProvider;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 
 class SessionProvider extends ComponentProvider
 {
@@ -23,6 +25,8 @@ class SessionProvider extends ComponentProvider
      * Register service provider.
      *
      * @return void
+     * @throws ReflectionException
+     * @throws ApplicationManagerException
      */
     public function register(): void
     {

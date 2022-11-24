@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\Application;
 
+use ReflectionException;
 use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 
 trait ApplicationAccessor
@@ -21,7 +22,7 @@ trait ApplicationAccessor
      *
      * @param string $instance
      * @return mixed
-     * @throws ApplicationManagerException
+     * @throws ApplicationManagerException|ReflectionException
      */
     public function __get(string $instance): mixed
     {
@@ -33,15 +34,39 @@ trait ApplicationAccessor
     }
 
     /**
+     * Set an instance to the application.
+     *
+     * @param mixed $key
+     * @param mixed $value
+     * @return void
+     */
+    public function __set(mixed $key, mixed $value): void
+    {
+        $this->instances->set($key, $value);
+    }
+
+    /**
      * Get instance with get method.
      *
      * @param $instance
      * @return mixed
-     * @throws ApplicationManagerException
+     * @throws ApplicationManagerException|ReflectionException
      */
     public function get($instance): mixed
     {
         return $this->make($instance);
+    }
+
+    /**
+     * Set an instance to the application.
+     *
+     * @param mixed $key
+     * @param mixed $value
+     * @return void
+     */
+    public function set(mixed $key, mixed $value): void
+    {
+        $this->instances->set($key, $value);
     }
 
     /**
@@ -60,7 +85,7 @@ trait ApplicationAccessor
      *
      * @param mixed $key
      * @return mixed
-     * @throws ApplicationManagerException
+     * @throws ApplicationManagerException|ReflectionException
      */
     public function offsetGet(mixed $key): mixed
     {

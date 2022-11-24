@@ -7,6 +7,7 @@ use ReflectionMethod;
 use ReflectionUnionType;
 use RuntimeException;
 use Twipsi\Support\Bags\ObjectBag;
+use Twipsi\Support\Str;
 
 trait ResolvesListeners
 {
@@ -19,12 +20,13 @@ trait ResolvesListeners
      */
     protected function collectEventListeners(array $listeners): array
     {
-        $classpath = '\App\Events\Listeners\\';
+        $classpath = $this->app->applicationNamespace().'\Events\Listeners\\';
 
         foreach ($listeners as $listener) {
 
+            $strip = explode(DIRECTORY_SEPARATOR, $listener);
             $abs = str_replace(
-                [$this->app->path('path.base'), '.php'], '', $classpath.$listener
+                '.php', '', $classpath.end($strip)
             );
 
             $reflection = new ObjectBag($abs);

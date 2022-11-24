@@ -13,12 +13,14 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\Bootstrapers;
 
+use ReflectionException;
 use Twipsi\Components\File\Exceptions\DirectoryManagerException;
 use Twipsi\Components\File\Exceptions\FileException;
 use Twipsi\Components\File\FileBag;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\ConfigRegistry;
 use Twipsi\Foundation\Env;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Twipsi\Foundation\Exceptions\BootstrapperException;
 
 class BootstrapConfiguration
@@ -52,6 +54,8 @@ class BootstrapConfiguration
      * Invoke the bootstrapper.
      *
      * @return void
+     * @throws ApplicationManagerException
+     * @throws ReflectionException
      */
     public function invoke(): void
     {
@@ -60,7 +64,8 @@ class BootstrapConfiguration
 
         // Bind the environment to the application.
         $this->app->setEnvironment(
-            fn() => $this->app->get('config')->get('system.env', 'production')
+            fn() => $this->app->get('config')
+                ->get('system.env', 'production')
         );
     }
 
@@ -70,7 +75,7 @@ class BootstrapConfiguration
      * @param Application $app
      * @return ConfigRegistry
      * @throws BootstrapperException
-     * @throws FileException|DirectoryManagerException
+     * @throws FileException|DirectoryManagerException|ApplicationManagerException
      */
     protected function lazyLoadConfig(Application $app): ConfigRegistry
     {

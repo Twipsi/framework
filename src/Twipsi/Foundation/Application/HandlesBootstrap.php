@@ -59,17 +59,18 @@ trait HandlesBootstrap
             try {
                 $bootstrapper = $this->make($bootstrap);
 
-            } catch (Throwable) {
+            } catch (Throwable $e) {
                 throw new ApplicationManagerException(
-                    sprintf("Could not resolve bootstrapper [%s]", $bootstrap)
+                    sprintf("Could not resolve bootstrapper [%s] with error [%s]", $bootstrap, $e->getMessage())
                 );
             }
 
             $bootstrapper->invoke($this);
 
             $this->bootstrappers[] = $bootstrap;
-            $this->bootstrapped = true;
         }
+
+        $this->bootstrapped = true;
     }
 
     /**
@@ -98,8 +99,9 @@ trait HandlesBootstrap
             $poststrapper->invoke($this);
 
             $this->poststrappers[] = $poststrap;
-            $this->poststrapped = true;
         }
+
+        $this->poststrapped = true;
     }
 
     /**

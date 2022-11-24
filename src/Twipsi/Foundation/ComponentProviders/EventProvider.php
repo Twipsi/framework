@@ -13,9 +13,11 @@ declare (strict_types = 1);
 
 namespace Twipsi\Foundation\ComponentProviders;
 
+use ReflectionException;
 use Twipsi\Components\Events\EventHandler;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\ComponentProvider;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 
 class EventProvider extends ComponentProvider
 {
@@ -35,6 +37,8 @@ class EventProvider extends ComponentProvider
      * Register component provider.
      *
      * @return void
+     * @throws ReflectionException
+     * @throws ApplicationManagerException
      */
     public function register(): void
     {

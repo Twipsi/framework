@@ -40,6 +40,13 @@ class Application extends IOCManager
     protected ?Closure $context = null;
 
     /**
+     * The application namespace.
+     *
+     * @var string
+     */
+    protected string $namespace;
+
+    /**
      * Terminator callbacks collection.
      *
      * @var array
@@ -62,6 +69,8 @@ class Application extends IOCManager
         $this->loadBaseComponents();
 
         $this->loadHelpers();
+
+        $this->namespace = '\\App';
     }
 
     /**
@@ -200,7 +209,7 @@ class Application extends IOCManager
     {
         // If we haven't poststrapped we don't know the route context,
         // so we return the default context.
-        if($this->isPoststrapped()) {
+        if($this->isPoststrapped() || $this->isTest()) {
             return !is_null($this->context)
                 ? call_user_func($this->context, $this)
                 : null;
@@ -213,7 +222,7 @@ class Application extends IOCManager
      * Check if we are in debug mode.
      *
      * @return bool
-     * @throws ApplicationManagerException
+     * @throws ApplicationManagerException|ReflectionException
      */
     public function isDebugEnabled(): bool
     {
@@ -224,13 +233,18 @@ class Application extends IOCManager
     /**
      * Make or load a class while resolving DI.
      *
-     * @param string $abstract
+     * @param string|object $abstract
      * @param array<int,mixed> $parameters
      * @return mixed
      * @throws ApplicationManagerException
+     * @throws ReflectionException
      */
-    public function make(string $abstract, array $parameters = []) : mixed
+    public function make(string|object $abstract, array $parameters = []) : mixed
     {
+        if(is_object($abstract)) {
+            return $abstract;
+        }
+
         // Get the abstract pointer if there are any registers as an alias.
         $this->loadIfProviderIsDeferred($abstract = $this->aliases->resolve($abstract));
 
@@ -323,7 +337,7 @@ class Application extends IOCManager
      * Check if system is down for maintenance.
      *
      * @return bool
-     * @throws ApplicationManagerException
+     * @throws ApplicationManagerException|ReflectionException
      */
     public function isUnderMaintenance(): bool
     {
@@ -356,6 +370,27 @@ class Application extends IOCManager
         $code === 404
             ? throw new NotFoundHttpException($message)
             : throw new HttpException($code, $message, null, $headers);
+    }
+
+    /**
+     * Get the application namespace.
+     *
+     * @return string
+     */
+    public function applicationNamespace(): string
+    {
+        return $this->namespace;
+    }
+
+    /**
+     * Set the application namespace.
+     *
+     * @param string $namespace
+     * @return void
+     */
+    public function setApplicationNamespace(string $namespace): void
+    {
+        $this->namespace = $namespace;
     }
 
     /**
@@ -392,7 +427,7 @@ class Application extends IOCManager
      * Terminate the application.
      *
      * @return void
-     * @throws ApplicationManagerException
+     * @throws ApplicationManagerException|ReflectionException
      */
     public function terminate(): void
     {

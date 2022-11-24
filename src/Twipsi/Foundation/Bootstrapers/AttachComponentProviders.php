@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\Bootstrapers;
 
+use ReflectionException;
 use Twipsi\Components\File\Exceptions\DirectoryManagerException;
 use Twipsi\Components\File\Exceptions\FileException;
 use Twipsi\Components\File\Exceptions\FileNotFoundException;
@@ -20,6 +21,7 @@ use Twipsi\Components\File\FileBag;
 use Twipsi\Components\File\FileItem;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\Env;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Twipsi\Support\Bags\SimpleBag as Container;
 
 class AttachComponentProviders
@@ -43,21 +45,23 @@ class AttachComponentProviders
     /**
      * The list of component providers.
      *
-     * @var array
+     * @var array|null
      */
-    protected array $providers;
+    protected array|null $providers;
 
     /**
      * Construct Bootstrapper.
      *
      * @param Application $app
+     * @throws ReflectionException
+     * @throws ApplicationManagerException
      */
     public function __construct(Application $app)
     {
         $this->app = $app;
 
         $this->providers = $this->app->get('config')
-            ->get('component.loaders')->all();
+            ->get('component.loaders')?->all();
 
         $this->cache = $this->app->componentCacheFile();
     }

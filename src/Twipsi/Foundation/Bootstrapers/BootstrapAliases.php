@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Twipsi\Foundation\Bootstrapers;
 
 use Twipsi\Foundation\Application\Application;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 
 class BootstrapAliases
 {
@@ -38,11 +39,13 @@ class BootstrapAliases
      * Invoke the bootstrapper.
      *
      * @return void
+     * @throws \ReflectionException
+     * @throws ApplicationManagerException
      */
     public function invoke(): void
     {
         $this->app->aliases()->inject(
-            $this->app->get('config')->get('component.aliases')
+            $this->app->get('config')->get('component.aliases') ?? []
         );
     }
 }

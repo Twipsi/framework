@@ -81,10 +81,11 @@ class PathRegistry extends Container
     public function bootPath(string $path = ""): string
     {
         $base = $this->formatBasePath($this->basePath);
+        $location = $this->get('path.boot') ?? $base . "boot";
 
         return !empty($path)
-            ? $base . "boot" . $this->formatPath($path)
-            : $base . "boot";
+            ? $location . $this->formatPath($path)
+            : $location;
     }
 
     /**

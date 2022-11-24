@@ -14,6 +14,7 @@ namespace Twipsi\Foundation;
 
 use Closure;
 use Exception;
+use ReflectionException;
 use Throwable;
 use Twipsi\Components\Http\HttpRequest;
 use Twipsi\Components\Http\Response\Interfaces\ResponseInterface;
@@ -112,6 +113,8 @@ final class Kernel
      *
      * @param HttpRequest $request
      * @return ResponseInterface
+     * @throws ApplicationManagerException
+     * @throws ReflectionException
      */
     public function run(HttpRequest $request): ResponseInterface
     {
@@ -143,7 +146,7 @@ final class Kernel
      * @param HttpRequest $request
      * @return ResponseInterface
      * @throws NotSupportedException
-     * @throws ApplicationManagerException|NotSupportedException|InvalidMiddlewareException
+     * @throws ApplicationManagerException|NotSupportedException|InvalidMiddlewareException|ReflectionException
      */
     protected function dispatch(HttpRequest $request): ResponseInterface
     {
@@ -202,7 +205,7 @@ final class Kernel
      * @param HttpRequest $request
      * @param ResponseInterface $response
      * @return void
-     * @throws ApplicationManagerException
+     * @throws ApplicationManagerException|ReflectionException
      */
     public function send(HttpRequest $request, ResponseInterface $response): void 
     {
@@ -226,7 +229,7 @@ final class Kernel
      * @param HttpRequest $request
      * @param ResponseInterface $response
      * @return void
-     * @throws ApplicationManagerException
+     * @throws ApplicationManagerException|ReflectionException
      */
     public function terminate(HttpRequest $request, ResponseInterface $response): void 
     {
@@ -252,7 +255,7 @@ final class Kernel
      * @param HttpRequest $request
      * @param Throwable $e
      * @return ResponseInterface
-     * @throws ApplicationManagerException
+     * @throws ApplicationManagerException|ReflectionException
      */
     protected function handleException(HttpRequest $request, Throwable $e): ResponseInterface
     {

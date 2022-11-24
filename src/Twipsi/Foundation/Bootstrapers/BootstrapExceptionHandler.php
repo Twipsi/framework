@@ -15,6 +15,7 @@ namespace Twipsi\Foundation\Bootstrapers;
 
 use Closure;
 use ErrorException;
+use ReflectionException;
 use Throwable;
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Component\ErrorHandler\Error\FatalError;
@@ -22,6 +23,7 @@ use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\Env;
 use Twipsi\Foundation\ExceptionHandler;
 use Twipsi\Foundation\Exceptions\ApplicationManagerException;
+use Twipsi\Tests\Foundation\Fakes\FakeException;
 
 class BootstrapExceptionHandler
 {
@@ -50,7 +52,7 @@ class BootstrapExceptionHandler
     public function invoke(): void
     {
         // Set PHP error handling configurations.
-        error_reporting(E_ALL ^ E_DEPRECATED);
+        error_reporting(-1);
 
         set_error_handler($this->redirectCall('handleError'));
 
@@ -68,7 +70,7 @@ class BootstrapExceptionHandler
      *
      * @param Throwable $e
      * @return void
-     * @throws ApplicationManagerException
+     * @throws ApplicationManagerException|ReflectionException
      */
     public function console(Throwable $e): void
     {
@@ -100,11 +102,15 @@ class BootstrapExceptionHandler
      * @param Throwable $e
      * @return void
      * @throws ApplicationManagerException
+     * @throws ReflectionException
      */
     public function handleException(Throwable $e): void 
     {
+        var_dump('HANDLING EXCEPTION');
+
         // Send it to the logger.
-        $this->getExceptionHandler()->report($e);
+        $this->getExceptionHandler()
+            ->report($e);
 
         // Render the actual exception.
         $this->getExceptionHandler()
@@ -116,7 +122,7 @@ class BootstrapExceptionHandler
      * Handle Shutdown.
      *
      * @return void
-     * @throws ApplicationManagerException
+     * @throws ApplicationManagerException|ReflectionException
      */
     public function handleShutdown(): void 
     {
@@ -148,7 +154,7 @@ class BootstrapExceptionHandler
      * Get the exception handler component.
      *
      * @return ExceptionHandler
-     * @throws ApplicationManagerException
+     * @throws ApplicationManagerException|ReflectionException
      */
     protected function getExceptionHandler(): ExceptionHandler
     {

@@ -12,8 +12,10 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\ComponentProviders;
 
+use ReflectionException;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\ComponentProvider;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 
 class CookieProvider extends ComponentProvider
 {
@@ -21,6 +23,8 @@ class CookieProvider extends ComponentProvider
      * Register service provider.
      *
      * @return void
+     * @throws ReflectionException
+     * @throws ApplicationManagerException
      */
     public function register(): void
     {

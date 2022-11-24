@@ -12,19 +12,22 @@ declare (strict_types = 1);
 
 namespace Twipsi\Foundation\ComponentProviders;
 
+use ReflectionException;
 use Twipsi\Components\Http\Response\ResponseFactory;
 use Twipsi\Components\Url\Redirector;
 use Twipsi\Components\Url\UrlGenerator;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\ComponentProvider;
-use Twipsi\Foundation\ConfigRegistry;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 
 class ResponseProvider extends ComponentProvider
 {
     /**
      * Register component provider.
-     * 
+     *
      * @return void
+     * @throws ReflectionException
+     * @throws ApplicationManagerException
      */
     public function register(): void
     {
@@ -43,7 +46,8 @@ class ResponseProvider extends ComponentProvider
         // Set the application key on the url generator.
         $this->app->extend('url', function (Application $app, UrlGenerator $url) {
             $url->setSystemKey(
-                fn() => $app->get('config')->get('security.app_key')
+                fn() => $app->get('config')
+                    ->get('security.app_key')
             );
         });
 

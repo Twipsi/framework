@@ -83,7 +83,7 @@ class BootstrapEnvironment
         }
 
         $this->setEnvironmentFile(
-            $this->environment . '.' . $context
+            $this->environment, $context
         );
     }
 
@@ -91,13 +91,15 @@ class BootstrapEnvironment
      * Set the context environment file.
      *
      * @param string $file
+     * @param string $context
      * @return bool
      */
-    protected function setEnvironmentFile(string $file): bool
+    protected function setEnvironmentFile(string $file, string $context): bool
     {
-        if (is_file($file)) {
-            $this->contextOverride = $file;
-            $this->app->setEnvironmentFile($file);
+        if (is_file($file . '.' . $context)) {
+            $this->contextOverride = $file . '.' . $context;
+            $this->app->setEnvironmentFile('env.'.$context);
+            $this->app->setEnvironment($context);
 
             return true;
         }

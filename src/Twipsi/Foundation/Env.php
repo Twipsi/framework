@@ -24,16 +24,22 @@ final class Env
     {
         $value = getenv($key) ?: ($_SERVER[$key] ?? null);
 
-        if(is_numeric($value)) {
-            $value = (int)$value;
-        }
-        elseif($value === 'true') {
-            $value = true;
-        }
-        elseif($value === 'false') {
-            $value = false;
-        }
+        return match ($value) {
+            is_numeric($value) => (int)$value,
+            $value === 'true' => true,
+            $value === 'false' => false,
+            empty($value) => $default,
+            default => $value ?? $default,
+        };
+    }
 
-        return $value ?? $default;
+    /**
+     * Get all the environment variables.
+     *
+     * @return array
+     */
+    public static function all(): array
+    {
+        return getenv();
     }
 }

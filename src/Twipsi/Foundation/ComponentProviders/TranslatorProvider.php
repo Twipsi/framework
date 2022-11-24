@@ -13,10 +13,12 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation\ComponentProviders;
 
+use ReflectionException;
 use Twipsi\Components\Translator\LocaleLocator;
 use Twipsi\Components\Translator\Translator;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\ComponentProvider;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 
 class TranslatorProvider extends ComponentProvider
 {
@@ -24,6 +26,8 @@ class TranslatorProvider extends ComponentProvider
      * Register service provider.
      *
      * @return void
+     * @throws ReflectionException
+     * @throws ApplicationManagerException
      */
     public function register(): void
     {

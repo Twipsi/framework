@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace Twipsi\Foundation\Application;
 
 use Closure;
+use Twipsi\Foundation\Env;
 
 trait HandlesEnvironment
 {
@@ -26,9 +27,9 @@ trait HandlesEnvironment
     /**
      * The current environment.
      * 
-     * @var Closure
+     * @var Closure|string
      */
-    protected Closure $environment;
+    protected Closure|string $environment;
 
     /**
      * Return the base .env file.
@@ -48,16 +49,20 @@ trait HandlesEnvironment
      */
     public function setEnvironmentFile(string $file): void
     {
+        $file = str_starts_with('.', $file)
+            ? $file
+            : '.'.$file;
+
         $this->env = $file;
     }
 
     /**
      * Set the environment callback.
      * 
-     * @param Closure $callback
+     * @param Closure|string $callback
      * @return void
      */
-    public function setEnvironment(Closure $callback): void
+    public function setEnvironment(Closure|string $callback): void
     {
         $this->environment = $callback;
     }
@@ -69,7 +74,9 @@ trait HandlesEnvironment
      */
     public function getEnvironment(): string
     {
-        return call_user_func($this->environment);
+        return is_string($this->environment)
+            ? $this->environment
+            : call_user_func($this->environment);
     }
 
     /**
@@ -99,6 +106,7 @@ trait HandlesEnvironment
      */
     public function isTest(): bool 
     {
-        return $this->getEnvironment() === 'testing';
+        return Env::get('APP_ENV') === 'testing'
+            || (isset($_SERVER['APP_ENV']) && $_SERVER['APP_ENV'] === 'testing');
     }
 }

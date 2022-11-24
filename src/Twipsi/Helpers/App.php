@@ -9,8 +9,6 @@
  */
 
 use Twipsi\Components\Events\Interfaces\EventInterface;
-use Twipsi\Components\Router\Route\Route;
-use \Twipsi\Components\Cookie\Cookie as CookieItem;
 use Twipsi\Facades\App;
 use Twipsi\Facades\Config;
 use Twipsi\Facades\Cookie;
@@ -100,7 +98,7 @@ if (!function_exists("route")) {
      */
     function route(string $route): ?string
     {
-        if(($url = Routes::byName($route)) instanceof Route) {
+        if(!is_null($url = Routes::byName($route))) {
             return rtrim($url->getUrl(), "/");
         }
 
@@ -148,7 +146,7 @@ if (!function_exists("csrf_token")) {
      */
     function csrf_token(): mixed
     {
-        if(($cookie = Cookie::getQueuedCookies("_csrf")) instanceof CookieItem) {
+        if(!is_null($cookie = Cookie::getQueuedCookies("_csrf"))) {
             return $cookie->getValue();
         }
 

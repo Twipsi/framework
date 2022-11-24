@@ -14,6 +14,10 @@ namespace Twipsi\Facades;
 
 use Twipsi\Facades\Interfaces\FacadeInterface;
 
+/**
+ * @method static get(string $string, \Closure $param)
+ * @method static any(string $string, \Closure $param)
+ */
 class Route extends Facade implements FacadeInterface
 {
     /**

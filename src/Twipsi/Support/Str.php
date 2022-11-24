@@ -303,6 +303,21 @@ class Str
     }
 
     /**
+     * Check if a string equals any values.
+     *
+     * @param ...$values
+     * @return bool
+     */
+    public function is(...$values): bool
+    {
+        if (in_array($this->haystack, $values, true)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
      * Slugify a string.
      *
      * @param string $separator

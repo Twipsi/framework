@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Twipsi\Foundation;
 
+use ReflectionException;
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Component\Console\Application as SymfonyConsole;
 use Throwable;
@@ -33,8 +34,8 @@ use Twipsi\Components\Validator\Exceptions\ValidatorException;
 use Twipsi\Components\View\ViewErrorBag;
 use Twipsi\Facades\Url;
 use Twipsi\Foundation\Application\Application;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 use Twipsi\Support\Arr;
-
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
 
@@ -82,10 +83,12 @@ class ExceptionHandler
 
     /**
      * Render the exception to a response.
-     * 
+     *
      * @param HttpRequest $request
      * @param Throwable $e
      * @return Response
+     * @throws ApplicationManagerException
+     * @throws ReflectionException
      */
     public function render(HttpRequest $request, Throwable $e): Response
     {
@@ -126,9 +129,7 @@ class ExceptionHandler
     protected function convertException(Throwable $e): Throwable
     {
         return match (true) {
-            $e instanceof RouteNotFoundException
-                => new NotFoundHttpException($e->getMessage(), $e),
-
+            $e instanceof RouteNotFoundException => new NotFoundHttpException($e->getMessage(), $e),
             $e instanceof AuthorizationException && $e->getStatus() => new HttpException($e->getStatus(), $e->getMessage(), $e),
             $e instanceof AuthorizationException && !$e->getStatus() => new AccessDeniedHttpException($e->getMessage(), $e),
             $e instanceof TokenMismatchException => new HttpException(419, 'Page Expired', $e),
@@ -143,6 +144,8 @@ class ExceptionHandler
      * @param HttpRequest $request
      * @param Throwable $e
      * @return Response
+     * @throws ApplicationManagerException
+     * @throws ReflectionException
      */
     protected function renderHttpResponse(HttpRequest $request, Throwable $e): Response
     {
@@ -158,6 +161,8 @@ class ExceptionHandler
      * @param HttpRequest $request
      * @param AuthenticationException $e
      * @return Response
+     * @throws ApplicationManagerException
+     * @throws ReflectionException
      */
     protected function renderAuthenticationResponse(HttpRequest $request, AuthenticationException $e): Response
     {
@@ -169,10 +174,12 @@ class ExceptionHandler
     /**
      * Redirect back while transmitting the inputs and errors,
      * on validator exception.
-     * 
+     *
      * @param HttpRequest $request
      * @param ValidatorException $e
      * @return Response
+     * @throws ApplicationManagerException
+     * @throws ReflectionException
      */
     protected function renderValidatorResponse(HttpRequest $request, ValidatorException $e): Response
     {
@@ -190,6 +197,8 @@ class ExceptionHandler
      *
      * @param Throwable $e
      * @return JsonResponse
+     * @throws ApplicationManagerException
+     * @throws ReflectionException
      */
     protected function buildJsonResponse(Throwable $e): JsonResponse
     {
@@ -228,6 +237,8 @@ class ExceptionHandler
      * @param HttpRequest $request
      * @param Throwable $e
      * @return Response
+     * @throws ApplicationManagerException
+     * @throws ReflectionException
      */
     protected function buildHttpResponse(HttpRequest $request, Throwable $e): Response
     {
@@ -246,9 +257,11 @@ class ExceptionHandler
 
     /**
      * Render the final exception response based on status code.
-     * 
+     *
      * @param HttpException $e
      * @return Response
+     * @throws ApplicationManagerException
+     * @throws ReflectionException
      */
     protected function renderHttpException(HttpException $e): Response
     {

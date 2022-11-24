@@ -12,8 +12,9 @@ declare(strict_types=1);
 
 namespace Twipsi\Components\Router;
 
+use ReflectionException;
 use Twipsi\Components\Events\EventHandler as Dispatcher;
-use Twipsi\Components\Http\Exceptions\NotSupportedException;
+use Twipsi\Components\Http\HttpRequest;
 use Twipsi\Components\Http\HttpRequest as Request;
 use Twipsi\Components\Router\Events\RouteMatchedEvent;
 use Twipsi\Components\Router\Events\RouteNotFoundEvent;
@@ -25,6 +26,7 @@ use Twipsi\Components\Router\Route\Route;
 use Twipsi\Components\Router\Route\ViewRoute;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\Exceptions\ApplicationManagerException;
+use Twipsi\Foundation\Exceptions\NotSupportedException;
 
 final class Router
 {
@@ -94,8 +96,8 @@ final class Router
      *
      * @param Request $request
      * @return Route|null
-     * @throws RouteNotFoundException|ApplicationManagerException
-     * @throws NotSupportedException
+     * @throws ApplicationManagerException
+     * @throws ReflectionException|NotSupportedException
      */
     public function match(Request $request): ?Route
     {
@@ -206,5 +208,18 @@ final class Router
     public function getLoadedRoutes(): RouteBag
     {
         return $this->loadedRoutes;
+    }
+
+    /**
+     * Set the request object on the router.
+     *
+     * @param Request $request
+     * @return $this
+     */
+    public function setRequest(HttpRequest $request): Router
+    {
+        $this->request = $request;
+
+        return $this;
     }
 }

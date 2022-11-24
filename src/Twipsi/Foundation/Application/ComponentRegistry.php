@@ -255,7 +255,7 @@ class ComponentRegistry extends Container
             $provider = get_class($provider);
         }
 
-        return $this->exists($provider, 'application');
+        return in_array($provider, $this->application());
     }
 
     /**
@@ -270,7 +270,7 @@ class ComponentRegistry extends Container
             $provider = get_class($provider);
         }
 
-        return $this->exists($provider, 'framework');
+        return in_array($provider, $this->framework());
     }
 
     /**
@@ -285,7 +285,7 @@ class ComponentRegistry extends Container
             $provider = get_class($provider);
         }
 
-        return $this->exists($provider, 'always');
+        return in_array($provider, $this->always());
     }
 
     /**
@@ -300,7 +300,7 @@ class ComponentRegistry extends Container
             $provider = get_class($provider);
         }
 
-        return $this->exists($provider, 'deferred');
+        return in_array($provider, $this->deferred());
     }
 
     /**

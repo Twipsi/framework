@@ -56,7 +56,7 @@ class BootstrapContext
      */
     protected function getContextLoader():  Closure
     {
-        return Env::get('APP_ENV', 'production') === 'testing'
+        return $this->app->isTest()
             ? fn() => Env::get('TEST_CONTEXT', '')
             : fn($app) => $app->get(Route::class)->getContext();
     }

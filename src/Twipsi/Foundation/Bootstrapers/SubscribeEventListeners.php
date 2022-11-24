@@ -20,6 +20,7 @@ use Twipsi\Components\File\Exceptions\FileException;
 use Twipsi\Components\File\FileBag;
 use Twipsi\Foundation\Application\Application;
 use Twipsi\Foundation\Env;
+use Twipsi\Foundation\Exceptions\ApplicationManagerException;
 
 class SubscribeEventListeners
 {
@@ -54,7 +55,7 @@ class SubscribeEventListeners
      * Invoke the bootstrapper.
      *
      * @return void
-     * @throws FileException|ReflectionException|DirectoryManagerException
+     * @throws FileException|ReflectionException|DirectoryManagerException|ApplicationManagerException
      */
     public function invoke(): void
     {
@@ -92,7 +93,7 @@ class SubscribeEventListeners
             throw new InvalidArgumentException(sprintf("Directory [%s] could not be found", $where));
         }
 
-        return (new FileBag($where, 'php'))->list();
+        return (new FileBag($where, 'php'))->listAbsolute();
     }
 
     /**
